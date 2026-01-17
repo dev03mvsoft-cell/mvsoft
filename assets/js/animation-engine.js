@@ -87,8 +87,13 @@ const AnimationEngine = (() => {
                 y: 0,
                 scale: 1,
                 duration: duration,
-                delay: delay,
                 ease: "expo.out",
+                onComplete: () => {
+                    // Remove the class that defines the initial opacity/transform
+                    elem.classList.remove('reveal-up');
+                    // Clear GSAP inline styles to let CSS take full control
+                    gsap.set(elem, { clearProps: "all" });
+                },
                 scrollTrigger: {
                     trigger: elem,
                     start: "top 90%",

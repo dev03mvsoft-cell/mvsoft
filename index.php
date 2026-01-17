@@ -165,7 +165,7 @@
 
         <div class="grid-offer mt-3">
             <!-- Card 1: Web Development -->
-            <div class="offering-card light-card reveal-up ">
+            <div class="offering-card light-card reveal-up" data-delay="0.1">
                 <div class="circle"></div>
                 <div class="card-content">
                     <h2 class="split text-dark">Web <br /> Development</h2>
@@ -179,10 +179,10 @@
             </div>
 
             <!-- Card 2: Mobile App Development -->
-            <div class="offering-card light-card reveal-up">
+            <div class="offering-card light-card reveal-up" data-delay="0.2">
                 <div class="circle"></div>
                 <div class="card-content">
-                    <h2 class="split text-dark">Mobile App <br /> Development</h2>
+                    <h2 class="split text-dark">Mobile <br /> Development</h2>
                     <p class="text-muted mb-3">Reach your audience on iOS and Android with a high-performance single codebase.</p>
                     <ul class="list-unstyled small text-muted">
                         <li class="mb-2"><i class="fas fa-mobile-alt text-primary me-2"></i> <strong>Android & IOS:</strong> Native performance at 50% cost</li>
@@ -192,7 +192,7 @@
             </div>
 
             <!-- Card 3: UI/UX & SEO -->
-            <div class="offering-card light-card reveal-up">
+            <div class="offering-card light-card reveal-up" data-delay="0.3">
                 <div class="circle"></div>
                 <div class="card-content">
                     <h2 class="split text-dark">UI/UX Design <br /> & Global SEO</h2>
@@ -438,92 +438,116 @@
             <p class="lead text-muted reveal-up">How we analyze your business problem and provide the best solution.</p>
         </div>
 
-        <div class="roadmap-container">
-            <!-- The Road -->
-            <div class="roadmap-line">
-                <div class="roadmap-progress"></div>
+        <div class="roadmap-wrapper">
+            <!-- Compact Snaky Road SVG (Height reduced from 1500 to 1000) -->
+            <svg class="snaky-road-svg" viewBox="0 0 1000 950" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Outer Glow/Shadow Path -->
+                <path class="road-glow" d="M500 0C500 80 100 120 100 220C100 320 900 340 900 500C900 660 100 680 100 780C100 880 500 900 500 900" stroke="rgba(26, 56, 127, 0.1)" stroke-width="12" stroke-linecap="round"/>
+                
+                <!-- Main Road Path -->
+                <path id="mainRoadPath" d="M500 0C500 80 100 120 100 220C100 320 900 340 900 500C900 660 100 680 100 780C100 880 500 900 500 900" stroke="#f0f0f0" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                
+                <!-- Progress Path -->
+                <path id="roadProgress" d="M500 0C500 80 100 120 100 220C100 320 900 340 900 500C900 660 100 680 100 780C100 880 500 900 500 900" stroke="url(#roadGradient)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                
+                <defs>
+                    <linearGradient id="roadGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="#1a387f" />
+                        <stop offset="100%" stop-color="#003aaf" />
+                    </linearGradient>
+                </defs>
+            </svg>
+
+            <!-- Decorative Environment (Lush Greenery) -->
+            <div class="roadmap-environment">
+                <!-- Trees -->
+                <img src="assets/img/journey/tree.png" class="road-greenery road-tree tree-1" alt="Tree">
+                <img src="assets/img/journey/tree.png" class="road-greenery road-tree tree-2" alt="Tree">
+                <img src="assets/img/journey/tree.png" class="road-greenery road-tree tree-3" alt="Tree">
+                <img src="assets/img/journey/tree.png" class="road-greenery road-tree tree-4" alt="Tree">
+                <img src="assets/img/journey/tree.png" class="road-greenery road-tree tree-5" alt="Tree">
+                <img src="assets/img/journey/tree.png" class="road-greenery road-tree tree-6" alt="Tree">
+                <img src="assets/img/journey/tree.png" class="road-greenery road-tree tree-7" alt="Tree">
+                <img src="assets/img/journey/tree.png" class="road-greenery road-tree tree-8" alt="Tree">
+                <img src="assets/img/journey/tree.png" class="road-greenery road-tree tree-9" alt="Tree">
+                <img src="assets/img/journey/tree.png" class="road-greenery road-tree tree-10" alt="Tree">
             </div>
 
-            <!-- Journey Marker (location pulse) -->
-            <div class="car-marker">
-                <div class="car-body"></div>
-            </div>
-
-            <!-- Scenery Layer: Premium Isometric District -->
-            <div class="scenery-layer">
-                <!-- High-Rise Offices -->
-                <img src="assets/img/journey/building_1.png" class="asset-3d building-asset asset-1 float" alt="Office Building 1">
-                <img src="assets/img/journey/building_2.png" class="asset-3d building-asset asset-2 float" style="animation-delay: -2s;" alt="Office Building 2">
-
-                <!-- Collaboration Hubs -->
-                <img src="assets/img/journey/people.png" class="asset-3d people-asset asset-3 float" style="animation-delay: -1s;" alt="Team Meeting">
-
-                <!-- Individual Talent -->
-                <img src="assets/img/journey/person_laptop.png" class="asset-3d person-asset asset-4 float" style="animation-delay: -3s;" alt="Developer">
-                <img src="assets/img/journey/person_meeting.png" class="asset-3d person-asset asset-5 float" style="animation-delay: -4s;" alt="Project Manager">
-
-                <!-- Campus Extension -->
-                <img src="assets/img/journey/building_1.png" class="asset-3d building-asset asset-6 float" style="animation-delay: -5s;" alt="Corporate Park">
-            </div>
-
-            <!-- Step 1: Planning -->
-            <div class="journey-step reveal-up">
-                <div class="step-number">1</div>
-                <div class="step-content">
-                    <div class="step-icon-box">
-                        <i class="fas fa-lightbulb"></i>
+            <!-- Floating 3D Bus Marker -->
+            <div id="snakyCar" class="snaky-car snaky-bus">
+                <div class="car-3d-wrapper">
+                    <img src="assets/img/journey/bus_3d.png" class="car-3d-icon" alt="Bus">
+                    <div class="car-light-beams">
+                        <div class="light-beam left"></div>
+                        <div class="light-beam right"></div>
                     </div>
-                    <h3>Client Consultation</h3>
-                    <p>It starts with you coming into our office or a virtual meet. We discuss your business needs, analyze the problem, and map out the best digital strategy.</p>
                 </div>
             </div>
 
-            <!-- Step 2: UI/UX -->
-            <div class="journey-step reveal-up">
-                <div class="step-number">2</div>
-                <div class="step-content">
-                    <div class="step-icon-box">
-                        <i class="fas fa-drafting-compass"></i>
-                    </div>
-                    <h3>UI & UX Design</h3>
-                    <p>Crafting intuitive and aesthetically pleasing interfaces that ensure a seamless user journey and high engagement rates.</p>
-                </div>
+            <!-- Journey Milestones -->
+            <div class="journey-milestone milestone-start">
+                <div class="milestone-dot"></div>
+                <div class="milestone-label">Journey Starts Here</div>
             </div>
 
-            <!-- Step 3: Development -->
-            <div class="journey-step reveal-up">
-                <div class="step-number">3</div>
-                <div class="step-content">
-                    <div class="step-icon-box">
-                        <i class="fas fa-code"></i>
+            <!-- Steps overlay -->
+            <div class="steps-overlay">
+                <!-- Step 1 -->
+                <div class="journey-step-v2 step-1" data-progress="0.2">
+                    <div class="step-card">
+                        <div class="step-illustration">
+                            <img src="assets/img/journey/strategy.png" alt="Strategy Icon">
+                        </div>
+                        <div class="step-badge">Strategy</div>
+                        <h3>Consultation</h3>
+                        <p>We analyze your needs with deep discovery sessions. <strong>Feature:</strong> Full digital audit.</p>
+                        <div class="step-icon"><i class="fas fa-comments"></i></div>
                     </div>
-                    <h3>Expert Development</h3>
-                    <p>Turning designs into high-performance reality using the latest technology stacks and industry best practices.</p>
                 </div>
-            </div>
 
-            <!-- Step 4: Testing -->
-            <div class="journey-step reveal-up">
-                <div class="step-number">4</div>
-                <div class="step-content">
-                    <div class="step-icon-box">
-                        <i class="fas fa-vial"></i>
+                <!-- Step 2 -->
+                <div class="journey-step-v2 step-2" data-progress="0.45">
+                    <div class="step-card">
+                        <div class="step-illustration">
+                            <img src="assets/img/journey/design.png" alt="Design Icon">
+                        </div>
+                        <div class="step-badge">Creative</div>
+                        <h3>UI & UX Design</h3>
+                        <p>User-centric wireframing and interactive prototyping. <strong>Feature:</strong> Accessibility focus.</p>
+                        <div class="step-icon"><i class="fas fa-bezier-curve"></i></div>
                     </div>
-                    <h3>Quality Assurance</h3>
-                    <p>Rigorous testing and quality assurance to ensure your product is bug-free, secure, and ready for the real world.</p>
                 </div>
-            </div>
 
-            <!-- Step 5: Deployment -->
-            <div class="journey-step reveal-up">
-                <div class="step-number">5</div>
-                <div class="step-content">
-                    <div class="step-icon-box">
-                        <i class="fas fa-rocket"></i>
+                <!-- Step 3 -->
+                <div class="journey-step-v2 step-3" data-progress="0.7">
+                    <div class="step-card">
+                        <div class="step-illustration">
+                            <img src="assets/img/journey/dev.png" alt="Development Icon">
+                        </div>
+                        <div class="step-badge">Build</div>
+                        <h3>Development</h3>
+                        <p>High-performance reality using cutting-edge stacks. <strong>Feature:</strong> Daily deployments.</p>
+                        <div class="step-icon"><i class="fas fa-rocket"></i></div>
                     </div>
-                    <h3>Deployment & Support</h3>
-                    <p>Successful launch followed by continuous support and updates to keep your business ahead of the competition.</p>
                 </div>
+
+                <!-- Step 4 -->
+                <div class="journey-step-v2 step-4" data-progress="0.95">
+                    <div class="step-card">
+                        <div class="step-illustration">
+                            <img src="assets/img/journey/launch.png" alt="Launch Icon">
+                        </div>
+                        <div class="step-badge">Go-Live</div>
+                        <h3>Launch & Success</h3>
+                        <p>Seamless Go-Live with 24/7 monitoring. <strong>Feature:</strong> Growth analytics.</p>
+                        <div class="step-icon"><i class="fas fa-chart-line"></i></div>
+                    </div>
+                </div>
+
+            <!-- Journey End Milestone -->
+            <div class="journey-milestone milestone-end">
+                <div class="milestone-label">Project Complete</div>
+                <div class="milestone-dot"></div>
             </div>
         </div>
     </div>
@@ -603,5 +627,6 @@
         </div>
     </div>
 </section>
+
 
 <?php include 'includes/footer.php'; ?>

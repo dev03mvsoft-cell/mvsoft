@@ -19,6 +19,7 @@
 <!-- GSAP -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
 <!-- Anime.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 <!-- Typed.js -->
@@ -37,7 +38,7 @@
 <script src="assets/js/three-engine.js"></script>
 <script src="assets/js/horizontal-scroll.js"></script>
 <script src="assets/js/smooth-scroll.js"></script>
-<script src="assets/js/journey.js"></script>
+<script src="assets/js/journey-v2.js"></script>
 <script src="assets/js/script.js"></script>
 </body>
 
