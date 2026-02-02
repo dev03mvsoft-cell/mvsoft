@@ -122,9 +122,9 @@
                                         Development <i class="fas fa-chevron-down d-lg-none"></i>
                                     </h6>
                                     <div class="collapse d-lg-block" id="devCollapse">
-                                        <a class="mega-link" href="#"><i class="fas fa-code"></i> Web Design</a>
-                                        <a class="mega-link" href="#"><i class="fas fa-mobile-alt"></i> App Development</a>
-                                        <a class="mega-link" href="#"><i class="fas fa-database"></i> Backend Solutions</a>
+                                        <a class="mega-link" href="web-design"><i class="fas fa-code"></i> Web Design</a>
+                                        <a class="mega-link" href="app-development"><i class="fas fa-mobile-alt"></i> App Development</a>
+                                        <a class="mega-link" href="backend-solutions"><i class="fas fa-database"></i> Backend Solutions</a>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-6 mb-3 mb-lg-0">
@@ -133,9 +133,9 @@
                                         Marketing <i class="fas fa-chevron-down d-lg-none"></i>
                                     </h6>
                                     <div class="collapse d-lg-block" id="marketingCollapse">
-                                        <a class="mega-link" href="#"><i class="fas fa-bullhorn"></i> SEO Optimization</a>
-                                        <a class="mega-link" href="#"><i class="fas fa-chart-line"></i> Digital Marketing</a>
-                                        <a class="mega-link" href="#"><i class="fas fa-envelope"></i> Email Campaigns</a>
+                                        <a class="mega-link" href="seo-optimization"><i class="fas fa-bullhorn"></i> SEO Optimization</a>
+                                        <a class="mega-link" href="digital-marketing"><i class="fas fa-chart-line"></i> Digital Marketing</a>
+                                        <a class="mega-link" href="email-campaigns"><i class="fas fa-envelope"></i> Email Campaigns</a>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-6 mb-3 mb-lg-0">
@@ -144,9 +144,9 @@
                                         Cloud <i class="fas fa-cloud"></i> <i class="fas fa-chevron-down d-lg-none"></i>
                                     </h6>
                                     <div class="collapse d-lg-block" id="cloudCollapse">
-                                        <a class="mega-link" href="#"><i class="fas fa-cloud"></i> Cloud Hosting</a>
-                                        <a class="mega-link" href="#"><i class="fas fa-shield-alt"></i> Cybersecurity</a>
-                                        <a class="mega-link" href="#"><i class="fas fa-server"></i> Server Management</a>
+                                        <a class="mega-link" href="cloud-hosting"><i class="fas fa-cloud"></i> Cloud Hosting</a>
+                                        <a class="mega-link" href="cybersecurity"><i class="fas fa-shield-alt"></i> Cybersecurity</a>
+                                        <a class="mega-link" href="server-management"><i class="fas fa-server"></i> Server Management</a>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-6 mb-0">
@@ -155,9 +155,9 @@
                                         Company <i class="fas fa-chevron-down d-lg-none"></i>
                                     </h6>
                                     <div class="collapse d-lg-block" id="companyCollapse">
-                                        <a class="mega-link" href="#"><i class="fas fa-info-circle"></i> About Us</a>
-                                        <a class="mega-link" href="#"><i class="fas fa-users"></i> Our Team</a>
-                                        <a class="mega-link" href="#"><i class="fas fa-phone-alt"></i> Contact Sales</a>
+                                        <a class="mega-link" href="about"><i class="fas fa-info-circle"></i> About Us</a>
+                                        <a class="mega-link" href="home#team"><i class="fas fa-users"></i> Our Team</a>
+                                        <a class="mega-link" href="contact"><i class="fas fa-phone-alt"></i> Contact Sales</a>
                                     </div>
                                 </div>
                             </div>

@@ -55,11 +55,12 @@
                         </div>
                         <h3>Web Development</h3>
                         <p>High-performance websites built with modern stacks like TALL (Tailwind, Alpine, Laravel, Livewire) and MERN.</p>
-                        <ul class="service-features list-unstyled">
+                        <ul class="service-features list-unstyled mb-4">
                             <li><i class="fas fa-check text-primary"></i> Reactive UI components</li>
                             <li><i class="fas fa-check text-primary"></i> Server-side rendering (SSR)</li>
                             <li><i class="fas fa-check text-primary"></i> Technical SEO optimized</li>
                         </ul>
+                        <a href="web-design" class="btn btn-outline-primary btn-sm rounded-pill px-3">Learn More</a>
                     </div>
                 </div>
 
@@ -71,11 +72,12 @@
                         </div>
                         <h3>Mobile Applications</h3>
                         <p>Cross-platform mobile solutions using React Native and Flutter for native-level performance on iOS & Android.</p>
-                        <ul class="service-features list-unstyled">
+                        <ul class="service-features list-unstyled mb-4">
                             <li><i class="fas fa-check text-primary"></i> Single codebase efficiency</li>
                             <li><i class="fas fa-check text-primary"></i> Real-time sync features</li>
                             <li><i class="fas fa-check text-primary"></i> App Store Optimization (ASO)</li>
                         </ul>
+                        <a href="app-development" class="btn btn-outline-primary btn-sm rounded-pill px-3">Learn More</a>
                     </div>
                 </div>
 
@@ -87,11 +89,12 @@
                         </div>
                         <h3>UI/UX Design</h3>
                         <p>User-centric design thinking that prioritizes accessibility, conversion, and emotional engagement.</p>
-                        <ul class="service-features list-unstyled">
+                        <ul class="service-features list-unstyled mb-4">
                             <li><i class="fas fa-check text-primary"></i> Interactive prototyping</li>
                             <li><i class="fas fa-check text-primary"></i> Brand identity systems</li>
                             <li><i class="fas fa-check text-primary"></i> Accessibility audits</li>
                         </ul>
+                        <a href="web-design" class="btn btn-outline-primary btn-sm rounded-pill px-3">Learn More</a>
                     </div>
                 </div>
 
@@ -103,11 +106,12 @@
                         </div>
                         <h3>3D Web & WebGL</h3>
                         <p>Immersive 3D environments and product configurators using Three.js and GSAP for the "WOW" factor.</p>
-                        <ul class="service-features list-unstyled">
+                        <ul class="service-features list-unstyled mb-4">
                             <li><i class="fas fa-check text-primary"></i> Custom WebGL shaders</li>
                             <li><i class="fas fa-check text-primary"></i> Interactive 3D models</li>
                             <li><i class="fas fa-check text-primary"></i> High-performance execution</li>
                         </ul>
+                        <a href="web-design" class="btn btn-outline-primary btn-sm rounded-pill px-3">Learn More</a>
                     </div>
                 </div>
 
@@ -119,11 +123,12 @@
                         </div>
                         <h3>Backend Solutions</h3>
                         <p>Scalable API architectures and database management systems built for security and enterprise growth.</p>
-                        <ul class="service-features list-unstyled">
+                        <ul class="service-features list-unstyled mb-4">
                             <li><i class="fas fa-check text-primary"></i> Laravel / Node.js ecosystems</li>
                             <li><i class="fas fa-check text-primary"></i> Robust API development</li>
                             <li><i class="fas fa-check text-primary"></i> Cloud infrastructure setup</li>
                         </ul>
+                        <a href="backend-solutions" class="btn btn-outline-primary btn-sm rounded-pill px-3">Learn More</a>
                     </div>
                 </div>
 
@@ -135,11 +140,12 @@
                         </div>
                         <h3>Digital Growth</h3>
                         <p>Merging technical excellence with marketing strategies to ensure your business ranks and converts.</p>
-                        <ul class="service-features list-unstyled">
+                        <ul class="service-features list-unstyled mb-4">
                             <li><i class="fas fa-check text-primary"></i> Global SEO strategies</li>
                             <li><i class="fas fa-check text-primary"></i> Growth analytics setup</li>
                             <li><i class="fas fa-check text-primary"></i> Performance monitoring</li>
                         </ul>
+                        <a href="seo-optimization" class="btn btn-outline-primary btn-sm rounded-pill px-3">Learn More</a>
                     </div>
                 </div>
             </div>
