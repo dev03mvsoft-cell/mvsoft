@@ -28,6 +28,17 @@ document.addEventListener('DOMContentLoaded', () => {
         strokeDashoffset: pathLength
     });
 
+    // Set initial position of the car to the start of the path
+    gsap.set(car, {
+        motionPath: {
+            path: "#mainRoadPath",
+            align: "#mainRoadPath",
+            alignOrigin: [0.5, 0.5],
+            start: 0,
+            end: 0
+        }
+    });
+
     // 2. Create the Master Timeline
     const mtl = gsap.timeline({
         scrollTrigger: {

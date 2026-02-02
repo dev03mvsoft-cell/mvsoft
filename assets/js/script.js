@@ -15,7 +15,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 3. Initialize Animations (SplitText, ScrollTrigger, Pins)
     if (typeof AnimationEngine !== 'undefined') {
-        AnimationEngine.init();
+        if (document.fonts) {
+            document.fonts.ready.then(() => {
+                AnimationEngine.init();
+            });
+        } else {
+            // Fallback for older browsers
+            AnimationEngine.init();
+        }
     }
 
     // 4. Initialize 3D Visuals (Galaxy, Cube, Neural)

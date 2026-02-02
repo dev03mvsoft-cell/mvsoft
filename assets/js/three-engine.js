@@ -274,6 +274,11 @@ const ThreeEngine = (() => {
             this.updateCameraPosition();
             this.animate();
         }
+
+        onMouseMove(e) {
+            this.mouse.x = (e.clientX / window.innerWidth) - 0.5;
+            this.mouse.y = (e.clientY / window.innerHeight) - 0.5;
+        }
         createRoundedRectShape(width, height, radius) {
             const shape = new THREE.Shape();
             shape.moveTo(-width / 2 + radius, -height / 2);
@@ -505,6 +510,14 @@ const ThreeEngine = (() => {
 
         animate() {
             const time = Date.now() * 0.001;
+
+            // Smooth Parallax Camera
+            const targetX = this.mouse.x * 20;
+            const targetY = (-this.mouse.y * 20) + 3;
+
+            this.camera.position.x += (targetX - this.camera.position.x) * 0.05;
+            this.camera.position.y += (targetY - this.camera.position.y) * 0.05;
+            this.camera.lookAt(0, 0, 0);
 
             if (this.badges) {
                 this.badges.forEach(badge => {

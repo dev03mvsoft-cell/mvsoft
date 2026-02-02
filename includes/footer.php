@@ -1,16 +1,81 @@
-<footer class="py-5 bg-white border-top">
-    <div class="container text-center">
-        <div class="mb-4">
-            <h4 class="fw-bold text-primary">MVSOFT</h4>
-            <p class="text-muted">Innovating the digital landscape, one line of code at a time.</p>
+<footer class="footer-premium">
+    <div class="container footer-top py-5">
+        <div class="row g-4">
+            <!-- Company column -->
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                <div class="footer-brand mb-4">
+                    <img src="assets/img/logo1.png" alt="Mvsoft Logo" class="footer-logo mb-3">
+                    <p class="text-muted footer-pitch">
+                        Mvsoft Tech Solutions is a powerhouse of elite developers and designers, delivering high-performance digital engineering and innovative 3D web experiences.
+                    </p>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <!-- Services column -->
+            <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                <h5 class="footer-title">Our Services</h5>
+                <ul class="list-unstyled footer-links">
+                    <li><a href="#">Web Development</a></li>
+                    <li><a href="#">Mobile App Development</a></li>
+                    <li><a href="#">UI/UX Design</a></li>
+                    <li><a href="#">Global SEO</a></li>
+                    <li><a href="#">Backend Solutions</a></li>
+                    <li><a href="#">3D Web Experiences</a></li>
+                </ul>
+            </div>
+
+            <!-- Industries column -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="footer-title">Industries We Serve</h5>
+                <ul class="list-unstyled footer-links">
+                    <li><a href="#">Transport & Logistics</a></li>
+                    <li><a href="#">E-Commerce</a></li>
+                    <li><a href="#">Healthcare</a></li>
+                    <li><a href="#">Finance & Insurance</a></li>
+                    <li><a href="#">Real Estate</a></li>
+                    <li><a href="#">Media & Education</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact column -->
+            <div class="col-lg-3 col-md-6">
+                <h5 class="footer-title">Contact Us</h5>
+                <ul class="list-unstyled footer-contact">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Corporate Office, India</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>sales@mvsoftsolutions.com</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+91 XXX XXX XXXX</span>
+                    </li>
+                    <li class="mt-4">
+                        <a href="contact" class="btn btn-primary rounded-pill px-4 btn-footer-cta">Get a Quote</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="social-links mb-4">
-            <a href="#" class="btn btn-outline-primary btn-sm rounded-circle me-2"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="btn btn-outline-primary btn-sm rounded-circle me-2"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="btn btn-outline-primary btn-sm rounded-circle me-2"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="btn btn-outline-primary btn-sm rounded-circle"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom py-3 border-top">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <p class="mb-0 small text-muted">&copy; <?= date('Y') ?> Mvsoft Tech Solutions. All rights reserved.</p>
+            <div class="footer-legal d-flex gap-3 small">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
         </div>
-        <p class="small text-muted mb-0">&copy; <?= date('Y') ?> Mvsoft Tech Solutions. All rights reserved.</p>
     </div>
 </footer>
 
@@ -39,6 +104,7 @@
 <script src="assets/js/horizontal-scroll.js"></script>
 <script src="assets/js/smooth-scroll.js"></script>
 <script src="assets/js/journey-v2.js"></script>
+<script src="assets/js/hero-story.js"></script>
 <script src="assets/js/script.js"></script>
 </body>
 

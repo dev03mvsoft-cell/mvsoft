@@ -48,7 +48,7 @@ const UICore = (() => {
                 scale: 0, duration: 1.2, ease: "elastic.out(1, 0.7)",
                 onStart: () => { if (!isMobile) startTechCycle(); }
             })
-                .to(navbar, { top: "20px", yPercent: 0, duration: 1, height: "60px", borderRadius: "50px", ease: "power3.inOut" })
+                .to(navbar, { top: "20px", yPercent: 0, duration: 1, height: "66px", borderRadius: "50px", ease: "power3.inOut" })
                 .to(navbar, { width: "95%", duration: 1.2, ease: "expo.inOut" });
 
             if (expertiseContainer && !isMobile) {
@@ -57,7 +57,7 @@ const UICore = (() => {
             }
 
             tl.to([".navbar-brand", ".navbar-nav", ".expertise-container span"], { opacity: 1, duration: 0.6, stagger: 0.1 }, "-=0.2");
-            tl.set(navbar, { overflow: "visible", height: "auto", padding: "10px 25px" });
+            tl.set(navbar, { overflow: "visible", height: "66px", padding: "0 30px" });
         }
 
         // Magic Hover Effects

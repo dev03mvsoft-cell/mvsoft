@@ -81,27 +81,22 @@ const AnimationEngine = (() => {
             const delay = elem.getAttribute('data-delay') || 0;
             const duration = elem.getAttribute('data-duration') || 1.2;
 
+            // Animate from hidden state to visible state
             gsap.to(elem, {
                 opacity: 1,
                 x: 0,
                 y: 0,
                 scale: 1,
                 duration: duration,
+                delay: delay,
                 ease: "expo.out",
-                onComplete: () => {
-                    // Remove the class that defines the initial opacity/transform
-                    elem.classList.remove('reveal-up');
-                    // Clear GSAP inline styles to let CSS take full control
-                    gsap.set(elem, { clearProps: "all" });
-                },
                 scrollTrigger: {
                     trigger: elem,
-                    start: "top 90%",
+                    start: "top 85%",
                     toggleActions: "play none none none"
                 }
             });
         });
-
         gsap.from(".box", {
             scrollTrigger: { trigger: ".box", start: "top 70%", scrub: 1 },
             rotate: 360, scale: 0.5, borderRadius: "50%", duration: 2
@@ -112,15 +107,15 @@ const AnimationEngine = (() => {
             gsap.from(".culture-item", {
                 scrollTrigger: {
                     trigger: ".culture-grid",
-                    start: "top 75%",
+                    start: "top 90%",
                     toggleActions: "play none none none"
                 },
                 autoAlpha: 0,
-                y: 100,
-                scale: 0.9,
-                rotationX: 15,
-                duration: 1.8,
-                stagger: 0.2,
+                y: 50,
+                scale: 0.95,
+                rotationX: 10,
+                duration: 1.2,
+                stagger: 0.1,
                 ease: "expo.out",
                 clearProps: "all"
             });

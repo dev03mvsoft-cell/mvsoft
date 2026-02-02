@@ -12,6 +12,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google Fonts: Raleway -->
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/logo.png">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Devicons for Tech Stack -->
@@ -26,25 +28,48 @@
         html.lenis {
             height: auto;
         }
-        .lenis-smooth {
+
+        .lenis.lenis-smooth {
             scroll-behavior: auto !important;
         }
-        .lenis-smooth [data-lenis-prevent] {
+
+        .lenis.lenis-smooth [data-lenis-prevent] {
             overscroll-behavior: contain;
         }
-        .lenis-smooth iframe {
+
+        .lenis.lenis-stopped {
+            overflow: hidden;
+        }
+
+        .lenis.lenis-scrolling iframe {
             pointer-events: none;
         }
+
         /* Custom Reveal Animations */
         [class*="reveal-"] {
             opacity: 0;
             transition: none;
         }
-        .reveal-up { transform: translateY(50px); }
-        .reveal-down { transform: translateY(-50px); }
-        .reveal-left { transform: translateX(50px); }
-        .reveal-right { transform: translateX(-50px); }
-        .reveal-scale { transform: scale(0.9); }
+
+        .reveal-up {
+            transform: translateY(50px);
+        }
+
+        .reveal-down {
+            transform: translateY(-50px);
+        }
+
+        .reveal-left {
+            transform: translateX(50px);
+        }
+
+        .reveal-right {
+            transform: translateX(-50px);
+        }
+
+        .reveal-scale {
+            transform: scale(0.9);
+        }
     </style>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -78,13 +103,13 @@
             <div class="collapse navbar-collapse" id="mainNavbar">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php">Home</a>
+                        <a class="nav-link" href="home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.php">About</a>
+                        <a class="nav-link" href="about">About</a>
                     </li>
                     <li class="nav-item dropdown position-static">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        <a class="nav-link dropdown-toggle" href="services" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
                             Services
                         </a>
@@ -139,10 +164,10 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="career.php">Career</a>
+                        <a class="nav-link" href="career">Career</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.php">Contact</a>
+                        <a class="nav-link" href="contact">Contact</a>
                     </li>
                 </ul>
             </div>

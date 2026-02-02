@@ -1,0 +1,11 @@
+RewriteEngine On
+
+# Ensure we are in the correct base directory
+# RewriteBase /Mvsoft/Mvsoft (2)/Mvsoft/
+
+# Do not rewrite for existing files or directories (assets, includes, etc)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rewrite everything else to index.php
+RewriteRule ^(.*)$ index.php [L,QSA]
