@@ -30,7 +30,36 @@ document.addEventListener('DOMContentLoaded', () => {
         ThreeEngine.init();
     }
 
-    // 5. Final Refresh for Smooth ScrollTriggers
+    // 5. Horizontal Tech Navigation
+    const techNavBtns = document.querySelectorAll('.tech-nav-btn');
+    const techPanes = document.querySelectorAll('.tech-content-pane');
+
+    if (techNavBtns.length > 0) {
+        techNavBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = btn.getAttribute('data-tab');
+                const targetPane = document.getElementById(`pane-${targetId}`);
+
+                if (!targetPane) return;
+
+                // Update nav buttons
+                techNavBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                // Update content panes
+                techPanes.forEach(pane => pane.classList.remove('active'));
+                targetPane.classList.add('active');
+
+                // Refresh ScrollTrigger as height might change
+                if (typeof ScrollTrigger !== 'undefined') {
+                    ScrollTrigger.refresh();
+                }
+            });
+        });
+    }
+
+    // 7. Final Refresh for Smooth ScrollTriggers
     if (typeof ScrollTrigger !== 'undefined') {
         ScrollTrigger.refresh();
     }

@@ -1,19 +1,20 @@
 <?php include 'includes/header.php'; ?>
 
 <main>
-    <!-- Nexus Contact Hero -->
-    <section class="section nexus-hero-section py-5 position-relative overflow-hidden d-flex align-items-center justify-content-center" style="min-height: 70vh;">
+    <!-- Career Hero -->
+    <section class="section nexus-hero-section py-5 position-relative overflow-hidden d-flex align-items-center justify-content-center" style="min-height: 80vh;">
         <div class="container text-center position-relative z-3 mt-5">
             <div class="hero-content reveal-up">
+                <span class="badge bg-primary rounded-pill px-3 py-2 mb-3">Join Our Collective</span>
                 <div class="elastic-stage">
                     <div class="elastic-content">
-                        <h1 class="elastic-txt">Contact</h1>
+                        <h1 class="elastic-txt">Careers</h1>
                     </div>
                 </div>
 
                 <h2 class="hero-subheading reveal-up" data-delay="0.6">
-                    Connect with our elite digital engineering <br>
-                    <span class="text-primary-gradient">collective today.</span>
+                    Join an elite collective of creators <br>
+                    <span class="text-primary-gradient">defining the future.</span>
                 </h2>
 
                 <script>
@@ -110,81 +111,34 @@
                     });
                 </script>
             </div>
+            <div class="reveal-up mt-4">
+                <a href="#positions" class="btn btn-dark btn-lg rounded-pill px-5 py-3">View Openings</a>
+            </div>
         </div>
     </section>
 
-    <!-- Contact Form & Info -->
-    <section class="py-5 bg-light">
+    <!-- Open Positions -->
+    <section id="positions" class="py-5 bg-white">
         <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-5">
-                    <div class="contact-info-card p-5 bg-white rounded-4 shadow-sm reveal-up">
-                        <h2 class="fw-bold mb-4">Contact Information</h2>
-                        <div class="info-item d-flex mb-4">
-                            <div class="icon me-3 text-primary"><i class="fas fa-map-marker-alt fs-4"></i></div>
-                            <div>
-                                <h5 class="fw-bold mb-1">Our Office</h5>
-                                <p class="text-muted small mb-0">Corporate Office, Tech Hub, India</p>
-                            </div>
+            <div class="text-center mb-5">
+                <h2 class="display-4 fw-bold text-dark reveal-up">Current Openings</h2>
+                <p class="text-muted reveal-up">Join the elite engineering team at Mvsoft.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-12">
+                    <div class="job-card p-4 rounded-4 border mb-4 reveal-up d-flex justify-content-between align-items-center">
+                        <div>
+                            <h4 class="fw-bold mb-1">Senior Full Stack Developer</h4>
+                            <p class="text-muted mb-0">Remote / Full-time • React, Node, AWS</p>
                         </div>
-                        <div class="info-item d-flex mb-4">
-                            <div class="icon me-3 text-primary"><i class="fas fa-envelope fs-4"></i></div>
-                            <div>
-                                <h5 class="fw-bold mb-1">Email Us</h5>
-                                <p class="text-muted small mb-0">sales@mvsoftsolutions.com</p>
-                            </div>
-                        </div>
-                        <div class="info-item d-flex mb-4">
-                            <div class="icon me-3 text-primary"><i class="fas fa-phone-alt fs-4"></i></div>
-                            <div>
-                                <h5 class="fw-bold mb-1">Call Us</h5>
-                                <p class="text-muted small mb-0">+91 XXX XXX XXXX</p>
-                            </div>
-                        </div>
-
-                        <div class="social-links mt-5">
-                            <h6 class="fw-bold text-dark mb-3">Follow Us</h6>
-                            <div class="d-flex gap-3">
-                                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#" class="social-icon"><i class="fab fa-x-twitter"></i></a>
-                                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                            </div>
-                        </div>
+                        <a href="contact" class="btn btn-outline-primary rounded-pill">Apply Now</a>
                     </div>
-                </div>
-                <div class="col-lg-7">
-                    <div class="contact-form-wrapper p-5 bg-white rounded-4 shadow-sm reveal-up" data-delay="0.1">
-                        <h2 class="fw-bold mb-4">Send us a Message</h2>
-                        <form id="contactForm">
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <label class="form-label small fw-bold">Full Name</label>
-                                    <input type="text" class="form-control rounded-pill px-4" placeholder="Your Name" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label small fw-bold">Email Address</label>
-                                    <input type="email" class="form-control rounded-pill px-4" placeholder="name@company.com" required>
-                                </div>
-                                <div class="col-md-12">
-                                    <label class="form-label small fw-bold">Subject</label>
-                                    <select class="form-select rounded-pill px-4">
-                                        <option selected>Web Development</option>
-                                        <option>Mobile App Development</option>
-                                        <option>UI/UX Design</option>
-                                        <option>Digital Marketing</option>
-                                        <option>Other / Inquiry</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-12">
-                                    <label class="form-label small fw-bold">Message</label>
-                                    <textarea class="form-control rounded-4 px-4 py-3" rows="5" placeholder="Tell us about your project..." required></textarea>
-                                </div>
-                                <div class="col-md-12 mt-4">
-                                    <button type="submit" class="btn btn-primary btn-lg rounded-pill px-5 w-100 shadow-glow">Send Message</button>
-                                </div>
-                            </div>
-                        </form>
+                    <div class="job-card p-4 rounded-4 border mb-4 reveal-up d-flex justify-content-between align-items-center">
+                        <div>
+                            <h4 class="fw-bold mb-1">3D Web Developer (Three.js)</h4>
+                            <p class="text-muted mb-0">Hybrid / Full-time • WebGL, GLSL, GSAP</p>
+                        </div>
+                        <a href="contact" class="btn btn-outline-primary rounded-pill">Apply Now</a>
                     </div>
                 </div>
             </div>
@@ -193,36 +147,16 @@
 </main>
 
 <style>
-    .text-primary-gradient {
-        background: linear-gradient(45deg, #1a387f, #003aaf);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .social-icon {
-        width: 40px;
-        height: 40px;
-        background: #f8f9fa;
-        color: #1a387f;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    .job-card {
+        background: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(10px);
         transition: all 0.3s ease;
-        text-decoration: none;
     }
 
-    .social-icon:hover {
-        background: #1a387f;
-        color: #fff;
-        transform: translateY(-3px);
-    }
-
-    .form-control:focus,
-    .form-select:focus {
+    .job-card:hover {
+        background: rgba(255, 255, 255, 0.8);
         border-color: #1a387f;
-        box-shadow: 0 0 0 0.25rem rgba(26, 56, 127, 0.1);
+        transform: scale(1.02);
     }
 </style>
 

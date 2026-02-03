@@ -32,4 +32,26 @@ document.addEventListener('DOMContentLoaded', () => {
         borderRadius: "50%",
         duration: 2
     });
+
+    // 4. Technology Tab Switcher
+    const techBtns = document.querySelectorAll('.tech-tab-btn');
+    const techPanes = document.querySelectorAll('.tech-pane');
+
+    techBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const target = btn.getAttribute('data-tech-target');
+
+            // Update buttons
+            techBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            // Update panes
+            techPanes.forEach(pane => {
+                pane.classList.remove('active');
+                if (pane.id === target) {
+                    pane.classList.add('active');
+                }
+            });
+        });
+    });
 });

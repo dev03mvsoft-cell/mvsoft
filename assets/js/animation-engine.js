@@ -28,7 +28,12 @@ const AnimationEngine = (() => {
             gsap.from(textSplit.chars, {
                 duration: 1.4, y: 100, rotationX: -90, rotationY: 30, scale: 0.6, filter: "blur(15px)", autoAlpha: 0,
                 stagger: { amount: 1.5, from: "start" }, ease: "expo.out", transformOrigin: "50% 50% -100",
-                scrollTrigger: { trigger: el, start: "top 90%", onEnter: () => el.classList.add('is-revealed'), toggleActions: "play none none none" }
+                scrollTrigger: {
+                    trigger: el,
+                    start: "top 90%",
+                    onEnter: () => el.classList.add('is-revealed'),
+                    toggleActions: "restart none none restart"
+                }
             });
         });
 
@@ -39,7 +44,7 @@ const AnimationEngine = (() => {
             gsap.from(legacySplit.chars, {
                 yPercent: "random([-300, 300])", xPercent: "random([-100, 100])", rotationZ: "random(-60, 60)", rotationX: "random(-180, 180)",
                 filter: "blur(20px)", autoAlpha: 0, scale: 0.2, stagger: { amount: 2.5, from: "random" },
-                duration: 3, ease: "expo.out", scrollTrigger: { trigger: legacyMagic, start: "top 85%", toggleActions: "play none none none" },
+                duration: 3, ease: "expo.out", scrollTrigger: { trigger: legacyMagic, start: "top 85%", toggleActions: "restart none none restart" },
                 onComplete: () => {
                     gsap.to(legacySplit.chars, { yPercent: "random([-15, 15])", rotation: "random(-5, 5)", duration: "random(2, 5)", repeat: -1, yoyo: true, ease: "sine.inOut", stagger: { amount: 1.5, from: "random" } });
                 }
@@ -69,7 +74,7 @@ const AnimationEngine = (() => {
                 scrollTrigger: {
                     trigger: el,
                     start: "top 85%",
-                    toggleActions: "play none none none"
+                    toggleActions: "restart none none restart"
                 }
             });
         });
@@ -93,7 +98,7 @@ const AnimationEngine = (() => {
                 scrollTrigger: {
                     trigger: elem,
                     start: "top 85%",
-                    toggleActions: "play none none none"
+                    toggleActions: "restart none none restart"
                 }
             });
         });
@@ -108,7 +113,7 @@ const AnimationEngine = (() => {
                 scrollTrigger: {
                     trigger: ".culture-grid",
                     start: "top 90%",
-                    toggleActions: "play none none none"
+                    toggleActions: "restart none none restart"
                 },
                 autoAlpha: 0,
                 y: 50,

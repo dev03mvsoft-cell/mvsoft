@@ -1,38 +1,114 @@
 <?php include 'includes/header.php'; ?>
 
 <main>
-    <!-- Services Hero Section -->
-    <section class="services-hero position-relative overflow-hidden py-5 d-flex align-items-center bg-white" style="min-height: 60vh;">
-        <!-- Background Decoration -->
-        <div class="position-absolute top-0 start-0 w-100 h-100 opacity-05 pointer-events-none">
-            <svg viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" class="w-100 h-100">
-                <defs>
-                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" style="stop-color:rgba(26, 56, 127, 0.05);stop-opacity:1" />
-                        <stop offset="100%" style="stop-color:rgba(0, 58, 175, 0.02);stop-opacity:1" />
-                    </linearGradient>
-                </defs>
-                <path fill="url(#grad1)" d="M0,1000 C300,800 400,900 700,600 C900,400 1000,500 1000,0 L1000,1000 Z" />
-            </svg>
-        </div>
+    <!-- Nexus Services Hero -->
+    <section class="section nexus-hero-section py-5 position-relative overflow-hidden d-flex align-items-center justify-content-center" style="min-height: 70vh;">
+        <div class="container text-center position-relative z-3 mt-5">
+            <div class="hero-content reveal-up">
+                <div class="elastic-stage">
+                    <div class="elastic-content">
+                        <h1 class="elastic-txt">Services</h1>
+                    </div>
+                </div>
 
-        <div class="container position-relative z-3 mt-5">
-            <div class="row align-items-center">
-                <div class="col-lg-7">
-                    <span class="badge bg-primary rounded-pill px-3 py-2 mb-3 reveal-up">What We Do</span>
-                    <h1 class="display-3 fw-bold text-dark mb-4 split-text reveal-up">Empowering Businesses with <br><span class="text-primary-gradient">Digital Excellence</span></h1>
-                    <p class="lead text-muted mb-5 reveal-up" style="max-width: 600px;">
-                        From immersive 3D web experiences to enterprise-grade backend solutions, we provide the technical muscle to scale your vision.
-                    </p>
-                    <div class="reveal-up">
-                        <a href="contact" class="btn btn-primary btn-lg rounded-pill px-5 shadow-glow">Start a Project</a>
-                    </div>
-                </div>
-                <div class="col-lg-5 d-none d-lg-block">
-                    <div class="services-hero-visual reveal-up" data-delay="0.3">
-                        <div id="services-canvas-container" style="height: 400px; width: 100%;"></div>
-                    </div>
-                </div>
+                <h2 class="hero-subheading reveal-up" data-delay="0.6">
+                    Enterprise-grade solutions for the <br>
+                    <span class="text-primary-gradient">modern digital economy.</span>
+                </h2>
+
+                <script>
+                    window.addEventListener('load', function() {
+                        if (typeof SplitText === 'undefined' || typeof gsap === 'undefined') return;
+                        const weightInit = 600,
+                            weightTarget = 400,
+                            weightDiff = weightInit - weightTarget;
+                        const stretchInit = 150,
+                            stretchTarget = 80,
+                            stretchDiff = stretchInit - stretchTarget;
+                        const maxYScale = 2.5;
+                        let mySplitText = new SplitText('.elastic-txt', {
+                            type: "chars",
+                            charsClass: "elastic-char"
+                        });
+                        let chars = document.querySelectorAll('.elastic-char'),
+                            txt = document.querySelector('.elastic-txt');
+                        let charH = txt.offsetHeight,
+                            numChars = chars.length,
+                            isMouseDown = false;
+                        let mouseInitialY = 0,
+                            mouseFinalY = 0,
+                            charIndexSelected = 0,
+                            elasticDropOff = 0.8,
+                            dragYScale = 0;
+                        gsap.set(chars, {
+                            transformOrigin: 'center bottom'
+                        });
+                        gsap.from(chars, {
+                            y: -500,
+                            fontWeight: weightTarget,
+                            fontStretch: stretchTarget,
+                            scaleY: 2,
+                            ease: "elastic(0.2, 0.1)",
+                            duration: 1.5,
+                            stagger: {
+                                each: 0.05,
+                                from: 'random'
+                            },
+                            scrollTrigger: {
+                                trigger: ".elastic-stage",
+                                start: "top bottom",
+                                toggleActions: "restart none none restart"
+                            }
+                        });
+                        document.body.addEventListener('mousedown', function(e) {
+                            if (e.target.classList.contains('elastic-char')) {
+                                mouseInitialY = e.clientY;
+                                isMouseDown = true;
+                                chars.forEach((c, i) => {
+                                    if (c === e.target) charIndexSelected = i;
+                                });
+                            }
+                        });
+                        document.body.addEventListener('mouseup', function() {
+                            if (isMouseDown) {
+                                isMouseDown = false;
+                                gsap.to(chars, {
+                                    y: 0,
+                                    fontWeight: weightInit,
+                                    fontStretch: stretchInit,
+                                    scale: 1,
+                                    ease: "elastic(0.35, 0.1)",
+                                    duration: 1,
+                                    stagger: {
+                                        each: 0.02,
+                                        from: charIndexSelected
+                                    }
+                                });
+                            }
+                        });
+                        document.body.addEventListener('mousemove', function(e) {
+                            if (isMouseDown) {
+                                mouseFinalY = e.clientY;
+                                let maxYDragDist = charH * (maxYScale - 1);
+                                let distY = mouseInitialY - mouseFinalY;
+                                dragYScale = distY / maxYDragDist;
+                                if (dragYScale > (maxYScale - 1)) dragYScale = maxYScale - 1;
+                                else if (dragYScale < -0.5) dragYScale = -0.5;
+                                gsap.to(chars, {
+                                    y: (index) => (1 - (Math.abs(index - charIndexSelected) / (numChars * elasticDropOff))) * dragYScale * -50,
+                                    fontWeight: (index) => weightInit - ((1 - (Math.abs(index - charIndexSelected) / (numChars * elasticDropOff))) * dragYScale * weightDiff),
+                                    fontStretch: (index) => stretchInit - ((1 - (Math.abs(index - charIndexSelected) / (numChars * elasticDropOff))) * dragYScale * stretchDiff),
+                                    scaleY: (index) => {
+                                        let sY = 1 + ((1 - (Math.abs(index - charIndexSelected) / (numChars * elasticDropOff))) * dragYScale);
+                                        return sY < 0.5 ? 0.5 : sY;
+                                    },
+                                    ease: "power4",
+                                    duration: 0.6
+                                });
+                            }
+                        });
+                    });
+                </script>
             </div>
         </div>
     </section>

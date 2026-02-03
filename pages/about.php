@@ -1,42 +1,242 @@
 <?php include 'includes/header.php'; ?>
 
 <main>
-    <!-- About Hero -->
-    <section class="about-hero py-5 position-relative overflow-hidden" style="background: #fff; min-height: 50vh; display: flex; align-items: center;">
-        <div class="container position-relative z-3 mt-5">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <span class="badge bg-primary rounded-pill px-3 py-2 mb-3 reveal-up">Our Story</span>
-                    <h1 class="display-3 fw-bold text-dark mb-4 reveal-up">Defining the Future of <br><span class="text-primary-gradient">Digital Engineering</span></h1>
-                    <p class="lead text-muted mb-5 reveal-up">
-                        Mvsoft Tech Solutions is more than a development agency. We are a collective of creators, engineers, and strategists dedicated to building the digital infrastructure of tomorrow.
-                    </p>
+    <!-- Nexus Hero (Interactive Background applies automatically) -->
+    <section class="section nexus-hero-section py-5 position-relative overflow-hidden d-flex align-items-center justify-content-center" style="min-height: 80vh;">
+        <div class="container text-center position-relative z-3 mt-5">
+            <div class="hero-content reveal-up">
+                <div class="elastic-stage">
+                    <div class="elastic-content">
+                        <h1 class="elastic-txt">About</h1>
+                    </div>
                 </div>
-                <div class="col-lg-6 d-none d-lg-block">
-                    <div class="about-hero-img position-relative reveal-up">
-                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070" class="img-fluid rounded-4 shadow-lg" alt="Team Work">
+
+                <h2 class="hero-subheading reveal-up" data-delay="0.6">
+                    Engineering digital excellence through <br>
+                    <span class="text-primary-gradient">innovation and integrity.</span>
+                </h2>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Detailed Overview -->
+    <section class="section py-5 position-relative">
+        <div class="container py-5">
+            <div class="glass-card p-4 p-md-5 reveal-up">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-5 reveal-right">
+                        <div class="position-relative">
+                            <img src="assets/img/office/mvsoftoff9.jpg" alt="Mvsoft Office" class="img-fluid rounded-5 shadow-2xl-strong transform-hover" style="border: 1px solid rgba(255,255,255,0.2);">
+                            <!-- Subtle decorative element -->
+                            <div class="position-absolute bottom-0 end-0 bg-primary-gradient p-3 rounded-circle shadow-lg m-n3 d-none d-md-block" style="width: 80px; height: 80px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-building text-white fs-3"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 reveal-left" data-delay="0.2">
+                        <div class="ps-lg-4">
+                            <span class="section-tag mb-3 reveal-up">Who We Are</span>
+                            <h2 class="display-5 fw-bold text-dark mb-4 reveal-up" data-delay="0.3">Leading the Future of <br><span class="text-primary-gradient">Digital Intelligence</span></h2>
+
+                            <div class="text-scramble__content lead text-muted mb-4" style="font-size: 1.15rem; line-height: 1.6;">
+                                <p id="scramble-text-original">MVSoft Solution is a modern software development company built for the post-2025 digital economy. Founded to bridge the gap between overpriced agencies and unreliable vendors, we deliver enterprise-grade technology with a value-first approach.</p>
+
+                                <div class="text-scramble__text" aria-hidden="true">
+                                    <span id="scramble-text-1"></span>
+                                    <span id="scramble-text-2"></span>
+                                    <span id="scramble-text-3"></span>
+                                    <span id="scramble-text-4"></span>
+                                    <span id="scramble-text-5"></span>
+                                    <img id="scramble-cursor" src="https://assets.codepen.io/16327/scramble-cursor.png" alt="" />
+                                </div>
+                            </div>
+
+                            <!-- Animated Stats Grid -->
+                            <div class="row g-3 mt-4 reveal-up" data-delay="0.5">
+                                <div class="col-6 col-md-3">
+                                    <div class="stat-card">
+                                        <span class="stat-number text-primary" data-target="500">0</span>
+                                        <span class="stat-label">Projects</span>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <div class="stat-card">
+                                        <span class="stat-number text-primary" data-target="250">0</span>
+                                        <span class="stat-label">Clients</span>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <div class="stat-card">
+                                        <span class="stat-number text-primary" data-target="24">0</span>
+                                        <span class="stat-label">H Support</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Redesigned Journey Subsection -->
+                    <div class="col-12 mt-5 pt-lg-4">
+                        <div class="text-center mb-5 reveal-up">
+                            <h3 class="display-6 fw-bold text-dark mb-3">Our Journey of Rapid Innovation</h3>
+                            <div class="mx-auto bg-primary-gradient" style="width: 80px; height: 4px; border-radius: 2px;"></div>
+                        </div>
+
+                        <div class="row g-4 justify-content-center">
+                            <div class="col-md-4 reveal-up" data-delay="0.1">
+                                <div class="milestone-card">
+                                    <div class="milestone-icon"><i class="fas fa-rocket"></i></div>
+                                    <h4 class="h5 fw-bold text-dark">The Inception (2025)</h4>
+                                    <p class="text-muted small mb-0">Launched to bridge the gap between overpriced agencies and unreliable vendors with a value-first engineering approach.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 reveal-up" data-delay="0.2">
+                                <div class="milestone-card active-border">
+                                    <div class="milestone-icon"><i class="fas fa-chart-line"></i></div>
+                                    <h4 class="h5 fw-bold text-dark">Rapid Scalability</h4>
+                                    <p class="text-muted small mb-0">Evolved into a global technology partner, delivering enterprise-grade platforms and conversion-focused apps.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 reveal-up" data-delay="0.3">
+                                <div class="milestone-card">
+                                    <div class="milestone-icon"><i class="fas fa-microchip"></i></div>
+                                    <h4 class="h5 fw-bold text-dark">Excellence Driven</h4>
+                                    <p class="text-muted small mb-0">Executing milestones that typically take a decade by moving faster, thinking smarter, and focusing on business ROI.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-5 reveal-up" data-delay="0.4">
+                            <p class="lead text-dark fw-medium">
+                                "Technology should <span class="text-primary-gradient fw-bold">accelerate business</span>, not slow it down."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Mission & Vision: Kinetic Overlap Redesign -->
+    <section class="kinetic-container py-5">
+        <div class="container position-relative py-5">
+            <!-- Ghost Background Labels -->
+            <div class="ghost-label ghost-label-left">PURPOSE</div>
+            <div class="ghost-label ghost-label-right">FUTURE</div>
+
+            <!-- Floating Accents -->
+            <div class="glass-blob animate-float" style="top: 20%; left: 40%;"></div>
+            <div class="glass-blob animate-float" style="bottom: 10%; right: 30%; animation-delay: 2s;"></div>
+
+            <div class="text-center mb-5 reveal-up">
+                <span class="section-tag mb-3">Our Core Drive</span>
+                <h2 class="display-4 fw-bold text-dark">Strategic Philosophy</h2>
+            </div>
+
+            <div class="kinetic-grid">
+                <!-- Mission Card -->
+                <div class="kinetic-card mission-overlap reveal-right" data-delay="0.3">
+                    <div class="icon-v-large text-primary-gradient"><i class="fas fa-rocket"></i></div>
+                    <h2 class="display-6 fw-bold mb-3">Our Mission</h2>
+                    <p class="lead text-muted">To empower businesses with secure, scalable, and high-performance digital products—delivered at a cost structure that supports growth, innovation, and long-term success.</p>
+                    <div class="mt-4 pt-3 border-top border-light">
+                        <span class="fw-bold text-primary small uppercase letter-spacing-1">Empowerment • Growth • Excellence</span>
+                    </div>
+                </div>
+
+                <!-- Vision Card -->
+                <div class="kinetic-card vision-overlap reveal-left" data-delay="0.5">
+                    <div class="icon-v-large text-primary-gradient"><i class="fas fa-eye"></i></div>
+                    <h2 class="display-6 fw-bold mb-3">Our Vision</h2>
+                    <p class="lead text-muted">To become a global benchmark for modern software development by setting new standards in quality, efficiency, and value in the digital-first world.</p>
+                    <div class="mt-4 pt-3 border-top border-light text-end">
+                        <span class="fw-bold text-primary small uppercase letter-spacing-1">Innovation • Integrity • Impact</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Mission & Vision -->
-    <section class="py-5 bg-light">
+    <!-- Sister Concern Section -->
+    <section class="sister-concern-section py-5 position-relative overflow-hidden">
         <div class="container py-5">
-            <div class="row g-4">
-                <div class="col-lg-6">
-                    <div class="mission-card p-5 bg-white rounded-5 h-100 shadow-sm reveal-up">
-                        <div class="icon mb-4"><i class="fas fa-rocket text-primary fs-1"></i></div>
-                        <h2 class="fw-bold mb-3">Our Mission</h2>
-                        <p class="text-muted">To empower businesses through high-performance technology that enhances human capability and drives sustainable growth.</p>
+            <div class="row align-items-center g-5">
+                <!-- Media Side -->
+                <div class="col-lg-6 reveal-right">
+                    <div class="media-stack position-relative">
+                        <!-- Video Container with Pop-up Trigger -->
+                        <div class="glass-card p-2 transform-hover shadow-2xl-strong overflow-hidden video-pop-trigger" style="border-radius: 40px; cursor: pointer;">
+                            <div class="play-overlay">
+                                <div class="play-btn-circle">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <video class="w-100 rounded-4 shadow-lg" autoplay muted loop playsinline style="height: auto; aspect-ratio: 1000 / 500; background: #000; border: 1px solid rgba(255,255,255,0.1);">
+                                <source src="assets/img/office/Business Care Solutions.mp4" type="video/mp4">
+                            </video>
+
+                            <!-- Floating decorative element over video -->
+                            <div class="glass-blob animate-float" style="width: 150px; height: 150px; top: -10%; right: -5%; opacity: 0.5;"></div>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Modal structure -->
+                <div class="video-modal" id="bcsVideoModal">
+                    <div class="video-modal-content">
+                        <div class="video-modal-close"><i class="fas fa-times"></i></div>
+                        <video id="popupVideo" class="w-100" controls style="aspect-ratio: 1000 / 500; background: #000;">
+                            <source src="assets/img/office/Business Care Solutions.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <!-- Content Side -->
                 <div class="col-lg-6">
-                    <div class="mission-card p-5 bg-white rounded-5 h-100 shadow-sm reveal-up" data-delay="0.1">
-                        <div class="icon mb-4"><i class="fas fa-eye text-primary fs-1"></i></div>
-                        <h2 class="fw-bold mb-3">Our Vision</h2>
-                        <p class="text-muted">To be the global benchmark for digital excellence, where innovation meets integrity in every line of code we write.</p>
+                    <div class="ps-lg-4">
+                        <span class="section-tag reveal-up">Strategic Alliance</span>
+                        <h2 class="display-5 fw-bold text-dark mb-4 split-text-reveal">Business Care Solutions (BCS)</h2>
+
+                        <div class="bcs-content mb-5">
+                            <p class="lead text-dark mb-4 split-text-p">
+                                Business Care Solutions (BCS) is the strategic sister concern of MVSoft Solution, specializing in digital marketing, brand growth, and online visibility.
+                            </p>
+                            <p class="text-muted mb-4 split-text-p">
+                                While MVSoft Solution focuses on advanced software engineering, web platforms, and mobile application development, BCS strengthens businesses through result-driven SEO, SEM, performance marketing, and professional corporate web design.
+                            </p>
+                            <p class="text-muted split-text-p">
+                                Together, MVSoft Solution and Business Care Solutions provide a complete digital ecosystem that supports sustainable growth, strong brand presence, and measurable business results across global markets.
+                            </p>
+                        </div>
+
+                        <div class="row g-4 reveal-up" data-delay="0.6">
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="icon-sm bg-primary-soft text-primary rounded-circle"><i class="fas fa-chart-line"></i></div>
+                                    <span class="fw-bold small">Digital Marketing</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="icon-sm bg-primary-soft text-primary rounded-circle"><i class="fas fa-search-dollar"></i></div>
+                                    <span class="fw-bold small">SEO & SEM Excellence</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="icon-sm bg-primary-soft text-primary rounded-circle"><i class="fas fa-bullseye"></i></div>
+                                    <span class="fw-bold small">Brand Strategy</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="icon-sm bg-primary-soft text-primary rounded-circle"><i class="fas fa-globe"></i></div>
+                                    <span class="fw-bold small">Performance Marketing</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -44,7 +244,7 @@
     </section>
 
     <!-- Core Values -->
-    <section class="py-5 bg-white">
+    <section class="py-5">
         <div class="container py-5">
             <div class="text-center mb-5">
                 <span class="section-tag reveal-up">Our Values</span>
@@ -52,21 +252,21 @@
             </div>
             <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="value-item text-center p-4 reveal-up">
+                    <div class="glass-card value-item text-center p-4 reveal-up h-100">
                         <div class="value-icon mb-3"><i class="fas fa-heart text-primary fs-2"></i></div>
                         <h4 class="fw-bold">Value First</h4>
                         <p class="text-muted small">We prioritize business outcomes over vanity metrics, ensuring every project delivers tangible ROI.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="value-item text-center p-4 reveal-up" data-delay="0.1">
+                    <div class="glass-card value-item text-center p-4 reveal-up h-100" data-delay="0.1">
                         <div class="value-icon mb-3"><i class="fas fa-shield-alt text-primary fs-2"></i></div>
                         <h4 class="fw-bold">Clean & Secure</h4>
                         <p class="text-muted small">Security and maintainability are built into our DNA, not added as afterthoughts.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="value-item text-center p-4 reveal-up" data-delay="0.2">
+                    <div class="glass-card value-item text-center p-4 reveal-up h-100" data-delay="0.2">
                         <div class="value-icon mb-3"><i class="fas fa-users text-primary fs-2"></i></div>
                         <h4 class="fw-bold">Human Centric</h4>
                         <p class="text-muted small">Technology should serve people. We focus on accessibility and emotional engagement in everything we build.</p>
@@ -76,28 +276,7 @@
         </div>
     </section>
 </main>
+<script src="assets/js/about-animations.js"></script>
 
-<style>
-    .text-primary-gradient {
-        background: linear-gradient(45deg, #1a387f, #003aaf);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .mission-card {
-        border: 1px solid rgba(0, 0, 0, 0.05);
-        transition: transform 0.3s ease;
-    }
-
-    .mission-card:hover {
-        transform: translateY(-10px);
-    }
-
-    .value-item:hover .value-icon i {
-        transform: scale(1.2);
-        transition: transform 0.3s ease;
-    }
-</style>
 
 <?php include 'includes/footer.php'; ?>

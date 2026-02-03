@@ -90,8 +90,15 @@ function initHeroAnimation() {
         paused: true
     }));
 
-    // 3. GSAP Entrance Timeline
-    const tl = gsap.timeline({ defaults: { ease: "expo.out", duration: 1.5 } });
+    // 3. GSAP Entrance Timeline (Optimized with ScrollTrigger)
+    const tl = gsap.timeline({
+        defaults: { ease: "expo.out", duration: 1.5 },
+        scrollTrigger: {
+            trigger: "#welcome",
+            start: "top center",
+            toggleActions: "restart none none restart"
+        }
+    });
 
     // Ensure elements are invisible initially
     const entranceTargets = [".hero-logo-text", ".hero-tagline", ".cta-group"];

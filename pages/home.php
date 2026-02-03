@@ -540,79 +540,338 @@
         </div>
 </section>
 
-<!-- Working Culture Section -->
-<section class="culture-section">
+<!-- Technologies we work with -->
+<section class="tech-section py-5">
     <div class="container">
-        <div class="row align-items-end mb-5">
-            <div class="col-lg-6">
-                <span class="section-tag reveal-up">Our Vibe</span>
-                <h2 class="display-4 fw-bold text-dark reveal-up">Behind the Code: Our Working Culture</h2>
-            </div>
-            <div class="col-lg-6">
-                <p class="lead text-muted reveal-up mb-4">We believe that great software is born in an environment of freedom, continuous learning, and shared passion.</p>
+        <div class="text-center mb-5">
+            <span class="section-tag reveal-up">Our Expertise</span>
+            <h2 class="display-4 fw-bold text-dark reveal-up">Technologies we work with</h2>
+            <p class="lead text-muted reveal-up">We use the latest tools to build cutting-edge digital solutions.</p>
+        </div>
+
+        <!-- Horizontal Tab Navigation -->
+        <div class="tech-nav-wrapper mb-5 reveal-up">
+            <div class="tech-nav-tabs">
+                <button class="tech-nav-btn active" data-tab="frontend">Front End</button>
+                <button class="tech-nav-btn" data-tab="mobile">Mobile</button>
+                <button class="tech-nav-btn" data-tab="backend">Backend</button>
+                <button class="tech-nav-btn" data-tab="frameworks">Frameworks</button>
+                <!-- <button class="tech-nav-btn" data-tab="cms">CMS</button> -->
+                <button class="tech-nav-btn" data-tab="database">Database</button>
+                <!-- <button class="tech-nav-btn" data-tab="devops">DevOps</button>
+                <button class="tech-nav-btn" data-tab="ecommerce">Ecommerce</button> -->
             </div>
         </div>
 
-        <div class="culture-grid">
-            <!-- Large Item -->
-            <div class="culture-item large animate-float">
-                <span class="culture-tag">Deep Work</span>
-                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070" alt="Collaboration">
-                <div class="culture-overlay">
-                    <h4>Flow State</h4>
-                    <p>We dedicate hours to uninterrupted "Deep Work" to solve complex logistical challenges with elegant code.</p>
+        <!-- Tab Content Panes -->
+        <div class="tech-panes-container reveal-up">
+            <!-- Mobile -->
+            <div class="tech-content-pane" id="pane-mobile">
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="tech-card">
+                            <i class="devicon-flutter-plain colored"></i>
+                            <span>Flutter</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="tech-card">
+                            <i class="devicon-react-original colored"></i>
+                            <span>React Native</span>
+                        </div>
+                    </div>
+                    <!-- <div class="col-lg-3 col-md-4 col-6">
+                        <div class="tech-card">
+                            <i class="devicon-swift-plain colored"></i>
+                            <span>Swift</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="tech-card">
+                            <i class="devicon-android-plain colored"></i>
+                            <span>Kotlin</span>
+                        </div>
+                    </div> -->
                 </div>
             </div>
 
-            <!-- Tall Item -->
-            <div class="culture-item tall">
-                <span class="culture-tag">Creativity</span>
-                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=2070" alt="Creative Office">
-                <div class="culture-overlay">
-                    <h4>Creative Logic</h4>
-                    <p>Thinking outside the box is our standard operating procedure.</p>
-                </div>
-            </div>
-            <div class="culture-item tall">
-                <span class="culture-tag">Creativity</span>
-                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=2070" alt="Creative Office">
-                <div class="culture-overlay">
-                    <h4>Creative Logic</h4>
-                    <p>Thinking outside the box is our standard operating procedure.</p>
+            <!-- Front End -->
+            <div class="tech-content-pane active" id="pane-frontend">
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="tech-card">
+                            <i class="devicon-html5-plain colored"></i>
+                            <span>HTML5</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="tech-card">
+                            <i class="devicon-css3-plain colored"></i>
+                            <span>CSS3</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="tech-card">
+                            <i class="devicon-bootstrap-plain colored"></i>
+                            <span>Bootstrap</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="tech-card">
+                            <i class="devicon-react-original colored"></i>
+                            <span>React JS</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="tech-card">
+                            <i class="devicon-nextjs-plain"></i>
+                            <span>Next.js</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="tech-card">
+                            <i class="devicon-tailwindcss-plain colored"></i>
+                            <span>Tailwind</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="tech-card">
+                            <i class="devicon-javascript-plain colored"></i>
+                            <span>ES6+</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Wide Item -->
-            <div class="culture-item wide animate-float">
-                <span class="culture-tag">Collaboration</span>
-                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070" alt="Team meeting">
-                <div class="culture-overlay">
-                    <h4>Shared Vision</h4>
-                    <p>Weekly brainstorming sessions where every voice, from intern to CEO, shapes our product roadmap.</p>
+            <!-- Backend -->
+            <div class="tech-content-pane" id="pane-backend">
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="tech-card">
+                            <i class="devicon-laravel-original colored"></i>
+                            <span>Laravel</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="tech-card">
+                            <i class="devicon-nodejs-plain colored"></i>
+                            <span>Node JS</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="tech-card">
+                            <i class="devicon-php-plain colored"></i>
+                            <span>Core PHP</span>
+                        </div>
+                    </div>
+                    <!-- <div class="col-lg-3 col-md-4 col-6">
+                        <div class="tech-card">
+                            <i class="devicon-python-plain colored"></i>
+                            <span>Python</span>
+                        </div>
+                    </div> -->
                 </div>
             </div>
 
-            <!-- Small Item -->
-            <div class="culture-item">
-                <span class="culture-tag">R&D</span>
-                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070" alt="Tech">
-                <div class="culture-overlay">
-                    <h4>Tech Innovation</h4>
-                    <p>Exploring AI and Blockchain to revolutionize shipping.</p>
+            <!-- Frameworks -->
+            <div class="tech-content-pane" id="pane-frameworks">
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="tech-card">
+                            <i class="devicon-express-original colored"></i>
+                            <span>Express</span>
+                        </div>
+                    </div>
+                    <!-- <div class="col-lg-3 col-md-4 col-6">
+                        <div class="tech-card">
+                            <i class="devicon-django-plain colored"></i>
+                            <span>Django</span>
+                        </div>
+                    </div> -->
+                    <!-- <div class="col-lg-3 col-md-4 col-6">
+                        <div class="tech-card">
+                            <i class="devicon-spring-plain colored"></i>
+                            <span>Spring Boot</span>
+                        </div>
+                    </div> -->
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="tech-card">
+                            <i class="devicon-nextjs-plain"></i>
+                            <span>Next.js</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Small Item -->
-            <div class="culture-item animate-float">
-                <span class="culture-tag">Energy</span>
-                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=2070" alt="Gaming">
-                <div class="culture-overlay">
-                    <h4>Work Hard, Play Harder</h4>
-                    <p>Gaming breaks and team outings to keep the creative juices flowing.</p>
+            <!-- CMS -->
+            <!-- <div class="tech-content-pane" id="pane-cms">
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="tech-card">
+                            <i class="devicon-wordpress-plain colored"></i>
+                            <span>WordPress</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="tech-card">
+                            <i class="devicon-shopify-plain colored"></i>
+                            <span>Shopify</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="tech-card">
+                            <i class="devicon-magento-original colored"></i>
+                            <span>Magento</span>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- Database -->
+            <div class="tech-content-pane" id="pane-database">
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="tech-card">
+                            <i class="devicon-mysql-plain colored"></i>
+                            <span>MySQL</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="tech-card">
+                            <i class="devicon-mongodb-plain colored"></i>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                    <!-- <div class="col-lg-3 col-md-4 col-6">
+                        <div class="tech-card">
+                            <i class="devicon-postgresql-plain colored"></i>
+                            <span>PostgreSQL</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="tech-card">
+                            <i class="devicon-redis-plain colored"></i>
+                            <span>Redis</span>
+                        </div>
+                    </div> -->
                 </div>
             </div>
-        </div>
-    </div>
-</section>
 
-<?php include 'includes/footer.php'; ?>
+            <!-- DevOps -->
+            <!-- <div class="tech-content-pane" id="pane-devops">
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="tech-card">
+                            <i class="devicon-docker-plain colored"></i>
+                            <span>Docker</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="tech-card">
+                            <i class="devicon-amazonwebservices-original colored"></i>
+                            <span>AWS</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="tech-card">
+                            <i class="devicon-github-original colored"></i>
+                            <span>GitHub Actions</span>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- Ecommerce -->
+            <!-- <div class="tech-content-pane" id="pane-ecommerce">
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="tech-card">
+                            <i class="devicon-woocommerce-plain colored"></i>
+                            <span>WooCommerce</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="tech-card">
+                            <i class="devicon-shopify-plain colored"></i>
+                            <span>Shopify Plus</span>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- Working Culture Section -->
+            <section class="culture-section">
+                <div class="container">
+                    <div class="row align-items-end mb-5">
+                        <div class="col-lg-6">
+                            <span class="section-tag reveal-up">Our Vibe</span>
+                            <h2 class="display-4 fw-bold text-dark reveal-up">Behind the Code: Our Working Culture</h2>
+                        </div>
+                        <div class="col-lg-6">
+                            <p class="lead text-muted reveal-up mb-4">We believe that great software is born in an environment of freedom, continuous learning, and shared passion.</p>
+                        </div>
+                    </div>
+
+                    <div class="culture-grid">
+                        <!-- Large Item -->
+                        <div class="culture-item large animate-float">
+                            <span class="culture-tag">Deep Work</span>
+                            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070" alt="Collaboration">
+                            <div class="culture-overlay">
+                                <h4>Flow State</h4>
+                                <p>We dedicate hours to uninterrupted "Deep Work" to solve complex logistical challenges with elegant code.</p>
+                            </div>
+                        </div>
+
+                        <!-- Tall Item -->
+                        <div class="culture-item tall">
+                            <span class="culture-tag">Creativity</span>
+                            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=2070" alt="Creative Office">
+                            <div class="culture-overlay">
+                                <h4>Creative Logic</h4>
+                                <p>Thinking outside the box is our standard operating procedure.</p>
+                            </div>
+                        </div>
+                        <div class="culture-item tall">
+                            <span class="culture-tag">Creativity</span>
+                            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=2070" alt="Creative Office">
+                            <div class="culture-overlay">
+                                <h4>Creative Logic</h4>
+                                <p>Thinking outside the box is our standard operating procedure.</p>
+                            </div>
+                        </div>
+
+                        <!-- Wide Item -->
+                        <div class="culture-item wide animate-float">
+                            <span class="culture-tag">Collaboration</span>
+                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070" alt="Team meeting">
+                            <div class="culture-overlay">
+                                <h4>Shared Vision</h4>
+                                <p>Weekly brainstorming sessions where every voice, from intern to CEO, shapes our product roadmap.</p>
+                            </div>
+                        </div>
+
+                        <!-- Small Item -->
+                        <div class="culture-item">
+                            <span class="culture-tag">R&D</span>
+                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070" alt="Tech">
+                            <div class="culture-overlay">
+                                <h4>Tech Innovation</h4>
+                                <p>Exploring AI and Blockchain to revolutionize shipping.</p>
+                            </div>
+                        </div>
+
+                        <!-- Small Item -->
+                        <div class="culture-item animate-float">
+                            <span class="culture-tag">Energy</span>
+                            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=2070" alt="Gaming">
+                            <div class="culture-overlay">
+                                <h4>Work Hard, Play Harder</h4>
+                                <p>Gaming breaks and team outings to keep the creative juices flowing.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <?php include 'includes/footer.php'; ?>

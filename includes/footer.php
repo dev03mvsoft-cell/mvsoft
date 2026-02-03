@@ -106,6 +106,10 @@
 <script src="assets/js/journey-v2.js"></script>
 <script src="assets/js/hero-story.js"></script>
 <script src="assets/js/script.js"></script>
+
+<?php if (isset($is_nexus) && $is_nexus): ?>
+    <script type="module" src="assets/js/nexus-engine.js"></script>
+<?php endif; ?>
 </body>
 
 </html>

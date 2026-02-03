@@ -73,6 +73,21 @@
     </style>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <?php
+    // Determine current page for conditional assets
+    $current_uri = $_SERVER['REQUEST_URI'];
+    $nexus_pages = ['about', 'contact', 'career', 'services', 'web-design', 'app-development', 'backend-solutions', 'seo-optimization', 'digital-marketing', 'email-campaigns', 'cloud-hosting', 'cybersecurity', 'server-management'];
+    $is_nexus = false;
+    foreach ($nexus_pages as $np) {
+        if (strpos($current_uri, $np) !== false) {
+            $is_nexus = true;
+            break;
+        }
+    }
+    if ($is_nexus): ?>
+        <link rel="stylesheet" href="assets/css/nexus.css">
+    <?php endif; ?>
 </head>
 
 <body>
