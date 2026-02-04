@@ -116,7 +116,7 @@
                         <span class="badge bg-primary rounded-pill px-3 py-2 mb-3 reveal-up">Our Legacy</span>
                         <h2 class="display-4 fw-bold text-dark mb-4 reveal-up">Built on <br><span class="text-primary-gradient">Trust & Innovation</span></h2>
                         <p class="display-6 text-dark fw-light reveal-up mb-4" style="line-height: 1.6; letter-spacing: -0.02em; font-size: 1.8rem;">
-                            Established in 2024, MVSoft Solutions was born from a realization that high-quality code shouldn't be a luxury. We've scaled to over 500 successful project completions.
+                            Established in 2025, MVSoft Solutions was born from a realization that high-quality code shouldn't be a luxury. We've scaled to over 500 successful project completions.
                         </p>
                         <p class="lead text-muted mb-5 reveal-up">
                             We believe in clean code, transparent pricing, and rapid delivery.
