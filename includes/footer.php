@@ -10,9 +10,9 @@
                     </p>
                 </div>
                 <div class="footer-social">
-                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/mvsoft-solutions/" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
 
@@ -20,12 +20,12 @@
             <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
                 <h5 class="footer-title">Our Services</h5>
                 <ul class="list-unstyled footer-links">
-                    <li><a href="#">Web Development</a></li>
-                    <li><a href="#">Mobile App Development</a></li>
-                    <li><a href="#">UI/UX Design</a></li>
-                    <li><a href="#">Global SEO</a></li>
-                    <li><a href="#">Backend Solutions</a></li>
-                    <li><a href="#">3D Web Experiences</a></li>
+                    <li><a href="web-design">Web Development</a></li>
+                    <li><a href="app-development">Mobile App Development</a></li>
+                    <li><a href="web-design">UI/UX Design</a></li>
+                    <li><a href="seo-optimization">Global SEO</a></li>
+                    <li><a href="backend-solutions">Backend Solutions</a></li>
+                    <li><a href="web-design">3D Web Experiences</a></li>
                 </ul>
             </div>
 
@@ -55,7 +55,7 @@
                         <span>admin@mvsoftsolutions.com</span>
                     </li>
                     <li>
-                        <i class="fas fa-phone-alt"></i>
+                        <i class="fas fa-phone"></i>
                         <span>02836-465134</span>
                     </li>
                     <li class="mt-4">

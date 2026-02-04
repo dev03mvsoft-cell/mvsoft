@@ -135,7 +135,7 @@
                             </div>
                         </div>
                         <div class="info-item d-flex mb-4">
-                            <div class="icon me-3 text-primary"><i class="fas fa-phone-alt fs-4"></i></div>
+                            <div class="icon me-3 text-primary"><i class="fas fa-phone fs-4"></i></div>
                             <div>
                                 <h5 class="fw-bold mb-1">Call Us</h5>
                                 <p class="text-muted small mb-0">02836-465134</p>
@@ -180,7 +180,10 @@
                                     <textarea class="form-control rounded-4 px-4 py-3" rows="5" placeholder="Tell us about your project..." required></textarea>
                                 </div>
                                 <div class="col-md-12 mt-4">
-                                    <button type="submit" class="btn btn-primary btn-lg rounded-pill px-5 w-100 shadow-glow">Send Message</button>
+                                    <button type="submit" class="btn btn-dark btn-lg rounded-pill px-5 w-100 shadow-glow btn-magnetic">
+                                        <span>Send Message</span>
+                                        <div class="particles-field"></div>
+                                    </button>
                                 </div>
                             </div>
                         </form>

@@ -81,6 +81,24 @@ const UICore = (() => {
                 typeSpeed: 100, backSpeed: 40, loop: true
             });
         }
+
+        // Magnetic Button Particles
+        const magneticButtons = document.querySelectorAll('.btn-magnetic');
+        magneticButtons.forEach(btn => {
+            const field = btn.querySelector('.particles-field');
+            if (field) {
+                for (let i = 0; i < 50; i++) {
+                    const particle = document.createElement('div');
+                    particle.className = 'particle';
+                    particle.style.setProperty('--x', `${Math.random() * 200 - 100}px`);
+                    particle.style.setProperty('--y', `${Math.random() * 200 - 100}px`);
+                    particle.style.animation = `particleFloat ${1 + Math.random() * 2}s infinite`;
+                    particle.style.left = `${Math.random() * 100}%`;
+                    particle.style.top = `${Math.random() * 100}%`;
+                    field.appendChild(particle);
+                }
+            }
+        });
     };
 
     function startTechCycle() {

@@ -199,8 +199,9 @@
                                     <textarea class="form-control bg-light border-0" rows="4" placeholder="Briefly describe your core expertise..."></textarea>
                                 </div>
                                 <div class="col-md-12 text-center mt-5">
-                                    <button type="submit" class="btn btn-primary btn-lg rounded-pill px-5 py-3 shadow-glow w-100">
-                                        Submit Application <i class="fas fa-paper-plane ms-2"></i>
+                                    <button type="submit" class="btn btn-dark btn-lg rounded-pill px-5 py-3 shadow-glow w-100 btn-magnetic">
+                                        <span>Submit Application <i class="fas fa-paper-plane ms-2"></i></span>
+                                        <div class="particles-field"></div>
                                     </button>
                                     <p class="small text-muted mt-3 mb-0">By submitting, you agree to our recruitment privacy guidelines.</p>
                                 </div>

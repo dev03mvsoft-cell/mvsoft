@@ -90,9 +90,11 @@
     if ($is_nexus): ?>
         <link rel="stylesheet" href="assets/css/nexus.css">
     <?php endif; ?>
+    <link rel="stylesheet" href="assets/css/magnetic-btn.css">
 </head>
 
 <body>
+
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.php">
@@ -114,8 +116,10 @@
                 </div>
             </div>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
             <div class="collapse navbar-collapse" id="mainNavbar">
                 <ul class="navbar-nav mx-auto">
@@ -163,7 +167,7 @@
                                     <div class="collapse d-lg-block" id="companyCollapse">
                                         <a class="mega-link" href="about"><i class="fas fa-info-circle"></i> About Us</a>
                                         <a class="mega-link" href="home#team"><i class="fas fa-users"></i> Our Team</a>
-                                        <a class="mega-link" href="contact"><i class="fas fa-phone-alt"></i> Contact Sales</a>
+                                        <a class="mega-link" href="contact"><i class="fas fa-phone"></i> Contact Sales</a>
                                     </div>
                                 </div>
                             </div>
