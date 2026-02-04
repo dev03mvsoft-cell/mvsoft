@@ -20,6 +20,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!roadWrapper || !roadProgress || !car) return;
 
+    // GPU acceleration hints
+    car.style.willChange = "transform";
+    steps.forEach(s => s.style.willChange = "transform, opacity");
+    greenery.forEach(g => g.style.willChange = "transform, opacity");
+
     // 1. Prepare SVG Paths
     const pathLength = roadProgress.getTotalLength();
 

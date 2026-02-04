@@ -16,7 +16,7 @@
         </h1>
         <p class="hero-tagline">Experience liftoff <span class="typewriter">with next-generation digital solutions</span></p>
         <div class="cta-group">
-            <button class="btn-main"><span class="material-symbols-outlined">bolt</span> <span>Explore Solutions</span></button>
+            <a href="#solutions" class="btn-main text-decoration-none"><span class="material-symbols-outlined">bolt</span> <span>Explore Solutions</span></a>
             <button class="btn-sec">View Portfolio</button>
         </div>
     </div>

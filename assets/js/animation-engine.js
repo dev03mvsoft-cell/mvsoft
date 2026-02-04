@@ -86,6 +86,9 @@ const AnimationEngine = (() => {
             const delay = elem.getAttribute('data-delay') || 0;
             const duration = elem.getAttribute('data-duration') || 1.2;
 
+            // GPU Acceleration Hint
+            elem.style.willChange = "transform, opacity";
+
             // Animate from hidden state to visible state
             gsap.to(elem, {
                 opacity: 1,
@@ -98,7 +101,9 @@ const AnimationEngine = (() => {
                 scrollTrigger: {
                     trigger: elem,
                     start: "top 85%",
-                    toggleActions: "restart none none restart"
+                    toggleActions: "restart none none restart",
+                    onEnter: () => elem.style.willChange = "auto", // Clean up after reveal
+                    onLeaveBack: () => elem.style.willChange = "transform, opacity"
                 }
             });
         });

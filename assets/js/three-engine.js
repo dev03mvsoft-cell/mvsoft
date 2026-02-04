@@ -23,6 +23,21 @@ const ThreeEngine = (() => {
         }
     }
 
+    // Helper for Intersection Observer visibility
+    const setupVisibilityObserver = (container, onVisible, onHidden) => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    onVisible();
+                } else {
+                    onHidden();
+                }
+            });
+        }, { threshold: 0.1 });
+        observer.observe(container);
+        return observer;
+    };
+
     class CubeWorld {
         constructor(container) {
             this.container = container;
@@ -40,9 +55,14 @@ const ThreeEngine = (() => {
             this.cubes = [];
             this.cubeSize = 10;
             this.cubeOffset = 10;
+            this.isPaused = true;
             this.drawCubes();
             this.animation();
-            this.render();
+
+            setupVisibilityObserver(this.container,
+                () => { this.isPaused = false; this.render(); },
+                () => { this.isPaused = true; }
+            );
         }
         drawCubes() {
             for (let i = -2; i <= 2; i++) {
@@ -71,6 +91,7 @@ const ThreeEngine = (() => {
             });
         }
         render() {
+            if (this.isPaused) return;
             this.scene.rotation.z += 0.01;
             this.renderer.render(this.scene, this.camera);
             requestAnimationFrame(() => this.render());
@@ -101,8 +122,13 @@ const ThreeEngine = (() => {
             this.scene.add(this.particles);
             this.lines = new THREE.Group();
             this.scene.add(this.lines);
+            this.isPaused = true;
             this.initParticles();
-            this.animate();
+
+            setupVisibilityObserver(this.container,
+                () => { this.isPaused = false; this.animate(); },
+                () => { this.isPaused = true; }
+            );
         }
         initParticles() {
             const geometry = new THREE.SphereBufferGeometry(1, 8, 8);
@@ -140,6 +166,7 @@ const ThreeEngine = (() => {
             this.scene.add(this.connectionLine);
         }
         animate() {
+            if (this.isPaused) return;
             this.points.forEach(p => {
                 p.position.add(p.userData.velocity);
                 if (Math.abs(p.position.x) > 75) p.userData.velocity.x *= -1;
@@ -269,10 +296,15 @@ const ThreeEngine = (() => {
             this.group = new THREE.Group();
             this.scene.add(this.group);
 
+            this.isPaused = true;
             this.createDetailedLaptop();
             this.createTechBadges();
             this.updateCameraPosition();
-            this.animate();
+
+            setupVisibilityObserver(this.container,
+                () => { this.isPaused = false; this.animate(); },
+                () => { this.isPaused = true; }
+            );
         }
 
         onMouseMove(e) {
@@ -509,6 +541,7 @@ const ThreeEngine = (() => {
         }
 
         animate() {
+            if (this.isPaused) return;
             const time = Date.now() * 0.001;
 
             // Smooth Parallax Camera

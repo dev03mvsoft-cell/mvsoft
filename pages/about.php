@@ -39,16 +39,12 @@
                             <span class="section-tag mb-3 reveal-up">Who We Are</span>
                             <h2 class="display-5 fw-bold text-dark mb-4 reveal-up" data-delay="0.3">Leading the Future of <br><span class="text-primary-gradient">Digital Intelligence</span></h2>
 
-                            <div class="text-scramble__content lead text-muted mb-4" style="font-size: 1.15rem; line-height: 1.6;">
-                                <p id="scramble-text-original">MVSoft Solution is a modern software development company built for the post-2025 digital economy. Founded to bridge the gap between overpriced agencies and unreliable vendors, we deliver enterprise-grade technology with a value-first approach.</p>
-
-                                <div class="text-scramble__text" aria-hidden="true">
-                                    <span id="scramble-text-1"></span>
-                                    <span id="scramble-text-2"></span>
-                                    <span id="scramble-text-3"></span>
-                                    <span id="scramble-text-4"></span>
-                                    <span id="scramble-text-5"></span>
-                                    <img id="scramble-cursor" src="https://assets.codepen.io/16327/scramble-cursor.png" alt="" />
+                            <div class="text-scramble__content lead text-muted mb-4" style="font-size: 1.15rem; line-height: 1.7; min-height: 120px;">
+                                <div class="text-scramble__text">
+                                    <div id="scramble-text-1" class="d-inline"></div>
+                                    <div id="scramble-text-2" class="d-inline"></div>
+                                    <div id="scramble-text-3" class="d-inline"></div>
+                                    <span id="scramble-cursor" class="d-inline-block bg-primary ms-1" style="width: 2px; height: 1.2em; vertical-align: middle;"></span>
                                 </div>
                             </div>
 
@@ -119,41 +115,47 @@
 
     </section>
 
-    <!-- Mission & Vision: Kinetic Overlap Redesign -->
+    <!-- Mission & Vision: Connected Design -->
     <section class="kinetic-container py-5">
         <div class="container position-relative py-5">
             <!-- Ghost Background Labels -->
             <div class="ghost-label ghost-label-left">PURPOSE</div>
             <div class="ghost-label ghost-label-right">FUTURE</div>
 
-            <!-- Floating Accents -->
-            <div class="glass-blob animate-float" style="top: 20%; left: 40%;"></div>
-            <div class="glass-blob animate-float" style="bottom: 10%; right: 30%; animation-delay: 2s;"></div>
+            <!-- Strategic Link Line (SVG) -->
+            <div class="strategic-link-container">
+                <svg width="100%" height="100%" viewBox="0 0 1000 400" preserveAspectRatio="none">
+                    <path id="strategicPath" d="M 250 200 Q 500 100 750 200" fill="none" stroke="url(#lineGradient)" stroke-width="2" stroke-dasharray="10, 10" />
+                    <defs>
+                        <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#1a387f" />
+                            <stop offset="100%" stop-color="#003aaf" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <div class="link-glow-ball"></div>
+            </div>
 
             <div class="text-center mb-5 reveal-up">
                 <span class="section-tag mb-3">Our Core Drive</span>
                 <h2 class="display-4 fw-bold text-dark">Strategic Philosophy</h2>
             </div>
 
-            <div class="kinetic-grid">
+            <div class="connected-grid">
                 <!-- Mission Card -->
-                <div class="kinetic-card mission-overlap reveal-right" data-delay="0.3">
+                <div class="kinetic-card mission-card reveal-right" data-delay="0.3">
+                    <div class="card-node mission-node"></div>
                     <div class="icon-v-large text-primary-gradient"><i class="fas fa-rocket"></i></div>
                     <h2 class="display-6 fw-bold mb-3">Our Mission</h2>
-                    <p class="lead text-muted">To empower businesses with secure, scalable, and high-performance digital products—delivered at a cost structure that supports growth, innovation, and long-term success.</p>
-                    <div class="mt-4 pt-3 border-top border-light">
-                        <span class="fw-bold text-primary small uppercase letter-spacing-1">Empowerment • Growth • Excellence</span>
-                    </div>
+                    <p class="lead text-muted">To empower businesses with secure, scalable, and high-performance digital products—delivered at a cost structure that supports growth and innovation.</p>
                 </div>
 
                 <!-- Vision Card -->
-                <div class="kinetic-card vision-overlap reveal-left" data-delay="0.5">
+                <div class="kinetic-card vision-card reveal-left" data-delay="0.5">
+                    <div class="card-node vision-node"></div>
                     <div class="icon-v-large text-primary-gradient"><i class="fas fa-eye"></i></div>
                     <h2 class="display-6 fw-bold mb-3">Our Vision</h2>
-                    <p class="lead text-muted">To become a global benchmark for modern software development by setting new standards in quality, efficiency, and value in the digital-first world.</p>
-                    <div class="mt-4 pt-3 border-top border-light text-end">
-                        <span class="fw-bold text-primary small uppercase letter-spacing-1">Innovation • Integrity • Impact</span>
-                    </div>
+                    <p class="lead text-muted">To become a global benchmark for modern software development by setting new standards in quality and efficiency in the digital-first world.</p>
                 </div>
             </div>
         </div>
@@ -167,12 +169,8 @@
                 <div class="col-lg-6 reveal-right">
                     <div class="media-stack position-relative">
                         <!-- Video Container with Pop-up Trigger -->
-                        <div class="glass-card p-2 transform-hover shadow-2xl-strong overflow-hidden video-pop-trigger" style="border-radius: 40px; cursor: pointer;">
-                            <div class="play-overlay">
-                                <div class="play-btn-circle">
-                                    <i class="fas fa-play"></i>
-                                </div>
-                            </div>
+                        <div class="" style="border-radius: 40px; cursor: pointer;">
+
                             <video class="w-100 rounded-4 shadow-lg" autoplay muted loop playsinline style="height: auto; aspect-ratio: 1000 / 500; background: #000; border: 1px solid rgba(255,255,255,0.1);">
                                 <source src="assets/img/office/Business Care Solutions.mp4" type="video/mp4">
                             </video>
@@ -270,6 +268,49 @@
                         <div class="value-icon mb-3"><i class="fas fa-users text-primary fs-2"></i></div>
                         <h4 class="fw-bold">Human Centric</h4>
                         <p class="text-muted small">Technology should serve people. We focus on accessibility and emotional engagement in everything we build.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Office Gallery Section -->
+    <section class="py-5 bg-light overflow-hidden">
+        <div class="container py-5">
+            <div class="row align-items-end mb-5">
+                <div class="col-lg-6">
+                    <span class="section-tag reveal-up">Our Workspace</span>
+                    <h2 class="display-5 fw-bold text-dark reveal-up" data-delay="0.2">Inside <span class="text-primary-gradient">Mvsoft HQ</span></h2>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <p class="text-muted reveal-up" data-delay="0.3">A peak behind the scenes where innovation meets engineering excellence.</p>
+                </div>
+            </div>
+
+            <!-- Bento Grid Gallery -->
+            <div class="row g-3">
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item reveal-up" style="height: 300px;">
+                        <img src="assets/img/office/mvsoftoff1.jpg" alt="Office View 1" class="img-fluid w-100 h-100 object-fit-cover rounded-4 shadow-sm transform-hover">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item reveal-up" data-delay="0.1" style="height: 300px;">
+                        <img src="assets/img/office/mvsoftoff3.jpg" alt="Office View 3" class="img-fluid w-100 h-100 object-fit-cover rounded-4 shadow-sm transform-hover">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item reveal-up" data-delay="0.2" style="height: 300px;">
+                        <img src="assets/img/office/mvsoftoff2.jpg" alt="Office View 2" class="img-fluid w-100 h-100 object-fit-cover rounded-4 shadow-sm transform-hover">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="gallery-item reveal-up" data-delay="0.3" style="height: 400px;">
+                        <img src="assets/img/office/mvsoftoff5.jpg" alt="Office View 5" class="img-fluid w-100 h-100 object-fit-cover rounded-4 shadow-sm transform-hover">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="gallery-item reveal-up" data-delay="0.4" style="height: 400px;">
+                        <img src="assets/img/office/mvsoftoff6.jpg" alt="Office View 6" class="img-fluid w-100 h-100 object-fit-cover rounded-4 shadow-sm transform-hover">
                     </div>
                 </div>
             </div>

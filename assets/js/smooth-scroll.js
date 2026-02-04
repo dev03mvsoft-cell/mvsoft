@@ -19,7 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
         lenis.raf(time * 1000);
     });
 
-    gsap.ticker.lagSmoothing(0);
+    // Optimized lag smoothing - 500ms max lag, 33ms catch-up
+    gsap.ticker.lagSmoothing(500, 33);
 
     // 3. Auto-update height (Fixes "getting stuck" on long pages)
     const resizeObserver = new ResizeObserver(() => {

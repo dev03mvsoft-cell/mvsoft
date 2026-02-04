@@ -48,15 +48,15 @@
                 <ul class="list-unstyled footer-contact">
                     <li>
                         <i class="fas fa-map-marker-alt"></i>
-                        <span>Corporate Office, India</span>
+                        <span>Plot no 300, Ward: 12/b, Shree Ambika Arcade, Office no 106, 1st Floor,Gandhidham 370201</span>
                     </li>
                     <li>
                         <i class="fas fa-envelope"></i>
-                        <span>sales@mvsoftsolutions.com</span>
+                        <span>admin@mvsoftsolutions.com</span>
                     </li>
                     <li>
                         <i class="fas fa-phone-alt"></i>
-                        <span>+91 XXX XXX XXXX</span>
+                        <span>02836-465134</span>
                     </li>
                     <li class="mt-4">
                         <a href="contact" class="btn btn-primary rounded-pill px-4 btn-footer-cta">Get a Quote</a>

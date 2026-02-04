@@ -2,21 +2,21 @@
 
 <main>
     <!-- Service Hero -->
-    <section class="service-hero py-5 position-relative overflow-hidden" style="background: #fff; min-height: 50vh; display: flex; align-items: center;">
+    <section class="service-hero py-5 position-relative overflow-hidden" style="background: #fff; min-height: 60vh; display: flex; align-items: center;">
         <div class="container position-relative z-3 mt-5">
             <div class="row align-items-center">
                 <div class="col-lg-7">
-                    <span class="badge bg-primary rounded-pill px-3 py-2 mb-3 reveal-up">Digital Visibility</span>
-                    <h1 class="display-3 fw-bold text-dark mb-4 reveal-up">Mastering the <br><span class="text-primary-gradient">Search Ecosystem</span></h1>
-                    <p class="lead text-muted mb-5 reveal-up" style="max-width: 600px;">
-                        Data-driven SEO strategies that dominate rankings and drive organic growth for your brand globally.
+                    <span class="badge bg-primary rounded-pill px-3 py-2 mb-3 reveal-up">Digital Authority</span>
+                    <h1 class="display-3 fw-bold text-dark mb-4 reveal-up">Engineering-First <br><span class="text-primary-gradient">SEO Optimization</span></h1>
+                    <p class="lead text-muted mb-5 reveal-up" style="max-width: 650px;">
+                        For MVSoft Solution, SEO is not just an "add-on" service; it is built into the core of our engineering. We implement Technical SEO at the code level for an immediate competitive advantage.
                     </p>
                     <div class="reveal-up">
-                        <a href="contact" class="btn btn-primary btn-lg rounded-pill px-5 shadow-glow">Audit My Site</a>
+                        <a href="contact" class="btn btn-primary btn-lg rounded-pill px-5 shadow-glow">Audit Your Visibility</a>
                     </div>
                 </div>
                 <div class="col-lg-5 text-center d-none d-lg-block">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426" class="img-fluid rounded-4 shadow-lg reveal-up" alt="SEO Optimization">
+                    <img src="assets/img/office/mvsoftoff7.jpg" class="img-fluid rounded-4 shadow-lg reveal-up" alt="SEO Engineering Team">
                 </div>
             </div>
         </div>
@@ -28,55 +28,174 @@
             <div class="row g-5">
                 <div class="col-lg-4">
                     <div class="sticky-top" style="top: 100px;">
-                        <h2 class="fw-bold text-dark mb-4">Search <br>Authority</h2>
-                        <p class="text-muted">Rank higher, convert faster. We merge technical code optimization with high-impact content strategy.</p>
-                        <div class="service-stats mt-5">
-                            <div class="stat-item mb-4">
-                                <h4 class="fw-bold text-primary mb-0">300%</h4>
-                                <p class="small text-muted">Traffic Increase</p>
+                        <h2 class="fw-bold text-dark mb-4">The <span class="text-primary-gradient">Synergy</span> Model</h2>
+                        <p class="text-muted">In collaboration with our sister concern, <strong>Business Care Solutions (BCS)</strong>, we ensure your platform is a lead-generating machine.</p>
+
+                        <!-- Synergy Table -->
+                        <div class="glass-card p-4 mt-5 reveal-up">
+                            <h5 class="fw-bold mb-3 small uppercase">MVSoft & BCS Synergy</h5>
+                            <div class="table-responsive">
+                                <table class="table table-sm table-borderless mb-0" style="font-size: 0.8rem;">
+                                    <thead>
+                                        <tr class="border-bottom">
+                                            <th class="text-muted">Focus</th>
+                                            <th class="text-primary">MVSoft (Tech)</th>
+                                            <th class="text-info">BCS (Authority)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-muted">Core</td>
+                                            <td>Speed & Structure</td>
+                                            <td>Keywords & Links</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-muted">Action</td>
+                                            <td>SSR, Schema, JS</td>
+                                            <td>Content, Blogs</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-muted">Goal</td>
+                                            <td>Zero-Error Index</td>
+                                            <td>Rank Dominance</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
-                            <div class="stat-item mb-4">
-                                <h4 class="fw-bold text-primary mb-0">#1</h4>
-                                <p class="small text-muted">Page Ranking</p>
+                        </div>
+
+                        <div class="service-stats mt-5">
+                            <div class="stat-item mb-4 reveal-up">
+                                <h4 class="fw-bold text-primary mb-0">3x Faster</h4>
+                                <p class="small text-muted">Ranking Speed</p>
+                            </div>
+                            <div class="stat-item mb-4 reveal-up" data-delay="0.1">
+                                <h4 class="fw-bold text-primary mb-0">Strategic</h4>
+                                <p class="small text-muted">Optimization Included</p>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-lg-8">
-                    <div class="row g-4">
-                        <div class="col-md-6">
-                            <div class="feature-box p-4 bg-white rounded-4 shadow-sm h-100 reveal-up">
-                                <div class="icon mb-3"><i class="fas fa-search text-primary fs-3"></i></div>
-                                <h4 class="fw-bold">Technical SEO</h4>
-                                <p class="text-muted small">Optimizing site architecture, Core Web Vitals, and XML sitemaps for maximum crawlability.</p>
-                            </div>
+                    <!-- 1. Engineering-First SEO -->
+                    <div class="engineering-block mb-5 reveal-up">
+                        <div class="d-flex align-items-center gap-3 mb-4">
+                            <div class="icon-box-primary bg-primary text-white">01</div>
+                            <h3 class="fw-bold mb-0">Engineering-First SEO (Technical)</h3>
                         </div>
-                        <div class="col-md-6">
-                            <div class="feature-box p-4 bg-white rounded-4 shadow-sm h-100 reveal-up" data-delay="0.1">
-                                <div class="icon mb-3"><i class="fas fa-keyboard text-primary fs-3"></i></div>
-                                <h4 class="fw-bold">Keyword Intelligence</h4>
-                                <p class="text-muted small">Deep analysis of customer search intent to target high-conversion, low-competition terms.</p>
+                        <p class="text-muted mb-4">We build "Google-friendly" architecture into every project. We focus on the mechanics that search engines love:</p>
+
+                        <div class="row g-4 mb-5">
+                            <div class="col-md-6">
+                                <div class="feature-pill-card p-4 h-100">
+                                    <div class="pill-icon mb-3"><i class="fas fa-server"></i></div>
+                                    <h6 class="fw-bold mb-2">Server-Side Rendering (SSR)</h6>
+                                    <p class="small text-muted mb-0">Using Next.js, we ensure pages are pre-rendered for instant indexing by search bots.</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="feature-box p-4 bg-white rounded-4 shadow-sm h-100 reveal-up" data-delay="0.2">
-                                <div class="icon mb-3"><i class="fas fa-link text-primary fs-3"></i></div>
-                                <h4 class="fw-bold">Link Acquisition</h4>
-                                <p class="text-muted small">Building high-authority backlink profiles that establish your domain as a leader in your industry.</p>
+                            <div class="col-md-6">
+                                <div class="feature-pill-card p-4 h-100" data-delay="0.1">
+                                    <div class="pill-icon mb-3"><i class="fas fa-bolt"></i></div>
+                                    <h6 class="fw-bold mb-2">Core Web Vitals Mastery</h6>
+                                    <p class="small text-muted mb-0">Optimization for LCP and CLS, ensuring site loads in under 2 seconds for visual stability.</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="feature-box p-4 bg-white rounded-4 shadow-sm h-100 reveal-up" data-delay="0.3">
-                                <div class="icon mb-3"><i class="fas fa-chart-line text-primary fs-3"></i></div>
-                                <h4 class="fw-bold">ROI Analytics</h4>
-                                <p class="text-muted small">Full-funnel tracking to ensure every search visitor translates into bottom-line growth.</p>
+                            <div class="col-md-6">
+                                <div class="feature-pill-card p-4 h-100" data-delay="0.2">
+                                    <div class="pill-icon mb-3"><i class="fas fa-code"></i></div>
+                                    <h6 class="fw-bold mb-2">Structured Data (JSON-LD)</h6>
+                                    <p class="small text-muted mb-0">Schema injection so your business appears with Rich Snippets (FAQs, Ratings) in search.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="feature-pill-card p-4 h-100" data-delay="0.3">
+                                    <div class="pill-icon mb-3"><i class="fas fa-route"></i></div>
+                                    <h6 class="fw-bold mb-2">Clean URL Routing</h6>
+                                    <p class="small text-muted mb-0">RESTful structures and semantic slugs that search bots can easily crawl and understand.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="content-text mt-5 reveal-up">
-                        <h3 class="fw-bold mb-4">Our SEO Ethos</h3>
-                        <p class="text-muted">SEO is not about gaming the system; it's about providing the best possible result for the user's query. At Mvsoft, we combine this philosophy with deep technical expertise in SSR (Server Side Rendering) and Meta-tag optimization to ensure search engines love your site as much as your customers do.</p>
+                    <!-- 2. Logistics specialized SEO -->
+                    <div class="engineering-block mb-5 reveal-up">
+                        <div class="d-flex align-items-center gap-3 mb-4">
+                            <div class="icon-box-primary bg-primary text-white">02</div>
+                            <h3 class="fw-bold mb-0">Industrial & Logistics Model</h3>
+                        </div>
+                        <p class="text-muted mb-4">For our clients in the logistics and industrial sectors, we follow a specialized "Authority" model:</p>
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <div class="p-3 bg-white rounded-4 border text-center h-100">
+                                    <div class="text-primary mb-2"><i class="fas fa-map-marker-alt fs-4"></i></div>
+                                    <h6 class="fw-bold mb-1">Local SEO</h6>
+                                    <p class="small text-muted mb-0">Optimizing profiles for terminals and warehouses.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="p-3 bg-white rounded-4 border text-center h-100">
+                                    <div class="text-primary mb-2"><i class="fas fa-bullseye fs-4"></i></div>
+                                    <h6 class="fw-bold mb-1">Long-Tail Targets</h6>
+                                    <p class="small text-muted mb-0">Ranking for specific terms like "3PL Gandhidham".</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="p-3 bg-white rounded-4 border text-center h-100">
+                                    <div class="text-primary mb-2"><i class="fas fa-link fs-4"></i></div>
+                                    <h6 class="fw-bold mb-1">Topical Trust</h6>
+                                    <p class="small text-muted mb-0">Connecting service pages to tech guides.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Technical SEO Governance -->
+                    <div class="engineering-block reveal-up" style="background: linear-gradient(135deg, #ffffff 0%, #f0f4ff 100%);">
+                        <div class="d-flex align-items-center gap-3 mb-4">
+                            <div class="icon-box-primary bg-primary text-white"><i class="fas fa-fingerprint"></i></div>
+                            <h3 class="fw-bold mb-0">Technical SEO Governance</h3>
+                        </div>
+                        <p class="text-muted mb-4">SEO is a byproduct of high-quality engineering. We ensure your technical foundation remains robust and crawl-ready as search algorithms evolve:</p>
+
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="d-flex gap-3 mb-3">
+                                    <div class="text-primary fs-5 mt-1"><i class="fas fa-check-circle"></i></div>
+                                    <div>
+                                        <h6 class="fw-bold mb-1">Technical Monitoring</h6>
+                                        <p class="text-muted small mb-0">Tracking site on Search Console to fix crawl errors immediately.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex gap-3 mb-3">
+                                    <div class="text-primary fs-5 mt-1"><i class="fas fa-check-circle"></i></div>
+                                    <div>
+                                        <h6 class="fw-bold mb-1">Performance Tuning</h6>
+                                        <p class="text-muted small mb-0">Weekly speed audits to ensure new content doesn't slow down the site.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex gap-3 mb-3">
+                                    <div class="text-primary fs-5 mt-1"><i class="fas fa-check-circle"></i></div>
+                                    <div>
+                                        <h6 class="fw-bold mb-1">Keyword Tracking</h6>
+                                        <p class="text-muted small mb-0">Monitoring rankings for top 5 targeted keywords and adjusting metadata.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex gap-3 mb-3">
+                                    <div class="text-primary fs-5 mt-1"><i class="fas fa-check-circle"></i></div>
+                                    <div>
+                                        <h6 class="fw-bold mb-1">Monthly Reporting</h6>
+                                        <p class="text-muted small mb-0">Clear data on your traffic growth and conversion rates from día one.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -84,12 +203,12 @@
     </section>
 
     <!-- Final CTA -->
-    <section class="py-5" style="background: #1a387f;">
+    <section class="py-5 position-relative" style="background: #1a387f !important; z-index: 10;">
         <div class="container py-5 text-center">
-            <h2 class="display-4 fw-bold text-white mb-4 reveal-up">Ready to Dominate Rankings?</h2>
-            <p class="lead text-white-50 mb-5 reveal-up">Let's build a strategy that puts you at the top of the search results.</p>
-            <div class="reveal-up">
-                <a href="contact" class="btn btn-light btn-lg rounded-pill px-5 fw-bold">Get a SEO Analysis</a>
+            <h2 class="display-4 fw-bold text-white mb-4">Ready to Dominate Search?</h2>
+            <p class="lead text-white-50 mb-5">Sites built on our technical foundation rank 3x faster. Let's start your climb.</p>
+            <div>
+                <a href="contact" class="btn btn-light btn-lg rounded-pill px-5 fw-bold">Request SEO Audit</a>
             </div>
         </div>
     </section>
@@ -103,14 +222,68 @@
         -webkit-text-fill-color: transparent;
     }
 
-    .feature-box {
+    .icon-box-primary {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        font-weight: 800;
+        font-size: 1.2rem;
+    }
+
+    .engineering-block {
+        background: white;
+        padding: 2.5rem;
+        border-radius: 24px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
         border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .feature-pill-card {
+        background: white;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        border-radius: 20px;
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .feature-pill-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(26, 56, 127, 0.08);
+        border-color: rgba(26, 56, 127, 0.2);
+    }
+
+    .pill-icon {
+        width: 45px;
+        height: 45px;
+        background: rgba(26, 56, 127, 0.05);
+        color: #1a387f;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        font-size: 1.1rem;
         transition: all 0.3s ease;
     }
 
-    .feature-box:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05) !important;
+    .feature-pill-card:hover .pill-icon {
+        background: #1a387f;
+        color: white;
+        transform: rotate(10deg);
+    }
+
+    .glass-card {
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        border-radius: 20px;
+    }
+
+    .shadow-glow {
+        box-shadow: 0 0 20px rgba(26, 56, 127, 0.2);
     }
 </style>
 

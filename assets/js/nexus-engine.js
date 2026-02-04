@@ -13,6 +13,8 @@ class NexusEngine {
         this.targetMouse = { x: 0.5, y: 0.5 };
         this.cursorSphere3D = new THREE.Vector3(0, 0, 0);
         this.isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        this.isPaused = true;
+        this.lastMouseMove = 0;
 
         this.settings = {
             sphereCount: this.isMobile ? 6 : 12,
@@ -69,7 +71,21 @@ class NexusEngine {
         window.addEventListener('mousemove', (e) => this.onMouseMove(e));
         window.addEventListener('resize', () => this.onResize());
 
-        this.animate();
+        this.setupVisibility();
+    }
+
+    setupVisibility() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    this.isPaused = false;
+                    this.animate();
+                } else {
+                    this.isPaused = true;
+                }
+            });
+        }, { threshold: 0.1 });
+        observer.observe(this.container);
     }
 
     createMaterial(dpr) {
@@ -229,7 +245,10 @@ class NexusEngine {
                     
                     float t = 0.0;
                     float d;
-                    for(int i=0; i<40; i++) {
+                    // Optimized: Reduced steps from 40 to 30 for performance, plus mobile detection
+                    int steps = ${this.isMobile ? '20' : '30'};
+                    for(int i=0; i<30; i++) {
+                        if(i >= steps) break;
                         d = sceneSDF(ro + rd * t);
                         if(d < EPSILON || t > 5.0) break;
                         t += d;
@@ -264,6 +283,9 @@ class NexusEngine {
     }
 
     onMouseMove(e) {
+        const now = performance.now();
+        if (now - this.lastMouseMove < 16) return; // Throttle to ~60fps
+        this.lastMouseMove = now;
         this.targetMouse.x = e.clientX / window.innerWidth;
         this.targetMouse.y = 1.0 - (e.clientY / window.innerHeight);
     }
@@ -280,6 +302,7 @@ class NexusEngine {
     }
 
     animate() {
+        if (this.isPaused) return;
         requestAnimationFrame(() => this.animate());
 
         const dt = this.clock.getDelta();

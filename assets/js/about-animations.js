@@ -31,6 +31,7 @@ window.addEventListener('load', function () {
         let charIndexSelected = 0;
         let elasticDropOff = 0.8;
         let dragYScale = 0;
+        let lastMouseMove = 0;
 
         gsap.set(chars, {
             transformOrigin: 'center bottom'
@@ -85,6 +86,10 @@ window.addEventListener('load', function () {
 
         document.body.addEventListener('mousemove', function (e) {
             if (isMouseDown) {
+                const now = performance.now();
+                if (now - lastMouseMove < 16) return; // Throttle to ~60fps
+                lastMouseMove = now;
+
                 mouseFinalY = e.clientY;
                 let maxYDragDist = charH * (maxYScale - 1);
                 distY = mouseInitialY - mouseFinalY;
@@ -122,60 +127,72 @@ window.addEventListener('load', function () {
         const wrapper = document.querySelector('.text-scramble__content');
         if (!wrapper || typeof gsap === 'undefined') return;
 
-        const segments = [{
-            id: 'scramble-text-1',
-            text: "MVSoft Solution is a modern software development company built for the post-2025 digital economy. "
-        },
-        {
-            id: 'scramble-text-2',
-            text: "Founded to bridge the gap between overpriced agencies and unreliable development vendors—"
-        },
-        {
-            id: 'scramble-text-3',
-            text: "we deliver enterprise-grade technology with a value-first approach."
-        }
+        const segments = [
+            { id: 'scramble-text-1', text: "MVSoft Solution is a modern software development company built for the post-2025 digital economy. " },
+            { id: 'scramble-text-2', text: "Founded to bridge the gap between overpriced agencies and unreliable development vendors—" },
+            { id: 'scramble-text-3', text: "we deliver enterprise-grade technology with a value-first approach." }
         ];
 
-        const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%^&*";
-        let masterTl;
+        const chars = "!<>-_\\/[]{}—=+*^?#________"; // More "coding" style characters
+        let isScrambling = false;
 
-        const cursorTl = gsap.timeline({ repeat: -1 });
-        cursorTl.to("#scramble-cursor", { opacity: 0, duration: 0.5, ease: "none", delay: 0.2 })
-            .to("#scramble-cursor", { opacity: 1, duration: 0.5, ease: "none", delay: 0.2 });
+        // Custom Cursor Animation
+        const cursor = document.getElementById('scramble-cursor');
+        if (cursor) {
+            gsap.to(cursor, { opacity: 0, duration: 0.5, repeat: -1, yoyo: true, ease: "steps(1)" });
+        }
 
-        function startScramble() {
-            if (masterTl) masterTl.kill();
-            segments.forEach(s => {
-                const el = document.getElementById(s.id);
-                if (el) el.textContent = "";
-            });
-            masterTl = gsap.timeline({ defaults: { ease: "none" } });
-            segments.forEach((s, index) => {
-                const el = document.getElementById(s.id);
-                if (!el) return;
+        function scramble(el, text, duration) {
+            return new Promise(resolve => {
                 let obj = { i: 0 };
-                masterTl.to(obj, {
-                    i: s.text.length,
-                    duration: index === 0 ? 1.5 : 1.2,
+                gsap.to(obj, {
+                    i: text.length,
+                    duration: duration,
+                    ease: "power2.out", // Snappier reveal
                     onUpdate: () => {
                         let iteration = Math.floor(obj.i);
-                        el.textContent = s.text.split("").map((letter, i) => {
-                            if (i < iteration) return s.text[i];
-                            if (s.text[i] === " ") return " ";
-                            return chars[Math.floor(Math.random() * chars.length)];
-                        }).join("");
-                    }
-                }, index === 0 ? 0 : ">-0.1");
+                        let result = "";
+                        for (let j = 0; j < text.length; j++) {
+                            if (j < iteration) {
+                                result += text[j];
+                            } else if (j < iteration + 5) {
+                                result += `<span class="text-primary" style="opacity: 0.7;">${chars[Math.floor(Math.random() * chars.length)]}</span>`;
+                            } else {
+                                result += `<span style="opacity: 0;">${text[j]}</span>`;
+                            }
+                        }
+                        el.innerHTML = result;
+                    },
+                    onComplete: resolve
+                });
             });
-            masterTl.add(cursorTl);
+        }
+
+        async function startScramble() {
+            if (isScrambling) return;
+            isScrambling = true;
+
+            const targets = segments.map(s => document.getElementById(s.id)).filter(el => el);
+            targets.forEach(el => el.innerHTML = "");
+
+            for (let i = 0; i < segments.length; i++) {
+                const el = document.getElementById(segments[i].id);
+                if (el) {
+                    await scramble(el, segments[i].text, 1.0); // Speded up from 1.5 to 1.0
+                    await new Promise(r => setTimeout(r, 100)); // Reduced pause from 200 to 100
+                }
+            }
+
+            // At the end, move cursor to the end of the last element or hide it
+            if (cursor) gsap.to(cursor, { opacity: 0, duration: 2, delay: 1 });
         }
 
         if (typeof ScrollTrigger !== 'undefined') {
             ScrollTrigger.create({
                 trigger: wrapper,
-                start: "top 90%",
+                start: "top 85%",
                 onEnter: startScramble,
-                onEnterBack: startScramble
+                once: true // Only run once for a cleaner experience
             });
         } else {
             startScramble();
@@ -248,8 +265,13 @@ window.addEventListener('load', function () {
 
         // 3D Tilt Effect on Hover
         const cards = document.querySelectorAll('.kinetic-card');
+        let lastTiltUpdate = 0;
         cards.forEach(card => {
             card.addEventListener('mousemove', (e) => {
+                const now = performance.now();
+                if (now - lastTiltUpdate < 20) return; // Throttle tilt
+                lastTiltUpdate = now;
+
                 const rect = card.getBoundingClientRect();
                 const x = e.clientX - rect.left;
                 const y = e.clientY - rect.top;

@@ -126,19 +126,86 @@
             </div>
             <div class="row g-4">
                 <div class="col-lg-12">
-                    <div class="job-card p-4 rounded-4 border mb-4 reveal-up d-flex justify-content-between align-items-center">
+                    <div class="job-card p-4 rounded-4 border mb-4 reveal-up d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
                         <div>
                             <h4 class="fw-bold mb-1">Senior Full Stack Developer</h4>
                             <p class="text-muted mb-0">Remote / Full-time • React, Node, AWS</p>
                         </div>
-                        <a href="contact" class="btn btn-outline-primary rounded-pill">Apply Now</a>
+                        <a href="#applyForm" class="btn btn-outline-primary rounded-pill px-4">Apply Now</a>
                     </div>
-                    <div class="job-card p-4 rounded-4 border mb-4 reveal-up d-flex justify-content-between align-items-center">
+                    <div class="job-card p-4 rounded-4 border mb-4 reveal-up d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
                         <div>
                             <h4 class="fw-bold mb-1">3D Web Developer (Three.js)</h4>
                             <p class="text-muted mb-0">Hybrid / Full-time • WebGL, GLSL, GSAP</p>
                         </div>
-                        <a href="contact" class="btn btn-outline-primary rounded-pill">Apply Now</a>
+                        <a href="#applyForm" class="btn btn-outline-primary rounded-pill px-4">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Form -->
+    <section id="applyForm" class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="application-form-card p-5 bg-white rounded-5 shadow-sm reveal-up">
+                        <div class="text-center mb-5">
+                            <span class="badge bg-primary-soft text-primary rounded-pill px-3 py-2 mb-3">Application Form</span>
+                            <h2 class="fw-bold text-dark">Join the Collective</h2>
+                            <p class="text-muted">Fill out the form below and our recruitment team will reach out.</p>
+                        </div>
+
+                        <form id="careerForm">
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <label class="form-label small fw-bold">Full Name</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-light border-0"><i class="fas fa-user text-muted"></i></span>
+                                        <input type="text" class="form-control bg-light border-0" placeholder="John Doe" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label small fw-bold">Email Address</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-light border-0"><i class="fas fa-envelope text-muted"></i></span>
+                                        <input type="email" class="form-control bg-light border-0" placeholder="john@example.com" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label small fw-bold">Phone Number</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-light border-0"><i class="fas fa-phone text-muted"></i></span>
+                                        <input type="tel" class="form-control bg-light border-0" placeholder="+91 00000 00000" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label small fw-bold">Applying For</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-light border-0"><i class="fas fa-briefcase text-muted"></i></span>
+                                        <input type="text" class="form-control bg-light border-0" placeholder="e.g. Senior Full Stack Developer" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label small fw-bold">Portfolio / LinkedIn / Resume Link</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-light border-0"><i class="fas fa-link text-muted"></i></span>
+                                        <input type="url" class="form-control bg-light border-0" placeholder="https://..." required>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label small fw-bold">Tell us about your superpower</label>
+                                    <textarea class="form-control bg-light border-0" rows="4" placeholder="Briefly describe your core expertise..."></textarea>
+                                </div>
+                                <div class="col-md-12 text-center mt-5">
+                                    <button type="submit" class="btn btn-primary btn-lg rounded-pill px-5 py-3 shadow-glow w-100">
+                                        Submit Application <i class="fas fa-paper-plane ms-2"></i>
+                                    </button>
+                                    <p class="small text-muted mt-3 mb-0">By submitting, you agree to our recruitment privacy guidelines.</p>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -150,13 +217,39 @@
     .job-card {
         background: rgba(255, 255, 255, 0.5);
         backdrop-filter: blur(10px);
-        transition: all 0.3s ease;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        border: 1px solid rgba(0, 0, 0, 0.08) !important;
     }
 
     .job-card:hover {
-        background: rgba(255, 255, 255, 0.8);
-        border-color: #1a387f;
-        transform: scale(1.02);
+        background: #fff;
+        border-color: #1a387f !important;
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(26, 56, 127, 0.1);
+    }
+
+    .application-form-card {
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        transition: all 0.4s ease;
+    }
+
+    .bg-primary-soft {
+        background-color: rgba(26, 56, 127, 0.1);
+    }
+
+    .form-control:focus,
+    .form-select:focus {
+        background-color: #fff !important;
+        box-shadow: 0 10px 20px rgba(26, 56, 127, 0.05);
+        border: 1px solid rgba(26, 56, 127, 0.2) !important;
+    }
+
+    .input-group-text {
+        border-right: none !important;
+    }
+
+    .shadow-glow {
+        box-shadow: 0 10px 30px rgba(26, 56, 127, 0.2);
     }
 </style>
 

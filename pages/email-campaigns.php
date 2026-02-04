@@ -2,21 +2,22 @@
 
 <main>
     <!-- Service Hero -->
-    <section class="service-hero py-5 position-relative overflow-hidden" style="background: #fff; min-height: 50vh; display: flex; align-items: center;">
+    <section class="service-hero py-5 position-relative overflow-hidden" style="background: #fff; min-height: 60vh; display: flex; align-items: center;">
         <div class="container position-relative z-3 mt-5">
             <div class="row align-items-center">
                 <div class="col-lg-7">
-                    <span class="badge bg-primary rounded-pill px-3 py-2 mb-3 reveal-up">Retention Marketing</span>
-                    <h1 class="display-3 fw-bold text-dark mb-4 reveal-up">High-Impact <br><span class="text-primary-gradient">Email Campaigns</span></h1>
-                    <p class="lead text-muted mb-5 reveal-up" style="max-width: 600px;">
-                        Build direct relationships. Our automated email strategies nurture leads and turn one-time buyers into lifetime fans.
+                    <span class="badge bg-primary rounded-pill px-3 py-2 mb-3 reveal-up">Automated Growth</span>
+                    <h1 class="display-3 fw-bold text-dark mb-4 reveal-up">Email Marketing & <br><span class="text-primary-gradient">Automation</span></h1>
+                    <h2 class="h4 fw-bold text-muted mb-4 reveal-up" data-delay="0.2">Targeted Outreach. Automated Growth.</h2>
+                    <p class="lead text-muted mb-5 reveal-up" data-delay="0.3" style="max-width: 650px;">
+                        Email remains the highest ROI digital marketing channel. We combine the technical precision of MVSoft with the marketing strategy of BCS to deliver email campaigns that convert cold prospects into loyal clients.
                     </p>
-                    <div class="reveal-up">
-                        <a href="contact" class="btn btn-primary btn-lg rounded-pill px-5 shadow-glow">Start Campaigning</a>
+                    <div class="reveal-up" data-delay="0.4">
+                        <a href="contact" class="btn btn-primary btn-lg rounded-pill px-5 shadow-glow">Start Growth Journey</a>
                     </div>
                 </div>
                 <div class="col-lg-5 text-center d-none d-lg-block">
-                    <img src="https://images.unsplash.com/photo-1557200134-90327ee9fafa?q=80&w=2070" class="img-fluid rounded-4 shadow-lg reveal-up" alt="Email Campaigns">
+                    <img src="assets/img/office/mvsoftoff6.jpg" class="img-fluid rounded-4 shadow-lg reveal-up" alt="Email Marketing Team" style="transform: rotate(2deg);">
                 </div>
             </div>
         </div>
@@ -28,55 +29,147 @@
             <div class="row g-5">
                 <div class="col-lg-4">
                     <div class="sticky-top" style="top: 100px;">
-                        <h2 class="fw-bold text-dark mb-4">Direct <br>Channel</h2>
-                        <p class="text-muted">Email remains the highest ROI channel in digital marketing. We help you unlock its full potential.</p>
-                        <div class="service-stats mt-5">
-                            <div class="stat-item mb-4">
-                                <h4 class="fw-bold text-primary mb-0">40%</h4>
-                                <p class="small text-muted">Open Rate Average</p>
+                        <h2 class="fw-bold text-dark mb-4">The Technical <span class="text-primary-gradient">Edge</span></h2>
+                        <p class="text-muted">We don't just send emails—we build automated communication engines integrated directly into your business logic.</p>
+
+                        <!-- Technical Edge Table -->
+                        <div class="glass-card p-4 mt-5 reveal-up">
+                            <h5 class="fw-bold mb-3 small uppercase text-primary">How We Compare</h5>
+                            <div class="table-responsive">
+                                <table class="table table-sm table-borderless mb-0" style="font-size: 0.8rem;">
+                                    <thead>
+                                        <tr class="border-bottom">
+                                            <th class="text-muted">Feature</th>
+                                            <th class="text-muted">Standard</th>
+                                            <th class="text-primary">MVSoft x BCS</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-muted">Integration</td>
+                                            <td>Manual Exports</td>
+                                            <td>Deep API/DB</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-muted">Custom Design</td>
+                                            <td>Basic Templates</td>
+                                            <td>Custom Dynamic</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-muted">Analytics</td>
+                                            <td>Open Rates</td>
+                                            <td>ROI & Conversion</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-muted">Targeting</td>
+                                            <td>General</td>
+                                            <td>Industry & Behavior</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
-                            <div class="stat-item mb-4">
-                                <h4 class="fw-bold text-primary mb-0">5X</h4>
-                                <p class="small text-muted">Repeat Purchases</p>
+                        </div>
+
+                        <div class="service-stats mt-5">
+                            <div class="stat-item mb-4 reveal-up">
+                                <h4 class="fw-bold text-primary mb-0">High ROI</h4>
+                                <p class="small text-muted">Direct Channel Results</p>
+                            </div>
+                            <div class="stat-item mb-4 reveal-up" data-delay="0.1">
+                                <h4 class="fw-bold text-primary mb-0">99%</h4>
+                                <p class="small text-muted">In-Box Deliverability</p>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-lg-8">
-                    <div class="row g-4">
-                        <div class="col-md-6">
-                            <div class="feature-box p-4 bg-white rounded-4 shadow-sm h-100 reveal-up">
-                                <div class="icon mb-3"><i class="fas fa-magic text-primary fs-3"></i></div>
-                                <h4 class="fw-bold">Marketing Automation</h4>
-                                <p class="text-muted small">Welcome flows, abandoned cart sequences, and re-engagement campaigns that run on autopilot.</p>
-                            </div>
+                    <!-- 1. Automated Sales Funnels -->
+                    <div class="engineering-block mb-5 reveal-up">
+                        <div class="d-flex align-items-center gap-3 mb-4">
+                            <div class="icon-box-primary bg-primary text-white"><i class="fas fa-robot"></i></div>
+                            <h3 class="fw-bold mb-0">Automated Sales Funnels</h3>
                         </div>
-                        <div class="col-md-6">
-                            <div class="feature-box p-4 bg-white rounded-4 shadow-sm h-100 reveal-up" data-delay="0.1">
-                                <div class="icon mb-3"><i class="fas fa-vial text-primary fs-3"></i></div>
-                                <h4 class="fw-bold">A/B Testing</h4>
-                                <p class="text-muted small">Optimizing subject lines, body copy, and send times to maximize engagement and CTR.</p>
+                        <p class="text-muted mb-4">We use the Laravel/MERN architecture to trigger automated emails based on real-time user behavior.</p>
+
+                        <div class="row g-4 mb-3">
+                            <div class="col-md-4">
+                                <div class="feature-pill-card p-4 h-100 text-center">
+                                    <h6 class="fw-bold mb-2">Welcome Sequences</h6>
+                                    <p class="small text-muted mb-0">Instantly engage new users after they sign up on your platform.</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="feature-box p-4 bg-white rounded-4 shadow-sm h-100 reveal-up" data-delay="0.2">
-                                <div class="icon mb-3"><i class="fas fa-user-tag text-primary fs-3"></i></div>
-                                <h4 class="fw-bold">Segmentation</h4>
-                                <p class="text-muted small">Personalizing content based on user behavior and demographics to deliver high relevance.</p>
+                            <div class="col-md-4">
+                                <div class="feature-pill-card p-4 h-100 text-center">
+                                    <h6 class="fw-bold mb-2">Drip Campaigns</h6>
+                                    <p class="small text-muted mb-0">Automatically nurture leads with informative emails that build trust.</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="feature-box p-4 bg-white rounded-4 shadow-sm h-100 reveal-up" data-delay="0.3">
-                                <div class="icon mb-3"><i class="fas fa-shield-alt text-primary fs-3"></i></div>
-                                <h4 class="fw-bold">Deliverability</h4>
-                                <p class="text-muted small">Expert management of sender reputation and technical setup to stay out of the spam folder.</p>
+                            <div class="col-md-4">
+                                <div class="feature-pill-card p-4 h-100 text-center">
+                                    <h6 class="fw-bold mb-2">Abandoned Action</h6>
+                                    <p class="small text-muted mb-0">Smart reminders sent if a user starts an inquiry but doesn't finish.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="content-text mt-5 reveal-up">
-                        <h3 class="fw-bold mb-4">Personalized Communication</h3>
-                        <p class="text-muted">An email list is an asset you own. We focus on building high-quality lists and nurturing them with value-first content. Our email designs are fully responsive and optimized for darkness and accessibility, ensuring they look great in every inbox.</p>
+                    <!-- 2. B2B Outreach -->
+                    <div class="engineering-block mb-5 reveal-up">
+                        <div class="d-flex align-items-center gap-3 mb-4">
+                            <div class="icon-box-primary bg-primary text-white"><i class="fas fa-paper-plane"></i></div>
+                            <h3 class="fw-bold mb-0">Corporate B2B Outreach</h3>
+                        </div>
+                        <p class="text-muted mb-4">For the Logistics and Industrial sectors, we build professional outreach campaigns to connect you with key decision-makers.</p>
+                        <div class="row g-3">
+                            <div class="col-md-12">
+                                <div class="d-flex gap-3 mb-3 p-3 bg-white rounded-4 border">
+                                    <div class="text-primary fs-5 mt-1"><i class="fas fa-crosshairs"></i></div>
+                                    <div>
+                                        <h6 class="fw-bold mb-1">Targeted Lead Generation</h6>
+                                        <p class="text-muted small mb-0">Strategic emails to shipping managers, exporters, and manufacturers across the region.</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex gap-3 mb-3 p-3 bg-white rounded-4 border">
+                                    <div class="text-primary fs-5 mt-1"><i class="fas fa-user-edit"></i></div>
+                                    <div>
+                                        <h6 class="fw-bold mb-1">Humanized Personalization</h6>
+                                        <p class="text-muted small mb-0">Using dynamic data to ensure every email feels tailor-made for the specific recipient.</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex gap-3 p-3 bg-white rounded-4 border">
+                                    <div class="text-primary fs-5 mt-1"><i class="fas fa-shield-virus"></i></div>
+                                    <div>
+                                        <h6 class="fw-bold mb-1">Technical Deliverability Mastery</h6>
+                                        <p class="text-muted small mb-0">We configure SPF, DKIM, and DMARC records to ensure your emails bypass spam filters.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Newsletter & Retention -->
+                    <div class="engineering-block reveal-up" style="background: linear-gradient(135deg, #ffffff 0%, #fef9f0 100%);">
+                        <div class="d-flex align-items-center gap-3 mb-4">
+                            <div class="icon-box-primary bg-primary text-white"><i class="fas fa-newspaper"></i></div>
+                            <h3 class="fw-bold mb-0">Newsletter & Retention</h3>
+                        </div>
+                        <p class="text-muted mb-4">Keep your brand at the top of your clients' minds through strategic consistency.</p>
+
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="p-4 bg-white rounded-4 border h-100">
+                                    <h6 class="fw-bold mb-2">Expertise Sharing</h6>
+                                    <p class="small text-muted mb-0">Monthly updates highlighting your latest tech innovations and marketing wins.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-4 bg-white rounded-4 border h-100">
+                                    <h6 class="fw-bold mb-2">Industry Authority</h6>
+                                    <p class="small text-muted mb-0">Establishing authority by sharing news about the Kutch and Gandhidham landscape.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -84,12 +177,12 @@
     </section>
 
     <!-- Final CTA -->
-    <section class="py-5" style="background: #1a387f;">
+    <section class="py-5" style="background: #1a387f !important;">
         <div class="container py-5 text-center">
-            <h2 class="display-4 fw-bold text-white mb-4 reveal-up">Ready to Connect with Your Audience?</h2>
-            <p class="lead text-white-50 mb-5 reveal-up">Let's build an email strategy that drives real revenue.</p>
-            <div class="reveal-up">
-                <a href="contact" class="btn btn-light btn-lg rounded-pill px-5 fw-bold">Free Email Audit</a>
+            <h2 class="display-4 fw-bold text-white mb-4">Ready to Automate Your Growth?</h2>
+            <p class="lead text-white-50 mb-5">Let's build an email engine that generates results while you focus on your core business.</p>
+            <div>
+                <a href="contact" class="btn btn-light btn-lg rounded-pill px-5 fw-bold">Request Email Strategy</a>
             </div>
         </div>
     </section>
@@ -103,14 +196,52 @@
         -webkit-text-fill-color: transparent;
     }
 
-    .feature-box {
-        border: 1px solid rgba(0, 0, 0, 0.05);
-        transition: all 0.3s ease;
+    .icon-box-primary {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        font-weight: 800;
+        font-size: 1.2rem;
     }
 
-    .feature-box:hover {
+    .engineering-block {
+        background: white;
+        padding: 2.5rem;
+        border-radius: 24px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .feature-pill-card {
+        background: white;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        border-radius: 20px;
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .feature-pill-card:hover {
         transform: translateY(-5px);
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05) !important;
+        box-shadow: 0 15px 30px rgba(26, 56, 127, 0.08);
+        border-color: rgba(26, 56, 127, 0.2);
+    }
+
+    .glass-card {
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        border-radius: 20px;
+    }
+
+    .shadow-glow {
+        box-shadow: 0 0 20px rgba(26, 56, 127, 0.2);
+    }
+
+    .uppercase {
+        text-transform: uppercase;
+        letter-spacing: 1px;
     }
 </style>
 

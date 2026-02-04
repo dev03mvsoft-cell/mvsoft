@@ -29,7 +29,12 @@ function initHeroAnimation() {
 
     // 1. Initialize Interaction
     let isInteractive = false;
+    let lastPointerUpdate = 0;
     $welcome.addEventListener('pointermove', (e) => {
+        const now = performance.now();
+        if (now - lastPointerUpdate < 16) return; // Throttle to ~60fps
+        lastPointerUpdate = now;
+
         if (!isInteractive) {
             $welcome.classList.add('interactive');
             isInteractive = true;
@@ -161,7 +166,12 @@ function initHeroAnimation() {
     });
 
     // 5. Parallax Effect (Optimized with RequestAnimationFrame implicit in GSAP)
+    let lastParallaxUpdate = 0;
     window.addEventListener('mousemove', (e) => {
+        const now = performance.now();
+        if (now - lastParallaxUpdate < 20) return; // Throttle parallax
+        lastParallaxUpdate = now;
+
         if (!ScrollTrigger.isInViewport($welcome)) return; // Don't calc if not visible
 
         const { clientX, clientY } = e;

@@ -16,6 +16,8 @@
     <link rel="icon" type="image/png" href="assets/img/logo.png">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Material Symbols -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!-- Devicons for Tech Stack -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <!-- Three.js and lil-gui -->
@@ -77,7 +79,7 @@
     <?php
     // Determine current page for conditional assets
     $current_uri = $_SERVER['REQUEST_URI'];
-    $nexus_pages = ['about', 'contact', 'career', 'services', 'web-design', 'app-development', 'backend-solutions', 'seo-optimization', 'digital-marketing', 'email-campaigns', 'cloud-hosting', 'cybersecurity', 'server-management'];
+    $nexus_pages = ['about', 'contact', 'career', 'services', 'web-design', 'app-development', 'backend-solutions', 'seo-optimization', 'digital-marketing', 'email-campaigns'];
     $is_nexus = false;
     foreach ($nexus_pages as $np) {
         if (strpos($current_uri, $np) !== false) {
@@ -131,7 +133,7 @@
                         <div class="dropdown-menu mega-menu p-4 shadow-lg border-0" aria-labelledby="navbarDropdown">
                             <div class="row">
                                 <!-- Mobile Accordion Logic -->
-                                <div class="col-lg-3 col-md-6 mb-3 mb-lg-0">
+                                <div class="col-lg-4 col-md-6 mb-3 mb-lg-0">
                                     <h6 class="fw-bold mb-3 d-flex justify-content-between align-items-center"
                                         data-bs-toggle="collapse" data-bs-target="#devCollapse" role="button">
                                         Development <i class="fas fa-chevron-down d-lg-none"></i>
@@ -142,7 +144,7 @@
                                         <a class="mega-link" href="backend-solutions"><i class="fas fa-database"></i> Backend Solutions</a>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-6 mb-3 mb-lg-0">
+                                <div class="col-lg-4 col-md-6 mb-3 mb-lg-0">
                                     <h6 class="fw-bold mb-3 d-flex justify-content-between align-items-center"
                                         data-bs-toggle="collapse" data-bs-target="#marketingCollapse" role="button">
                                         Marketing <i class="fas fa-chevron-down d-lg-none"></i>
@@ -153,18 +155,7 @@
                                         <a class="mega-link" href="email-campaigns"><i class="fas fa-envelope"></i> Email Campaigns</a>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-6 mb-3 mb-lg-0">
-                                    <h6 class="fw-bold mb-3 d-flex justify-content-between align-items-center"
-                                        data-bs-toggle="collapse" data-bs-target="#cloudCollapse" role="button">
-                                        Cloud <i class="fas fa-cloud"></i> <i class="fas fa-chevron-down d-lg-none"></i>
-                                    </h6>
-                                    <div class="collapse d-lg-block" id="cloudCollapse">
-                                        <a class="mega-link" href="cloud-hosting"><i class="fas fa-cloud"></i> Cloud Hosting</a>
-                                        <a class="mega-link" href="cybersecurity"><i class="fas fa-shield-alt"></i> Cybersecurity</a>
-                                        <a class="mega-link" href="server-management"><i class="fas fa-server"></i> Server Management</a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-6 mb-0">
+                                <div class="col-lg-4 col-md-6 mb-0">
                                     <h6 class="fw-bold mb-3 d-flex justify-content-between align-items-center"
                                         data-bs-toggle="collapse" data-bs-target="#companyCollapse" role="button">
                                         Company <i class="fas fa-chevron-down d-lg-none"></i>

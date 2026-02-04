@@ -124,21 +124,21 @@
                             <div class="icon me-3 text-primary"><i class="fas fa-map-marker-alt fs-4"></i></div>
                             <div>
                                 <h5 class="fw-bold mb-1">Our Office</h5>
-                                <p class="text-muted small mb-0">Corporate Office, Tech Hub, India</p>
+                                <p class="text-muted small mb-0">Plot no 300, Ward: 12/b, Shree Ambika Arcade, Office no 106, 1st Floor,Gandhidham 370201</p>
                             </div>
                         </div>
                         <div class="info-item d-flex mb-4">
                             <div class="icon me-3 text-primary"><i class="fas fa-envelope fs-4"></i></div>
                             <div>
                                 <h5 class="fw-bold mb-1">Email Us</h5>
-                                <p class="text-muted small mb-0">sales@mvsoftsolutions.com</p>
+                                <p class="text-muted small mb-0">admin@mvsoftsolutions.com</p>
                             </div>
                         </div>
                         <div class="info-item d-flex mb-4">
                             <div class="icon me-3 text-primary"><i class="fas fa-phone-alt fs-4"></i></div>
                             <div>
                                 <h5 class="fw-bold mb-1">Call Us</h5>
-                                <p class="text-muted small mb-0">+91 XXX XXX XXXX</p>
+                                <p class="text-muted small mb-0">02836-465134</p>
                             </div>
                         </div>
 
@@ -146,7 +146,6 @@
                             <h6 class="fw-bold text-dark mb-3">Follow Us</h6>
                             <div class="d-flex gap-3">
                                 <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#" class="social-icon"><i class="fab fa-x-twitter"></i></a>
                                 <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
                                 <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
                             </div>
