@@ -16,7 +16,7 @@
                     </div>
                 </div>
                 <div class="col-lg-5 text-center d-none d-lg-block">
-                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc51?q=80&w=2070" class="img-fluid rounded-4 shadow-lg reveal-up" alt="Server Management">
+                    <img src="assets/img/office/mvsoftoff24.jpg" class="img-fluid rounded-4 shadow-lg reveal-up" alt="Server Management">
                 </div>
             </div>
         </div>

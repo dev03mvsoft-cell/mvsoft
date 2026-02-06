@@ -18,7 +18,7 @@
                 </div>
                 <div class="col-lg-5 text-center d-none d-lg-block">
                     <div class="position-relative">
-                        <img src="assets/img/office/mvsoftoff3.jpg" class="img-fluid rounded-4 shadow-lg reveal-up" alt="App Development Team" style="transform: rotate(2deg);">
+                        <img src="assets/img/office/mvsoftoff13.jpg" class="img-fluid rounded-4 shadow-lg reveal-up" alt="App Development Team" style="transform: rotate(2deg);">
                         <div class="glass-card p-3 position-absolute bottom-0 start-0 m-3 reveal-up" data-delay="0.5" style="background: rgba(255,255,255,0.8); backdrop-filter: blur(10px); border-radius: 15px;">
                             <div class="d-flex align-items-center gap-2">
                                 <div class="icon-sm bg-primary text-white rounded-circle" style="width:30px; height:30px; display:flex; align-items:center; justify-content:center;"><i class="fas fa-bolt small"></i></div>

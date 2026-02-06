@@ -29,7 +29,7 @@
                         <div class="position-relative">
                             <img src="assets/img/office/mvsoftoff9.jpg" alt="Mvsoft Office" class="img-fluid rounded-5 shadow-2xl-strong transform-hover" style="border: 1px solid rgba(255,255,255,0.2);">
                             <!-- Subtle decorative element -->
-                            <div class="position-absolute bottom-0 end-0 bg-primary-gradient p-3 rounded-circle shadow-lg m-n3 d-none d-md-block" style="width: 80px; height: 80px; display: flex; align-items: center; justify-content: center;">
+                            <div class="position-absolute bottom-0 end-0   d-none d-md-block" style="width: 80px; height: 80px; display: flex; align-items: center; justify-content: center;">
                                 <i class="fas fa-building text-white fs-3"></i>
                             </div>
                         </div>

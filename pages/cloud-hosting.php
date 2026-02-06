@@ -16,7 +16,7 @@
                     </div>
                 </div>
                 <div class="col-lg-5 text-center d-none d-lg-block">
-                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072" class="img-fluid rounded-4 shadow-lg reveal-up" alt="Cloud Hosting">
+                    <img src="assets/img/office/mvsoftoff22.jpg" class="img-fluid rounded-4 shadow-lg reveal-up" alt="Cloud Hosting">
                 </div>
             </div>
         </div>

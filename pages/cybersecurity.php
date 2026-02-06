@@ -16,7 +16,7 @@
                     </div>
                 </div>
                 <div class="col-lg-5 text-center d-none d-lg-block">
-                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070" class="img-fluid rounded-4 shadow-lg reveal-up" alt="Cybersecurity">
+                    <img src="assets/img/office/mvsoftoff23.jpg" class="img-fluid rounded-4 shadow-lg reveal-up" alt="Cybersecurity">
                 </div>
             </div>
         </div>

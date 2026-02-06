@@ -4267,3 +4267,364 @@ body {
         justify-content: flex-start;
     }
 }
+
+/* Airplane Mode Button Styles */
+:root {
+    --am-hue: 223;
+    --am-bg1: hsl(var(--am-hue), 10%, 90%);
+    --am-bg2: hsl(var(--am-hue), 10%, 60%);
+    --am-fg: hsl(var(--am-hue), 10%, 10%);
+    --am-trans-dur: 0.3s;
+}
+
+.am,
+.am__crack,
+.am__input {
+    border-radius: 50%;
+}
+
+.am,
+.am__input {
+    /* margin: auto; removed to allow placement */
+    -webkit-tap-highlight-color: transparent;
+}
+
+.am {
+    background-color: #ffffff;
+    position: relative;
+    width: 8em;
+    height: 3.5em;
+    display: inline-block;
+    font-size: 20px;
+    border-radius: 0.4em;
+    border: 2px solid #e0e0e0;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    z-index: 5;
+}
+
+/* Road markings (black boxes/dashes) */
+.am::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-image: linear-gradient(to right, #000000 50%, transparent 50%);
+    background-size: 1.5em 100%;
+    transform: translateY(-50%);
+    opacity: 0.8;
+    /* Increased visibility of center boxes */
+}
+
+.am__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 10;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.am__plane,
+.am__plane-body,
+.am__plane-body:before,
+.am__plane-body:after,
+.am__plane-engines,
+.am__plane-engines:before,
+.am__plane-engines:after,
+.am__plane-fins,
+.am__plane-fins:before,
+.am__plane-fins:after,
+.am__plane-wings,
+.am__plane-wings:before,
+.am__plane-wings:after,
+.am__smoke {
+    display: block;
+    position: absolute;
+}
+
+.am__plane-body:before,
+.am__plane-body:after,
+.am__plane-engines:before,
+.am__plane-engines:after,
+.am__plane-fins:before,
+.am__plane-fins:after,
+.am__plane-wings:before,
+.am__plane-wings:after {
+    content: '';
+}
+
+.am__plane {
+    filter: drop-shadow(0.2em 0.2em 0.2em hsla(0, 0%, 0%, 0.2));
+    top: 50%;
+    left: 15%;
+    z-index: 3;
+    pointer-events: none;
+    transform: translate3d(-50%, -50%, 0);
+    transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center;
+    will-change: transform;
+}
+
+.am__plane-body {
+    background-image:
+        radial-gradient(0.125em 0.125em at 75% 50%, hsl(0, 90%, 40%) 48%, hsla(0, 90%, 40%, 0) 50%),
+        linear-gradient(#333 30%, #000 70%);
+    border-radius: 1.5em 1em 1em 1.5em / 50% 50% 50% 50%;
+    overflow: hidden;
+    width: 2.8em;
+    height: 0.4em;
+    transform: translate(-50%, -50%);
+}
+
+.am__plane-body:before {
+    border-radius: 50%;
+    box-shadow: 0.1em 0 0 hsl(var(--am-hue), 10%, 10%) inset;
+    left: 0.2em;
+    width: 0.25em;
+    height: 100%;
+}
+
+.am__plane-body:after {
+    background-color: #222;
+    top: 0.15em;
+    right: 0;
+    width: 1em;
+    height: 0.1em;
+}
+
+.am__plane-engines {
+    top: 50%;
+    left: 0.3em;
+}
+
+.am__plane-engines:before,
+.am__plane-engines:after {
+    border-radius: 0.2em 0 0 0.2em / 50% 0 0 50%;
+    width: 0.4em;
+    height: 0.2em;
+    transform-origin: 50% 0;
+}
+
+.am__plane-engines:before {
+    background-image: linear-gradient(#333 20%, #000 80%);
+    transform: translateY(-1em);
+}
+
+.am__plane-engines:after {
+    background-image: linear-gradient(#111 20%, #333 80%);
+    transform: translateY(1em) scaleY(-1);
+}
+
+.am__plane-fins {
+    top: 50%;
+    left: -1.2em;
+}
+
+.am__plane-fins:before,
+.am__plane-fins:after {
+    background-image: linear-gradient(53deg, #333 44%, #000);
+    clip-path: polygon(100% 0, 30% 0, 0 100%, 25% 100%, 100% 0);
+    width: 0.75em;
+    height: 0.75em;
+    transform-origin: 50% 0;
+}
+
+.am__plane-fins:after {
+    transform: scaleY(-1);
+}
+
+.am__plane-wings {
+    top: 50%;
+    left: 0.1em;
+}
+
+.am__plane-wings:before,
+.am__plane-wings:after {
+    background-image: linear-gradient(63deg, #444 44%, #000);
+    clip-path: polygon(100% 0, 20% 0, 0 100%, 25% 100%, 100% 0);
+    width: 1em;
+    height: 1.5em;
+    transform-origin: 50% 0;
+}
+
+.am__plane-wings:after {
+    transform: scaleY(-1);
+}
+
+.am__smoke {
+    background-image: radial-gradient(hsl(0, 0%, 100%), hsla(0, 0%, 100%, 0));
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    top: calc(50% - 0.125em);
+    left: calc(50% - 0.125em);
+    width: 0.25em;
+    height: 0.25em;
+    z-index: 2;
+}
+
+.am__sr {
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+}
+
+/* :focus(-visible) */
+.am__input:focus {
+    outline: transparent;
+}
+
+.am__input:focus~.am__crack {
+    background-color: hsl(var(--am-hue), 90%, 70%);
+    box-shadow: 0 0 0.5em hsla(var(--am-hue), 90%, 70%, 1);
+}
+
+@supports selector(:focus-visible) {
+    .am__input:focus~.am__crack {
+        background-color: hsl(0, 0%, 0%);
+        box-shadow: 0 0 0.5em hsla(var(--am-hue), 90%, 70%, 0);
+    }
+
+    .am__input:focus-visible~.am__crack {
+        background-color: hsl(var(--am-hue), 90%, 70%);
+        box-shadow: 0 0 0.5em hsla(var(--am-hue), 90%, 70%, 1);
+    }
+}
+
+/* :checked */
+.am__input:checked {
+    filter: grayscale(0);
+    transform: scale(0.96);
+}
+
+.am__input:checked~.am__crack {
+    opacity: 0.8;
+}
+
+/* :checked - Clicked State */
+.am__input:checked~.am__plane {
+    transition: none;
+    left: 85%;
+    /* Start takeoff from the right side */
+    top: 50%;
+    animation: planeTakeoffOrbital 1.2s forwards cubic-bezier(0.6, 0, 0.4, 1);
+    z-index: 99;
+}
+
+@keyframes planeTakeoffOrbital {
+    from {
+        filter: drop-shadow(0.25em 0.25em 0.25em hsla(0, 0%, 0%, 0.3));
+        transform: translate3d(-50%, -50%, 0) translate3d(0, -2.5em, 0) rotate(0) translate3d(0, 2.5em, 0) scale(1);
+    }
+
+    30% {
+        filter: drop-shadow(0.25em 0.25em 0.25em hsla(0, 0%, 0%, 0.3));
+        transform: translate3d(-50%, -50%, 0) translate3d(0, -2.5em, 0) rotate(-0.1turn) translate3d(0, 2.5em, 0) scale(0.96);
+    }
+
+    to {
+        filter: drop-shadow(0.25em 0.25em 0.5em hsla(0, 0%, 0%, 0.3));
+        transform: translate3d(-50%, -50%, 0) translate3d(0, -2.5em, 0) rotate(-1turn) translate3d(0, 2.5em, 0) scale(1.5);
+    }
+}
+
+/* :indeterminate */
+.am__input:indeterminate~.am__plane {
+    animation: none;
+    left: 20%;
+}
+
+/* Hover Effect: Move plane from left to right */
+.am:hover .am__plane {
+    transform: translate3d(calc(5.6em - 50%), -50%, 0);
+    /* 5.6em is the travel distance */
+}
+
+.am__input:checked+.am:hover .am__plane {
+    transform: translate3d(-50%, -50%, 0);
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --am-bg1: hsl(var(--am-hue), 10%, 40%);
+        --am-bg2: hsl(var(--am-hue), 10%, 10%);
+        --am-fg: hsl(var(--am-hue), 10%, 90%);
+    }
+}
+
+/* Animations */
+@keyframes planeRunway {
+    0% {
+        left: 15%;
+        transform: translateY(-1px);
+    }
+
+    100% {
+        left: 75%;
+        transform: translateY(1px);
+    }
+}
+
+@keyframes planeTakeoffRight {
+    0% {
+        left: 20%;
+        top: 50%;
+        transform: rotate(0);
+        scale: 1;
+        opacity: 1;
+    }
+
+    30% {
+        left: 40%;
+        top: 50%;
+        transform: rotate(-5deg);
+        scale: 1.1;
+        opacity: 1;
+    }
+
+    100% {
+        left: 180%;
+        top: -80%;
+        transform: rotate(-25deg);
+        scale: 2;
+        opacity: 0;
+    }
+}
+
+@keyframes planeLand {
+    from {
+        filter: drop-shadow(0.25em 0.25em 0.5em hsla(0, 0%, 0%, 0.3));
+        transform: translate3d(0, -2.5em, 0) rotate(1turn) translate3d(0, 2.5em, 0);
+    }
+
+    to {
+        filter: drop-shadow(0.25em 0.25em 0.25em hsla(0, 0%, 0%, 0.3));
+        transform: translate3d(0, -2.5em, 0) rotate(2turn) translate3d(0, 2.5em, 0);
+    }
+}
+
+@keyframes planeTakeOff {
+    from {
+        filter: drop-shadow(0.25em 0.25em 0.25em hsla(0, 0%, 0%, 0.3));
+        transform: translate3d(0, -2.5em, 0) rotate(0) translate3d(0, 2.5em, 0) scale(1);
+    }
+
+    30% {
+        filter: drop-shadow(0.25em 0.25em 0.25em hsla(0, 0%, 0%, 0.3));
+        transform: translate3d(0, -2.5em, 0) rotate(0) translate3d(0, 2.5em, 0) scale(0.96);
+    }
+
+    to {
+        filter: drop-shadow(0.25em 0.25em 0.5em hsla(0, 0%, 0%, 0.3));
+        transform: translate3d(0, -2.5em, 0) rotate(1turn) translate3d(0, 2.5em, 0) scale(1);
+    }
+}

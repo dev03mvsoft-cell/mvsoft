@@ -24,8 +24,18 @@
                             <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> High-Performance Scalable Apps</li>
                             <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> Value-First Engineering Model</li>
                         </ul>
-                        <div class="reveal-up">
-                            <a href="#services" class="btn btn-primary btn-lg rounded-pill px-5 shadow-glow">Learn More</a>
+                        <div class="reveal-up" style="display: flex; align-items: center; gap: 1rem;">
+                            <label class="am">
+                                <input id="am" class="am__input" type="checkbox" />
+                                <span class="am__sr">Learn More</span>
+                                <span class="am__plane">
+                                    <span class="am__plane-engines"></span>
+                                    <span class="am__plane-wings"></span>
+                                    <span class="am__plane-fins"></span>
+                                    <span class="am__plane-body"></span>
+                                </span>
+                            </label>
+                            <span class="text-dark">Learn More</span>
                         </div>
                     </div>
                 </div>

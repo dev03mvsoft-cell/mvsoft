@@ -273,7 +273,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="image-stack position-relative pl-lg-5">
-                        <img src="assets/img/office/mvsoftoff4.jpg" class="img-fluid rounded-4 shadow-lg reveal-up" alt="Mvsoft Team and Workspace">
+                        <img src="assets/img/office/mvsoftoff11.jpg" class="img-fluid rounded-4 shadow-lg reveal-up" alt="Mvsoft Team and Workspace">
                     </div>
                 </div>
             </div>

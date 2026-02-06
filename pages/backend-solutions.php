@@ -16,7 +16,7 @@
                     </div>
                 </div>
                 <div class="col-lg-5 text-center d-none d-lg-block">
-                    <img src="assets/img/office/mvsoftoff2.jpg" class="img-fluid rounded-4 shadow-lg reveal-up" alt="Backend Infrastructure">
+                    <img src="assets/img/office/mvsoftoff16.jpg" class="img-fluid rounded-4 shadow-lg reveal-up" alt="Backend Infrastructure">
                 </div>
             </div>
         </div>

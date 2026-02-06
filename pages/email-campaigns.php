@@ -17,7 +17,7 @@
                     </div>
                 </div>
                 <div class="col-lg-5 text-center d-none d-lg-block">
-                    <img src="assets/img/office/mvsoftoff6.jpg" class="img-fluid rounded-4 shadow-lg reveal-up" alt="Email Marketing Team" style="transform: rotate(2deg);">
+                    <img src="assets/img/office/mvsoftoff21.jpg" class="img-fluid rounded-4 shadow-lg reveal-up" alt="Email Marketing Team" style="transform: rotate(2deg);">
                 </div>
             </div>
         </div>
