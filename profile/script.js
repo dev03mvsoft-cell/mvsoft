@@ -3,56 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Register ScrollTrigger
     gsap.registerPlugin(ScrollTrigger);
 
-    // --- Three.js 3D Model Integration ---
-    let scene, camera, renderer, model;
-    function init3D() {
-        const container = document.getElementById('magic-3d-canvas');
-        if (!container) return;
-
-        scene = new THREE.Scene();
-        camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        container.appendChild(renderer.domElement);
-
-        // Create a tech-looking geometry
-        const geometry = new THREE.IcosahedronGeometry(2, 1);
-        const material = new THREE.MeshBasicMaterial({
-            color: 0x00ffff,
-            wireframe: true,
-            transparent: true,
-            opacity: 0.5
-        });
-        model = new THREE.Mesh(geometry, material);
-        scene.add(model);
-
-        camera.position.z = 5;
-
-        function animate() {
-            requestAnimationFrame(animate);
-            model.rotation.y += 0.005;
-            model.rotation.x += 0.003;
-            renderer.render(scene, camera);
-        }
-        animate();
-
-        window.addEventListener('resize', () => {
-            camera.aspect = window.innerWidth / window.innerHeight;
-            camera.updateProjectionMatrix();
-            renderer.setSize(window.innerWidth, window.innerHeight);
-        });
-    }
-
-    // Initialize 3D if Three.js is available (assuming it might be loaded globally)
-    if (window.THREE) {
-        init3D();
-    } else {
-        // Dynamic Load if needed
-        const script = document.createElement('script');
-        script.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js';
-        script.onload = init3D;
-        document.head.appendChild(script);
-    }
 
     // Initial Animations
     const tl = gsap.timeline();
@@ -104,7 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
         gsap.to(asset, {
             y: "random(-25, 25)",
             x: "random(-20, 20)",
-            rotation: "random(-8, 8)",
             duration: "random(3, 5)",
             repeat: -1,
             yoyo: true,
@@ -146,7 +95,6 @@ document.addEventListener('DOMContentLoaded', () => {
             .from(visual, {
                 scale: 0.8,
                 opacity: 0,
-                rotation: i % 2 === 0 ? 10 : -10,
                 duration: 1.2,
                 ease: "expo.out"
             }, '-=1');
@@ -172,14 +120,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- Magic Text Pin Animation ---
+
+    // --- Magic Text Pin Animation (Dynamic Layouts) ---
     const slides = gsap.utils.toArray('.magic-slide');
+    const bossImg = document.querySelector('.magic-boss-image');
+
+    // Initial State: Each slide on a layer above the boss image
+    gsap.set(slides, {
+        clipPath: (i) => i === 0 ? "inset(0% 0% 0% 0%)" : "inset(100% 0% 0% 0%)",
+        zIndex: (i) => i + 20, // Start high enough to avoid overlap
+        opacity: 1,
+        visibility: 'visible'
+    });
 
     const magicTl = gsap.timeline({
         scrollTrigger: {
             trigger: '.magic-pin-section',
             start: 'top top',
-            end: '+=400%',
+            end: '+=450%',
             pin: true,
             scrub: 1.2,
             anticipatePin: 1,
@@ -187,50 +145,143 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Ensure all cards start with clear properties
-    gsap.set('.arc-card', { force3D: true });
-
     // Animate each slide
     slides.forEach((slide, i) => {
-        const colorAttr = slide.getAttribute('data-color') || '#00ffff';
+        const content = slide.querySelector('.magic-content');
 
-        // Reveal Slide
-        magicTl.to(slide, {
-            autoAlpha: 1,
-            x: 0,
-            scale: 1,
-            duration: 1,
-            ease: 'power2.inOut',
-            onStart: () => {
-                // Safety check for Three.js model
-                if (typeof THREE !== 'undefined' && model) {
-                    try {
-                        const targetColor = new THREE.Color(colorAttr);
-                        gsap.to(model.material.color, {
-                            r: targetColor.r,
-                            g: targetColor.g,
-                            b: targetColor.b,
-                            duration: 1
-                        });
-                        gsap.to(model.rotation, { z: i * Math.PI / 2, duration: 1.5 });
-                        gsap.to(model.scale, { x: 1.2, y: 1.2, z: 1.2, duration: 0.5, yoyo: true, repeat: 1 });
-                    } catch (e) {
-                        console.warn("Three.js color transition failed", e);
-                    }
-                }
-            }
-        });
-
-        // Hide Slide (except last)
-        if (i < slides.length - 1) {
-            magicTl.to(slide, {
-                autoAlpha: 0,
+        if (i === 0) {
+            // Slide 1 Initial Animation
+            gsap.from([slide.querySelector('.magic-label'), slide.querySelector('.magic-title')], {
                 x: -50,
-                scale: 1.1,
-                duration: 1,
-                ease: 'power2.inOut',
+                opacity: 0,
+                stagger: 0.2,
+                duration: 1.5,
                 delay: 0.5
             });
+            return;
+        }
+
+        const prevSlide = slides[i - 1];
+
+        // 1. Reveal Slide
+        magicTl.to(slide, {
+            clipPath: "inset(0% 0% 0% 0%)",
+            duration: 2.5,
+            ease: "power3.inOut"
+        }, "+=0.3");
+
+        // 2. Animate Boss Image (Responsive Scaling)
+        if (i === 1) {
+            magicTl.to(bossImg, {
+                top: "50%",
+                left: "50%",
+                xPercent: -50,
+                yPercent: -50,
+                width: "min(400px, 30vw)",
+                height: "min(550px, 45vh)",
+                borderRadius: "20px",
+                duration: 2.2,
+                force3D: true, // Fixes sub-pixel border artifacts
+                ease: "expo.inOut"
+            }, "<");
+        } else if (i === 2) {
+            magicTl.to(bossImg, {
+                left: "10%",
+                xPercent: 0,
+                width: "min(480px, 35vw)",
+                height: "min(650px, 55vh)",
+                duration: 2.2,
+                force3D: true,
+                ease: "expo.inOut"
+            }, "<");
+        } else if (i === 3) {
+            // Slide 4: Full Image (Contain - No Cut)
+            magicTl.to(bossImg, {
+                top: "50%",
+                left: "50%",
+                xPercent: -50,
+                yPercent: -50,
+                width: "min(1200px, 95vw)",
+                height: "min(800px, 85vh)",
+                borderRadius: "20px",
+                opacity: 1,
+                duration: 2.5,
+                force3D: true,
+                ease: "expo.inOut"
+            }, "<");
+        }
+
+        // 3. Fade Prev Slide
+        magicTl.to(prevSlide, {
+            scale: 0.8,
+            opacity: 0,
+            filter: "blur(20px)",
+            duration: 2,
+            ease: "power2.inOut"
+        }, "<");
+
+        // 4. Animate Text (Sequential)
+        if (i === 1) {
+            // Slide 2: Split Layout Reveal (L/R)
+            gsap.set(content, { width: "100%", maxWidth: "1200px", left: 0, zIndex: 100 });
+            const leftPart = content.querySelector('.split-left');
+            const rightPart = content.querySelector('.split-right');
+
+            magicTl.fromTo([leftPart, rightPart], {
+                x: (idx) => idx === 0 ? -100 : 100,
+                opacity: 0
+            }, {
+                x: 0,
+                opacity: 1,
+                duration: 1.5,
+                ease: "power4.out"
+            }, "-=1.5");
+        } else if (i === 2) {
+            // Slide 3: Right Layout (Image is on Left)
+            // Use smaller width and safe absolute positioning to avoid overlap
+            gsap.set(content, {
+                textAlign: "right",
+                width: "35%",
+                position: "absolute",
+                right: "10%",
+                left: "auto",
+                zIndex: 100
+            });
+            magicTl.fromTo([content.querySelector('.magic-label'), content.querySelector('.magic-title')], {
+                x: 50,
+                opacity: 0
+            }, {
+                x: 0,
+                opacity: 1,
+                stagger: 0.2,
+                duration: 1.5,
+                ease: "back.out(1.4)"
+            }, "-=1.5");
+        } else if (i === 3) {
+            // Slide 4: Full Centered Focus
+            gsap.set(content, {
+                textAlign: "center",
+                width: "min(100%, 1000px)",
+                left: "50%",
+                top: "50%",
+                xPercent: -50,
+                yPercent: -50,
+                position: "absolute",
+                zIndex: 100
+            });
+            magicTl.fromTo([content.querySelector('.magic-label'), content.querySelector('.magic-title')], {
+                y: 50,
+                opacity: 0
+            }, {
+                y: 0,
+                opacity: 1,
+                stagger: 0.2,
+                duration: 1.5,
+                ease: "power3.out"
+            }, "-=1.5");
+
+            // Ensure boss image is visible but behind text
+            magicTl.set(bossImg, { zIndex: 10 }, "<");
         }
     });
 
@@ -446,13 +497,122 @@ document.addEventListener('DOMContentLoaded', () => {
         ScrollTrigger.sort();
     };
 
-    window.addEventListener('load', () => {
-        finalize();
-        setTimeout(finalize, 500);
-        setTimeout(finalize, 2000);
-    });
 
     window.addEventListener('resize', () => {
         ScrollTrigger.refresh();
     });
+
+    // --- Professional Partners Diamond Collage GSAP ---
+    const collageItems = document.querySelectorAll('.collage-item.diamond');
+
+    if (collageItems.length > 0) {
+        // Initial state for entrance
+        gsap.set(collageItems, {
+            scale: 0,
+            opacity: 0,
+            rotate: 15
+        });
+
+        // Professional Staggered Entrance
+        ScrollTrigger.batch(collageItems, {
+            onEnter: batch => gsap.to(batch, {
+                scale: 1,
+                opacity: 1,
+                rotate: 45, // Target rotation for diamond
+                duration: 1.2,
+                stagger: 0.1,
+                ease: "back.out(1.7)",
+                overwrite: true
+            }),
+            start: "top 85%"
+        });
+
+        // Subtle Organic Floating (Premium Feel)
+        collageItems.forEach((item, i) => {
+            gsap.to(item, {
+                y: "random(-10, 10)",
+                x: "random(-5, 5)",
+                duration: "random(4, 6)",
+                repeat: -1,
+                yoyo: true,
+                ease: "sine.inOut",
+                delay: i * 0.3
+            });
+        });
+
+        // Magnetic Tilt Hover logic via GSAP
+        collageItems.forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                gsap.to(item, {
+                    scale: 1.15,
+                    duration: 0.4,
+                    ease: "power2.out",
+                    overwrite: true
+                });
+            });
+            item.addEventListener('mouseleave', () => {
+                gsap.to(item, {
+                    scale: 1,
+                    duration: 0.6,
+                    ease: "elastic.out(1, 0.5)",
+                    overwrite: true
+                });
+            });
+        });
+
+        // --- Dynamic Random Image Swapping (Living Collage) ---
+        const partnerImages = [
+            "../assets/img/logo/BCS hiring .png",
+            "../assets/img/logo/logo.webp",
+            "../assets/img/logo/jodac-logo.png",
+            "../assets/img/logo/jb-logo.webp",
+            "../assets/img/logo/bengali-association-logo.webp",
+            "../assets/img/logo/mohnish-logo.webp",
+            "../assets/img/logo/skl-logo-1.webp",
+            "../assets/img/logo/cropped-WSD-Logo-png.webp",
+            "../assets/img/logo/logo.0bf6238f.jpg",
+            "../assets/img/logo/Trident_Logo_Registered_489c31b1ff (1).svg",
+            "../assets/img/logo/yugansh-logo.webp",
+            "../assets/img/logo/trilink_export_logo.png",
+            "../assets/img/logo/mahabali-logo.webp"
+        ];
+
+        function swapRandomImage() {
+            const cards = Array.from(collageItems).filter(card => card.querySelector('img'));
+            const randomCard = cards[Math.floor(Math.random() * cards.length)];
+            const img = randomCard.querySelector('img');
+
+            // Get all current image sources to avoid duplicates
+            const currentSrcs = cards.map(c => c.querySelector('img').getAttribute('src'));
+
+            // Filter pool to find images that are NOT currently showing
+            const availablePool = partnerImages.filter(src => !currentSrcs.includes(src));
+
+            if (availablePool.length === 0) return; // All logos showing (unlikely with pool of 13)
+
+            const newSrc = availablePool[Math.floor(Math.random() * availablePool.length)];
+
+            gsap.to(img, {
+                opacity: 0,
+                scale: 0.8,
+                duration: 0.8,
+                onComplete: () => {
+                    img.src = newSrc;
+                    // Also update the overlay text if applicable
+                    const overlay = randomCard.querySelector('.diamond-overlay span');
+                    if (overlay) {
+                        // Extract name from path if possible, or mapping could be added
+                        // For now, just swap image source as requested
+                    }
+                    gsap.to(img, {
+                        opacity: 1,
+                        scale: 1,
+                        duration: 0.8
+                    });
+                }
+            });
+        }
+        setInterval(swapRandomImage, 4000);
+    }
 });
+

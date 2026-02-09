@@ -12,8 +12,8 @@
                 </div>
 
                 <h2 class="hero-subheading reveal-up" data-delay="0.6">
-                    Engineering digital excellence through <br>
-                    <span class="text-primary-gradient">innovation and integrity.</span>
+                    The Premier Tech Hub for <span class="text-primary-gradient">Gujarat & Indore.</span> <br>
+                    Engineering excellence from Ahmedabad to Kutch and Beyond.
                 </h2>
 
             </div>

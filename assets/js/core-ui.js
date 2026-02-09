@@ -87,7 +87,7 @@ const UICore = (() => {
         magneticButtons.forEach(btn => {
             const field = btn.querySelector('.particles-field');
             if (field) {
-                for (let i = 0; i < 50; i++) {
+                for (let i = 0; i < 15; i++) {
                     const particle = document.createElement('div');
                     particle.className = 'particle';
                     particle.style.setProperty('--x', `${Math.random() * 200 - 100}px`);

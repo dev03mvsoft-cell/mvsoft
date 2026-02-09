@@ -134,7 +134,7 @@ const ThreeEngine = (() => {
             const geometry = new THREE.SphereBufferGeometry(1, 8, 8);
             const material = new THREE.MeshBasicMaterial({ color: 0x003aaf });
             this.points = [];
-            for (let i = 0; i < 60; i++) {
+            for (let i = 0; i < 40; i++) {
                 const mesh = new THREE.Mesh(geometry, material);
                 mesh.position.set((Math.random() - 0.5) * 150, (Math.random() - 0.5) * 150, (Math.random() - 0.5) * 150);
                 mesh.userData.velocity = new THREE.Vector3((Math.random() - 0.5) * 0.2, (Math.random() - 0.5) * 0.2, (Math.random() - 0.5) * 0.2);

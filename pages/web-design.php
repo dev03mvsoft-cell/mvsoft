@@ -6,10 +6,10 @@
         <div class="container position-relative z-3 mt-5">
             <div class="row align-items-center">
                 <div class="col-lg-7">
-                    <span class="badge bg-primary rounded-pill px-3 py-2 mb-3 reveal-up">UI/UX & Creative</span>
-                    <h1 class="display-3 fw-bold text-dark mb-4 reveal-up">Web Design & <br><span class="text-primary-gradient">Visual Storytelling</span></h1>
+                    <span class="badge bg-primary rounded-pill px-3 py-2 mb-3 reveal-up">Elite Web Agency Gujarat</span>
+                    <h1 class="display-3 fw-bold text-dark mb-4 reveal-up">Bespoke <span class="text-primary-gradient">Website Development</span> & Digital Design</h1>
                     <p class="lead text-muted mb-5 reveal-up" style="max-width: 600px;">
-                        We create immersive, high-conversion web designs that blend aesthetic brilliance with technical precision.
+                        Mvsoft is a premier <strong>web design company in Gujarat</strong>, crafting immersive, high-conversion digital experiences for Indian and global brands.
                     </p>
                     <div class="reveal-up">
                         <a href="contact" class="btn btn-primary btn-lg rounded-pill px-5 shadow-glow">Start Designing</a>

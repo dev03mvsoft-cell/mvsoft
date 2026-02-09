@@ -1,6 +1,4 @@
 
-import * as THREE from "https://esm.sh/three@0.178.0";
-
 class NexusEngine {
     constructor() {
         this.container = null;
@@ -57,7 +55,7 @@ class NexusEngine {
             powerPreference: "high-performance"
         });
 
-        const dpr = Math.min(window.devicePixelRatio, 2);
+        const dpr = Math.min(window.devicePixelRatio, 1.5); // Capped at 1.5 for better performance
         this.renderer.setPixelRatio(dpr);
         this.renderer.setSize(window.innerWidth, window.innerHeight);
         this.container.appendChild(this.renderer.domElement);
@@ -98,7 +96,7 @@ class NexusEngine {
                 uMousePosition: { value: new THREE.Vector2(0.5, 0.5) },
                 uCursorSphere: { value: new THREE.Vector3(0, 0, 0) },
                 uCursorRadius: { value: this.settings.cursorRadiusMin },
-                uSphereCount: { value: this.settings.sphereCount },
+                uSphereCount: { value: this.isMobile ? 4 : 8 }, // Controlled directly for speed
                 uMergeDistance: { value: this.settings.mergeDistance },
                 uSmoothness: { value: this.settings.smoothness },
                 uAmbientIntensity: { value: this.settings.ambientIntensity },
@@ -141,9 +139,9 @@ class NexusEngine {
                 uniform float uSpecularIntensity;
                 uniform float uSpecularPower;
                 uniform float uFresnelPower;
-                uniform vec3 uBackgroundColor;
-                uniform vec3 uSphereColor;
-                uniform vec3 uLightColor;
+                vec3 uBackgroundColor = vec3(1.0);
+                vec3 uSphereColor = vec3(0.94);
+                vec3 uLightColor = vec3(0.1, 0.22, 0.5);
                 uniform vec3 uLightPosition;
                 uniform float uContrast;
                 uniform float uFogDensity;
@@ -151,11 +149,11 @@ class NexusEngine {
                 uniform float uMovementScale;
                 uniform float uCursorGlowIntensity;
                 uniform float uCursorGlowRadius;
-                vec3 uCursorGlowColor = vec3(0.1, 0.22, 0.69); // Hardcoded Mvsoft blue for glow
+                vec3 gColor = vec3(0.1, 0.22, 0.69);
 
                 varying vec2 vUv;
-                const float MAX_DIST = 100.0;
-                const float EPSILON = 0.001;
+                const float MAX_DIST = 8.0;
+                const float EPSILON = 0.002; // Increased for performance
 
                 float smin(float a, float b, float k) {
                     float h = max(k - abs(a - b), 0.0) / k;
@@ -166,114 +164,87 @@ class NexusEngine {
                     return length(p) - r;
                 }
 
-                vec3 screenToWorld(vec2 pos) {
-                    vec2 uv = pos * 2.0 - 1.0;
-                    uv.x *= uResolution.x / uResolution.y;
-                    return vec3(uv * 2.0, 0.0);
-                }
-
                 float sceneSDF(vec3 pos) {
                     float result = MAX_DIST;
                     float t = uTime * uAnimationSpeed;
                     float aspect = uResolution.x / uResolution.y;
                     
-                    for (int i = 0; i < 15; i++) {
+                    for (int i = 0; i < 8; i++) {
                         if (i >= uSphereCount) break;
                         float fi = float(i);
                         
-                        // Create unique anchors for bubbles to spread them out
-                        // We use the index to scatter them in different quadrants
-                        vec3 anchor = vec3(0.0);
-                        if (i == 0) anchor = vec3(-aspect * 1.4, 1.2, 0.0); // Top Left
-                        else if (i == 1) anchor = vec3(aspect * 1.4, -1.2, 0.0); // Bottom Right
-                        else if (i == 2) anchor = vec3(-aspect * 1.2, -1.0, 0.0); // Bottom Left
-                        else if (i == 3) anchor = vec3(aspect * 1.2, 1.0, 0.0); // Top Right
-                        else if (i == 4) anchor = vec3(0.0, 1.5, 0.0); // Top Center
-                        else if (i == 5) anchor = vec3(0.0, -1.5, 0.0); // Bottom Center
-                        else if (i >= 6) {
-                            // Scatter the rest randomly based on index
-                            anchor = vec3(
-                                sin(fi * 1.3) * aspect * 1.5,
-                                cos(fi * 0.9) * 1.5,
-                                sin(fi * 2.1) * 0.1
-                            );
-                        }
+                        vec3 anchor = vec3(
+                            sin(fi * 1.5) * aspect * 1.2,
+                            cos(fi * 0.7) * 1.2,
+                            sin(fi * 2.0) * 0.1
+                        );
 
-                        float speed = 0.3 + fi * 0.08;
-                        float radius = 0.18 + mod(fi, 4.0) * 0.06;
-                        float orbitSize = (0.6 + mod(fi, 3.0) * 0.3) * uMovementScale;
-                        float phase = fi * 1.57;
+                        float speed = 0.4 + fi * 0.05;
+                        float radius = 0.2 + mod(fi, 3.0) * 0.05;
+                        float orbitSize = (0.5 + mod(fi, 2.0) * 0.4) * uMovementScale;
+                        float phase = fi * 1.2;
                         
                         vec3 movement = vec3(
                             sin(t * speed + phase) * orbitSize,
-                            cos(t * speed * 0.7 + phase * 1.3) * orbitSize * 0.8,
-                            sin(t * speed * 0.4 + phase) * 0.3
+                            cos(t * speed * 0.8 + phase) * orbitSize,
+                            0.0
                         );
                         
                         vec3 bubblePos = anchor + movement;
-                        
-                        // Attraction to cursor if close
-                        vec3 toCursor = uCursorSphere - bubblePos;
-                        float distToCursor = length(toCursor);
-                        if(distToCursor < uMergeDistance) {
-                            bubblePos += normalize(toCursor) * (1.0 - distToCursor/uMergeDistance) * 0.5;
-                        }
-                        
                         result = smin(result, sdSphere(pos - bubblePos, radius), uSmoothness);
                     }
                     
-                    result = smin(result, sdSphere(pos - uCursorSphere, uCursorRadius), uSmoothness * 1.2);
+                    result = smin(result, sdSphere(pos - uCursorSphere, uCursorRadius), uSmoothness * 1.1);
                     return result;
                 }
 
                 vec3 calcNormal(vec3 p) {
-                    vec2 e = vec2(1.0, -1.0) * 0.0005;
-                    return normalize(
-                        e.xyy * sceneSDF(p + e.xyy) +
-                        e.yyx * sceneSDF(p + e.yyx) +
-                        e.yxy * sceneSDF(p + e.yxy) +
-                        e.xxx * sceneSDF(p + e.xxx)
-                    );
+                    vec2 e = vec2(0.001, 0.0);
+                    return normalize(vec3(
+                        sceneSDF(p + e.xyy) - sceneSDF(p - e.xyy),
+                        sceneSDF(p + e.yxy) - sceneSDF(p - e.yxy),
+                        sceneSDF(p + e.yyx) - sceneSDF(p - e.yyx)
+                    ));
                 }
 
                 void main() {
                     vec2 uv = (gl_FragCoord.xy * 2.0 - uActualResolution.xy) / uActualResolution.xy;
                     uv.x *= uResolution.x / uResolution.y;
                     
-                    vec3 ro = vec3(uv * 2.0, -1.0);
+                    vec3 ro = vec3(uv * 2.0, -2.0);
                     vec3 rd = vec3(0.0, 0.0, 1.0);
                     
                     float t = 0.0;
                     float d;
-                    // Optimized: Reduced steps from 40 to 30 for performance, plus mobile detection
-                    int steps = ${this.isMobile ? '20' : '30'};
-                    for(int i=0; i<30; i++) {
+                    // Significantly reduced steps for performance
+                    int steps = ${this.isMobile ? '12' : '20'};
+                    for(int i=0; i<20; i++) {
                         if(i >= steps) break;
                         d = sceneSDF(ro + rd * t);
-                        if(d < EPSILON || t > 5.0) break;
+                        if(d < EPSILON || t > MAX_DIST) break;
                         t += d;
                     }
                     
                     vec3 color = uBackgroundColor;
                     
-                    if(t < 5.0) {
+                    if(t < MAX_DIST) {
                         vec3 p = ro + rd * t;
                         vec3 n = calcNormal(p);
-                        vec3 v = -rd;
                         vec3 l = normalize(uLightPosition);
                         
                         float diff = max(dot(n, l), 0.0);
-                        float fresnel = pow(1.0 - max(dot(n, v), 0.0), uFresnelPower);
+                        float fresnel = pow(1.0 - max(dot(n, -rd), 0.0), uFresnelPower);
+                        vec3 spec = uLightColor * pow(max(dot(reflect(-l, n), -rd), 0.0), uSpecularPower);
                         
-                        vec3 spec = uLightColor * pow(max(dot(reflect(-l, n), v), 0.0), uSpecularPower);
-                        
-                        color = uSphereColor + diff * uDiffuseIntensity * uLightColor + fresnel * 0.3 * uLightColor + spec * uSpecularIntensity;
-                        color = mix(color, uBackgroundColor, smoothstep(0.0, 5.0, t) * uFogDensity);
+                        color = uSphereColor + diff * uDiffuseIntensity * uLightColor + fresnel * 0.2 * uLightColor + spec * uSpecularIntensity;
                     }
                     
-                    // Cursor Glow
-                    float glow = 1.0 - smoothstep(0.0, uCursorGlowRadius, length(ro.xy - uCursorSphere.xy));
-                    color += uCursorGlowColor * pow(glow, 3.0) * uCursorGlowIntensity;
+                    // Optimized Glow
+                    float glowDist = length(ro.xy - uCursorSphere.xy);
+                    if (glowDist < uCursorGlowRadius) {
+                        float glow = 1.0 - (glowDist / uCursorGlowRadius);
+                        color += gColor * pow(glow, 3.0) * uCursorGlowIntensity;
+                    }
                     
                     gl_FragColor = vec4(color, 1.0);
                 }

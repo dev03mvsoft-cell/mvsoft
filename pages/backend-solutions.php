@@ -6,10 +6,10 @@
         <div class="container position-relative z-3 mt-5">
             <div class="row align-items-center">
                 <div class="col-lg-7">
-                    <span class="badge bg-primary rounded-pill px-3 py-2 mb-3 reveal-up">Enterprise Architecture</span>
-                    <h1 class="display-3 fw-bold text-dark mb-4 reveal-up">Next-Gen <br><span class="text-primary-gradient">Backend Strategy</span></h1>
+                    <span class="badge bg-primary rounded-pill px-3 py-2 mb-3 reveal-up">Expert PHP Development</span>
+                    <h1 class="display-3 fw-bold text-dark mb-4 reveal-up">Elite <span class="text-primary-gradient">PHP & Laravel</span> Architecture</h1>
                     <p class="lead text-muted mb-5 reveal-up" style="max-width: 650px;">
-                        For the backend of your applications, MVSoft Solution utilizes a high-performance database strategy that combines the reliability of Relational (SQL) and the flexibility of Non-Relational (NoSQL) systems.
+                        Mvsoft is a specialized <strong>PHP development agency in Gujarat</strong>. We engineer robust, secure, and scalable server-side systems for enterprise applications across India and the globe.
                     </p>
                     <div class="reveal-up">
                         <a href="contact" class="btn btn-primary btn-lg rounded-pill px-5 shadow-glow">Architect Your System</a>
@@ -28,8 +28,8 @@
             <div class="row g-5">
                 <div class="col-lg-4">
                     <div class="sticky-top" style="top: 100px;">
-                        <h2 class="fw-bold text-dark mb-4">Scalable <br><span class="text-primary-gradient">Foundations</span></h2>
-                        <p class="text-muted">Whether you are using our Laravel/PHP stack or the MERN stack, we architect your database to ensure data integrity and infinite scalability.</p>
+                        <h2 class="fw-bold text-dark mb-4">Scalable <br><span class="text-primary-gradient">PHP Foundations</span></h2>
+                        <p class="text-muted">As a <strong>PHP-first engineering collective</strong>, we specialize in building high-performance Laravel systems that serve as the backbone for complex enterprise operations worldwide.</p>
 
                         <div class="service-stats mt-5">
                             <div class="stat-item mb-4 reveal-up">

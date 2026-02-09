@@ -4,16 +4,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mvsoft Tech Solutions - Leading provider of innovative 3D web experiences, high-performance scalable apps, and elite digital engineering.">
-    <meta name="keywords" content="web development, 3D web design, React JS, Next.js, Laravel, PHP, AI solutions, digital transformation, Mvsoft">
+
+    <!-- SEO Optimization -->
+    <title>Mvsoft | Best React, PHP, Flutter & Web Development in Gandhidham, Gujarat, India</title>
+    <meta name="description" content="Mvsoft Tech Solutions is the premier hub for React, PHP, Next.js, Laravel, Flutter, and Express development. Leading the digital landscape across Ahmedabad, Surat, Vadodara, Indore, Kutch, and Jamnagar.">
+    <meta name="keywords" content="React development Ahmedabad, PHP developers Surat, Next.js Vadodara, Laravel development Indore, Flutter app development Kutch, Express JS Jamnagar, Website development Dahod, Best IT company Gujarat, Mvsoft Tech Solutions, Top software agency Indore">
     <meta name="author" content="Mvsoft Tech Solutions">
-    <title>Mvsoft | Elite Web Development & 3D Digital Solutions</title>
+
+    <!-- Geo-Targeting for Search Engines -->
+    <meta name="geo.region" content="IN-GJ" />
+    <meta name="geo.placename" content="Gandhidham" />
+    <meta name="geo.position" content="23.0763;70.1270" />
+    <meta name="ICBM" content="23.0763, 70.1270" />
+
+    <!-- Open Graph / Social Media Meta -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mvsoftsolutions.com/">
+    <meta property="og:title" content="Mvsoft | Top Development Hub in Gujarat, India (React, PHP, Laravel)">
+    <meta property="og:description" content="The ultimate destination for React, PHP, Next.js, Laravel, Flutter, and Express engineering. Dominating the tech space in Ahmedabad, Surat, Vadodara, and beyond.">
+    <meta property="og:image" content="assets/img/logo1.png">
+
+    <!-- Schema.js (JSON-LD) for SEO -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Mvsoft Tech Solutions",
+            "url": "https://mvsoftsolutions.com/",
+            "logo": "https://mvsoftsolutions.com/assets/img/logo1.png",
+            "sameAs": [
+                "https://www.linkedin.com/company/mvsoft-solutions/",
+                "https://www.instagram.com/mvsoftsolutions/"
+            ],
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+91-02836-465134",
+                "contactType": "customer service",
+                "areaServed": ["Ahmedabad", "Surat", "Vadodara", "Indore", "Kutch", "Jamnagar", "Dahod", "IN", "US", "AE"],
+                "availableLanguage": ["English", "Hindi", "Gujarati"]
+            }
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Mvsoft Tech Solutions",
+            "image": "https://mvsoftsolutions.com/assets/img/logo1.png",
+            "@id": "",
+            "url": "https://mvsoftsolutions.com/",
+            "telephone": "02836-465134",
+            "priceRange": "$$",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Plot no 300, Ward: 12/b, Shree Ambika Arcade, Office no 106, 1st Floor",
+                "addressLocality": "Gandhidham",
+                "addressRegion": "GJ",
+                "postalCode": "370201",
+                "addressCountry": "IN"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 23.0763,
+                "longitude": 70.1270
+            },
+            "openingHoursSpecification": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday"
+                ],
+                "opens": "10:00",
+                "closes": "18:00"
+            }
+        }
+    </script>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google Fonts: Raleway -->
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&display=swap" rel="stylesheet">
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/img/logo.png">
+    <link rel="icon" type="image/png" href="assets/img/mvsoftfav.png">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Material Symbols -->

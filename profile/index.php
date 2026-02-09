@@ -8,7 +8,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -40,30 +40,27 @@
 
             <div class="floating-assets">
                 <!-- Row 1 -->
-                <div class="asset asset-1"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300" alt=""></div>
-                <div class="asset asset-2"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=300" alt=""></div>
-                <div class="asset asset-3"><img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400" alt=""></div>
+                <div class="asset asset-1"><img src="../assets/img/companyimages/mvsoftoff10.png" alt=""></div>
+                <div class="asset asset-2"><img src="../assets/img/companyimages/mvsoftoff11.png" alt=""></div>
+                <div class="asset asset-3"><img src="../assets/img/companyimages/mvsoftoff12.png" alt=""></div>
                 <!-- Row 2 -->
-                <div class="asset asset-4"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=250" alt=""></div>
-                <div class="asset asset-5"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300" alt=""></div>
-                <div class="asset asset-6"><img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=200" alt=""></div>
+                <div class="asset asset-4"><img src="../assets/img/companyimages/mvsoftoff13.png" alt=""></div>
+                <div class="asset asset-5"><img src="../assets/img/companyimages/mvsoftoff14.png" alt=""></div>
+                <div class="asset asset-6"><img src="../assets/img/companyimages/mvsoftoff15.png" alt=""></div>
                 <!-- Row 3 -->
-                <div class="asset asset-7"><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=350" alt=""></div>
-                <div class="asset asset-8"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=300" alt=""></div>
-                <div class="asset asset-9"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=250" alt=""></div>
+                <div class="asset asset-7"><img src="../assets/img/companyimages/mvsoftoff16.png" alt=""></div>
+                <div class="asset asset-8"><img src="../assets/img/companyimages/mvsoftoff17.png" alt=""></div>
+                <div class="asset asset-9"><img src="../assets/img/companyimages/mvsoftoff18.png" alt=""></div>
                 <!-- Extra scattered -->
-                <div class="asset asset-10"><img src="https://images.unsplash.com/photo-1521119989659-a83eee488004?w=300" alt=""></div>
-                <div class="asset asset-11"><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=300" alt=""></div>
-                <div class="asset asset-12"><img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=300" alt=""></div>
+                <div class="asset asset-10"><img src="../assets/img/companyimages/mvsoftoff19.png" alt=""></div>
+                <div class="asset asset-11"><img src="../assets/img/companyimages/mvsoftoff20.png" alt=""></div>
+                <div class="asset asset-12"><img src="../assets/img/companyimages/mvsoftoff21.png" alt=""></div>
             </div>
 
             <div class="hero-center">
                 <h1 class="hero-title">Your space <br>for inspiration</h1>
                 <p class="hero-tagline">Discover, search, and save what's next.</p>
-                <div class="scroll-indicator">
-                    <span>Keep Scrolling for Magic</span>
-                    <div class="mouse"></div>
-                </div>
+
             </div>
         </section>
 
@@ -72,18 +69,18 @@
             <div class="exceptional-container">
                 <!-- Full Circle Arc of Cards -->
                 <div class="cards-arc">
-                    <div class="arc-card card-1"><img src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=300" alt=""></div>
-                    <div class="arc-card card-2"><img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=300" alt=""></div>
-                    <div class="arc-card card-3"><img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=300" alt=""></div>
-                    <div class="arc-card card-4"><img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=300" alt=""></div>
-                    <div class="arc-card card-5"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=300" alt=""></div>
-                    <div class="arc-card card-6"><img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=300" alt=""></div>
-                    <div class="arc-card card-7"><img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=300" alt=""></div>
-                    <div class="arc-card card-8"><img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=300" alt=""></div>
-                    <div class="arc-card card-9"><img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=300" alt=""></div>
-                    <div class="arc-card card-10"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=300" alt=""></div>
-                    <div class="arc-card card-11"><img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=300" alt=""></div>
-                    <div class="arc-card card-12"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=300" alt=""></div>
+                    <div class="arc-card card-1"><img src="../assets/img/companyimages/mvsoftoff22.png" alt=""></div>
+                    <div class="arc-card card-2"><img src="../assets/img/companyimages/mvsoftoff23.png" alt=""></div>
+                    <div class="arc-card card-3"><img src="../assets/img/companyimages/mvsoftoff24.png" alt=""></div>
+                    <div class="arc-card card-4"><img src="../assets/img/companyimages/mvsoftoff25.png" alt=""></div>
+                    <div class="arc-card card-5"><img src="../assets/img/companyimages/mvsoftoff26.png" alt=""></div>
+                    <div class="arc-card card-6"><img src="../assets/img/companyimages/mvsoftoff27.png" alt=""></div>
+                    <div class="arc-card card-7"><img src="../assets/img/companyimages/mvsoftoff28.png" alt=""></div>
+                    <div class="arc-card card-8"><img src="../assets/img/companyimages/mvsoftoff29.png" alt=""></div>
+                    <div class="arc-card card-9"><img src="../assets/img/companyimages/mvsoftoff30.png" alt=""></div>
+                    <div class="arc-card card-10"><img src="../assets/img/companyimages/mvsoftoff31.png" alt=""></div>
+                    <div class="arc-card card-11"><img src="../assets/img/companyimages/mvsoftoff32.png" alt=""></div>
+                    <div class="arc-card card-12"><img src="../assets/img/companyimages/mvsoftoff33.png" alt=""></div>
                 </div>
 
                 <div class="exceptional-content">
@@ -99,40 +96,59 @@
 
         <!-- Magic Pinned Section -->
         <section class="magic-pin-section">
-            <!-- 3D Model Background -->
-            <div id="magic-3d-canvas"></div>
-
             <div class="magic-container">
+
+                <div class="magic-boss-image">
+                    <img src="../assets/img/boss.jpg" alt="Leadership">
+                </div>
+
                 <!-- Slide 1 -->
                 <div class="magic-slide" data-color="#00ffff">
                     <div class="magic-content">
-                        <span class="magic-label">01. Innovation</span>
-                        <h2 class="magic-title">We architect <span>digital worlds</span></h2>
+                        <span class="magic-label">Understand</span>
+                        <h2 class="magic-title">
+                            We listen to <span>your business needs</span>
+                        </h2>
                     </div>
                 </div>
+
                 <!-- Slide 2 -->
                 <div class="magic-slide" data-color="#ff00ff">
-                    <div class="magic-content">
-                        <span class="magic-label">02. Precision</span>
-                        <h2 class="magic-title">Every pixel <span>has a purpose</span></h2>
+                    <div class="magic-content split-layout">
+                        <div class="split-left">
+                            <span class="magic-label">Plan</span>
+                            <h2 class="magic-title">We design</h2>
+                        </div>
+                        <div class="split-right">
+                            <h2 class="magic-title"><span>clear solutions</span></h2>
+                        </div>
                     </div>
                 </div>
+
                 <!-- Slide 3 -->
                 <div class="magic-slide" data-color="#ffff00">
                     <div class="magic-content">
-                        <span class="magic-label">03. Scale</span>
-                        <h2 class="magic-title">Built for the <span>Next Generation</span></h2>
+                        <span class="magic-label">Build</span>
+                        <h2 class="magic-title">
+                            We develop with <span>precision & quality</span>
+                        </h2>
                     </div>
                 </div>
+
                 <!-- Slide 4 -->
                 <div class="magic-slide" data-color="#00ff00">
                     <div class="magic-content">
-                        <span class="magic-label">04. Vision</span>
-                        <h2 class="magic-title">The Future of <span>Nexus is Here</span></h2>
+                        <span class="magic-label">Deliver</span>
+                        <h2 class="magic-title">
+                            We deliver <span>on time & at scale</span>
+                        </h2>
                     </div>
                 </div>
+
+
             </div>
         </section>
+
 
         <!-- Clients Showcase Section -->
         <section class="clients-showcase">
@@ -146,78 +162,212 @@
                     <!-- Client 1 -->
                     <div class="client-card">
                         <div class="client-logo">
-                            <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=100&h=100&fit=crop" alt="BCS Logo">
+                            <img src="../assets/img/logo/BCS hiring .png" alt="BCS Logo">
                         </div>
                         <h3 class="client-name">Business Care Solutions</h3>
                         <p class="client-task">Developed an Elite Ship Management & Logistics System</p>
-                        <a href="#" class="client-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="https://bcsads.com/" target="_blank" class="client-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                     <!-- Client 2 -->
                     <div class="client-card">
                         <div class="client-logo">
-                            <img src="https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?w=100&h=100&fit=crop" alt="Aurio Logo">
+                            <img src="../assets/img/logo/logo.webp" alt="Ario Logo">
                         </div>
-                        <h3 class="client-name">Aurio</h3>
-                        <p class="client-task">Next-Gen E-commerce Infrastructure & UX Design</p>
-                        <a href="#" class="client-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
+                        <h3 class="client-name">Ario Shipping</h3>
+                        <p class="client-task">Global Freight Forwarding & Customs Clearance Solutions</p>
+                        <a href="https://arioshipping.com/" target="_blank" class="client-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                     <!-- Client 3 -->
                     <div class="client-card">
                         <div class="client-logo">
-                            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=100&h=100&fit=crop" alt="Jodac Logo">
+                            <img src="../assets/img/logo/jodac-logo.png" alt="Jodac Logo">
                         </div>
-                        <h3 class="client-name">Jodac</h3>
-                        <p class="client-task">Built a Secure Real-time Logistics Dashboard</p>
-                        <a href="#" class="client-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
+                        <h3 class="client-name">Jodac Shipping</h3>
+                        <p class="client-task">Expert NVOCC & Specialized Container Handling Systems</p>
+                        <a href="https://jodacshipping.com/" target="_blank" class="client-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                     <!-- Client 4 -->
                     <div class="client-card">
                         <div class="client-logo">
-                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=100&h=100&fit=crop" alt="JB Logo">
+                            <img src="../assets/img/logo/jb-logo.webp" alt="JB Logo">
                         </div>
-                        <h3 class="client-name">JB Enterprises</h3>
-                        <p class="client-task">Enterprise-level HR Management & Operations Portal</p>
-                        <a href="#" class="client-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
+                        <h3 class="client-name">JB Recycling</h3>
+                        <p class="client-task">Hazardous Waste Management & Eco-Sustainability Portal</p>
+                        <a href="https://jbrecycling.in/" target="_blank" class="client-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                     <!-- Client 5 -->
                     <div class="client-card">
                         <div class="client-logo">
-                            <img src="https://images.unsplash.com/photo-1572021335469-317162483f6c?w=100&h=100&fit=crop" alt="Nexus Logo">
+                            <img src="../assets/img/logo/bengali-association-logo.webp" alt="Bengali Logo">
                         </div>
-                        <h3 class="client-name">Nexus Logics</h3>
-                        <p class="client-task">AI-Powered Data Visualization & Analytics Engine</p>
-                        <a href="#" class="client-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
+                        <h3 class="client-name">Bengali Association</h3>
+                        <p class="client-task">Cultural Heritage Platform & Community Management</p>
+                        <a href="https://bengaliassociationkutch.org/" target="_blank" class="client-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                     <!-- Client 6 -->
                     <div class="client-card">
                         <div class="client-logo">
-                            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=100&h=100&fit=crop" alt="Apex Logo">
+                            <img src="../assets/img/logo/mohnish-logo.webp" alt="Mohnish Logo">
                         </div>
-                        <h3 class="client-name">Apex Tech</h3>
-                        <p class="client-task">Cloud Infrastructure for Scalable SaaS Platforms</p>
-                        <a href="#" class="client-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
+                        <h3 class="client-name">Mohnish Logistics</h3>
+                        <p class="client-task">Licensed CHA & Global Freight Forwarding Infrastructure</p>
+                        <a href="https://www.mohnishlogistics.com/" target="_blank" class="client-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                     <!-- Client 7 -->
                     <div class="client-card">
                         <div class="client-logo">
-                            <img src="https://images.unsplash.com/photo-1551288049-bbdac8a28a80?w=100&h=100&fit=crop" alt="Zenith Logo">
+                            <img src="../assets/img/logo/skl-logo-1.webp" alt="SKL Logo">
                         </div>
-                        <h3 class="client-name">Zenith Digital</h3>
-                        <p class="client-task">Cross-platform Mobile Application Development</p>
-                        <a href="#" class="client-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
+                        <h3 class="client-name">Shri Krishna Log</h3>
+                        <p class="client-task">Multi-port Sea Freight & Smart Warehousing Solutions</p>
+                        <a href="https://www.shrikrishnalog.com/" target="_blank" class="client-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                     <!-- Client 8 -->
                     <div class="client-card">
                         <div class="client-logo">
-                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=100&h=100&fit=crop" alt="Vertex Logo">
+                            <img src="../assets/img/logo/cropped-WSD-Logo-png.webp" alt="WSD Logo">
                         </div>
-                        <h3 class="client-name">Vertex Hub</h3>
-                        <p class="client-task">Custom ERP Solution for Global Trade Operations</p>
-                        <a href="#" class="client-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
+                        <h3 class="client-name">WSD Connect</h3>
+                        <p class="client-task">Global Shipping Directory & Data Networking Portal</p>
+                        <a href="https://wsdconnect.com/listing-region/gandhidham/" target="_blank" class="client-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <!-- Client 9 -->
+                    <div class="client-card">
+                        <div class="client-logo">
+                            <img src="../assets/img/logo/logo.0bf6238f.jpg" alt="TurantGo Logo">
+                        </div>
+                        <h3 class="client-name">TurantGo</h3>
+                        <p class="client-task">Integrated Multimodal Logistics & 3PL/4PL Supply Chain</p>
+                        <a href="https://turantgo.com/" target="_blank" class="client-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <!-- Client 10 -->
+                    <div class="client-card">
+                        <div class="client-logo">
+                            <img src="../assets/img/logo/Trident_Logo_Registered_489c31b1ff (1).svg" alt="Trident Logo">
+                        </div>
+                        <h3 class="client-name">Trident India</h3>
+                        <p class="client-task">Enterprise-level Textile & Chemical Manufacturing ERP</p>
+                        <a href="https://www.tridentindia.com/" target="_blank" class="client-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <!-- Client 11 -->
+                    <div class="client-card">
+                        <div class="client-logo">
+                            <img src="../assets/img/logo/yugansh-logo.webp" alt="Yugansh Logo">
+                        </div>
+                        <h3 class="client-name">Yugansh Shipping</h3>
+                        <p class="client-task">Advanced Port-to-Port Logistics & Customs Operations</p>
+                        <a href="https://www.yuganshshipping.com/" target="_blank" class="client-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <!-- Client 12 -->
+                    <div class="client-card">
+                        <div class="client-logo">
+                            <img src="../assets/img/logo/trilink_export_logo.png" alt="Trilink Logo">
+                        </div>
+                        <h3 class="client-name">Trilink Exports</h3>
+                        <p class="client-task">Global Export Compliance & Documentation Management</p>
+                        <a href="https://trilinkexports.com/" target="_blank" class="client-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <!-- Client 13 -->
+                    <div class="client-card">
+                        <div class="client-logo">
+                            <img src="../assets/img/logo/mahabali-logo.webp" alt="Mahabali Logo">
+                        </div>
+                        <h3 class="client-name">Mahabali Overseas</h3>
+                        <p class="client-task">Agricultural Trade & Global Sourcing Digital Platform</p>
+                        <a href="https://mahabalioverseas.com/" target="_blank" class="client-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Partners Collage Section -->
+        <section class="partners-collage">
+            <div class="collage-header center">
+                <span class="magic-label">Network</span>
+                <h2 class="collage-title">Strategic <span>Partners</span></h2>
+            </div>
+
+            <div class="collage-wrapper">
+                <div class="collage-grid">
+                    <!-- Row 1 (1 Item) -->
+                    <div class="collage-row row-1">
+                        <div class="collage-item diamond">
+                            <div class="diamond-content">
+                                <img src="../assets/img/logo/BCS hiring .png" alt="Partner">
+                                <div class="diamond-overlay"><span>Business Care Solutions</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 2 (2 Items) -->
+                    <div class="collage-row row-2">
+                        <div class="collage-item diamond">
+                            <div class="diamond-content">
+                                <img src="../assets/img/logo/logo.webp" alt="Partner">
+                                <div class="diamond-overlay"><span>Ario Shipping</span></div>
+                            </div>
+                        </div>
+                        <div class="collage-item diamond">
+                            <div class="diamond-content">
+                                <img src="../assets/img/logo/jodac-logo.png" alt="Partner">
+                                <div class="diamond-overlay"><span>Jodac Shipping</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 3 (3 Items) -->
+                    <div class="collage-row row-3">
+                        <div class="collage-item diamond">
+                            <div class="diamond-content">
+                                <img src="../assets/img/logo/jb-logo.webp" alt="Partner">
+                                <div class="diamond-overlay"><span>JB Recycling</span></div>
+                            </div>
+                        </div>
+                        <!-- Central Stat Item -->
+                        <div class="collage-item diamond">
+                            <div class="diamond-content bg-accent">
+                                <div class="diamond-text">
+                                    <h3>13+</h3>
+                                    <p>Key Clients</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collage-item diamond">
+                            <div class="diamond-content">
+                                <img src="../assets/img/logo/mohnish-logo.webp" alt="Partner">
+                                <div class="diamond-overlay"><span>Mohnish Logistics</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 4 (2 Items) -->
+                    <div class="collage-row row-4">
+                        <div class="collage-item diamond">
+                            <div class="diamond-content">
+                                <img src="../assets/img/logo/skl-logo-1.webp" alt="Partner">
+                                <div class="diamond-overlay"><span>Shri Krishna Log</span></div>
+                            </div>
+                        </div>
+                        <div class="collage-item diamond">
+                            <div class="diamond-content">
+                                <img src="../assets/img/logo/logo.0bf6238f.jpg" alt="Partner">
+                                <div class="diamond-overlay"><span>TurantGo</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="collage-row row-1">
+                        <div class="collage-item diamond">
+                            <div class="diamond-content">
+                                <img src="../assets/img/logo/Trident_Logo_Registered_489c31b1ff (1).svg" alt="Partner">
+                                <div class="diamond-overlay"><span>Trident India</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Trusted Brand Section -->
         <section class="trusted-section">
             <div class="container">
@@ -262,7 +412,7 @@
                     </div>
                     <div class="t-divider"></div>
                     <div class="t-stat">
-                        <span class="t-count">15+</span>
+                        <span class="t-count">1+</span>
                         <span class="t-label">Years of Legacy</span>
                     </div>
                 </div>
@@ -271,13 +421,55 @@
 
     </main>
 
-    <!-- Standalone Footer -->
+    <!-- Comprehensive Premium Footer -->
     <footer class="profile-footer">
-        <div class="logo">MV<span>SOFT</span></div>
-        <p class="copy-text">&copy; 2026 Mvsoft Nexus. All rights reserved.</p>
-        <div class="socials" style="display: flex; gap: 1.5rem; font-size: 1.2rem;">
-            <a href="#" style="color: var(--text-secondary);"><i class="fab fa-github"></i></a>
-            <a href="#" style="color: var(--text-secondary);"><i class="fab fa-linkedin"></i></a>
+        <div class="footer-main">
+            <div class="footer-brand">
+                <a href="../home" class="footer-logo">MV<span>SOFT</span></a>
+                <p class="footer-desc">Leading provider of innovative 3D web experiences, high-performance scalable apps, and elite digital engineering solutions.</p>
+                <div class="footer-socials">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul class="footer-links">
+                    <li><a href="../home">Home</a></li>
+                    <li><a href="../about">About Us</a></li>
+                    <li><a href="../services">Our Services</a></li>
+                    <li><a href="../career">Careers</a></li>
+                    <li><a href="../contact">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Development</h4>
+                <ul class="footer-links">
+                    <li><a href="../web-design">Web Design</a></li>
+                    <li><a href="../app-development">App Development</a></li>
+                    <li><a href="../backend-solutions">Backend Systems</a></li>
+                    <li><a href="../cloud-hosting">Cloud Hosting</a></li>
+                    <li><a href="../cybersecurity">Cyber Security</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Marketing</h4>
+                <ul class="footer-links">
+                    <li><a href="../seo-optimization">SEO Optimization</a></li>
+                    <li><a href="../digital-marketing">Digital Marketing</a></li>
+                    <li><a href="../email-campaigns">Email Campaigns</a></li>
+                    <li><a href="../server-management">Server Management</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="copy-text">&copy; 2026 Mvsoft Nexus. All rights reserved.</p>
         </div>
     </footer>
 

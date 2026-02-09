@@ -117,28 +117,102 @@
         </div>
     </section>
 
-    <!-- Open Positions -->
-    <section id="positions" class="py-5 bg-white">
+    <!-- Cultural Pillars (Bento Grid) -->
+    <section class="py-5 position-relative overflow-hidden">
         <div class="container py-5">
-            <div class="text-center mb-5">
-                <h2 class="display-4 fw-bold text-dark reveal-up">Current Openings</h2>
-                <p class="text-muted reveal-up">Join the elite engineering team at Mvsoft.</p>
+            <div class="row mb-5 text-center reveal-up">
+                <div class="col-12">
+                    <span class="section-tag">Our Ecosystem</span>
+                    <h2 class="display-5 fw-bold text-dark">Engineered for <span class="text-primary-gradient">Growth</span></h2>
+                </div>
             </div>
-            <div class="row g-4">
-                <div class="col-lg-12">
-                    <div class="job-card p-4 rounded-4 border mb-4 reveal-up d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
-                        <div>
-                            <h4 class="fw-bold mb-1">Senior Full Stack Developer</h4>
-                            <p class="text-muted mb-0">Remote / Full-time • React, Node, AWS</p>
+
+            <div class="culture-bento-grid">
+                <div class="bento-item bento-tall glass-card p-5 reveal-up shadow-sm">
+                    <div class="bento-content">
+                        <div class="icon-pill mb-4"><i class="fas fa-microchip"></i></div>
+                        <h4 class="fw-bold">High-Tier Stack</h4>
+                        <p class="text-muted">We don't do legacy. Work with Next.js, Three.js, and high-performance Laravel architectures.</p>
+                        <div class="bento-tags mt-4">
+                            <span class="badge rounded-pill bg-light text-dark">AI-First</span>
+                            <span class="badge rounded-pill bg-light text-dark">Modern UI</span>
                         </div>
-                        <a href="#applyForm" class="btn btn-outline-primary rounded-pill px-4">Apply Now</a>
                     </div>
-                    <div class="job-card p-4 rounded-4 border mb-4 reveal-up d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
-                        <div>
-                            <h4 class="fw-bold mb-1">3D Web Developer (Three.js)</h4>
-                            <p class="text-muted mb-0">Hybrid / Full-time • WebGL, GLSL, GSAP</p>
+                </div>
+
+                <div class="bento-item bento-wide glass-card p-5 reveal-up shadow-sm" data-delay="0.1">
+                    <div class="row align-items-center h-100">
+                        <div class="col-md-7">
+                            <h4 class="fw-bold">Global Collective</h4>
+                            <p class="text-muted mb-0">Join a distributed team of engineers across 3 continents. Zero boundaries, maximum impact.</p>
                         </div>
-                        <a href="#applyForm" class="btn btn-outline-primary rounded-pill px-4">Apply Now</a>
+                        <div class="col-md-5 text-end d-none d-md-block">
+                            <div class="global-icon"><i class="fas fa-earth-americas text-primary"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bento-item glass-card p-5 reveal-up shadow-sm" data-delay="0.2">
+                    <div class="icon-pill mb-3"><i class="fas fa-bolt"></i></div>
+                    <h5 class="fw-bold">Radical Velocity</h5>
+                    <p class="text-muted small mb-0">We build fast, test hard, and deploy daily.</p>
+                </div>
+
+                <div class="bento-item glass-card p-5 reveal-up shadow-sm" data-delay="0.3">
+                    <div class="icon-pill mb-3"><i class="fas fa-brain"></i></div>
+                    <h5 class="fw-bold">Mental Sovereignty</h5>
+                    <p class="text-muted small mb-0">Continuous learning budget and weekly R&D sessions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open Positions -->
+    <section id="positions" class="py-5 bg-light position-relative">
+        <div class="container py-5">
+            <div class="text-center mb-5 reveal-up">
+                <span class="section-tag">Active Roles</span>
+                <h2 class="display-4 fw-bold text-dark">The Collective is <span class="text-primary-gradient">Expanding</span></h2>
+                <p class="text-muted">Current engineering and creative opportunities.</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Job Card 1 -->
+                <div class="col-lg-6">
+                    <div class="nexus-job-card h-100 glass-card p-5 reveal-up shadow-sm">
+                        <div class="d-flex justify-content-between align-items-start mb-4">
+                            <div>
+                                <h4 class="fw-bold mb-1">Senior Systems Architect</h4>
+                                <span class="badge bg-primary-soft text-primary rounded-pill px-3">Full-time</span>
+                                <span class="badge bg-dark-soft text-dark rounded-pill px-3">Remote</span>
+                            </div>
+                            <div class="job-rate text-primary fw-bold">Project Based</div>
+                        </div>
+                        <p class="text-muted small mb-4">Designing complex database schemas and high-concurrency API architectures for global logistics platforms.</p>
+                        <div class="job-meta d-flex gap-4 mb-4 text-muted small">
+                            <span><i class="fas fa-code me-2"></i> PHP/Laravel</span>
+                            <span><i class="fas fa-database me-2"></i> Postgres</span>
+                        </div>
+                        <a href="#applyForm" class="btn btn-nexus-outline w-100">Apply to Collective</a>
+                    </div>
+                </div>
+
+                <!-- Job Card 2 -->
+                <div class="col-lg-6">
+                    <div class="nexus-job-card h-100 glass-card p-5 reveal-up shadow-sm" data-delay="0.1">
+                        <div class="d-flex justify-content-between align-items-start mb-4">
+                            <div>
+                                <h4 class="fw-bold mb-1">Creative Technologist</h4>
+                                <span class="badge bg-primary-soft text-primary rounded-pill px-3">Contract</span>
+                                <span class="badge bg-dark-soft text-dark rounded-pill px-3">Hybrid</span>
+                            </div>
+                        </div>
+                        <p class="text-muted small mb-4">Bridging the gap between UI design and WebGL implementation. You are a visual storyteller with code.</p>
+                        <div class="job-meta d-flex gap-4 mb-4 text-muted small">
+                            <span><i class="fas fa-cube me-2"></i> Three.js</span>
+                            <span><i class="fas fa-wand-magic-sparkles me-2"></i> GSAP</span>
+                        </div>
+                        <a href="#applyForm" class="btn btn-nexus-outline w-100">Apply to Collective</a>
                     </div>
                 </div>
             </div>
@@ -215,42 +289,113 @@
 </main>
 
 <style>
-    .job-card {
-        background: rgba(255, 255, 255, 0.5);
-        backdrop-filter: blur(10px);
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    .text-primary-gradient {
+        background: linear-gradient(45deg, #1a387f, #003aaf);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
-    .job-card:hover {
-        background: #fff;
+    /* Culture Bento Grid */
+    .culture-bento-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: minmax(180px, auto);
+        gap: 1.5rem;
+    }
+
+    .bento-item {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .bento-tall {
+        grid-row: span 2;
+    }
+
+    .bento-wide {
+        grid-column: span 2;
+    }
+
+    .icon-pill {
+        width: 50px;
+        height: 50px;
+        background: #1a387f;
+        color: white;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.25rem;
+    }
+
+    .global-icon {
+        font-size: 6rem;
+        opacity: 0.1;
+        transform: rotate(15deg);
+    }
+
+    /* Job Cards */
+    .nexus-job-card {
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        border: 1px solid rgba(26, 56, 127, 0.1) !important;
+    }
+
+    .nexus-job-card:hover {
+        transform: translateY(-10px) scale(1.02);
         border-color: #1a387f !important;
-        transform: translateY(-5px);
-        box-shadow: 0 15px 35px rgba(26, 56, 127, 0.1);
+        background: white !important;
+        box-shadow: 0 30px 60px rgba(26, 56, 127, 0.1) !important;
     }
 
+    .bg-primary-soft {
+        background: rgba(26, 56, 127, 0.08);
+    }
+
+    .bg-dark-soft {
+        background: rgba(0, 0, 0, 0.05);
+    }
+
+    .btn-nexus-outline {
+        border: 1px solid #1a387f;
+        color: #1a387f;
+        border-radius: 50px;
+        padding: 0.8rem;
+        font-weight: 700;
+        transition: all 0.3s ease;
+        background: transparent;
+        text-decoration: none;
+        display: block;
+        text-align: center;
+    }
+
+    .btn-nexus-outline:hover {
+        background: #1a387f;
+        color: white;
+    }
+
+    /* Forms */
     .application-form-card {
         border: 1px solid rgba(0, 0, 0, 0.05);
         transition: all 0.4s ease;
     }
 
-    .bg-primary-soft {
-        background-color: rgba(26, 56, 127, 0.1);
+    .form-control:focus {
+        background: white !important;
+        border-color: #1a387f !important;
+        box-shadow: 0 10px 20px rgba(26, 56, 127, 0.1) !important;
     }
 
-    .form-control:focus,
-    .form-select:focus {
-        background-color: #fff !important;
-        box-shadow: 0 10px 20px rgba(26, 56, 127, 0.05);
-        border: 1px solid rgba(26, 56, 127, 0.2) !important;
-    }
+    @media (max-width: 991px) {
+        .culture-bento-grid {
+            grid-template-columns: 1fr;
+        }
 
-    .input-group-text {
-        border-right: none !important;
-    }
-
-    .shadow-glow {
-        box-shadow: 0 10px 30px rgba(26, 56, 127, 0.2);
+        .bento-tall,
+        .bento-wide {
+            grid-row: auto;
+            grid-column: auto;
+        }
     }
 </style>
 

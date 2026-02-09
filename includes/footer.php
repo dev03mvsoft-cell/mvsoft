@@ -6,7 +6,7 @@
                 <div class="footer-brand mb-4">
                     <img src="assets/img/logo1.png" alt="Mvsoft Logo" class="footer-logo mb-3">
                     <p class="text-muted footer-pitch">
-                        Mvsoft Tech Solutions is a powerhouse of elite developers and designers, delivering high-performance digital engineering and innovative 3D web experiences.
+                        Mvsoft Tech Solutions is the leading <strong>Website & App Development company in Gujarat, India</strong>. Our elite collective delivers high-performance digital engineering and innovative 3D web experiences to a global clientele.
                     </p>
                 </div>
                 <div class="footer-social">
@@ -68,6 +68,18 @@
 
     <!-- Footer Bottom -->
     <div class="footer-bottom py-3 border-top">
+        <!-- Service Locations For SEO -->
+        <div class="footer-locations py-4 border-top mt-5">
+            <div class="row">
+                <div class="col-12">
+                    <p class="small text-muted mb-0">
+                        <strong class="text-dark me-2">Service Hubs:</strong>
+                        Ahmedabad &bull; Surat &bull; Vadodara &bull; Rajkot &bull; Indore &bull; Jamnagar &bull; Gandhidham &bull; Kutch &bull; Dahod &bull; Global Remote Engineering
+                    </p>
+                </div>
+            </div>
+        </div>
+
         <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
             <p class="mb-0 small text-muted">&copy; <?= date('Y') ?> Mvsoft Tech Solutions. All rights reserved.</p>
             <div class="footer-legal d-flex gap-3 small">

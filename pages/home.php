@@ -14,15 +14,15 @@
                 <!-- Column 2: About Text -->
                 <div class="col-sm-6 order-1 order-sm-2 mb-5 mb-sm-0">
                     <div class="about-content ps-sm-5">
-                        <span class="badge bg-primary rounded-pill px-3 py-2 mb-3 reveal-up">Who We Are</span>
-                        <h2 class="display-4 fw-bold text-dark mb-4 split-text reveal-up">Evolution of <br><span class="text-drak-gradient">Digital Excellence</span></h2>
+                        <span class="badge bg-primary rounded-pill px-3 py-2 mb-3 reveal-up">Elite Software Agency</span>
+                        <h2 class="display-4 fw-bold text-dark mb-4 split-text reveal-up">Top <span class="text-drak-gradient">Website & App Development</span> in Gujarat</h2>
                         <p class="lead text-muted mb-4 reveal-up">
-                            Mvsoft is a powerhouse of elite developers and designers committed to pushing the boundaries of what's possible in the digital space.
+                            Mvsoft is a premier <strong>digital engineering powerhouse</strong> in Gandhidham, Gujarat. We serve businesses across India and the globe with elite website development and high-performance mobile app solutions.
                         </p>
                         <ul class="list-unstyled text-muted mb-5 reveal-up">
-                            <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> Innovative 3D Web Experiences</li>
-                            <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> High-Performance Scalable Apps</li>
-                            <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> Value-First Engineering Model</li>
+                            <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> Leading Web Development in Gujarat</li>
+                            <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> Scalable App Development India</li>
+                            <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> Global Digital Engineering Model</li>
                         </ul>
                         <div class="reveal-up" style="display: flex; align-items: center; gap: 1rem;">
                             <label class="am">
@@ -35,7 +35,7 @@
                                     <span class="am__plane-body"></span>
                                 </span>
                             </label>
-                            <span class="text-dark">Learn More</span>
+                            <!-- <span class="text-dark">Learn More</span> -->
                         </div>
                     </div>
                 </div>
@@ -47,8 +47,8 @@
     <!-- Tech Solutions Intro Section -->
     <section class="info-section">
         <div class="left-part">
-            <h1 class="split-text"><span class="d-flex">we make</span> <span class="text"></span></h1>
-            <p>We build cutting-edge digital products with our team of elite engineers and designers, delivering innovation that scales.</p>
+            <h1 class="split-text"><span class="d-flex">premium</span> <span class="text"></span></h1>
+            <p>Mvsoft delivers cutting-edge <strong>website development</strong> and <strong>app development</strong> services from Gujarat to the world, ensuring innovation that scales internationally.</p>
             <a href="contact" class="book-link">
                 <span class="linktext">Start Your Project</span>
                 <span class="arrow">
@@ -64,36 +64,36 @@
 
             <div class="main-grid d-flex">
                 <div class="box">
-                    <div class="bg-img"><img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=2070&auto=format&fit=crop" alt="React"></div>
-                    <span class="px-2">React JS</span>
+                    <div class="bg-img"><img src="assets/img/companyimages/mvsoftoff34.png" alt="React"></div>
+                    <span class="px-2">Advanced React Logic</span>
                 </div>
                 <div class="box">
-                    <div class="bg-img"><img src="https://images.unsplash.com/photo-1618477388954-7852f32655ec?q=80&w=2070&auto=format&fit=crop" alt="Next.js"></div>
-                    <span class="px-2">Next.js</span>
+                    <div class="bg-img"><img src="assets/img/companyimages/mvsoftoff35.png" alt="Next.js"></div>
+                    <span class="px-2">Next-Gen Web Apps</span>
                 </div>
                 <div class="box">
-                    <div class="bg-img"><img src="https://images.unsplash.com/photo-1599507593499-a3f7d7d97667?q=80&w=2070&auto=format&fit=crop" alt="PHP"></div>
-                    <span class="px-2">PHP</span>
+                    <div class="bg-img"><img src="assets/img/companyimages/mvsoftoff36.png" alt="PHP"></div>
+                    <span class="px-2">Secure Backend Systems</span>
                 </div>
                 <div class="box">
-                    <div class="bg-img"><img src="https://images.unsplash.com/photo-1537432376769-00f5c2f4c8d2?q=80&w=2070&auto=format&fit=crop" alt="Laravel"></div>
-                    <span class="px-2">Laravel</span>
+                    <div class="bg-img"><img src="assets/img/companyimages/mvsoftoff37.png" alt="Laravel"></div>
+                    <span class="px-2">Enterprise Laravel</span>
                 </div>
                 <div class="box">
-                    <div class="bg-img"><img src="https://images.unsplash.com/photo-1544383835-bda2bc66a55d?q=80&w=2070&auto=format&fit=crop" alt="MySQL"></div>
-                    <span class="px-2">MySQL</span>
+                    <div class="bg-img"><img src="assets/img/companyimages/mvsoftoff38.png" alt="MySQL"></div>
+                    <span class="px-2">Smart Data Architecture</span>
                 </div>
                 <div class="box">
-                    <div class="bg-img"><img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?q=80&w=2070&auto=format&fit=crop" alt="Bootstrap"></div>
-                    <span class="px-2">Bootstrap</span>
+                    <div class="bg-img"><img src="assets/img/companyimages/mvsoftoff10.png" alt="Bootstrap"></div>
+                    <span class="px-2">Rapid Component Design</span>
                 </div>
                 <div class="box">
-                    <div class="bg-img"><img src="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?q=80&w=2070&auto=format&fit=crop" alt="Tailwind"></div>
-                    <span class="px-2">Tailwind CSS</span>
+                    <div class="bg-img"><img src="assets/img/companyimages/mvsoftoff11.png" alt="Tailwind"></div>
+                    <span class="px-2">Modern Tailwind Styling</span>
                 </div>
                 <div class="box">
-                    <div class="bg-img"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070&auto=format&fit=crop" alt="AI Solutions"></div>
-                    <span class="px-2">AI Solutions</span>
+                    <div class="bg-img"><img src="assets/img/companyimages/mvsoftoff12.png" alt="AI Solutions"></div>
+                    <span class="px-2">AI-Powered Engineering</span>
                 </div>
             </div>
 
@@ -204,7 +204,60 @@
     </section>
 
 
-    <!-- Customized Digital Solutions Section - Horizontal Scroll -->
+    <!-- Regional Supremacy Section -->
+    <!-- <section class="py-5" style="background: rgba(26, 56, 127, 0.02);">
+        <div class="container py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-12 text-center reveal-up">
+                    <span class="section-tag">Regional Hub</span>
+                    <h2 class="display-5 fw-bold mb-4">Leading Tech Hub Across <span class="text-primary-gradient">Gujarat & Indore</span></h2>
+                    <p class="lead text-muted mx-auto" style="max-width: 800px;">
+                        Mvsoft is the best destination for <strong>React, PHP, Next.js, Laravel, Flutter, and Express</strong> engineering. We are the top-rated software company serving clients in <strong>Kutch, Ahmedabad, Surat, Vadodara, Indore, Jamnagar, and Dahod.</strong>
+                    </p>
+                </div>
+            </div>
+            <div class="row g-4 mt-4 text-center">
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="city-pill reveal-up"><strong>Ahmedabad</strong><br><span class="small opacity-75">React & Next.js</span></div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2" data-delay="0.1">
+                    <div class="city-pill reveal-up"><strong>Surat</strong><br><span class="small opacity-75">PHP & Laravel</span></div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2" data-delay="0.2">
+                    <div class="city-pill reveal-up"><strong>Vadodara</strong><br><span class="small opacity-75">Express & Node</span></div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2" data-delay="0.3">
+                    <div class="city-pill reveal-up"><strong>Indore</strong><br><span class="small opacity-75">Flutter Apps</span></div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2" data-delay="0.4">
+                    <div class="city-pill reveal-up"><strong>Jamnagar</strong><br><span class="small opacity-75">Web Design</span></div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2" data-delay="0.5">
+                    <div class="city-pill reveal-up"><strong>Kutch</strong><br><span class="small opacity-75">Custom Softwares</span></div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <style>
+        .city-pill {
+            background: white;
+            padding: 15px 10px;
+            border-radius: 12px;
+            text-align: center;
+            font-weight: 700;
+            color: #1a387f;
+            border: 1px solid rgba(26, 56, 127, 0.1);
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+        }
+
+        .city-pill:hover {
+            background: #1a387f;
+            color: white;
+            transform: translateY(-5px);
+        }
+    </style>
     <section id="solutions" class="solutions-section">
         <div class="horizontal-solutions-container">
             <!-- Header Card -->
@@ -584,24 +637,12 @@
                                 <span>Flutter</span>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-6">
+                        <!-- <div class="col-lg-3 col-md-4 col-6">
                             <div class="tech-card">
                                 <i class="devicon-react-original colored"></i>
                                 <span>React Native</span>
                             </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-6">
-                            <div class="tech-card">
-                                <i class="devicon-android-plain colored"></i>
-                                <span>Android (Java/Kotlin)</span>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-6">
-                            <div class="tech-card">
-                                <i class="devicon-apple-original"></i>
-                                <span>iOS (Swift)</span>
-                            </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
 
@@ -678,6 +719,12 @@
                             <div class="tech-card">
                                 <i class="devicon-php-plain colored"></i>
                                 <span>Core PHP</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-6">
+                            <div class="tech-card">
+                                <i class="devicon-express-original colored"></i>
+                                <span>Express</span>
                             </div>
                         </div>
                         <!-- <div class="col-lg-3 col-md-4 col-6">

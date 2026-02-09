@@ -113,82 +113,152 @@
         </div>
     </section>
 
-    <!-- Contact Form & Info -->
-    <section class="py-5 bg-light">
+    <!-- Contact Interaction Section -->
+    <section class="py-5 position-relative">
         <div class="container py-5">
             <div class="row g-5">
+                <!-- Info Column -->
                 <div class="col-lg-5">
-                    <div class="contact-info-card p-5 bg-white rounded-4 shadow-sm reveal-up">
-                        <h2 class="fw-bold mb-4">Contact Information</h2>
-                        <div class="info-item d-flex mb-4">
-                            <div class="icon me-3 text-primary"><i class="fas fa-map-marker-alt fs-4"></i></div>
-                            <div>
-                                <h5 class="fw-bold mb-1">Our Office</h5>
-                                <p class="text-muted small mb-0">Plot no 300, Ward: 12/b, Shree Ambika Arcade, Office no 106, 1st Floor,Gandhidham 370201</p>
+                    <div class="reveal-up">
+                        <span class="section-tag">Get in Touch</span>
+                        <h2 class="display-5 fw-bold text-dark mb-4">Let's build something <span class="text-primary-gradient">legendary.</span></h2>
+                        <p class="text-muted mb-5 lead">Whether you have a specific project inquiry or just want to explore the possibilities of digital engineering, our team is ready.</p>
+
+                        <div class="contact-details">
+                            <div class="detail-card glass-card p-4 mb-4 reveal-up shadow-sm">
+                                <div class="d-flex align-items-center gap-4">
+                                    <div class="icon-circle shadow-glow">
+                                        <i class="fas fa-map-location-dot"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="fw-bold mb-1">Corporate HQ</h5>
+                                        <p class="text-muted small mb-0">Plot no 300, Ward: 12/b, Shree Ambika Arcade,<br>Office no 106, 1st Floor, Gandhidham 370201</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="info-item d-flex mb-4">
-                            <div class="icon me-3 text-primary"><i class="fas fa-envelope fs-4"></i></div>
-                            <div>
-                                <h5 class="fw-bold mb-1">Email Us</h5>
-                                <p class="text-muted small mb-0">admin@mvsoftsolutions.com</p>
+
+                            <div class="detail-card glass-card p-4 mb-4 reveal-up shadow-sm" data-delay="0.1">
+                                <div class="d-flex align-items-center gap-4">
+                                    <div class="icon-circle shadow-glow">
+                                        <i class="fas fa-paper-plane"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="fw-bold mb-1">Direct Communication</h5>
+                                        <p class="text-muted small mb-0">admin@mvsoftsolutions.com<br>info@mvsoftsolutions.com</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="info-item d-flex mb-4">
-                            <div class="icon me-3 text-primary"><i class="fas fa-phone fs-4"></i></div>
-                            <div>
-                                <h5 class="fw-bold mb-1">Call Us</h5>
-                                <p class="text-muted small mb-0">02836-465134</p>
+
+                            <div class="detail-card glass-card p-4 reveal-up shadow-sm" data-delay="0.2">
+                                <div class="d-flex align-items-center gap-4">
+                                    <div class="icon-circle shadow-glow">
+                                        <i class="fas fa-headset"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="fw-bold mb-1">Client Support</h5>
+                                        <p class="text-muted small mb-0">02836-465134<br>Available 10:00 - 18:00 IST</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="social-links mt-5">
-                            <h6 class="fw-bold text-dark mb-3">Follow Us</h6>
+                        <div class="social-wrapper mt-5 reveal-up">
+                            <h6 class="fw-bold text-dark mb-3">Connect Professionally</h6>
                             <div class="d-flex gap-3">
-                                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="nexus-social-icon"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="nexus-social-icon"><i class="fab fa-x-twitter"></i></a>
+                                <a href="#" class="nexus-social-icon"><i class="fab fa-instagram"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Form Column -->
                 <div class="col-lg-7">
-                    <div class="contact-form-wrapper p-5 bg-white rounded-4 shadow-sm reveal-up" data-delay="0.1">
-                        <h2 class="fw-bold mb-4">Send us a Message</h2>
-                        <form id="contactForm">
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <label class="form-label small fw-bold">Full Name</label>
-                                    <input type="text" class="form-control rounded-pill px-4" placeholder="Your Name" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label small fw-bold">Email Address</label>
-                                    <input type="email" class="form-control rounded-pill px-4" placeholder="name@company.com" required>
-                                </div>
-                                <div class="col-md-12">
-                                    <label class="form-label small fw-bold">Subject</label>
-                                    <select class="form-select rounded-pill px-4">
-                                        <option selected>Web Development</option>
-                                        <option>Mobile App Development</option>
-                                        <option>UI/UX Design</option>
-                                        <option>Digital Marketing</option>
-                                        <option>Other / Inquiry</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-12">
-                                    <label class="form-label small fw-bold">Message</label>
-                                    <textarea class="form-control rounded-4 px-4 py-3" rows="5" placeholder="Tell us about your project..." required></textarea>
-                                </div>
-                                <div class="col-md-12 mt-4">
-                                    <button type="submit" class="btn btn-dark btn-lg rounded-pill px-5 w-100 shadow-glow btn-magnetic">
-                                        <span>Send Message</span>
-                                        <div class="particles-field"></div>
-                                    </button>
-                                </div>
+                    <div class="nexus-form-container p-5 glass-card reveal-up shadow-lg" data-delay="0.2">
+                        <div class="mb-4">
+                            <h3 class="fw-bold mb-2">Project Brief</h3>
+                            <p class="text-muted small">Share your vision and we'll handle the engineering.</p>
+                        </div>
+                        <form id="contactForm" class="row g-4">
+                            <div class="col-md-6">
+                                <label class="form-label-custom">Identity</label>
+                                <input type="text" class="form-control-nexus" placeholder="Full Name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label-custom">Communication</label>
+                                <input type="email" class="form-control-nexus" placeholder="Email@work.com" required>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label-custom">Requirement Focus</label>
+                                <select class="form-select-nexus">
+                                    <option selected disabled>Select Core Service</option>
+                                    <option>Enterprise Web Systems</option>
+                                    <option>Mobile Engineering</option>
+                                    <option>UI/UX & Identity</option>
+                                    <option>Cloud & Architecture</option>
+                                    <option>Digital Strategy</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label-custom">Context & Vision</label>
+                                <textarea class="form-control-nexus" rows="4" placeholder="Describe the problem we are solving together..."></textarea>
+                            </div>
+                            <div class="col-12 text-end">
+                                <button type="submit" class="btn btn-nexus-primary btn-magnetic px-5 py-3 shadow-glow">
+                                    <span>Initiate Strategy <i class="fas fa-arrow-right ms-2"></i></span>
+                                    <div class="particles-field"></div>
+                                </button>
                             </div>
                         </form>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Presence Section -->
+    <section class="py-5" style="background: rgba(26, 56, 127, 0.02);">
+        <div class="container py-5 text-center">
+            <div class="reveal-up mb-5">
+                <span class="section-tag">Global Strategy</span>
+                <h2 class="display-6 fw-bold">Distributed Talent, <span class="text-primary-gradient">Unified Results.</span></h2>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-3 col-md-6">
+                    <div class="presence-card p-4 glass-card reveal-up h-100">
+                        <h4 class="fw-bold mb-2">Asia-Pacific</h4>
+                        <p class="text-muted small mb-0">Our primary engineering hub delivering complex logic and architecture.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="presence-card p-4 glass-card reveal-up h-100" data-delay="0.1">
+                        <h4 class="fw-bold mb-2">Remote-First</h4>
+                        <p class="text-muted small mb-0">Connecting elite developers globally to bring diverse perspectives to your UI.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="presence-card p-4 glass-card reveal-up h-100" data-delay="0.2">
+                        <h4 class="fw-bold mb-2">24/7 Ops</h4>
+                        <p class="text-muted small mb-0">Ensuring zero-downtime development and continuous deployment cycles.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consultation CTA -->
+    <section class="py-5">
+        <div class="container pb-5">
+            <div class="consultation-cta-card glass-card p-5 reveal-up shadow-lg text-center position-relative overflow-hidden">
+                <div class="cta-inner position-relative z-2">
+                    <h2 class="fw-bold mb-3">Prefer a Direct Strategy Session?</h2>
+                    <p class="text-muted mb-4 lead">Skip the forms. Book a 15-minute introductory call with our technical architects.</p>
+                    <a href="mailto:admin@mvsoftsolutions.com" class="btn btn-nexus-primary px-5 py-3 shadow-glow">
+                        <i class="fas fa-calendar-check me-2"></i> Schedule Discovery Call
+                    </a>
+                </div>
+                <div class="bg-glow"></div>
             </div>
         </div>
     </section>
@@ -202,29 +272,113 @@
         -webkit-text-fill-color: transparent;
     }
 
-    .social-icon {
-        width: 40px;
-        height: 40px;
-        background: #f8f9fa;
+    .nexus-social-icon {
+        width: 45px;
+        height: 45px;
+        background: rgba(26, 56, 127, 0.05);
         color: #1a387f;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        text-decoration: none;
+        border: 1px solid rgba(26, 56, 127, 0.1);
+    }
+
+    .nexus-social-icon:hover {
+        background: #1a387f;
+        color: #fff;
+        transform: translateY(-5px) rotate(8deg);
+        box-shadow: 0 10px 20px rgba(26, 56, 127, 0.2);
+    }
+
+    .icon-circle {
+        width: 60px;
+        height: 60px;
+        background: #1a387f;
+        color: white;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
+        font-size: 1.5rem;
+        flex-shrink: 0;
+    }
+
+    .form-label-custom {
+        display: block;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: #1a387f;
+        margin-bottom: 0.5rem;
+    }
+
+    .form-control-nexus,
+    .form-select-nexus {
+        width: 100%;
+        background: rgba(26, 56, 127, 0.03);
+        border: 1px solid rgba(26, 56, 127, 0.1);
+        border-radius: 12px;
+        padding: 0.8rem 1.2rem;
+        color: #1a387f;
         transition: all 0.3s ease;
-        text-decoration: none;
     }
 
-    .social-icon:hover {
-        background: #1a387f;
-        color: #fff;
-        transform: translateY(-3px);
-    }
-
-    .form-control:focus,
-    .form-select:focus {
+    .form-control-nexus:focus,
+    .form-select-nexus:focus {
+        background: white;
         border-color: #1a387f;
-        box-shadow: 0 0 0 0.25rem rgba(26, 56, 127, 0.1);
+        box-shadow: 0 10px 25px rgba(26, 56, 127, 0.1);
+        outline: none;
+    }
+
+    .btn-nexus-primary {
+        background: #1a387f;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        font-weight: 700;
+        transition: all 0.4s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .btn-nexus-primary:hover {
+        background: #003aaf;
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 15px 30px rgba(0, 58, 175, 0.3);
+    }
+
+    .presence-card {
+        transition: all 0.4s ease;
+    }
+
+    .presence-card:hover {
+        border-color: #1a387f !important;
+        transform: translateY(-10px);
+        background: white !important;
+    }
+
+    .consultation-cta-card {
+        border-radius: 30px;
+    }
+
+    .bg-glow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle at 50% 50%, rgba(26, 56, 127, 0.05), transparent 70%);
+        z-index: 1;
+    }
+
+    .lead {
+        font-size: 1.15rem;
     }
 </style>
 

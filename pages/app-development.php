@@ -6,11 +6,11 @@
         <div class="container position-relative z-3 mt-5">
             <div class="row align-items-center">
                 <div class="col-lg-7">
-                    <span class="badge bg-primary rounded-pill px-3 py-2 mb-3 reveal-up">Mobile Engineering</span>
-                    <h1 class="display-3 fw-bold text-dark mb-4 reveal-up">Next-Gen App <br><span class="text-primary-gradient">Development</span></h1>
-                    <h2 class="h4 fw-bold text-muted mb-4 reveal-up" data-delay="0.2">Flutter & NativePHP: The Ultimate Synergy of Design and Backend Power.</h2>
+                    <span class="badge bg-primary rounded-pill px-3 py-2 mb-3 reveal-up">Best App Development Gujarat</span>
+                    <h1 class="display-3 fw-bold text-dark mb-4 reveal-up">Premium <span class="text-primary-gradient">App Development</span> India</h1>
+                    <h2 class="h4 fw-bold text-muted mb-4 reveal-up" data-delay="0.2">Elite Flutter & Native Engineering from Gujarat to the World.</h2>
                     <p class="lead text-muted mb-5 reveal-up" data-delay="0.3" style="max-width: 650px;">
-                        At MVSoft Solution, we build applications that are truly "platform-agnostic." By combining Flutter's world-class UI capabilities with NativePHP’s robust backend integration, we deliver apps that run seamlessly on iOS, Android, Windows, and macOS using a single, unified logic.
+                        Mvsoft is the leading <strong>mobile app development company in Gujarat</strong>. We build applications that are truly "platform-agnostic," delivering high-performance logic across India and international markets.
                     </p>
                     <div class="reveal-up" data-delay="0.4">
                         <a href="contact" class="btn btn-primary btn-lg rounded-pill px-5 shadow-glow">Start Your App Project</a>
