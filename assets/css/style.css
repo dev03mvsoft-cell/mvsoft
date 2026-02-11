@@ -13,7 +13,9 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Raleway', sans-serif;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
+    width: 100%;
+    position: relative;
     background: #fff;
 }
 
@@ -33,7 +35,7 @@ body {
     padding: 8px 15px;
     text-decoration: none;
     position: relative;
-    transition: color 0.3s ease;
+    transition: color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
     overflow: hidden;
 }
 
@@ -174,31 +176,35 @@ body {
         width: 24px;
         height: 2px;
         background: var(--primary-color);
-        transition: all 0.3s ease;
+        transition: none !important;
+        /* Managed by JS for perfect smoothness */
         margin: 0 auto;
+        will-change: transform, opacity;
     }
 
-    .navbar-toggler:not(.collapsed) span:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .navbar-toggler:not(.collapsed) span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .navbar-toggler:not(.collapsed) span:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
+    /* Premium Smooth Transition (User bezier reference) */
+    .collapsing {
+        transition: height 0ms cubic-bezier(0.17, 0.04, 0.03, 0.94) !important;
+        height: 0;
+        overflow: hidden;
+        will-change: height;
     }
 
     .navbar-collapse {
-        background: white;
+        background: #fff;
         margin-top: 15px;
         border-radius: 20px;
         padding: 20px;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        /* Reduced shadow for better performance on close */
         border: 1px solid rgba(0, 0, 0, 0.05);
         max-height: 80vh;
         overflow-y: auto;
+        transform: translateZ(0);
+        /* Force Hardware Acceleration */
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        will-change: height, opacity;
     }
 }
 
@@ -630,6 +636,15 @@ body {
         padding: 12px 0 !important;
         border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         width: 100%;
+        translate: none !important;
+        rotate: none !important;
+        scale: none !important;
+        transform: none !important;
+    }
+
+    .nav-link::after {
+        display: none !important;
+        /* Hide the hover line on mobile as it's replaced by border-bottom */
     }
 
     .navbar-collapse .nav-item:last-child .nav-link {

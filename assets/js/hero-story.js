@@ -111,9 +111,9 @@ function initHeroAnimation() {
 
     gsap.set(entranceTargets, { opacity: 0, y: 35 });
 
-    tl.to(".hero-logo-text", { opacity: 1, y: 0, duration: 1.8 }, 0.4)
-        .to(".hero-tagline", { opacity: 1, y: 0, duration: 1.8 }, 0.6)
-        .to(".cta-group", { opacity: 1, y: 0, duration: 1.8 }, 0.8);
+    tl.to(".hero-logo-text", { opacity: 1, y: 0, duration: 1.2 }, 0.2) // Shorter duration
+        .to(".hero-tagline", { opacity: 1, y: 0, duration: 1.2 }, 0.4)
+        .to(".cta-group", { opacity: 1, y: 0, duration: 1.2 }, 0.6);
 
     if (document.querySelector(".icon-actor")) {
         tl.to(".icon-actor", {
@@ -188,7 +188,7 @@ function initHeroAnimation() {
                 gsap.to(icon, {
                     x: moveX,
                     y: moveY,
-                    duration: 1.5,
+                    duration: 1.0, // Snappier follow
                     ease: "power2.out",
                     overwrite: "auto"
                 });

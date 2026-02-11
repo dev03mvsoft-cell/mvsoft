@@ -115,17 +115,17 @@
 <!-- Lenis Smooth Scroll -->
 <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
 <!-- Custom JS Modules -->
-<script src="assets/js/core-ui.js"></script>
-<script src="assets/js/animation-engine.js"></script>
-<script src="assets/js/three-engine.js"></script>
-<script src="assets/js/horizontal-scroll.js"></script>
-<script src="assets/js/smooth-scroll.js"></script>
-<script src="assets/js/journey-v2.js"></script>
-<script src="assets/js/hero-story.js"></script>
-<script src="assets/js/script.js"></script>
+<script src="<?= asset_v('assets/js/core-ui.js') ?>"></script>
+<script src="<?= asset_v('assets/js/animation-engine.js') ?>"></script>
+<script src="<?= asset_v('assets/js/three-engine.js') ?>"></script>
+<script src="<?= asset_v('assets/js/horizontal-scroll.js') ?>"></script>
+<script src="<?= asset_v('assets/js/smooth-scroll.js') ?>"></script>
+<script src="<?= asset_v('assets/js/journey-v2.js') ?>"></script>
+<script src="<?= asset_v('assets/js/hero-story.js') ?>"></script>
+<script src="<?= asset_v('assets/js/script.js') ?>"></script>
 
 <?php if (isset($is_nexus) && $is_nexus): ?>
-    <script type="module" src="assets/js/nexus-engine.js"></script>
+    <script type="module" src="<?= asset_v('assets/js/nexus-engine.js') ?>"></script>
 <?php endif; ?>
 </body>
 

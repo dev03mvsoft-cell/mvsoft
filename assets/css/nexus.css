@@ -81,6 +81,13 @@ section {
     text-shadow: 0 0.05em 0 rgba(0, 0, 0, 0.05);
 }
 
+@media (max-width: 991px) {
+    .elastic-txt {
+        font-size: 15vw;
+        /* Fixed size on mobile to prevent excessive scaling */
+    }
+}
+
 .elastic-char {
     display: inline-block;
     will-change: font-weight, font-stretch, transform;
@@ -146,6 +153,14 @@ section {
     position: relative;
     overflow: hidden;
     min-height: 1000px;
+    width: 100%;
+}
+
+@media (max-width: 991px) {
+    .kinetic-container {
+        padding: 5rem 0;
+        min-height: auto;
+    }
 }
 
 .ghost-label {
@@ -179,6 +194,15 @@ section {
     /* Fixed X-axis centering */
     transform: translateX(-50%);
     text-align: center;
+}
+
+@media (max-width: 991px) {
+    .ghost-label {
+        font-size: 30vw;
+        /* Significantly smaller on mobile */
+        opacity: 0.1;
+        /* Slightly more visible since smaller */
+    }
 }
 
 .kinetic-container .text-center {

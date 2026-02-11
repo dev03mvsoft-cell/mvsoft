@@ -1,68 +1,71 @@
-/**
- * Mvsoft Main Script (Entry Point)
- * Initializes modular engines for UI, 3D, and Animations
- */
 document.addEventListener('DOMContentLoaded', () => {
 	// 1. Register Plugins (Must be global)
 	if (typeof gsap !== 'undefined') {
 		gsap.registerPlugin(ScrollTrigger);
 	}
 
-	// 2. Initialize UI (Navbar, Cursor, Common UI)
-	if (typeof UICore !== 'undefined') {
-		UICore.init();
-	}
+	// 2. Initialize Core UI & Animations in priority order
+	if (typeof UICore !== 'undefined') UICore.init();
 
-	// 3. Initialize Animations (SplitText, ScrollTrigger, Pins)
 	if (typeof AnimationEngine !== 'undefined') {
 		if (document.fonts) {
 			document.fonts.ready.then(() => {
 				AnimationEngine.init();
 			});
 		} else {
-			// Fallback for older browsers
 			AnimationEngine.init();
 		}
 	}
 
-	// 4. Initialize 3D Visuals (Galaxy, Cube, Neural)
-	if (typeof ThreeEngine !== 'undefined') {
-		ThreeEngine.init();
-	}
+	if (typeof ThreeEngine !== 'undefined') ThreeEngine.init();
 
-	// 5. Horizontal Tech Navigation
-	const techNavBtns = document.querySelectorAll('.tech-nav-btn');
-	const techPanes = document.querySelectorAll('.tech-content-pane');
+	// 3. Optimized Tab Switching Logic
+	const tabBtns = document.querySelectorAll('.tech-nav-btn');
+	const tabPanes = document.querySelectorAll('.tech-content-pane');
 
-	if (techNavBtns.length > 0) {
-		techNavBtns.forEach(btn => {
-			btn.addEventListener('click', (e) => {
-				e.preventDefault();
-				const targetId = btn.getAttribute('data-tab');
-				const targetPane = document.getElementById(`pane-${targetId}`);
+	tabBtns.forEach(btn => {
+		btn.addEventListener('click', () => {
+			const targetTab = btn.getAttribute('data-tab');
 
-				if (!targetPane) return;
+			// Update Buttons
+			tabBtns.forEach(b => b.classList.remove('active'));
+			btn.classList.add('active');
 
-				// Update nav buttons
-				techNavBtns.forEach(b => b.classList.remove('active'));
-				btn.classList.add('active');
-
-				// Update content panes
-				techPanes.forEach(pane => pane.classList.remove('active'));
-				targetPane.classList.add('active');
-
-				// Refresh ScrollTrigger as height might change
-				if (typeof ScrollTrigger !== 'undefined') {
-					ScrollTrigger.refresh();
+			// Update Panes with smooth fade
+			tabPanes.forEach(pane => {
+				if (pane.id === `pane-${targetTab}`) {
+					gsap.to(pane, {
+						opacity: 1, display: 'block', duration: 0.4, onComplete: () => {
+							ScrollTrigger.refresh();
+						}
+					});
+				} else {
+					gsap.to(pane, { opacity: 0, display: 'none', duration: 0.3 });
 				}
 			});
 		});
-	}
+	});
 
-	// 7. Final Refresh for Smooth ScrollTriggers
-	if (typeof ScrollTrigger !== 'undefined') {
-		ScrollTrigger.refresh();
-	}
+	// 4. Final Performance Cleanup
+	window.addEventListener('load', () => {
+		setTimeout(() => {
+			if (typeof ScrollTrigger !== 'undefined') {
+				ScrollTrigger.refresh();
+			}
+		}, 500);
+	});
+
+	// 5. Smooth Anchor Adjustments (fallback)
+	document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+		anchor.addEventListener('click', function (e) {
+			if (window.lenis) return; // Let Lenis handle it if active
+			e.preventDefault();
+			const target = document.querySelector(this.getAttribute('href'));
+			if (target) {
+				target.scrollIntoView({ behavior: 'smooth' });
+			}
+		});
+	});
 });
 
 /* Airplane Mode Button Logic */

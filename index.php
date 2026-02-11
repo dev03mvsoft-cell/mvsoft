@@ -5,9 +5,9 @@
  */
 
 // 1. Get the requested path
-$request = $_SERVER['REQUEST_URI'];
-$base_path = '/Mvsoft/Mvsoft (2)/Mvsoft/'; // Adjust this if the project is in a different subfolder
-$path = str_replace($base_path, '', $request);
+$request = urldecode($_SERVER['REQUEST_URI']);
+$base_path = '/Mvsoft/Mvsoft (2)/Mvsoft/';
+$path = str_ireplace($base_path, '', $request);
 $path = trim($path, '/');
 
 // 2. Parse query string if present

@@ -1,30 +1,28 @@
-/**
- * Smooth Scroll & Reveal Module
- * Initializes Lenis and synchronizes with GSAP ScrollTrigger
- */
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Initialize Lenis with optimized settings
+    // 1. Initialize Lenis with snappy lerp settings
     const lenis = new Lenis({
-        duration: 1.2,
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        lerp: 0.1, // More direct control than duration
+        wheelMultiplier: 1.0,
+        touchMultiplier: 1.5,
         smoothWheel: true,
-        wheelMultiplier: 1,
         className: 'lenis-smooth',
     });
 
     // 2. Sync Lenis with GSAP ScrollTrigger
     lenis.on('scroll', ScrollTrigger.update);
 
+    // Optimized RAF loop
     gsap.ticker.add((time) => {
         lenis.raf(time * 1000);
     });
 
-    // Optimized lag smoothing - 500ms max lag, 33ms catch-up
+    // Lag smoothing - Important for complex Three.js scenes
     gsap.ticker.lagSmoothing(500, 33);
 
-    // 3. Auto-update height (Fixes "getting stuck" on long pages)
+    // 3. Auto-update height
     const resizeObserver = new ResizeObserver(() => {
         lenis.resize();
+        ScrollTrigger.refresh(); // Refresh ST when layout height changes
     });
     resizeObserver.observe(document.body);
 
@@ -33,12 +31,13 @@ document.addEventListener('DOMContentLoaded', () => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const href = this.getAttribute('href');
-            if (href === "#") return;
+            if (href === "#" || href === "") return;
             const target = document.querySelector(href);
             if (target) {
                 lenis.scrollTo(target, {
                     offset: -50,
-                    duration: 1.5
+                    immediate: false,
+                    duration: 1.2
                 });
             }
         });

@@ -1,8 +1,6 @@
-/**
- * Three.js Engine Module
- * Handles 3D environments (Hero Galaxy, About Cube, Legacy Neural Network)
- */
 const ThreeEngine = (() => {
+    const isMobile = window.innerWidth <= 991;
+
     // Shared Cube Class for About Section
     class Cube extends THREE.Object3D {
         constructor(size) {
@@ -23,7 +21,6 @@ const ThreeEngine = (() => {
         }
     }
 
-    // Helper for Intersection Observer visibility
     const setupVisibilityObserver = (container, onVisible, onHidden) => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -33,7 +30,7 @@ const ThreeEngine = (() => {
                     onHidden();
                 }
             });
-        }, { threshold: 0.1 });
+        }, { threshold: 0.05 }); // Lower threshold for earlier activation
         observer.observe(container);
         return observer;
     };
@@ -48,26 +45,28 @@ const ThreeEngine = (() => {
             this.distance = 100;
             this.camera = new THREE.OrthographicCamera(-this.distance * this.aspectRatio, this.distance * this.aspectRatio, this.distance, -this.distance, 1, 1000);
             this.camera.position.set(0, 0, 150);
-            this.renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+            this.renderer = new THREE.WebGLRenderer({ alpha: true, antialias: !isMobile }); // Disable antialias on mobile
             this.renderer.setSize(this.width, this.height);
+            this.renderer.setPixelRatio(isMobile ? 1 : Math.min(window.devicePixelRatio, 2));
             this.container.appendChild(this.renderer.domElement);
             this.cubesGroup = new THREE.Object3D();
             this.cubes = [];
-            this.cubeSize = 10;
+            this.cubeSize = isMobile ? 12 : 10; // Slightly larger for visibility
             this.cubeOffset = 10;
             this.isPaused = true;
             this.drawCubes();
             this.animation();
 
             setupVisibilityObserver(this.container,
-                () => { this.isPaused = false; this.render(); },
+                () => { if (this.isPaused) { this.isPaused = false; this.render(); } },
                 () => { this.isPaused = true; }
             );
         }
         drawCubes() {
-            for (let i = -2; i <= 2; i++) {
-                for (let j = -2; j <= 2; j++) {
-                    for (let k = -2; k <= 2; k++) {
+            const range = isMobile ? 1 : 2; // Reduce grid size on mobile (3x3x3 vs 5x5x5)
+            for (let i = -range; i <= range; i++) {
+                for (let j = -range; j <= range; j++) {
+                    for (let k = -range; k <= range; k++) {
                         const cube = new Cube(this.cubeSize);
                         cube.position.set(i * this.cubeSize, k * this.cubeSize, j * this.cubeSize);
                         this.cubes.push(cube);
@@ -92,7 +91,7 @@ const ThreeEngine = (() => {
         }
         render() {
             if (this.isPaused) return;
-            this.scene.rotation.z += 0.01;
+            this.scene.rotation.z += 0.005; // Slower for smoother feel
             this.renderer.render(this.scene, this.camera);
             requestAnimationFrame(() => this.render());
         }
@@ -115,8 +114,9 @@ const ThreeEngine = (() => {
             this.scene = new THREE.Scene();
             this.camera = new THREE.PerspectiveCamera(75, this.width / this.height, 0.1, 1000);
             this.camera.position.z = 150;
-            this.renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+            this.renderer = new THREE.WebGLRenderer({ alpha: true, antialias: false }); // Antialias off for background
             this.renderer.setSize(this.width, this.height);
+            this.renderer.setPixelRatio(isMobile ? 1 : 1.5);
             this.container.appendChild(this.renderer.domElement);
             this.particles = new THREE.Group();
             this.scene.add(this.particles);
@@ -126,18 +126,19 @@ const ThreeEngine = (() => {
             this.initParticles();
 
             setupVisibilityObserver(this.container,
-                () => { this.isPaused = false; this.animate(); },
+                () => { if (this.isPaused) { this.isPaused = false; this.animate(); } },
                 () => { this.isPaused = true; }
             );
         }
         initParticles() {
-            const geometry = new THREE.SphereBufferGeometry(1, 8, 8);
+            const count = isMobile ? 25 : 40;
+            const geometry = new THREE.SphereBufferGeometry(1, 6, 6); // Lower segments
             const material = new THREE.MeshBasicMaterial({ color: 0x003aaf });
             this.points = [];
-            for (let i = 0; i < 40; i++) {
+            for (let i = 0; i < count; i++) {
                 const mesh = new THREE.Mesh(geometry, material);
                 mesh.position.set((Math.random() - 0.5) * 150, (Math.random() - 0.5) * 150, (Math.random() - 0.5) * 150);
-                mesh.userData.velocity = new THREE.Vector3((Math.random() - 0.5) * 0.2, (Math.random() - 0.5) * 0.2, (Math.random() - 0.5) * 0.2);
+                mesh.userData.velocity = new THREE.Vector3((Math.random() - 0.5) * 0.15, (Math.random() - 0.5) * 0.15, (Math.random() - 0.5) * 0.15);
                 this.particles.add(mesh);
                 this.points.push(mesh);
             }
@@ -161,7 +162,7 @@ const ThreeEngine = (() => {
                 this.connectionLine.geometry.dispose();
             }
             const geometry = new THREE.BufferGeometry().setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
-            const material = new THREE.LineBasicMaterial({ color: 0x003aaf, transparent: true, opacity: 0.4 });
+            const material = new THREE.LineBasicMaterial({ color: 0x003aaf, transparent: true, opacity: 0.3 });
             this.connectionLine = new THREE.LineSegments(geometry, material);
             this.scene.add(this.connectionLine);
         }
@@ -174,8 +175,8 @@ const ThreeEngine = (() => {
                 if (Math.abs(p.position.z) > 75) p.userData.velocity.z *= -1;
             });
             this.updateConnections();
-            this.particles.rotation.y += 0.001;
-            if (this.connectionLine) this.connectionLine.rotation.y += 0.001;
+            this.particles.rotation.y += 0.0005;
+            if (this.connectionLine) this.connectionLine.rotation.y += 0.0005;
             this.renderer.render(this.scene, this.camera);
             requestAnimationFrame(() => this.animate());
         }
@@ -187,60 +188,6 @@ const ThreeEngine = (() => {
         }
     }
 
-    const initGalaxy = () => {
-        const canvas = document.getElementById('hero-three-canvas');
-        if (!canvas) return;
-        const parameters = { count: 52200, size: 0.006, radius: 19.03, branches: 6, spin: -1.577, randomness: 0.864, randomnessPower: 5.855, insideColor: '#f3af1b', outsideColor: '#2d54b9' };
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 100);
-        camera.position.set(0, 3, 5);
-        const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-
-        let geometry, material, points;
-        const generateGalaxy = () => {
-            if (points) { geometry.dispose(); material.dispose(); scene.remove(points); }
-            geometry = new THREE.BufferGeometry();
-            const positions = new Float32Array(parameters.count * 3);
-            const colors = new Float32Array(parameters.count * 3);
-            const colorInside = new THREE.Color(parameters.insideColor);
-            const colorOutside = new THREE.Color(parameters.outsideColor);
-
-            for (let i = 0; i < parameters.count; i++) {
-                const i3 = i * 3;
-                const radius = Math.random() * parameters.radius;
-                const spinAngle = radius * parameters.spin;
-                const branchAngle = (i % parameters.branches) / parameters.branches * Math.PI * 2;
-                const rX = Math.pow(Math.random(), parameters.randomnessPower) * (Math.random() < 0.5 ? 1 : -1) * parameters.randomness * radius;
-                const rY = Math.pow(Math.random(), parameters.randomnessPower) * (Math.random() < 0.5 ? 1 : -1) * parameters.randomness * radius;
-                const rZ = Math.pow(Math.random(), parameters.randomnessPower) * (Math.random() < 0.5 ? 1 : -1) * parameters.randomness * radius;
-                positions[i3] = Math.cos(branchAngle + spinAngle) * radius + rX;
-                positions[i3 + 1] = rY;
-                positions[i3 + 2] = Math.sin(branchAngle + spinAngle) * radius + rZ;
-                const mixedColor = colorInside.clone().lerp(colorOutside, radius / parameters.radius);
-                colors[i3] = mixedColor.r; colors[i3 + 1] = mixedColor.g; colors[i3 + 2] = mixedColor.b;
-            }
-            geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-            geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
-            material = new THREE.PointsMaterial({ size: parameters.size, sizeAttenuation: true, depthWrite: false, blending: THREE.AdditiveBlending, vertexColors: true });
-            points = new THREE.Points(geometry, material);
-            scene.add(points);
-        };
-        generateGalaxy();
-        const clock = new THREE.Clock();
-        const animate = () => {
-            if (points) points.rotation.y = clock.getElapsedTime() * 0.2;
-            renderer.render(scene, camera);
-            requestAnimationFrame(animate);
-        };
-        animate();
-        window.addEventListener('resize', () => {
-            camera.aspect = window.innerWidth / window.innerHeight; camera.updateProjectionMatrix();
-            renderer.setSize(window.innerWidth, window.innerHeight);
-        });
-    };
-
     class Laptop {
         constructor(container) {
             this.container = container;
@@ -251,42 +198,36 @@ const ThreeEngine = (() => {
             this.camera.position.set(0, 3, 30);
             this.camera.lookAt(0, 0, 0);
 
-            this.renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+            this.renderer = new THREE.WebGLRenderer({ alpha: true, antialias: !isMobile });
             this.renderer.setSize(this.width, this.height);
-            this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-            this.renderer.shadowMap.enabled = true;
+            this.renderer.setPixelRatio(isMobile ? 1 : Math.min(window.devicePixelRatio, 2));
+            this.renderer.shadowMap.enabled = !isMobile; // Disable shadows on mobile for performance
             this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
             this.renderer.outputEncoding = THREE.sRGBEncoding;
             this.container.appendChild(this.renderer.domElement);
 
-            // Atmospheric Depth (Fog)
             this.scene.fog = new THREE.FogExp2(0x000000, 0.015);
-
-            // Mouse Interactivity State
             this.mouse = { x: 0, y: 0 };
             this.targetCameraPos = new THREE.Vector3(0, 3, 30);
-            window.addEventListener('mousemove', (e) => this.onMouseMove(e));
 
-            // Premium Studio Lighting (Apple-style)
+            if (!isMobile) {
+                window.addEventListener('mousemove', (e) => this.onMouseMove(e));
+            }
+
             const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
             this.scene.add(ambientLight);
 
-            // Key Light - Main source of highlights
             const keyLight = new THREE.SpotLight(0xffffff, 1.5);
             keyLight.position.set(20, 40, 20);
             keyLight.angle = Math.PI / 6;
             keyLight.penumbra = 0.5;
-            keyLight.castShadow = true;
-            keyLight.shadow.mapSize.width = 2048;
-            keyLight.shadow.mapSize.height = 2048;
+            keyLight.castShadow = !isMobile;
             this.scene.add(keyLight);
 
-            // Rim Light - For edge definition
             const rimLight = new THREE.DirectionalLight(0xffffff, 0.8);
             rimLight.position.set(-20, 10, -10);
             this.scene.add(rimLight);
 
-            // Inner Glow (RectAreaLight) - Simulates screen light on keyboard
             const rectLight = new THREE.RectAreaLight(0x003aaf, 5, 14, 8);
             rectLight.position.set(0, 0.5, -5);
             rectLight.lookAt(0, 0, 0);
@@ -302,7 +243,7 @@ const ThreeEngine = (() => {
             this.updateCameraPosition();
 
             setupVisibilityObserver(this.container,
-                () => { this.isPaused = false; this.animate(); },
+                () => { if (this.isPaused) { this.isPaused = false; this.animate(); } },
                 () => { this.isPaused = true; }
             );
         }
@@ -327,136 +268,97 @@ const ThreeEngine = (() => {
 
         createDetailedLaptop() {
             const textureLoader = new THREE.TextureLoader();
-            const onLoad = (tex) => console.log('Texture loaded successfully:', tex.image.src);
-            const onError = (err) => console.error('Error loading texture:', err);
-
-            // User-specified silver color #dcdee0
             const bodyMat = new THREE.MeshStandardMaterial({
                 color: 0xdcdee0,
-                roughness: 0.15,
-                metalness: 0.85,
-                envMapIntensity: 1
+                roughness: 0.2,
+                metalness: 0.8
             });
 
             const lidMat = new THREE.MeshStandardMaterial({
                 color: 0xdcdee0,
-                roughness: 0.1,
-                metalness: 0.9
+                roughness: 0.2,
+                metalness: 0.8
             });
 
-            const screenMat = new THREE.MeshStandardMaterial({
-                color: 0x000000,
-                emissive: 0x003aaf,
-                emissiveIntensity: 0.5,
-                roughness: 0.05,
-                metalness: 0.1
-            });
-
-            // 1. Base (Rounded)
             const baseGroup = new THREE.Group();
             this.group.add(baseGroup);
 
             const baseShape = this.createRoundedRectShape(16, 11, 0.8);
-            const baseExtrudeSettings = { depth: 0.6, bevelEnabled: true, bevelThickness: 0.1, bevelSize: 0.1, curveSegments: 16 };
+            const baseExtrudeSettings = { depth: 0.6, bevelEnabled: true, bevelThickness: 0.1, bevelSize: 0.1, curveSegments: isMobile ? 8 : 16 };
             const baseGeom = new THREE.ExtrudeBufferGeometry(baseShape, baseExtrudeSettings);
             const mainBase = new THREE.Mesh(baseGeom, bodyMat);
             mainBase.rotation.x = -Math.PI / 2;
-            mainBase.position.y = -0.3; // Offset for extrude depth
-            mainBase.castShadow = true;
-            mainBase.receiveShadow = true;
+            mainBase.position.y = -0.3;
+            mainBase.castShadow = !isMobile;
+            mainBase.receiveShadow = !isMobile;
             baseGroup.add(mainBase);
 
-            // 2. Keyboard & Trackpad Area
-            const kbTexture = textureLoader.load('assets/img/laptop-keyboard-apple.jpg', onLoad, undefined, onError);
+            const kbTexture = textureLoader.load('assets/img/laptop-keyboard-apple.jpg');
             const kbMat = new THREE.MeshStandardMaterial({
                 map: kbTexture,
-                color: 0xffffff,
                 roughness: 0.6,
                 metalness: 0.1,
                 emissive: 0xffffff,
-                emissiveIntensity: 0.1, // Increased visibility
-                side: THREE.DoubleSide // Ensure it shows even if flipped
+                emissiveIntensity: 0.05
             });
 
-            // Restore PlaneBufferGeometry for UV stability (Guarantees texture shows)
             const kbArea = new THREE.Mesh(new THREE.PlaneBufferGeometry(15.5, 10.5), kbMat);
             kbArea.rotation.x = -Math.PI / 2;
-            kbArea.position.y = 0.47; // Slightly higher to be safe
-            kbArea.position.z = 0;
+            kbArea.position.y = 0.47;
             baseGroup.add(kbArea);
 
-            // 3. Screen (Detailed with Hinge and Rounded Corners)
             this.screenGroup = new THREE.Group();
             this.screenGroup.position.set(0, 0.3, -5.4);
             this.group.add(this.screenGroup);
 
-            // Hinge Bar (Silver)
-            const hinge = new THREE.Mesh(new THREE.CylinderBufferGeometry(0.3, 0.3, 15.5, 12), lidMat);
+            const hinge = new THREE.Mesh(new THREE.CylinderBufferGeometry(0.3, 0.3, 15.5, isMobile ? 8 : 12), lidMat);
             hinge.rotation.z = Math.PI / 2;
             this.screenGroup.add(hinge);
 
             const lipShape = this.createRoundedRectShape(16, 10, 0.8);
-            const lipExtrudeSettings = { depth: 0.4, bevelEnabled: true, bevelThickness: 0.1, bevelSize: 0.1, curveSegments: 16 };
+            const lipExtrudeSettings = { depth: 0.4, bevelEnabled: true, bevelThickness: 0.1, bevelSize: 0.1, curveSegments: isMobile ? 8 : 16 };
             const lipGeom = new THREE.ExtrudeBufferGeometry(lipShape, lipExtrudeSettings);
             const screenLip = new THREE.Mesh(lipGeom, lidMat);
-            screenLip.position.set(0, 5, -0.2); // Center of extrude
-            screenLip.castShadow = true;
-            screenLip.receiveShadow = true;
+            screenLip.position.set(0, 5, -0.2);
+            screenLip.castShadow = !isMobile;
+            screenLip.receiveShadow = !isMobile;
             this.screenGroup.add(screenLip);
 
-            // Screen Back Cover (Glowing Apple Logo)
-            const backTexture = textureLoader.load('assets/img/laptop-back-apple.png', onLoad, undefined, onError);
+            const backTexture = textureLoader.load('assets/img/laptop-back-apple.png');
             const backMat = new THREE.MeshStandardMaterial({
                 map: backTexture,
-                color: 0xffffff,
                 roughness: 0.2,
                 metalness: 0.5,
                 emissive: 0xffffff,
                 emissiveMap: backTexture,
-                emissiveIntensity: 0.4, // Increased for clarity
-                side: THREE.DoubleSide
+                emissiveIntensity: 0.3,
+                side: THREE.BackSide
             });
-            // Restore PlaneBufferGeometry for UV stability (Guarantees texture shows)
             const screenBack = new THREE.Mesh(new THREE.PlaneBufferGeometry(15.8, 9.8), backMat);
-            // Positioned clearly behind the bevel
             screenBack.position.set(0, 5, -0.5);
             screenBack.rotation.y = Math.PI;
             this.screenGroup.add(screenBack);
 
-            // Screen Content with Texture (Dev Skills)
-            const screenTexture = textureLoader.load('assets/img/laptop-screen-dev.png', onLoad, undefined, onError);
+            const screenTexture = textureLoader.load('assets/img/laptop-screen-dev.png');
             const screenContentMat = new THREE.MeshStandardMaterial({
                 map: screenTexture,
-                color: 0xffffff,
                 emissive: 0xffffff,
                 emissiveMap: screenTexture,
-                emissiveIntensity: 0.15, // Increased pop
+                emissiveIntensity: 0.1,
                 roughness: 0.2,
-                metalness: 0.2,
-                side: THREE.DoubleSide
+                metalness: 0.2
             });
 
-            // Texture for the old laptop parts (backwards compatibility if needed)
-            // textureLoader.load('assets/img/laptop-keyboard-v2.png', onLoad, undefined, onError);
-            // textureLoader.load('assets/img/laptop-screen.png', onLoad, undefined, onError);
-            // textureLoader.load('assets/img/laptop-back.png', onLoad, undefined, onError);
-
-            // Restore PlaneBufferGeometry for UV stability (Guarantees texture shows)
             const activeScreen = new THREE.Mesh(new THREE.PlaneBufferGeometry(15.2, 9.2), screenContentMat);
-            // Positioned in front of the bevel
             activeScreen.position.set(0, 5, 0.37);
             this.screenGroup.add(activeScreen);
 
-            // Inner bezel remains a shape as it's a solid color
             const bezelShape = this.createRoundedRectShape(15.6, 9.6, 0.7);
             const bezelGeom = new THREE.ShapeBufferGeometry(bezelShape);
-            const innerBezel = new THREE.Mesh(bezelGeom, new THREE.MeshStandardMaterial({ color: 0x000000, roughness: 0.01 }));
+            const innerBezel = new THREE.Mesh(bezelGeom, new THREE.MeshStandardMaterial({ color: 0x000000, roughness: 0.05 }));
             innerBezel.position.set(0, 5, 0.205);
             this.screenGroup.add(innerBezel);
 
-            // Removed topBar bezel detail as requested
-
-            // Initial state: starts open (1.6 rad)
             this.screenGroup.rotation.x = 1.6;
         }
 
@@ -464,74 +366,56 @@ const ThreeEngine = (() => {
             const techs = [
                 { name: 'React JS', color: '#61DAFB' },
                 { name: 'Next JS', color: '#ffffff' },
-                { name: 'Bootstrap', color: '#7952B3' },
                 { name: 'PHP', color: '#777BB4' },
                 { name: 'Laravel', color: '#FF2D20' },
                 { name: 'MySQL', color: '#4479A1' },
-                { name: 'Tailwind', color: '#06B6D4' },
                 { name: 'GSAP', color: '#88CE02' },
                 { name: 'Three JS', color: '#ffffff' },
-                { name: 'JavaScript', color: '#F7DF1E' },
-                { name: 'React Native', color: '#61DAFB' },
                 { name: 'Flutter', color: '#02569B' }
-            ];
+            ]; // Reduced set for mobile
 
             this.badges = [];
             techs.forEach((tech, i) => {
                 const canvas = document.createElement('canvas');
                 const ctx = canvas.getContext('2d');
-                canvas.width = 512;
-                canvas.height = 128;
+                canvas.width = 256; // Reduced resolution
+                canvas.height = 64;
 
-                // Refined Glassy Badge (Frosted Look)
-                const gradient = ctx.createRadialGradient(256, 64, 0, 256, 64, 256);
-                gradient.addColorStop(0, tech.color + '33');
-                gradient.addColorStop(1, tech.color + '05');
-
-                ctx.fillStyle = gradient;
+                ctx.fillStyle = tech.color + '22';
                 ctx.beginPath();
-                ctx.roundRect(0, 0, 512, 128, 64);
+                ctx.roundRect(0, 0, 256, 64, 32);
                 ctx.fill();
 
                 ctx.strokeStyle = tech.color;
-                ctx.lineWidth = 4;
-                ctx.globalAlpha = 0.5;
+                ctx.lineWidth = 2;
                 ctx.stroke();
-                ctx.globalAlpha = 1.0;
 
                 ctx.fillStyle = 'white';
-                ctx.shadowColor = tech.color;
-                ctx.shadowBlur = 15;
-                ctx.font = 'bold 50px Raleway, sans-serif';
+                ctx.font = 'bold 24px Raleway, sans-serif';
                 ctx.textAlign = 'center';
                 ctx.textBaseline = 'middle';
-                ctx.fillText(tech.name, 256, 64);
+                ctx.fillText(tech.name, 128, 32);
 
                 const texture = new THREE.CanvasTexture(canvas);
-                const badgeGeom = new THREE.PlaneBufferGeometry(6, 1.5);
+                const badgeGeom = new THREE.PlaneBufferGeometry(isMobile ? 8 : 6, isMobile ? 2 : 1.5);
                 const badgeMesh = new THREE.Mesh(badgeGeom, new THREE.MeshStandardMaterial({
                     map: texture,
                     transparent: true,
-                    opacity: 0.9,
-                    side: THREE.DoubleSide,
+                    opacity: 0.8,
                     emissive: new THREE.Color(tech.color),
-                    emissiveIntensity: 0.4
+                    emissiveIntensity: 0.2
                 }));
 
                 const angle = (i / techs.length) * Math.PI * 2;
-                const radius = 18 + Math.random() * 8;
-                badgeMesh.position.set(
-                    Math.cos(angle) * radius,
-                    (Math.random() - 0.5) * 15,
-                    Math.sin(angle) * radius
-                );
+                const radius = isMobile ? 15 : 20 + Math.random() * 5;
+                badgeMesh.position.set(Math.cos(angle) * radius, (Math.random() - 0.5) * 10, Math.sin(angle) * radius);
 
                 badgeMesh.userData = {
                     angle: angle,
                     radius: radius,
                     yOffset: badgeMesh.position.y,
-                    floatSpeed: 0.001 + Math.random() * 0.001,
-                    orbitSpeed: 0.002 + Math.random() * 0.003,
+                    floatSpeed: 0.001,
+                    orbitSpeed: isMobile ? 0.002 : 0.003,
                     phase: Math.random() * Math.PI * 2
                 };
 
@@ -544,12 +428,13 @@ const ThreeEngine = (() => {
             if (this.isPaused) return;
             const time = Date.now() * 0.001;
 
-            // Smooth Parallax Camera
-            const targetX = this.mouse.x * 20;
-            const targetY = (-this.mouse.y * 20) + 3;
+            if (!isMobile) {
+                const targetX = this.mouse.x * 15;
+                const targetY = (-this.mouse.y * 15) + 3;
+                this.camera.position.x += (targetX - this.camera.position.x) * 0.05;
+                this.camera.position.y += (targetY - this.camera.position.y) * 0.05;
+            }
 
-            this.camera.position.x += (targetX - this.camera.position.x) * 0.05;
-            this.camera.position.y += (targetY - this.camera.position.y) * 0.05;
             this.camera.lookAt(0, 0, 0);
 
             if (this.badges) {
@@ -558,7 +443,7 @@ const ThreeEngine = (() => {
                     data.angle += data.orbitSpeed;
                     badge.position.x = Math.cos(data.angle) * data.radius;
                     badge.position.z = Math.sin(data.angle) * data.radius;
-                    badge.position.y = data.yOffset + Math.sin(time + data.phase) * 0.5;
+                    badge.position.y = data.yOffset + Math.sin(time + data.phase) * 0.3;
                     badge.lookAt(this.camera.position);
                 });
             }
@@ -569,10 +454,9 @@ const ThreeEngine = (() => {
 
         updateCameraPosition() {
             const aspect = this.width / this.height;
-            // On portrait screens (mobile), move camera back so laptop fits
             if (aspect < 1) {
-                this.camera.position.z = 45;
-                this.group.scale.set(0.7, 0.7, 0.7); // Slightly smaller model on mobile
+                this.camera.position.z = isMobile ? 50 : 45;
+                this.group.scale.set(0.65, 0.65, 0.65);
             } else {
                 this.camera.position.z = 30;
                 this.group.scale.set(1, 1, 1);
@@ -589,10 +473,7 @@ const ThreeEngine = (() => {
         }
     }
 
-
-
     const init = () => {
-        // initGalaxy(); // Hero Galaxy removed as per user request
         const aboutContainer = document.getElementById('about-canvas-container');
         if (aboutContainer) {
             const cubeWorld = new CubeWorld(aboutContainer);
@@ -610,8 +491,6 @@ const ThreeEngine = (() => {
             window.laptopEffect = new Laptop(laptopContainer);
             window.addEventListener('resize', () => window.laptopEffect.resize());
         }
-
-
     };
 
     return { init };

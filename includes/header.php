@@ -5,6 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <?php
+    // Cache busting helper
+    if (!function_exists('asset_v')) {
+        function asset_v($path)
+        {
+            $fullPath = __DIR__ . '/../' . $path;
+            $v = file_exists($fullPath) ? filemtime($fullPath) : time();
+            return $path . '?v=' . $v;
+        }
+    }
+    ?>
+
     <!-- SEO Optimization -->
     <title>Mvsoft | Best React, PHP, Flutter & Web Development Hub</title>
     <meta name="description" content="Mvsoft Tech Solutions is the premier hub for React, PHP, Next.js, Laravel, Flutter, and Express development. Leading the digital landscape with elite engineering solutions.">
@@ -103,6 +115,7 @@
     <style>
         html.lenis {
             height: auto;
+            overflow-x: hidden;
         }
 
         .lenis.lenis-smooth {
@@ -148,7 +161,8 @@
         }
     </style>
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="<?= asset_v('assets/css/style.css') ?>">
 
     <?php
     // Determine current page for conditional assets
@@ -162,9 +176,9 @@
         }
     }
     if ($is_nexus): ?>
-        <link rel="stylesheet" href="assets/css/nexus.css">
+        <link rel="stylesheet" href="<?= asset_v('assets/css/nexus.css') ?>">
     <?php endif; ?>
-    <link rel="stylesheet" href="assets/css/magnetic-btn.css">
+    <link rel="stylesheet" href="<?= asset_v('assets/css/magnetic-btn.css') ?>">
 </head>
 
 <body>

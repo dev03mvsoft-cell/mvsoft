@@ -2,7 +2,7 @@
 
 <main>
     <!-- Nexus Hero (Interactive Background applies automatically) -->
-    <section class="section nexus-hero-section py-5 position-relative overflow-hidden d-flex align-items-center justify-content-center" style="min-height: 80vh;">
+    <section class="section nexus-hero-section  position-relative overflow-hidden d-flex align-items-center justify-content-center" style="min-height: 80vh;">
         <div class="container text-center position-relative z-3 mt-5">
             <div class="hero-content reveal-up">
                 <div class="elastic-stage">
@@ -21,7 +21,7 @@
     </section>
 
     <!-- Company Detailed Overview -->
-    <section class="section py-5 position-relative">
+    <section class="section position-relative">
         <div class="container py-5">
             <div class="glass-card p-4 p-md-5 reveal-up">
                 <div class="row align-items-center g-5">
@@ -199,13 +199,13 @@
 
                         <div class="bcs-content mb-5">
                             <p class="lead text-dark mb-4 split-text-p">
-                                Business Care Solutions (BCS) is the strategic sister concern of MVSoft Solution, specializing in digital marketing, brand growth, and online visibility.
+                                Business Care Solutions (BCS) is the strategic sister concern of MVsoft solutions, specializing in digital marketing, brand growth, and online visibility.
                             </p>
                             <p class="text-muted mb-4 split-text-p">
-                                While MVSoft Solution focuses on advanced software engineering, web platforms, and mobile application development, BCS strengthens businesses through result-driven SEO, SEM, performance marketing, and professional corporate web design.
+                                While MVsoft solutions focuses on advanced software engineering, web platforms, and mobile application development, BCS strengthens businesses through result-driven SEO, SEM, performance marketing, and professional corporate web design.
                             </p>
                             <p class="text-muted split-text-p">
-                                Together, MVSoft Solution and Business Care Solutions provide a complete digital ecosystem that supports sustainable growth, strong brand presence, and measurable business results across global markets.
+                                Together, MVsoft solutions and Business Care Solutions provide a complete digital ecosystem that supports sustainable growth, strong brand presence, and measurable business results across global markets.
                             </p>
                         </div>
 

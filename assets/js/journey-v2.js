@@ -48,11 +48,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const mtl = gsap.timeline({
         scrollTrigger: {
             trigger: roadWrapper,
-            start: "top 10%", // Give a bit more room at the start
-            end: "bottom 90%",
-            scrub: 1.2, // Faster scrub for snappier feel
+            start: "top 20%",
+            end: "bottom 80%",
+            scrub: 0.6, // Reduced from 1.2 for snappier feel
             anticipatePin: 1,
-            // invalidateOnRefresh: true, // Good for responsive adjustments
+            fastScrollEnd: true
         }
     });
 
@@ -62,15 +62,14 @@ document.addEventListener('DOMContentLoaded', () => {
         ease: "none"
     }, 0);
 
-    // B. Animate Bus along path (Fixed Perspective to prevent overturning)
+    // B. Animate Bus along path
     mtl.to(car, {
         motionPath: {
             path: "#mainRoadPath",
             align: "#mainRoadPath",
-            autoRotate: false, // Disabling auto-rotate to keep the 3D/Isometric perspective stable
+            autoRotate: false,
             alignOrigin: [0.5, 0.5]
         },
-        // We set a fixed rotation in CSS or here to ensure the "top" is always showing
         rotation: 0,
         ease: "none",
         force3D: true
@@ -83,21 +82,21 @@ document.addEventListener('DOMContentLoaded', () => {
         mtl.to(step, {
             autoAlpha: 1,
             y: 0,
-            duration: 0.5,
+            duration: 0.3, // Faster duration
             ease: "power2.out",
             onStart: () => step.classList.add('active'),
             onReverseComplete: () => step.classList.remove('active'),
             force3D: true
-        }, stepProgress - 0.30);
+        }, stepProgress - 0.25);
     });
 
-    // D. Animate Greenery (Trees & Flowers) popping in
+    // D. Animate Greenery (Trees & Flowers)
     greenery.forEach((item, index) => {
         const itemProgress = (index + 1) / (greenery.length + 1);
         mtl.to(item, {
             opacity: 1,
             scale: 1,
-            duration: 0.2,
+            duration: 0.15,
             ease: "back.out(1.7)",
             onStart: () => item.classList.add('active'),
             onReverseComplete: () => item.classList.remove('active'),
