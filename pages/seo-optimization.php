@@ -136,8 +136,8 @@
                             <div class="col-md-4">
                                 <div class="p-3 bg-white rounded-4 border text-center h-100">
                                     <div class="text-primary mb-2"><i class="fas fa-bullseye fs-4"></i></div>
-                                    <h6 class="fw-bold mb-1">Long-Tail Targets</h6>
-                                    <p class="small text-muted mb-0">Ranking for specific terms like "3PL Gandhidham".</p>
+                                    <h6 class="fw-bold mb-1">Domain Authority</h6>
+                                    <p class="small text-muted mb-0">Ranking for high-intent industry keywords.</p>
                                 </div>
                             </div>
                             <div class="col-md-4">

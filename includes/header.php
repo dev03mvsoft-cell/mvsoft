@@ -6,22 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO Optimization -->
-    <title>Mvsoft | Best React, PHP, Flutter & Web Development in Gandhidham, Gujarat, India</title>
-    <meta name="description" content="Mvsoft Tech Solutions is the premier hub for React, PHP, Next.js, Laravel, Flutter, and Express development. Leading the digital landscape across Ahmedabad, Surat, Vadodara, Indore, Kutch, and Jamnagar.">
-    <meta name="keywords" content="React development Ahmedabad, PHP developers Surat, Next.js Vadodara, Laravel development Indore, Flutter app development Kutch, Express JS Jamnagar, Website development Dahod, Best IT company Gujarat, Mvsoft Tech Solutions, Top software agency Indore">
+    <title>Mvsoft | Best React, PHP, Flutter & Web Development Hub</title>
+    <meta name="description" content="Mvsoft Tech Solutions is the premier hub for React, PHP, Next.js, Laravel, Flutter, and Express development. Leading the digital landscape with elite engineering solutions.">
+    <meta name="keywords" content="React development, PHP developers, Next.js, Laravel development, Flutter app development, Express JS, Website development, Best IT company, Mvsoft Tech Solutions, Top software agency">
     <meta name="author" content="Mvsoft Tech Solutions">
 
-    <!-- Geo-Targeting for Search Engines -->
-    <meta name="geo.region" content="IN-GJ" />
-    <meta name="geo.placename" content="Gandhidham" />
-    <meta name="geo.position" content="23.0763;70.1270" />
-    <meta name="ICBM" content="23.0763, 70.1270" />
+    <!-- Global Targeting -->
+    <meta name="geo.region" content="IN" />
 
     <!-- Open Graph / Social Media Meta -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mvsoftsolutions.com/">
-    <meta property="og:title" content="Mvsoft | Top Development Hub in Gujarat, India (React, PHP, Laravel)">
-    <meta property="og:description" content="The ultimate destination for React, PHP, Next.js, Laravel, Flutter, and Express engineering. Dominating the tech space in Ahmedabad, Surat, Vadodara, and beyond.">
+    <meta property="og:title" content="Mvsoft | Top Development Hub (React, PHP, Laravel)">
+    <meta property="og:description" content="The ultimate destination for React, PHP, Next.js, Laravel, Flutter, and Express engineering. Dominating the tech space globally.">
     <meta property="og:image" content="assets/img/logo1.png">
 
     <!-- Schema.js (JSON-LD) for SEO -->
@@ -40,7 +37,7 @@
                 "@type": "ContactPoint",
                 "telephone": "+91-02836-465134",
                 "contactType": "customer service",
-                "areaServed": ["Ahmedabad", "Surat", "Vadodara", "Indore", "Kutch", "Jamnagar", "Dahod", "IN", "US", "AE"],
+                "areaServed": ["IN", "US", "AE"],
                 "availableLanguage": ["English", "Hindi", "Gujarati"]
             }
         }
@@ -58,8 +55,8 @@
             "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "Plot no 300, Ward: 12/b, Shree Ambika Arcade, Office no 106, 1st Floor",
-                "addressLocality": "Gandhidham",
-                "addressRegion": "GJ",
+                "addressLocality": "Online/Global",
+                "addressRegion": "International",
                 "postalCode": "370201",
                 "addressCountry": "IN"
             },
@@ -95,6 +92,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!-- Devicons for Tech Stack -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <!-- reCAPTCHA v3 -->
+    <script src="https://www.google.com/recaptcha/api.js?render=6LcNmGUsAAAAAFqQA9y7Fqi_8yRQF7QvsnHpS4Qu"></script>
     <!-- Three.js and lil-gui -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lil-gui@0.17.0/dist/lil-gui.umd.min.js"></script>

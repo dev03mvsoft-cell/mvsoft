@@ -231,48 +231,59 @@
                             <p class="text-muted">Fill out the form below and our recruitment team will reach out.</p>
                         </div>
 
-                        <form id="careerForm">
+                        <form id="careerForm" action="mail-handler.php" method="POST" enctype="multipart/form-data">
+                            <!-- Anti-Spam Honeypot -->
+                            <div style="display:none;">
+                                <input type="text" name="honeypot" value="">
+                            </div>
+                            <input type="hidden" name="form_type" value="career">
+
                             <div class="row g-4">
                                 <div class="col-md-6">
                                     <label class="form-label small fw-bold">Full Name</label>
                                     <div class="input-group">
                                         <span class="input-group-text bg-light border-0"><i class="fas fa-user text-muted"></i></span>
-                                        <input type="text" class="form-control bg-light border-0" placeholder="John Doe" required>
+                                        <input type="text" name="name" class="form-control bg-light border-0" placeholder="John Doe" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label small fw-bold">Email Address</label>
                                     <div class="input-group">
                                         <span class="input-group-text bg-light border-0"><i class="fas fa-envelope text-muted"></i></span>
-                                        <input type="email" class="form-control bg-light border-0" placeholder="john@example.com" required>
+                                        <input type="email" name="email" class="form-control bg-light border-0" placeholder="john@example.com" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label small fw-bold">Phone Number</label>
                                     <div class="input-group">
                                         <span class="input-group-text bg-light border-0"><i class="fas fa-phone text-muted"></i></span>
-                                        <input type="tel" class="form-control bg-light border-0" placeholder="+91 00000 00000" required>
+                                        <input type="tel" name="phone" class="form-control bg-light border-0" placeholder="+91 00000 00000" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label small fw-bold">Applying For</label>
                                     <div class="input-group">
                                         <span class="input-group-text bg-light border-0"><i class="fas fa-briefcase text-muted"></i></span>
-                                        <input type="text" class="form-control bg-light border-0" placeholder="e.g. Senior Full Stack Developer" required>
+                                        <input type="text" name="position" class="form-control bg-light border-0" placeholder="e.g. Senior Full Stack Developer" required>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
-                                    <label class="form-label small fw-bold">Portfolio / LinkedIn / Resume Link</label>
+                                    <label class="form-label small fw-bold">Upload Resume (PDF only)</label>
                                     <div class="input-group">
-                                        <span class="input-group-text bg-light border-0"><i class="fas fa-link text-muted"></i></span>
-                                        <input type="url" class="form-control bg-light border-0" placeholder="https://..." required>
+                                        <span class="input-group-text bg-light border-0"><i class="fas fa-file-pdf text-muted"></i></span>
+                                        <input type="file" name="resume" class="form-control bg-light border-0" accept=".pdf" required>
                                     </div>
+                                    <div class="form-text small">Max size 5MB. Your file will be emailed safely without being stored on our server.</div>
                                 </div>
                                 <div class="col-md-12">
                                     <label class="form-label small fw-bold">Tell us about your superpower</label>
-                                    <textarea class="form-control bg-light border-0" rows="4" placeholder="Briefly describe your core expertise..."></textarea>
+                                    <textarea name="message" class="form-control bg-light border-0" rows="4" placeholder="Briefly describe your core expertise..." required></textarea>
                                 </div>
-                                <div class="col-md-12 text-center mt-5">
+
+                                <!-- Google reCAPTCHA v3 -->
+                                <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
+
+                                <div class="col-md-12 text-center mt-4">
                                     <button type="submit" class="btn btn-dark btn-lg rounded-pill px-5 py-3 shadow-glow w-100 btn-magnetic">
                                         <span>Submit Application <i class="fas fa-paper-plane ms-2"></i></span>
                                         <div class="particles-field"></div>
@@ -281,6 +292,20 @@
                                 </div>
                             </div>
                         </form>
+                        <script>
+                            document.getElementById('careerForm').addEventListener('submit', function(e) {
+                                e.preventDefault();
+                                const form = this;
+                                grecaptcha.ready(function() {
+                                    grecaptcha.execute('6LcNmGUsAAAAAFqQA9y7Fqi_8yRQF7QvsnHpS4Qu', {
+                                        action: 'career'
+                                    }).then(function(token) {
+                                        document.getElementById('g-recaptcha-response').value = token;
+                                        form.submit();
+                                    });
+                                });
+                            });
+                        </script>
                     </div>
                 </div>
             </div>

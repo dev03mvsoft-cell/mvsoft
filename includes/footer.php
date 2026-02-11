@@ -69,15 +69,20 @@
     <!-- Footer Bottom -->
     <div class="footer-bottom py-3 border-top">
         <!-- Service Locations For SEO -->
-        <div class="footer-locations py-4 border-top mt-5">
-            <div class="row">
-                <div class="col-12">
-                    <p class="small text-muted mb-0">
-                        <strong class="text-dark me-2">Service Hubs:</strong>
-                        Ahmedabad &bull; Surat &bull; Vadodara &bull; Rajkot &bull; Indore &bull; Jamnagar &bull; Gandhidham &bull; Kutch &bull; Dahod &bull; Global Remote Engineering
-                    </p>
-                </div>
-            </div>
+        <!-- Service Locations For SEO (Hidden) -->
+        <div style="display:none;">
+            <ul>
+                <li>Ahmedabad</li>
+                <li>Surat</li>
+                <li>Vadodara</li>
+                <li>Rajkot</li>
+                <li>Indore</li>
+                <li>Jamnagar</li>
+                <li>Gandhidham</li>
+                <li>Kutch</li>
+                <li>Dahod</li>
+                <li>Global Remote Engineering</li>
+            </ul>
         </div>
 
         <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">

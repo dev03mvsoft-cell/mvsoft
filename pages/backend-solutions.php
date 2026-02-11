@@ -9,7 +9,7 @@
                     <span class="badge bg-primary rounded-pill px-3 py-2 mb-3 reveal-up">Expert PHP Development</span>
                     <h1 class="display-3 fw-bold text-dark mb-4 reveal-up">Elite <span class="text-primary-gradient">PHP & Laravel</span> Architecture</h1>
                     <p class="lead text-muted mb-5 reveal-up" style="max-width: 650px;">
-                        Mvsoft is a specialized <strong>PHP development agency in Gujarat</strong>. We engineer robust, secure, and scalable server-side systems for enterprise applications across India and the globe.
+                        Mvsoft is a specialized <strong>PHP development agency</strong>. We engineer robust, secure, and scalable server-side systems for enterprise applications across India and the globe.
                     </p>
                     <div class="reveal-up">
                         <a href="contact" class="btn btn-primary btn-lg rounded-pill px-5 shadow-glow">Architect Your System</a>

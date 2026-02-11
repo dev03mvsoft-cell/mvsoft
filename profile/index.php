@@ -374,22 +374,22 @@
                 <div class="section-header center">
                     <span class="magic-label">Why Trust Us?</span>
                     <h2 class="trusted-title">The Most Trusted Name in <span>Modern Tech</span></h2>
-                    <p class="trusted-intro">From the bustling port of Gandhidham to the vast landscapes of Western Gujarat, we've built a legacy of digital excellence that spans across India.</p>
+                    <p class="trusted-intro">From our elite engineering hubs to the vast global landscape, we've built a legacy of digital excellence that spans across international markets.</p>
                 </div>
 
                 <div class="trust-grid">
                     <!-- Local Dominance -->
                     <div class="trust-card leaf-style">
-                        <div class="trust-icon"><i class="fa-solid fa-anchor"></i></div>
-                        <h3>Gandhidham Powerhouse</h3>
-                        <p>Deeply rooted in the heart of Gandhidham, we understand the local business pulse better than anyone else.</p>
+                        <div class="trust-icon"><i class="fa-solid fa-bolt-lightning"></i></div>
+                        <h3>Digital Powerhouse</h3>
+                        <p>Deeply rooted in the heart of modern technology, we understand the business pulse better than anyone else.</p>
                     </div>
 
                     <!-- Regional Authority -->
                     <div class="trust-card leaf-style">
-                        <div class="trust-icon"><i class="fa-solid fa-map-location-dot"></i></div>
-                        <h3>Western Gujarat Legend</h3>
-                        <p>A dominant force across Western Gujarat, providing robust digital infrastructures for industries and logistics.</p>
+                        <div class="trust-icon"><i class="fa-solid fa-microchip"></i></div>
+                        <h3>Global Engineering Hub</h3>
+                        <p>A dominant force in digital innovation, providing robust infrastructures for global industries and logistics.</p>
                     </div>
 
                     <!-- National Reach -->

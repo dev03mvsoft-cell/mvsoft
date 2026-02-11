@@ -166,7 +166,7 @@
                             <div class="col-md-6">
                                 <div class="p-4 bg-white rounded-4 border h-100">
                                     <h6 class="fw-bold mb-2">Industry Authority</h6>
-                                    <p class="small text-muted mb-0">Establishing authority by sharing news about the Kutch and Gandhidham landscape.</p>
+                                    <p class="small text-muted mb-0">Establishing authority by sharing news about global tech and market trends.</p>
                                 </div>
                             </div>
                         </div>

@@ -15,12 +15,12 @@
                 <div class="col-sm-6 order-1 order-sm-2 mb-5 mb-sm-0">
                     <div class="about-content ps-sm-5">
                         <span class="badge bg-primary rounded-pill px-3 py-2 mb-3 reveal-up">Elite Software Agency</span>
-                        <h2 class="display-4 fw-bold text-dark mb-4 split-text reveal-up">Top <span class="text-drak-gradient">Website & App Development</span> in Gujarat</h2>
+                        <h2 class="display-4 fw-bold text-dark mb-4 split-text reveal-up">Top <span class="text-drak-gradient">Website & App Development</span> Hub</h2>
                         <p class="lead text-muted mb-4 reveal-up">
-                            Mvsoft is a premier <strong>digital engineering powerhouse</strong> in Gandhidham, Gujarat. We serve businesses across India and the globe with elite website development and high-performance mobile app solutions.
+                            Mvsoft is a premier <strong>digital engineering powerhouse</strong>. We serve businesses across India and the globe with elite website development and high-performance mobile app solutions.
                         </p>
                         <ul class="list-unstyled text-muted mb-5 reveal-up">
-                            <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> Leading Web Development in Gujarat</li>
+                            <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> Leading Web Development Agency</li>
                             <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> Scalable App Development India</li>
                             <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> Global Digital Engineering Model</li>
                         </ul>
@@ -48,7 +48,7 @@
     <section class="info-section">
         <div class="left-part">
             <h1 class="split-text"><span class="d-flex">premium</span> <span class="text"></span></h1>
-            <p>Mvsoft delivers cutting-edge <strong>website development</strong> and <strong>app development</strong> services from Gujarat to the world, ensuring innovation that scales internationally.</p>
+            <p>Mvsoft delivers cutting-edge <strong>website development</strong> and <strong>app development</strong> services to the world, ensuring innovation that scales internationally.</p>
             <a href="contact" class="book-link">
                 <span class="linktext">Start Your Project</span>
                 <span class="arrow">
@@ -210,30 +210,30 @@
             <div class="row align-items-center g-5">
                 <div class="col-lg-12 text-center reveal-up">
                     <span class="section-tag">Regional Hub</span>
-                    <h2 class="display-5 fw-bold mb-4">Leading Tech Hub Across <span class="text-primary-gradient">Gujarat & Indore</span></h2>
+                    <h2 class="display-5 fw-bold mb-4">Leading Tech Hub for <span class="text-primary-gradient">Global Excellence</span></h2>
                     <p class="lead text-muted mx-auto" style="max-width: 800px;">
-                        Mvsoft is the best destination for <strong>React, PHP, Next.js, Laravel, Flutter, and Express</strong> engineering. We are the top-rated software company serving clients in <strong>Kutch, Ahmedabad, Surat, Vadodara, Indore, Jamnagar, and Dahod.</strong>
+                        Mvsoft is the best destination for <strong>React, PHP, Next.js, Laravel, Flutter, and Express</strong> engineering. We are the top-rated software company serving global clients with precision and speed.
                     </p>
                 </div>
             </div>
             <div class="row g-4 mt-4 text-center">
                 <div class="col-6 col-md-4 col-lg-2">
-                    <div class="city-pill reveal-up"><strong>Ahmedabad</strong><br><span class="small opacity-75">React & Next.js</span></div>
+                    <div class="city-pill reveal-up"><strong>React</strong><br><span class="small opacity-75">Frontend Systems</span></div>
                 </div>
                 <div class="col-6 col-md-4 col-lg-2" data-delay="0.1">
-                    <div class="city-pill reveal-up"><strong>Surat</strong><br><span class="small opacity-75">PHP & Laravel</span></div>
+                    <div class="city-pill reveal-up"><strong>PHP</strong><br><span class="small opacity-75">Backend Logic</span></div>
                 </div>
                 <div class="col-6 col-md-4 col-lg-2" data-delay="0.2">
-                    <div class="city-pill reveal-up"><strong>Vadodara</strong><br><span class="small opacity-75">Express & Node</span></div>
+                    <div class="city-pill reveal-up"><strong>Next.js</strong><br><span class="small opacity-75">Fullstack Apps</span></div>
                 </div>
                 <div class="col-6 col-md-4 col-lg-2" data-delay="0.3">
-                    <div class="city-pill reveal-up"><strong>Indore</strong><br><span class="small opacity-75">Flutter Apps</span></div>
+                    <div class="city-pill reveal-up"><strong>Flutter</strong><br><span class="small opacity-75">Mobile Solutions</span></div>
                 </div>
                 <div class="col-6 col-md-4 col-lg-2" data-delay="0.4">
-                    <div class="city-pill reveal-up"><strong>Jamnagar</strong><br><span class="small opacity-75">Web Design</span></div>
+                    <div class="city-pill reveal-up"><strong>Laravel</strong><br><span class="small opacity-75">Enterprise Engines</span></div>
                 </div>
                 <div class="col-6 col-md-4 col-lg-2" data-delay="0.5">
-                    <div class="city-pill reveal-up"><strong>Kutch</strong><br><span class="small opacity-75">Custom Softwares</span></div>
+                    <div class="city-pill reveal-up"><strong>Node JS</strong><br><span class="small opacity-75">Real-time Data</span></div>
                 </div>
             </div>
         </div>

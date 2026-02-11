@@ -12,7 +12,7 @@
                 </div>
 
                 <h2 class="hero-subheading reveal-up" data-delay="0.6">
-                    Elite <strong>Website & App Development</strong> in Gujarat <br>
+                    Elite <strong>Website & App Development</strong> Hub <br>
                     for the <span class="text-primary-gradient">Global Digital Economy.</span>
                 </h2>
 

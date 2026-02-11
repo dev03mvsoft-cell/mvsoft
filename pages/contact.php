@@ -180,19 +180,25 @@
                             <h3 class="fw-bold mb-2">Project Brief</h3>
                             <p class="text-muted small">Share your vision and we'll handle the engineering.</p>
                         </div>
-                        <form id="contactForm" class="row g-4">
+                        <form id="contactForm" action="mail-handler.php" method="POST" class="row g-4">
+                            <!-- Anti-Spam Honeypot -->
+                            <div style="display:none;">
+                                <input type="text" name="honeypot" value="">
+                            </div>
+                            <input type="hidden" name="form_type" value="contact">
+
                             <div class="col-md-6">
                                 <label class="form-label-custom">Identity</label>
-                                <input type="text" class="form-control-nexus" placeholder="Full Name" required>
+                                <input type="text" name="name" class="form-control-nexus" placeholder="Full Name" required>
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label-custom">Communication</label>
-                                <input type="email" class="form-control-nexus" placeholder="Email@work.com" required>
+                                <input type="email" name="email" class="form-control-nexus" placeholder="Email@work.com" required>
                             </div>
                             <div class="col-12">
                                 <label class="form-label-custom">Requirement Focus</label>
-                                <select class="form-select-nexus">
-                                    <option selected disabled>Select Core Service</option>
+                                <select name="service" class="form-select-nexus" required>
+                                    <option selected disabled value="">Select Core Service</option>
                                     <option>Enterprise Web Systems</option>
                                     <option>Mobile Engineering</option>
                                     <option>UI/UX & Identity</option>
@@ -202,8 +208,12 @@
                             </div>
                             <div class="col-12">
                                 <label class="form-label-custom">Context & Vision</label>
-                                <textarea class="form-control-nexus" rows="4" placeholder="Describe the problem we are solving together..."></textarea>
+                                <textarea name="message" class="form-control-nexus" rows="4" placeholder="Describe the problem we are solving together..." required></textarea>
                             </div>
+
+                            <!-- Google reCAPTCHA v3 -->
+                            <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
+
                             <div class="col-12 text-end">
                                 <button type="submit" class="btn btn-nexus-primary btn-magnetic px-5 py-3 shadow-glow">
                                     <span>Initiate Strategy <i class="fas fa-arrow-right ms-2"></i></span>
@@ -211,6 +221,20 @@
                                 </button>
                             </div>
                         </form>
+                        <script>
+                            document.getElementById('contactForm').addEventListener('submit', function(e) {
+                                e.preventDefault();
+                                const form = this;
+                                grecaptcha.ready(function() {
+                                    grecaptcha.execute('6LcNmGUsAAAAAFqQA9y7Fqi_8yRQF7QvsnHpS4Qu', {
+                                        action: 'contact'
+                                    }).then(function(token) {
+                                        document.getElementById('g-recaptcha-response').value = token;
+                                        form.submit();
+                                    });
+                                });
+                            });
+                        </script>
                     </div>
                 </div>
             </div>

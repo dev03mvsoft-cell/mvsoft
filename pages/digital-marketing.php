@@ -107,8 +107,8 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="feature-pill-card p-4 h-100">
-                                    <h6 class="fw-bold mb-2">Local SEO Mastery</h6>
-                                    <p class="small text-muted mb-0">Dominating local markets to ensure Kutch and Gandhidham clients find you first.</p>
+                                    <h6 class="fw-bold mb-2">SEO Dominance</h6>
+                                    <p class="small text-muted mb-0">Dominating search visibility to ensure your target audience finds you first.</p>
                                 </div>
                             </div>
                             <div class="col-md-6">
