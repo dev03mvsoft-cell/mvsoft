@@ -1,19 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
 	// 1. Register Plugins (Must be global)
 	if (typeof gsap !== 'undefined') {
-		gsap.registerPlugin(ScrollTrigger);
+		gsap.registerPlugin(ScrollTrigger, SplitText, Observer, MotionPathPlugin);
 	}
 
 	// 2. Initialize Core UI & Animations in priority order
 	if (typeof UICore !== 'undefined') UICore.init();
 
+	// Optimized initialization: Don't wait strictly for all fonts
 	if (typeof AnimationEngine !== 'undefined') {
+		// Start engine immediately for faster response
+		AnimationEngine.init();
+
+		// Fallback for font-specific positioning if needed (non-blocking)
 		if (document.fonts) {
 			document.fonts.ready.then(() => {
-				AnimationEngine.init();
+				if (typeof ScrollTrigger !== 'undefined') ScrollTrigger.refresh();
 			});
-		} else {
-			AnimationEngine.init();
 		}
 	}
 
@@ -46,7 +49,24 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	});
 
-	// 4. Final Performance Cleanup
+	// 4. Final Performance Cleanup & Preloader Removal
+	const hidePreloader = () => {
+		const preloader = document.getElementById('preloader');
+		if (preloader && !preloader.classList.contains('loaded')) {
+			preloader.classList.add('loaded');
+			sessionStorage.setItem('preloaderSeen', 'true'); // Don't show again this session
+			setTimeout(() => {
+				preloader.style.display = 'none';
+				if (typeof ScrollTrigger !== 'undefined') ScrollTrigger.refresh();
+			}, 600);
+		}
+	};
+
+	window.addEventListener('load', hidePreloader);
+
+	// Fail-safe: Hide preloader after 3 seconds anyway if window load is too slow
+	setTimeout(hidePreloader, 3000);
+
 	window.addEventListener('load', () => {
 		setTimeout(() => {
 			if (typeof ScrollTrigger !== 'undefined') {

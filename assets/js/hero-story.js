@@ -1,5 +1,5 @@
 /**
- * Mvsoft Hero Animation Script
+ * MVsoft Hero Animation Script
  * Full Antigravity Entrance System & Particle Ring
  */
 
@@ -96,12 +96,13 @@ function initHeroAnimation() {
     }));
 
     // 3. GSAP Entrance Timeline (Optimized with ScrollTrigger)
+    // 3. GSAP Entrance Timeline (Optimized)
     const tl = gsap.timeline({
         defaults: { ease: "expo.out", duration: 1.5 },
         scrollTrigger: {
             trigger: "#welcome",
-            start: "top center",
-            toggleActions: "restart none none restart"
+            start: "top 95%", // More permissive for mobile/fast load
+            toggleActions: "play none none none"
         }
     });
 

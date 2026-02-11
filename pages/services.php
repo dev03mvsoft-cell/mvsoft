@@ -286,7 +286,7 @@
                 <div class="col-lg-6">
                     <div class="image-showcase reveal-up pl-lg-5 position-relative">
                         <div class="blob-bg"></div>
-                        <img src="assets/img/office/mvsoftoff11.jpg" class="img-fluid rounded-5 shadow-lg position-relative z-2" alt="Mvsoft Strategy Hub">
+                        <img src="assets/img/office/mvsoftoff11.jpg" class="img-fluid rounded-5 shadow-lg position-relative z-2" alt="MVsoftStrategy Hub">
                         <div class="stat-floating-card glass-card p-3 shadow-glow reveal-up" data-delay="0.5">
                             <span class="d-block fw-bold text-primary fs-4">500+</span>
                             <span class="text-muted small uppercase fw-bold">Active Projects</span>

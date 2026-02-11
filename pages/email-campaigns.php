@@ -10,7 +10,7 @@
                     <h1 class="display-3 fw-bold text-dark mb-4 reveal-up">Email Marketing & <br><span class="text-primary-gradient">Automation</span></h1>
                     <h2 class="h4 fw-bold text-muted mb-4 reveal-up" data-delay="0.2">Targeted Outreach. Automated Growth.</h2>
                     <p class="lead text-muted mb-5 reveal-up" data-delay="0.3" style="max-width: 650px;">
-                        Email remains the highest ROI digital marketing channel. We combine the technical precision of MVSoft with the marketing strategy of BCS to deliver email campaigns that convert cold prospects into loyal clients.
+                        Email remains the highest ROI digital marketing channel. We combine the technical precision of MVsoft Solutions with the marketing strategy of BCS to deliver email campaigns that convert cold prospects into loyal clients.
                     </p>
                     <div class="reveal-up" data-delay="0.4">
                         <a href="contact" class="btn btn-primary btn-lg rounded-pill px-5 shadow-glow">Start Growth Journey</a>
@@ -41,7 +41,7 @@
                                         <tr class="border-bottom">
                                             <th class="text-muted">Feature</th>
                                             <th class="text-muted">Standard</th>
-                                            <th class="text-primary">MVSoft x BCS</th>
+                                            <th class="text-primary">MVsoft Solutions & BCS</th>
                                         </tr>
                                     </thead>
                                     <tbody>

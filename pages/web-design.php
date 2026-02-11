@@ -9,7 +9,7 @@
                     <span class="badge bg-primary rounded-pill px-3 py-2 mb-3 reveal-up">Elite Digital Agency</span>
                     <h1 class="display-3 fw-bold text-dark mb-4 reveal-up">Bespoke <span class="text-primary-gradient">Website Development</span> & Digital Design</h1>
                     <p class="lead text-muted mb-5 reveal-up" style="max-width: 600px;">
-                        Mvsoft is a premier <strong>web design agency</strong>, crafting immersive, high-conversion digital experiences for Indian and global brands.
+                        MVsoft is a premier <strong>web design agency</strong>, crafting immersive, high-conversion digital experiences for Indian and global brands.
                     </p>
                     <div class="reveal-up">
                         <a href="contact" class="btn btn-primary btn-lg rounded-pill px-5 shadow-glow">Start Designing</a>
@@ -84,7 +84,7 @@
                             <div class="icon-box-primary">01</div>
                             <h3 class="fw-bold mb-0">Custom "From Scratch" Development</h3>
                         </div>
-                        <p class="text-muted mb-4">We don't believe in "one-size-fits-all" templates. At MVSoft, we build your digital identity from a blank canvas to ensure your website is unique, lightweight, and perfectly aligned with your business goals.</p>
+                        <p class="text-muted mb-4">We don't believe in "one-size-fits-all" templates. At MVsoft Solutions, we build your digital identity from a blank canvas to ensure your website is unique, lightweight, and perfectly aligned with your business goals.</p>
                         <div class="row g-4">
                             <div class="col-md-4">
                                 <div class="feature-pill-card p-4 h-100 reveal-up">
@@ -202,7 +202,7 @@
                         </div>
                     </div>
                     <div class="col-lg-7 text-center text-lg-start">
-                        <h2 class="fw-bold text-dark mb-3">The MVSoft Architecture Promise</h2>
+                        <h2 class="fw-bold text-dark mb-3">The MVsoft Solutions Architecture Promise</h2>
                         <p class="lead text-muted mb-0">
                             We don't just build websites; we engineer **Digital Assets**. Every project is delivered with clean, decoupled architecture and documented code, ensuring your internal team or future partners can scale the platform without technical debt.
                         </p>

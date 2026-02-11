@@ -9,6 +9,17 @@
     --glass-border: rgba(255, 255, 255, 0.1);
 }
 
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), #ff5722);
+    z-index: 9999;
+    box-shadow: 0 0 10px rgba(255, 176, 0, 0.5);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -405,10 +416,38 @@ body {
     align-items: center;
     width: 100%;
     max-width: 100% !important;
-    /* Force full width to prevent cutoff */
-    gap: clamp(400px, 50vw, 400px);
-    /* Systematic gap for center image space */
-    /* Responsive gap for center image */
+    gap: clamp(200px, 40vw, 400px);
+}
+
+@media (max-width: 1366px) {
+    .magic-title {
+        font-size: clamp(2rem, 4.5vw, 3rem);
+    }
+
+    .magic-content.split-layout {
+        gap: clamp(150px, 35vw, 300px);
+    }
+}
+
+@media (max-width: 1024px) {
+    .magic-container {
+        width: 96%;
+        margin: 2vh auto;
+        height: 85vh;
+    }
+
+    .magic-title {
+        font-size: clamp(1.8rem, 4vw, 2.8rem);
+    }
+
+    .magic-content.split-layout {
+        gap: clamp(100px, 30vw, 250px);
+    }
+
+    .magic-boss-image {
+        width: 130px;
+        height: 180px;
+    }
 }
 
 .split-left {
@@ -1309,7 +1348,7 @@ body {
     overflow: hidden;
     padding: 8px;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-    transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+    /* Transition removed to fix GSAP conflict */
     opacity: 1;
     will-change: transform, opacity;
     backface-visibility: hidden;
@@ -1385,6 +1424,21 @@ body {
     text-align: center;
 }
 
+/* High-end Background Glow - Fixed nesting */
+.exceptional-content::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle, rgba(250, 250, 250, 0.4) 0%, transparent 70%);
+    z-index: -1;
+    pointer-events: none;
+    filter: blur(200px);
+}
+
 .exceptional-main-image {
     width: 250px;
     height: 250px;
@@ -1420,14 +1474,17 @@ body {
     color: #ffffff;
     margin-bottom: 1.5rem;
     letter-spacing: -0.02em;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 0.1);
 }
 
 .exceptional-text {
     font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.4);
+    color: rgba(255, 255, 255, 0.6);
+    /* Increased opacity slightly for readability with shadow */
     max-width: 600px;
     margin: 0 auto 3rem;
     line-height: 1.6;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
 }
 
 .orange-cta {
@@ -1839,15 +1896,14 @@ body {
 
 .collage-item.diamond {
     width: 120px;
-    /* Even larger */
     height: 120px;
     position: relative;
-    background: #1a1a1a;
+    background: #ffffff;
     border-radius: 5px;
     transform: rotate(45deg);
     overflow: hidden;
     padding: 2px;
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(0, 0, 0, 0.05);
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
     z-index: 5;
     flex-shrink: 0;
@@ -1870,7 +1926,7 @@ body {
     height: 200%;
     background: linear-gradient(45deg,
             transparent,
-            rgba(255, 255, 255, 0.05),
+            rgba(0, 0, 0, 0.05),
             transparent);
     transform: rotate(-45deg);
     transition: 0.8s;
@@ -1890,16 +1946,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0.8rem;
-    /* Minimal padding for maximum logo size */
+    padding: 1rem;
+    /* Increased padding for better logo scaling on white */
 }
 
 .diamond-content img {
-    max-width: 95%;
-    max-height: 95%;
+    max-width: 90%;
+    max-height: 90%;
     object-fit: contain;
-    filter: brightness(1.2);
-    /* Extra brightness boost */
     transition: all 0.6s ease;
 }
 

@@ -128,7 +128,7 @@ window.addEventListener('load', function () {
         if (!wrapper || typeof gsap === 'undefined') return;
 
         const segments = [
-            { id: 'scramble-text-1', text: "MVSoft Solution is a modern software development company built for the post-2025 digital economy. " },
+            { id: 'scramble-text-1', text: "MVsoft Solution is a modern software development company built for the post-2025 digital economy. " },
             { id: 'scramble-text-2', text: "Founded to bridge the gap between overpriced agencies and unreliable development vendors—" },
             { id: 'scramble-text-3', text: "we deliver enterprise-grade technology with a value-first approach." }
         ];

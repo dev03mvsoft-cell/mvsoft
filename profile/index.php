@@ -4,8 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile | Mvsoft Nexus</title>
+
+    <!-- SEO Optimization -->
+    <title>Profile | MVsoft Solutions - Digital Engineering Excellence</title>
+    <meta name="description" content="Explore the elite digital engineering portfolio of MVsoft Solutions. Discover our vision, mission, and the innovative tech stacks we use to build extraordinary web and mobile experiences.">
+    <meta name="keywords" content="MVsoft Profile, Digital Engineering, Web Development Gujarat, Innovative IT Solutions, MVsoft Portfolio, Tech Stack, Software Development India">
+    <meta name="author" content="MVsoft Solutions">
+
+    <!-- Open Graph / Social Media Meta -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://MVsoft Solutions .com/profile/">
+    <meta property="og:title" content="MVsoft Profile | Excellence in Digital Engineering">
+    <meta property="og:description" content="A masterclass in modern digital engineering. See how MVsoft builds the future of tech.">
+    <meta property="og:image" content="../assets/img/logo1.png">
+
     <!-- CSS -->
+    <link rel="icon" type="image/png" href="../assets/img/mvsoftfav.png">
     <link rel="stylesheet" href="style.css">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
@@ -14,6 +28,9 @@
 </head>
 
 <body>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
 
     <!-- Cosmos Navigation -->
     <nav class="profile-nav">
@@ -30,13 +47,7 @@
     <main id="app">
         <!-- Cosmos Hero (Normal Scroll) -->
         <section class="cosmos-hero">
-            <!-- Search Bar -->
-            <div class="hero-search-container">
-                <div class="search-bar">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" placeholder="Search Cosmos" readonly>
-                </div>
-            </div>
+
 
             <div class="floating-assets">
                 <!-- Row 1 -->
@@ -171,7 +182,7 @@
                     <!-- Client 2 -->
                     <div class="client-card">
                         <div class="client-logo">
-                            <img src="../assets/img/logo/logo.webp" alt="Ario Logo">
+                            <img src="../assets/img/logo/logo.0bf6238f.jpg" alt="Ario Logo">
                         </div>
                         <h3 class="client-name">Ario Shipping</h3>
                         <p class="client-task">Global Freight Forwarding & Customs Clearance Solutions</p>
@@ -234,7 +245,7 @@
                     <!-- Client 9 -->
                     <div class="client-card">
                         <div class="client-logo">
-                            <img src="../assets/img/logo/logo.0bf6238f.jpg" alt="TurantGo Logo">
+                            <img src="../assets/img/logo/logo.webp" alt="TurantGo Logo">
                         </div>
                         <h3 class="client-name">TurantGo</h3>
                         <p class="client-task">Integrated Multimodal Logistics & 3PL/4PL Supply Chain</p>
@@ -243,11 +254,11 @@
                     <!-- Client 10 -->
                     <div class="client-card">
                         <div class="client-logo">
-                            <img src="../assets/img/logo/Trident_Logo_Registered_489c31b1ff (1).svg" alt="Trident Logo">
+                            <img src="../assets/img/logo/trident_maritime_logo.png" alt="Trident Logo">
                         </div>
-                        <h3 class="client-name">Trident India</h3>
-                        <p class="client-task">Enterprise-level Textile & Chemical Manufacturing ERP</p>
-                        <a href="https://www.tridentindia.com/" target="_blank" class="client-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
+                        <h3 class="client-name">TRIDENT MARITIME SHIPPING LINE</h3>
+                        <p class="client-task">Trident Maritime Shipping Line</p>
+                        <a href="https://tridentmaritime.co.in/" target="_blank" class="client-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                     <!-- Client 11 -->
                     <div class="client-card">
@@ -294,7 +305,7 @@
                         <div class="collage-item diamond">
                             <div class="diamond-content">
                                 <img src="../assets/img/logo/BCS hiring .png" alt="Partner">
-                                <div class="diamond-overlay"><span>Business Care Solutions</span></div>
+
                             </div>
                         </div>
                     </div>
@@ -304,13 +315,12 @@
                         <div class="collage-item diamond">
                             <div class="diamond-content">
                                 <img src="../assets/img/logo/logo.webp" alt="Partner">
-                                <div class="diamond-overlay"><span>Ario Shipping</span></div>
+
                             </div>
                         </div>
                         <div class="collage-item diamond">
                             <div class="diamond-content">
                                 <img src="../assets/img/logo/jodac-logo.png" alt="Partner">
-                                <div class="diamond-overlay"><span>Jodac Shipping</span></div>
                             </div>
                         </div>
                     </div>
@@ -320,7 +330,6 @@
                         <div class="collage-item diamond">
                             <div class="diamond-content">
                                 <img src="../assets/img/logo/jb-logo.webp" alt="Partner">
-                                <div class="diamond-overlay"><span>JB Recycling</span></div>
                             </div>
                         </div>
                         <!-- Central Stat Item -->
@@ -335,7 +344,6 @@
                         <div class="collage-item diamond">
                             <div class="diamond-content">
                                 <img src="../assets/img/logo/mohnish-logo.webp" alt="Partner">
-                                <div class="diamond-overlay"><span>Mohnish Logistics</span></div>
                             </div>
                         </div>
                     </div>
@@ -345,13 +353,11 @@
                         <div class="collage-item diamond">
                             <div class="diamond-content">
                                 <img src="../assets/img/logo/skl-logo-1.webp" alt="Partner">
-                                <div class="diamond-overlay"><span>Shri Krishna Log</span></div>
                             </div>
                         </div>
                         <div class="collage-item diamond">
                             <div class="diamond-content">
                                 <img src="../assets/img/logo/logo.0bf6238f.jpg" alt="Partner">
-                                <div class="diamond-overlay"><span>TurantGo</span></div>
                             </div>
                         </div>
                     </div>
@@ -360,7 +366,6 @@
                         <div class="collage-item diamond">
                             <div class="diamond-content">
                                 <img src="../assets/img/logo/Trident_Logo_Registered_489c31b1ff (1).svg" alt="Partner">
-                                <div class="diamond-overlay"><span>Trident India</span></div>
                             </div>
                         </div>
                     </div>
@@ -428,10 +433,9 @@
                 <a href="../home" class="footer-logo">MV<span>SOFT</span></a>
                 <p class="footer-desc">Leading provider of innovative 3D web experiences, high-performance scalable apps, and elite digital engineering solutions.</p>
                 <div class="footer-socials">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/people/MVSoft-Solutions/61588057437483/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/company/mvsoft-solutions/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/mvsoftsolutions?utm_source=qr&igsh=MTFoNjcxNjhhZXA2Mg%3D%3D" target="_blank"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
 
@@ -469,7 +473,7 @@
         </div>
 
         <div class="footer-bottom">
-            <p class="copy-text">&copy; 2026 Mvsoft Nexus. All rights reserved.</p>
+            <p class="copy-text">&copy; 2026 MVsoft Solutions . All rights reserved.</p>
         </div>
     </footer>
 

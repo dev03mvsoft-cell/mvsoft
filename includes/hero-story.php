@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Mvsoft Hero Section - Antigravity Style
+ * MVsoft Hero Section - Antigravity Style
  */
 ?>
 

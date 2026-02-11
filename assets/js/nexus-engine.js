@@ -23,7 +23,7 @@ class NexusEngine {
             fresnelPower: 2.5,
             backgroundColor: new THREE.Color(0xffffff),
             sphereColor: new THREE.Color(0xf0f0f0),
-            lightColor: new THREE.Color(0x1a387f), // Mvsoft Blue
+            lightColor: new THREE.Color(0x1a387f), // MVsoft Blue
             lightPosition: new THREE.Vector3(1, 1, 1),
             smoothness: 0.6,
             contrast: 1.2,

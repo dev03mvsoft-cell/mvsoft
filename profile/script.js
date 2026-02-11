@@ -177,32 +177,31 @@ document.addEventListener('DOMContentLoaded', () => {
                 left: "50%",
                 xPercent: -50,
                 yPercent: -50,
-                width: "min(400px, 30vw)",
-                height: "min(550px, 45vh)",
+                width: "min(350px, 28vw)",
+                height: "min(500px, 42vh)",
                 borderRadius: "20px",
                 duration: 2.2,
-                force3D: true, // Fixes sub-pixel border artifacts
+                force3D: true,
                 ease: "expo.inOut"
             }, "<");
         } else if (i === 2) {
             magicTl.to(bossImg, {
-                left: "10%",
+                left: "min(12%, 100px)",
                 xPercent: 0,
-                width: "min(480px, 35vw)",
-                height: "min(650px, 55vh)",
+                width: "min(450px, 32vw)",
+                height: "min(600px, 52vh)",
                 duration: 2.2,
                 force3D: true,
                 ease: "expo.inOut"
             }, "<");
         } else if (i === 3) {
-            // Slide 4: Full Image (Contain - No Cut)
             magicTl.to(bossImg, {
                 top: "50%",
                 left: "50%",
                 xPercent: -50,
                 yPercent: -50,
-                width: "min(1200px, 95vw)",
-                height: "min(800px, 85vh)",
+                width: "min(1100px, 92vw)",
+                height: "min(750px, 82vh)",
                 borderRadius: "20px",
                 opacity: 1,
                 duration: 2.5,
@@ -433,38 +432,54 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Exceptional Section Full Circle Animation (Scrubbed Expansion) ---
     gsap.set('.cards-arc', { xPercent: -50, yPercent: -50, force3D: true });
 
-    // --- Exceptional Section Text Reveal (Instant) ---
+    // --- Global Scroll Progress Bar ---
+    gsap.to('.scroll-progress', {
+        width: '100%',
+        ease: 'none',
+        scrollTrigger: {
+            trigger: 'body',
+            start: 'top top',
+            end: 'bottom bottom',
+            scrub: 0.3
+        }
+    });
+
+    // --- Exceptional Section Text Reveal (Immediate) ---
+    // Using a separate trigger to ensure text is visible exactly when needed
     gsap.from('.exceptional-content', {
         scrollTrigger: {
             trigger: '.exceptional-section',
-            start: 'top 80%',
+            start: 'top 90%', // Trigger earlier
+            toggleActions: 'play none none reverse',
         },
         autoAlpha: 0,
         y: 50,
-        duration: 1,
+        duration: 1.2,
         ease: 'power3.out'
     });
 
+    // --- Exceptional Section Cards Expansion (Scrubbed) ---
     const exceptionalTl = gsap.timeline({
         scrollTrigger: {
             trigger: '.exceptional-section',
-            start: 'top bottom',
-            end: 'center center',
-            scrub: 1.5,
+            start: 'top 95%',
+            end: 'top 20%',
+            scrub: true,
             invalidateOnRefresh: true,
         }
     });
 
-    // Cards fan out from the center bundle into the 360 ring as you scroll
+    // Cards fan out immediately as you scroll
     exceptionalTl.from('.arc-card', {
-        scale: 0.1,
+        scale: 0,
         autoAlpha: 0,
-        y: 0, // Starts at center (translateY(0))
+        y: 0,
         stagger: {
-            each: 0.05,
+            each: 0.04,
             from: "center"
         },
-        ease: 'power2.inOut',
+        duration: 2,
+        ease: 'power4.out',
         force3D: true,
         clearProps: "all"
     });

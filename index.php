@@ -1,12 +1,12 @@
 <?php
 
 /**
- * Mvsoft Front Controller / Router
+ * MVsoft Front Controller / Router
  */
 
 // 1. Get the requested path
 $request = urldecode($_SERVER['REQUEST_URI']);
-$base_path = '/Mvsoft/Mvsoft (2)/Mvsoft/';
+$base_path = '/Mvsoft/MVsoft (2)/Mvsoft/';
 $path = str_ireplace($base_path, '', $request);
 $path = trim($path, '/');
 

@@ -4,14 +4,14 @@
             <!-- Company column -->
             <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
                 <div class="footer-brand mb-4">
-                    <img src="assets/img/logo1.png" alt="Mvsoft Logo" class="footer-logo mb-3">
+                    <img src="assets/img/logo1.png" alt="MVsoftLogo" class="footer-logo mb-3">
                     <p class="text-muted footer-pitch">
-                        Mvsoft Tech Solutions is the leading <strong>Website & App Development company in Gujarat, India</strong>. Our elite collective delivers high-performance digital engineering and innovative 3D web experiences to a global clientele.
+                        MVsoft Solutions is the leading <strong>Website & App Development company in Gujarat, India</strong>. Our elite collective delivers high-performance digital engineering and innovative 3D web experiences to a global clientele.
                     </p>
                 </div>
                 <div class="footer-social">
-                    <a href="#" class="social-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/people/MVSoft-Solutions/61588057437483/" class="social-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/mvsoftsolutions?utm_source=qr&igsh=MTFoNjcxNjhhZXA2Mg%3D%3D" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
                     <a href="https://www.linkedin.com/company/mvsoft-solutions/" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
@@ -48,11 +48,11 @@
                 <ul class="list-unstyled footer-contact">
                     <li>
                         <i class="fas fa-map-marker-alt"></i>
-                        <span>Plot no 300, Ward: 12/b, Shree Ambika Arcade, Office no 106, 1st Floor,Gandhidham 370201</span>
+                        <span>No 106, 1st Floor, Shree Ambika Arcade, Plot no 300, Ward: 12/b, Gandhidham(Kutch) Gujarat, India </span>
                     </li>
                     <li>
                         <i class="fas fa-envelope"></i>
-                        <span>admin@mvsoftsolutions.com</span>
+                        <span>admin@mvsoftSolutions .com</span>
                     </li>
                     <li>
                         <i class="fas fa-phone"></i>
@@ -86,7 +86,7 @@
         </div>
 
         <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
-            <p class="mb-0 small text-muted">&copy; <?= date('Y') ?> Mvsoft Tech Solutions. All rights reserved.</p>
+            <p class="mb-0 small text-muted">&copy; <?= date('Y') ?> MVsoft Solutions . All rights reserved.</p>
             <div class="footer-legal d-flex gap-3 small">
                 <a href="#">Privacy Policy</a>
                 <a href="#">Terms of Service</a>
@@ -97,23 +97,23 @@
 </footer>
 
 <!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="<?= asset_v('assets/vendor/js/bootstrap.bundle.min.js') ?>"></script>
 <!-- GSAP -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
+<script src="<?= asset_v('assets/vendor/js/gsap.min.js') ?>"></script>
+<script src="<?= asset_v('assets/vendor/js/ScrollTrigger.min.js') ?>"></script>
+<script src="<?= asset_v('assets/vendor/js/MotionPathPlugin.min.js') ?>"></script>
 <!-- Anime.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script src="<?= asset_v('assets/vendor/js/anime.min.js') ?>"></script>
 <!-- Typed.js -->
-<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script src="<?= asset_v('assets/vendor/js/typed.umd.js') ?>"></script>
 <!-- SplitType -->
-<script src="https://unpkg.com/split-type"></script>
+<script src="<?= asset_v('assets/vendor/js/split-type.min.js') ?>"></script>
 <!-- GSAP Observer Plugin -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Observer.min.js"></script>
+<script src="<?= asset_v('assets/vendor/js/Observer.min.js') ?>"></script>
 <!-- GSAP SplitText Plugin -->
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/SplitText.min.js"></script>
+<script src="<?= asset_v('assets/vendor/js/SplitText.min.js') ?>"></script>
 <!-- Lenis Smooth Scroll -->
-<script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+<script src="<?= asset_v('assets/vendor/js/lenis.min.js') ?>"></script>
 <!-- Custom JS Modules -->
 <script src="<?= asset_v('assets/js/core-ui.js') ?>"></script>
 <script src="<?= asset_v('assets/js/animation-engine.js') ?>"></script>

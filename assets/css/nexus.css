@@ -81,10 +81,26 @@ section {
     text-shadow: 0 0.05em 0 rgba(0, 0, 0, 0.05);
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
+    .elastic-txt {
+        font-size: 12vw;
+    }
+
+    .hero-subheading {
+        font-size: 1.8rem;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
     .elastic-txt {
         font-size: 15vw;
         /* Fixed size on mobile to prevent excessive scaling */
+    }
+
+    .hero-subheading {
+        font-size: 1.4rem;
+        padding: 0 15px;
     }
 }
 

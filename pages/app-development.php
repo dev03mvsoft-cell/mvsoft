@@ -10,7 +10,7 @@
                     <h1 class="display-3 fw-bold text-dark mb-4 reveal-up">Premium <span class="text-primary-gradient">App Development</span> India</h1>
                     <h2 class="h4 fw-bold text-muted mb-4 reveal-up" data-delay="0.2">Elite Flutter & Native Engineering for the Modern World.</h2>
                     <p class="lead text-muted mb-5 reveal-up" data-delay="0.3" style="max-width: 650px;">
-                        Mvsoft is the leading <strong>mobile app development agency</strong>. We build applications that are truly "platform-agnostic," delivering high-performance logic across India and international markets.
+                        MVsoft is the leading <strong>mobile app development agency</strong>. We build applications that are truly "platform-agnostic," delivering high-performance logic across India and international markets.
                     </p>
                     <div class="reveal-up" data-delay="0.4">
                         <a href="contact" class="btn btn-primary btn-lg rounded-pill px-5 shadow-glow">Start Your App Project</a>
@@ -100,7 +100,7 @@
                     <div class="engineering-block reveal-up" style="background: linear-gradient(135deg, #ffffff 0%, #f0f4ff 100%);">
                         <div class="d-flex align-items-center gap-3 mb-4">
                             <div class="icon-box-primary bg-primary text-white"><i class="fas fa-hand-holding-heart"></i></div>
-                            <h3 class="fw-bold mb-0">The MVSoft "Launch & Care" Package</h3>
+                            <h3 class="fw-bold mb-0">The MVsoft "Launch & Care" Package</h3>
                         </div>
                         <p class="text-muted mb-4">With high-level engineering focus, we know that the launch is just the beginning of your app's journey.</p>
 

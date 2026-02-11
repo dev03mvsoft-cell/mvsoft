@@ -18,18 +18,18 @@
     ?>
 
     <!-- SEO Optimization -->
-    <title>Mvsoft | Best React, PHP, Flutter & Web Development Hub</title>
-    <meta name="description" content="Mvsoft Tech Solutions is the premier hub for React, PHP, Next.js, Laravel, Flutter, and Express development. Leading the digital landscape with elite engineering solutions.">
-    <meta name="keywords" content="React development, PHP developers, Next.js, Laravel development, Flutter app development, Express JS, Website development, Best IT company, Mvsoft Tech Solutions, Top software agency">
-    <meta name="author" content="Mvsoft Tech Solutions">
+    <title>MVsoft| Best React, PHP, Laravel & Web Development Hub</title>
+    <meta name="description" content="MVsoft Solutions  is the premier hub for React, PHP, Next.js, Laravel, Flutter, and Express development. Leading the digital landscape with elite engineering solutions.">
+    <meta name="keywords" content="React development, PHP developers, Next.js, Laravel development, Flutter app development, Express JS, Website development, Best IT company, MVsoft Solutions , Top software agency">
+    <meta name="author" content="MVsoft Solutions ">
 
     <!-- Global Targeting -->
     <meta name="geo.region" content="IN" />
 
     <!-- Open Graph / Social Media Meta -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://mvsoftsolutions.com/">
-    <meta property="og:title" content="Mvsoft | Top Development Hub (React, PHP, Laravel)">
+    <meta property="og:url" content="https://MVsoft Solutions .com/">
+    <meta property="og:title" content="MVsoft| Top Development Hub (React, PHP, Laravel)">
     <meta property="og:description" content="The ultimate destination for React, PHP, Next.js, Laravel, Flutter, and Express engineering. Dominating the tech space globally.">
     <meta property="og:image" content="assets/img/logo1.png">
 
@@ -38,12 +38,12 @@
         {
             "@context": "https://schema.org",
             "@type": "Organization",
-            "name": "Mvsoft Tech Solutions",
-            "url": "https://mvsoftsolutions.com/",
-            "logo": "https://mvsoftsolutions.com/assets/img/logo1.png",
+            "name": "MVsoft Solutions ",
+            "url": "https://MVsoft Solutions .com/",
+            "logo": "https://MVsoft Solutions .com/assets/img/logo1.png",
             "sameAs": [
                 "https://www.linkedin.com/company/mvsoft-solutions/",
-                "https://www.instagram.com/mvsoftsolutions/"
+                "https://www.instagram.com/MVsoft Solutions ?utm_source=qr&igsh=MTFoNjcxNjhhZXA2Mg%3D%3D"
             ],
             "contactPoint": {
                 "@type": "ContactPoint",
@@ -58,15 +58,15 @@
         {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "name": "Mvsoft Tech Solutions",
-            "image": "https://mvsoftsolutions.com/assets/img/logo1.png",
+            "name": "MVsoft Solutions ",
+            "image": "https://MVsoft Solutions .com/assets/img/logo1.png",
             "@id": "",
-            "url": "https://mvsoftsolutions.com/",
+            "url": "https://MVsoft Solutions .com/",
             "telephone": "02836-465134",
             "priceRange": "$$",
             "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Plot no 300, Ward: 12/b, Shree Ambika Arcade, Office no 106, 1st Floor",
+                "streetAddress": "No 106, 1st Floor, Shree Ambika Arcade, Plot no 300, Ward: 12/b, Gandhidham(Kutch) Gujarat, India",
                 "addressLocality": "Online/Global",
                 "addressRegion": "International",
                 "postalCode": "370201",
@@ -93,24 +93,24 @@
         }
     </script>
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?= asset_v('assets/vendor/css/bootstrap.min.css') ?>" rel="stylesheet">
     <!-- Google Fonts: Raleway -->
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&display=swap" rel="stylesheet">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/img/mvsoftfav.png">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="<?= asset_v('assets/vendor/css/all.min.css') ?>">
     <!-- Material Symbols -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!-- Devicons for Tech Stack -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="<?= asset_v('assets/vendor/css/devicon.min.css') ?>">
     <!-- reCAPTCHA v3 -->
     <script src="https://www.google.com/recaptcha/api.js?render=6LcNmGUsAAAAAFqQA9y7Fqi_8yRQF7QvsnHpS4Qu"></script>
     <!-- Three.js and lil-gui -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lil-gui@0.17.0/dist/lil-gui.umd.min.js"></script>
+    <script src="<?= asset_v('assets/vendor/js/three.min.js') ?>"></script>
+    <script src="<?= asset_v('assets/vendor/js/lil-gui.umd.min.js') ?>"></script>
     <!-- Stats.js -->
-    <script src="https://cdn.jsdelivr.net/npm/stats.js@0.17.0/build/stats.min.js"></script>
+    <script src="<?= asset_v('assets/vendor/js/stats.min.js') ?>"></script>
     <!-- Lenis Smooth Scroll CSS -->
     <style>
         html.lenis {
@@ -159,6 +159,89 @@
         .reveal-scale {
             transform: scale(0.9);
         }
+
+        /* --- Professional Preloader Styles --- */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            transition: opacity 0.6s cubic-bezier(0.65, 0, 0.35, 1), visibility 0.6s;
+        }
+
+        #preloader.loaded {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader-logo {
+            width: 120px;
+            margin-bottom: 30px;
+            animation: pulse-logo 2s infinite ease-in-out;
+        }
+
+        .loader-bar-container {
+            width: 200px;
+            height: 2px;
+            background: rgba(26, 56, 127, 0.1);
+            border-radius: 2px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .loader-bar {
+            width: 100%;
+            height: 100%;
+            background: #1a387f;
+            position: absolute;
+            left: -100%;
+            animation: load-animation 2s infinite cubic-bezier(0.65, 0, 0.35, 1);
+        }
+
+        .loader-text {
+            margin-top: 15px;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #1a387f;
+            font-weight: 700;
+            opacity: 0.8;
+        }
+
+        @keyframes load-animation {
+            0% {
+                left: -100%;
+            }
+
+            50% {
+                left: 0;
+            }
+
+            100% {
+                left: 100%;
+            }
+        }
+
+        @keyframes pulse-logo {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(0.95);
+                opacity: 0.8;
+            }
+        }
     </style>
     <!-- Custom CSS -->
     <!-- Custom CSS -->
@@ -182,10 +265,24 @@
 </head>
 
 <body>
+    <!-- Professional Preloader -->
+    <div id="preloader">
+        <script>
+            // Instant session check to prevent flash
+            if (sessionStorage.getItem('preloaderSeen')) {
+                document.getElementById('preloader').style.display = 'none';
+            }
+        </script>
+        <img src="assets/img/mvsoftfav.png" alt="Mvsoft" class="loader-logo">
+        <div class="loader-bar-container">
+            <div class="loader-bar"></div>
+        </div>
+        <div class="loader-text">Loading Excellence</div>
+    </div>
 
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.php">
+            <a class="navbar-brand fw-bold" href="/">
                 <img src="assets/img/logo1.png" alt="">
             </a>
 

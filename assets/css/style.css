@@ -98,7 +98,7 @@ body {
 }
 
 .navbar-brand img {
-    height: 40px;
+    height: 60px;
     width: auto;
     object-fit: contain;
     transition: transform 0.3s ease;
@@ -106,7 +106,7 @@ body {
 
 @media (max-width: 991px) {
     .navbar-brand img {
-        height: 32px;
+        height: 48px;
     }
 
     .navbar {
@@ -184,7 +184,7 @@ body {
 
     /* Premium Smooth Transition (User bezier reference) */
     .collapsing {
-        transition: height 0ms cubic-bezier(0.17, 0.04, 0.03, 0.94) !important;
+        transition: height 600ms cubic-bezier(0.17, 0.04, 0.03, 0.94) !important;
         height: 0;
         overflow: hidden;
         will-change: height;
@@ -424,7 +424,7 @@ body {
 }
 
 .music::after {
-    content: "Mvsoft Anthem";
+    content: "MVsoft Anthem";
     position: absolute;
     left: 45px;
     width: 130px;
@@ -848,7 +848,7 @@ body {
     height: 65%;
 }
 
-/* Refined Offering Section - Mvsoft White Integration */
+/* Refined Offering Section - MVsoft White Integration */
 .offering-section {
     background: #fff;
     color: #222;
@@ -1746,6 +1746,70 @@ body {
     z-index: -1;
     overflow: hidden;
     display: flex !important;
+}
+
+/* === Responsive Fixes for Tech Grid === */
+@media (max-width: 1200px) {
+    .info-section {
+        height: auto;
+        min-height: auto;
+        padding: 100px 20px;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .left-part {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-part h1 {
+        font-size: clamp(80px, 15vw, 180px);
+    }
+
+    .left-part p {
+        width: 90%;
+        margin: 30px auto;
+    }
+
+    .right-part {
+        width: 588px;
+        height: 588px;
+        margin: 0 auto;
+        transform: scale(0.9);
+        transform-origin: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .info-section {
+        padding: 80px 15px;
+    }
+
+    .left-part h1 {
+        font-size: clamp(60px, 18vw, 120px);
+    }
+
+    .right-part {
+        transform: scale(0.7);
+        margin: -80px auto 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .left-part h1 {
+        font-size: clamp(50px, 20vw, 90px);
+    }
+
+    .right-part {
+        transform: scale(0.55);
+        margin: -130px auto 0;
+    }
 }
 
 .bg-line img {
@@ -3598,7 +3662,7 @@ body {
 }
 
 
-/* MVSOFT ANTIGRAVITY CSS ENGINE - REFINED */
+/* MVsoft ANTIGRAVITY CSS ENGINE - REFINED */
 
 /* Global Variables for Hero */
 :root {
@@ -3881,7 +3945,7 @@ body {
 }
 
 .footer-logo {
-    height: 45px;
+    height: 70px;
     width: auto;
     object-fit: contain;
 }
@@ -4066,34 +4130,6 @@ body {
     }
 }
 
-/* === Premium Footer Styles === */
-.footer-premium {
-    background: #fff;
-    color: #222;
-    position: relative;
-    overflow: hidden;
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.footer-logo {
-    height: 45px;
-    width: auto;
-    object-fit: contain;
-}
-
-.footer-pitch {
-    font-size: 0.95rem;
-    line-height: 1.7;
-    max-width: 320px;
-}
-
-.footer-title {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #111;
-    margin-bottom: 25px;
-    position: relative;
-}
 
 .footer-links li {
     margin-bottom: 12px;

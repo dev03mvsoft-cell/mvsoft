@@ -17,7 +17,7 @@
                         <span class="badge bg-primary rounded-pill px-3 py-2 mb-3 reveal-up">Elite Software Agency</span>
                         <h2 class="display-4 fw-bold text-dark mb-4 split-text reveal-up">Top <span class="text-drak-gradient">Website & App Development</span> Hub</h2>
                         <p class="lead text-muted mb-4 reveal-up">
-                            Mvsoft is a premier <strong>digital engineering powerhouse</strong>. We serve businesses across India and the globe with elite website development and high-performance mobile app solutions.
+                            MVsoft Solutions is a premier <strong>digital engineering powerhouse</strong>. We serve businesses across India and the globe with elite website development and high-performance mobile app solutions.
                         </p>
                         <ul class="list-unstyled text-muted mb-5 reveal-up">
                             <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> Leading Web Development Agency</li>
@@ -48,7 +48,7 @@
     <section class="info-section">
         <div class="left-part">
             <h1 class="split-text"><span class="d-flex">premium</span> <span class="text"></span></h1>
-            <p>Mvsoft delivers cutting-edge <strong>website development</strong> and <strong>app development</strong> services to the world, ensuring innovation that scales internationally.</p>
+            <p>MVsoft Solutions delivers cutting-edge <strong>website development</strong> and <strong>app development</strong> services to the world, ensuring innovation that scales internationally.</p>
             <a href="contact" class="book-link">
                 <span class="linktext">Start Your Project</span>
                 <span class="arrow">
@@ -126,7 +126,7 @@
                         <span class="badge bg-primary rounded-pill px-3 py-2 mb-3 reveal-up">Our Legacy</span>
                         <h2 class="display-4 fw-bold text-dark mb-4 reveal-up">Built on <br><span class="text-primary-gradient">Trust & Innovation</span></h2>
                         <p class="display-6 text-dark fw-light reveal-up mb-4" style="line-height: 1.6; letter-spacing: -0.02em; font-size: 1.8rem;">
-                            Established in 2025, MVSoft Solutions was born from a realization that high-quality code shouldn't be a luxury. We've scaled to over 500 successful project completions.
+                            Established in 2025, MVsoft Solutions was born from a realization that high-quality code shouldn't be a luxury. We've scaled to over 500 successful project completions.
                         </p>
                         <p class="lead text-muted mb-5 reveal-up">
                             We believe in clean code, transparent pricing, and rapid delivery.
@@ -212,7 +212,7 @@
                     <span class="section-tag">Regional Hub</span>
                     <h2 class="display-5 fw-bold mb-4">Leading Tech Hub for <span class="text-primary-gradient">Global Excellence</span></h2>
                     <p class="lead text-muted mx-auto" style="max-width: 800px;">
-                        Mvsoft is the best destination for <strong>React, PHP, Next.js, Laravel, Flutter, and Express</strong> engineering. We are the top-rated software company serving global clients with precision and speed.
+                        MVsoftis the best destination for <strong>React, PHP, Next.js, Laravel, Flutter, and Express</strong> engineering. We are the top-rated software company serving global clients with precision and speed.
                     </p>
                 </div>
             </div>
@@ -876,7 +876,7 @@
                 <!-- Large Item -->
                 <div class="culture-item large animate-float">
                     <span class="culture-tag">Deep Work</span>
-                    <img src="assets/img/office/mvsoftoff8.jpg" class="img-fluid rounded-4 shadow-lg reveal-up" alt="Mvsoft Office Environment">
+                    <img src="assets/img/office/mvsoftoff8.jpg" class="img-fluid rounded-4 shadow-lg reveal-up" alt="MVsoftOffice Environment">
                     <div class="culture-overlay">
                         <h4>Flow State</h4>
                         <p>We dedicate hours to uninterrupted "Deep Work" to solve complex logistical challenges with elegant code.</p>

@@ -2,7 +2,7 @@
 
 <main>
     <!-- Nexus Hero (Interactive Background applies automatically) -->
-    <section class="section nexus-hero-section  position-relative overflow-hidden d-flex align-items-center justify-content-center" style="min-height: 80vh;">
+    <section id="welcome" class="section nexus-hero-section  position-relative overflow-hidden d-flex align-items-center justify-content-center" style="min-height: 80vh;">
         <div class="container text-center position-relative z-3 mt-5">
             <div class="hero-content reveal-up">
                 <div class="elastic-stage">
@@ -27,7 +27,7 @@
                 <div class="row align-items-center g-5">
                     <div class="col-lg-5 reveal-right">
                         <div class="position-relative">
-                            <img src="assets/img/office/mvsoftoff9.jpg" alt="Mvsoft Office" class="img-fluid rounded-5 shadow-2xl-strong transform-hover" style="border: 1px solid rgba(255,255,255,0.2);">
+                            <img src="assets/img/office/mvsoftoff9.jpg" alt="MVsoft Office" class="img-fluid rounded-5 shadow-2xl-strong transform-hover" style="border: 1px solid rgba(255,255,255,0.2);">
                             <!-- Subtle decorative element -->
                             <div class="position-absolute bottom-0 end-0   d-none d-md-block" style="width: 80px; height: 80px; display: flex; align-items: center; justify-content: center;">
                                 <i class="fas fa-building text-white fs-3"></i>
@@ -279,7 +279,7 @@
             <div class="row align-items-end mb-5">
                 <div class="col-lg-6">
                     <span class="section-tag reveal-up">Our Workspace</span>
-                    <h2 class="display-5 fw-bold text-dark reveal-up" data-delay="0.2">Inside <span class="text-primary-gradient">Mvsoft HQ</span></h2>
+                    <h2 class="display-5 fw-bold text-dark reveal-up" data-delay="0.2">Inside <span class="text-primary-gradient">MVsoft HQ</span></h2>
                 </div>
                 <div class="col-lg-6 text-lg-end">
                     <p class="text-muted reveal-up" data-delay="0.3">A peak behind the scenes where innovation meets engineering excellence.</p>

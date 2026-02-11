@@ -9,7 +9,7 @@
                     <span class="badge bg-primary rounded-pill px-3 py-2 mb-3 reveal-up">Digital Authority</span>
                     <h1 class="display-3 fw-bold text-dark mb-4 reveal-up">Engineering-First <br><span class="text-primary-gradient">SEO Optimization</span></h1>
                     <p class="lead text-muted mb-5 reveal-up" style="max-width: 650px;">
-                        For MVSoft Solution, SEO is not just an "add-on" service; it is built into the core of our engineering. We implement Technical SEO at the code level for an immediate competitive advantage.
+                        For MVsoft Solutions, SEO is not just an "add-on" service; it is built into the core of our engineering. We implement Technical SEO at the code level for an immediate competitive advantage.
                     </p>
                     <div class="reveal-up">
                         <a href="contact" class="btn btn-primary btn-lg rounded-pill px-5 shadow-glow">Audit Your Visibility</a>
@@ -33,13 +33,13 @@
 
                         <!-- Synergy Table -->
                         <div class="glass-card p-4 mt-5 reveal-up">
-                            <h5 class="fw-bold mb-3 small uppercase">MVSoft & BCS Synergy</h5>
+                            <h5 class="fw-bold mb-3 small uppercase">MVsoft Solutions & BCS Synergy</h5>
                             <div class="table-responsive">
                                 <table class="table table-sm table-borderless mb-0" style="font-size: 0.8rem;">
                                     <thead>
                                         <tr class="border-bottom">
                                             <th class="text-muted">Focus</th>
-                                            <th class="text-primary">MVSoft (Tech)</th>
+                                            <th class="text-primary">MVsoft(Tech)</th>
                                             <th class="text-info">BCS (Authority)</th>
                                         </tr>
                                     </thead>

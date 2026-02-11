@@ -10,7 +10,7 @@
                     <h1 class="display-3 fw-bold text-dark mb-4 reveal-up">Digital Marketing & <br><span class="text-primary-gradient">Growth Strategy</span></h1>
                     <h2 class="h4 fw-bold text-muted mb-4 reveal-up" data-delay="0.2">Precision Targeting. Measurable ROI.</h2>
                     <p class="lead text-muted mb-5 reveal-up" data-delay="0.3" style="max-width: 650px;">
-                        At MVSoft Solution, we believe that world-class software deserves world-class visibility. Through our sister concern, Business Care Solutions (BCS), we provide performance-based marketing strategies that turn your digital platforms into revenue-generating assets.
+                        At MVsoft Solutions, we believe that world-class software deserves world-class visibility. Through our sister concern, Business Care Solutions (BCS), we provide performance-based marketing strategies that turn your digital platforms into revenue-generating assets.
                     </p>
                     <div class="reveal-up" data-delay="0.4">
                         <a href="contact" class="btn btn-primary btn-lg rounded-pill px-5 shadow-glow">Drive High-Value Leads</a>
@@ -34,7 +34,7 @@
 
                         <!-- Advantage Table -->
                         <div class="glass-card p-4 mt-5 reveal-up">
-                            <h5 class="fw-bold mb-3 small uppercase">The MVSoft x BCS Way</h5>
+                            <h5 class="fw-bold mb-3 small uppercase">The MVsoft Solutions & BCS Way</h5>
                             <div class="table-responsive">
                                 <table class="table table-sm table-borderless mb-0" style="font-size: 0.8rem;">
                                     <thead>
@@ -90,7 +90,7 @@
                             <div class="icon-box-primary bg-primary text-white">01</div>
                             <h3 class="fw-bold mb-0">Search Engine Optimization (SEO)</h3>
                         </div>
-                        <p class="text-muted mb-4">We dominate search results by combining Technical SEO from MVSoft with Content Authority from BCS.</p>
+                        <p class="text-muted mb-4">We dominate search results by combining Technical SEO from MVsoft Solutions with Content Authority from BCS.</p>
 
                         <div class="row g-4 mb-3">
                             <div class="col-md-6">
@@ -198,7 +198,7 @@
     <section class="py-5 position-relative" style="background: #1a387f !important; z-index: 10;">
         <div class="container py-5 text-center">
             <h2 class="display-4 fw-bold text-white mb-4">Ready for High-Value Leads?</h2>
-            <p class="lead text-white-50 mb-5">By choosing MVSoft and BCS, you get a platform optimized for both humans and bots.</p>
+            <p class="lead text-white-50 mb-5">By choosing MVsoft Solutions and BCS, you get a platform optimized for both humans and bots.</p>
             <div>
                 <a href="contact" class="btn btn-light btn-lg rounded-pill px-5 fw-bold">Request Growth Strategy</a>
             </div>

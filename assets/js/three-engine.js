@@ -383,7 +383,11 @@ const ThreeEngine = (() => {
 
                 ctx.fillStyle = tech.color + '22';
                 ctx.beginPath();
-                ctx.roundRect(0, 0, 256, 64, 32);
+                if (ctx.roundRect) {
+                    ctx.roundRect(0, 0, 256, 64, 32);
+                } else {
+                    ctx.rect(0, 0, 256, 64); // Fallback to normal rect
+                }
                 ctx.fill();
 
                 ctx.strokeStyle = tech.color;

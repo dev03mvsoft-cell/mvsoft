@@ -9,7 +9,7 @@
                     <span class="badge bg-primary rounded-pill px-3 py-2 mb-3 reveal-up">Expert PHP Development</span>
                     <h1 class="display-3 fw-bold text-dark mb-4 reveal-up">Elite <span class="text-primary-gradient">PHP & Laravel</span> Architecture</h1>
                     <p class="lead text-muted mb-5 reveal-up" style="max-width: 650px;">
-                        Mvsoft is a specialized <strong>PHP development agency</strong>. We engineer robust, secure, and scalable server-side systems for enterprise applications across India and the globe.
+                        MVsoft is a specialized <strong>PHP development agency</strong>. We engineer robust, secure, and scalable server-side systems for enterprise applications across India and the globe.
                     </p>
                     <div class="reveal-up">
                         <a href="contact" class="btn btn-primary btn-lg rounded-pill px-5 shadow-glow">Architect Your System</a>
@@ -125,11 +125,11 @@
                         </div>
                     </div>
 
-                    <!-- 4. The MVSoft Backend Promise -->
+                    <!-- 4. The MVsoftBackend Promise -->
                     <div class="engineering-block reveal-up" style="background: linear-gradient(135deg, #ffffff 0%, #f0f4ff 100%);">
                         <div class="d-flex align-items-center gap-3 mb-4">
                             <div class="icon-box-primary bg-primary text-white"><i class="fas fa-cogs"></i></div>
-                            <h3 class="fw-bold mb-0">The "MVSoft Backend" Promise</h3>
+                            <h3 class="fw-bold mb-0">The "MVsoft Backend" Promise</h3>
                         </div>
 
                         <div class="row g-4">

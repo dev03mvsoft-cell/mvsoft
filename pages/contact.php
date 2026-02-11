@@ -132,7 +132,7 @@
                                     </div>
                                     <div>
                                         <h5 class="fw-bold mb-1">Corporate HQ</h5>
-                                        <p class="text-muted small mb-0">Plot no 300, Ward: 12/b, Shree Ambika Arcade,<br>Office no 106, 1st Floor, Gandhidham 370201</p>
+                                        <p class="text-muted small mb-0">No 106, 1st Floor, Shree Ambika Arcade, Plot no 300, Ward: 12/b, Gandhidham(Kutch) Gujarat, India</p>
                                     </div>
                                 </div>
                             </div>
@@ -144,7 +144,7 @@
                                     </div>
                                     <div>
                                         <h5 class="fw-bold mb-1">Direct Communication</h5>
-                                        <p class="text-muted small mb-0">admin@mvsoftsolutions.com<br>info@mvsoftsolutions.com</p>
+                                        <p class="text-muted small mb-0">admin@mvsoftsolutions.com</p>
                                     </div>
                                 </div>
                             </div>
@@ -165,9 +165,9 @@
                         <div class="social-wrapper mt-5 reveal-up">
                             <h6 class="fw-bold text-dark mb-3">Connect Professionally</h6>
                             <div class="d-flex gap-3">
-                                <a href="#" class="nexus-social-icon"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#" class="nexus-social-icon"><i class="fab fa-x-twitter"></i></a>
-                                <a href="#" class="nexus-social-icon"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/company/mvsoft-solutions/" class="nexus-social-icon" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://www.facebook.com/people/mvSoft-Solutions/61588057437483/" class="nexus-social-icon" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://www.instagram.com/mvsoftsolutions?utm_source=qr&igsh=MTFoNjcxNjhhZXA2Mg%3D%3D" class="nexus-social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
                             </div>
                         </div>
                     </div>

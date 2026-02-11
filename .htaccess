@@ -1,7 +1,7 @@
 RewriteEngine On
 
 # Ensure we are in the correct base directory
-# RewriteBase /Mvsoft/Mvsoft (2)/Mvsoft/
+# RewriteBase /Mvsoft/MVsoft (2)/Mvsoft/
 
 # Do not rewrite for existing files or directories (assets, includes, etc)
 RewriteCond %{REQUEST_FILENAME} !-f
