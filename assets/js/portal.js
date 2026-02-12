@@ -13,7 +13,10 @@ const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerH
 
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setPixelRatio(window.devicePixelRatio);
+renderer.setClearColor(0x000000, 1);
 renderer.autoClear = false;
+
+console.log("Renderer initialized:", renderer);
 
 // ---- transition logic ----
 console.log("Transition Logic Initialized");
@@ -165,9 +168,13 @@ function createSidewallMaterial() {
 }
 
 const matSideWall = createSidewallMaterial();
-const matTop = new THREE.MeshLambertMaterial({ color: 'black' });
-const mesh = new THREE.Mesh(extrudeGeom, [matTop, matSideWall]);
+const mesh = new THREE.Mesh(extrudeGeom, [
+    new THREE.MeshBasicMaterial({ color: 0x000000 }), // Top
+    matSideWall // Side
+]);
+mesh.visible = true;
 scene.add(mesh);
+console.log("Mesh added to scene:", mesh);
 
 // ---- composer ----
 const composer = new EffectComposer(renderer);
@@ -183,27 +190,34 @@ const { binormals } = extrudePath.computeFrenetFrames(steps);
 const matrix = new THREE.Matrix4();
 
 function animate(t) {
-    requestAnimationFrame(animate);
+    try {
+        requestAnimationFrame(animate);
 
-    // Update tunnel cam
-    const u = ((mpms * t) % totalLen) / totalLen;
-    extrudePath.getPointAt(u, camera.position);
+        // Update tunnel cam
+        let u = ((mpms * t) % totalLen) / totalLen;
+        if (isNaN(u)) u = 0;
 
-    if (binormals && binormals.length > 0) {
-        camera.setRotationFromMatrix(matrix.lookAt(
-            camera.position,
-            extrudePath.getPointAt(Math.min(1.0, u + 0.01)),
-            binormals[Math.floor(u * steps)] || binormals[0]
-        ));
+        extrudePath.getPointAt(u, camera.position);
+
+        if (binormals && binormals.length > 0) {
+            const lookTarget = extrudePath.getPointAt(Math.min(1.0, u + 0.01));
+            camera.setRotationFromMatrix(matrix.lookAt(
+                camera.position,
+                lookTarget,
+                binormals[Math.floor(u * steps)] || binormals[0]
+            ));
+        }
+
+        // Update tunnel materials
+        if (matSideWall.uniforms.t) {
+            matSideWall.uniforms.t.value = t;
+        }
+
+        // Render 3D scene
+        composer.render();
+    } catch (err) {
+        console.error("Animation Error:", err);
     }
-
-    // Update tunnel materials
-    if (matSideWall.uniforms.t) {
-        matSideWall.uniforms.t.value = t;
-    }
-
-    // Render 3D scene
-    composer.render();
 }
 
 requestAnimationFrame(animate);

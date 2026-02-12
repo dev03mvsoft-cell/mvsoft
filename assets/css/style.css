@@ -1056,22 +1056,22 @@ body {
 }
 
 .offering-card.light-card:nth-child(1) .circle {
-    background: url("https://images.unsplash.com/photo-1587440871875-191322ee64b0?q=80&w=2071") no-repeat 50% 50% / cover;
+    background: url("../img/work/mvsoftoffwork13.png") no-repeat 50% 50% / cover;
     clip-path: circle(120px at 100% 100%);
 }
 
 .offering-card.light-card:nth-child(2) .circle {
-    background: url("https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=2070") no-repeat 50% 50% / cover;
+    background: url("../img/work/mvsoftoffwork14.jpg") no-repeat 50% 50% / cover;
     clip-path: circle(120px at 0% 100%);
 }
 
 .offering-card.light-card:nth-child(3) .circle {
-    background: url("https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1974") no-repeat 50% 50% / cover;
+    background: url("../img/work/mvsoftoffwork15.jpg") no-repeat 50% 50% / cover;
     clip-path: circle(120px at 100% 0%);
 }
 
 .offering-card.light-card:nth-child(4) .circle {
-    background: url("https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070") no-repeat 50% 50% / cover;
+    background: url("../img/work/mvsoftoffwork16.jpg") no-repeat 50% 50% / cover;
     clip-path: circle(120px at 0% 0%);
 }
 
@@ -3645,28 +3645,28 @@ body {
 }
 
 .offering-card-v2:nth-child(1) .card-circle {
-    background: url("https://images.unsplash.com/photo-1587440871875-191322ee64b0?q=80&w=2071&auto=format&fit=crop") no-repeat center center / cover;
+    background: url("../img/work/mvsoftoffwork13.png") no-repeat center center / cover;
     bottom: 0;
     right: 0;
     clip-path: circle(calc(6.25rem + 7.5vw) at 100% 100%);
 }
 
 .offering-card-v2:nth-child(2) .card-circle {
-    background: url("https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=2070&auto=format&fit=crop") no-repeat center center / cover;
+    background: url("../img/work/mvsoftoffwork14.jpg") no-repeat center center / cover;
     bottom: 0;
     left: 0;
     clip-path: circle(calc(6.25rem + 7.5vw) at 0% 100%);
 }
 
 .offering-card-v2:nth-child(3) .card-circle {
-    background: url("https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1974&auto=format&fit=crop") no-repeat center center / cover;
+    background: url("../img/work/mvsoftoffwork15.jpg") no-repeat center center / cover;
     top: 0;
     right: 0;
     clip-path: circle(calc(6.25rem + 7.5vw) at 100% 0%);
 }
 
 .offering-card-v2:nth-child(4) .card-circle {
-    background: url("https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop") no-repeat center center / cover;
+    background: url("../img/work/mvsoftoffwork16.jpg") no-repeat center center / cover;
     top: 0;
     left: 0;
     clip-path: circle(calc(6.25rem + 7.5vw) at 0% 0%);

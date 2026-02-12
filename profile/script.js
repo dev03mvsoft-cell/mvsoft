@@ -12,12 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
         duration: 0.8,
         ease: 'power3.out'
     })
-        .from('.search-bar', {
-            y: -30,
-            opacity: 0,
-            duration: 0.8,
-            ease: 'power3.out'
-        }, '-=0.4')
         // Cosmos Hero Reveal
         .from('.hero-title', {
             y: 100,
@@ -31,12 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
             duration: 0.8,
             ease: 'power3.out'
         }, '-=0.8')
-        .from('.main-cta', {
-            scale: 0.8,
-            opacity: 0,
-            duration: 0.5,
-            ease: 'back.out(1.7)'
-        }, '-=0.5')
         .from('.asset', {
             opacity: 0,
             scale: 0.2,
@@ -48,9 +36,23 @@ document.addEventListener('DOMContentLoaded', () => {
             ease: 'expo.out'
         }, '-=1');
 
-    // Floating Animation for Assets
+    // Hero "Bind Up" Reveal (Moving UP on scroll)
+    gsap.to('.hero-center', {
+        y: -200,
+        opacity: 0,
+        ease: "none",
+        scrollTrigger: {
+            trigger: '.cosmos-hero',
+            start: 'top top',
+            end: 'bottom top',
+            scrub: true
+        }
+    });
+
+    // Floating Animation for Assets (Original Layout)
     const assets = document.querySelectorAll('.asset');
     assets.forEach((asset, i) => {
+        // Subtle floating movement
         gsap.to(asset, {
             y: "random(-25, 25)",
             x: "random(-20, 20)",
@@ -59,6 +61,18 @@ document.addEventListener('DOMContentLoaded', () => {
             yoyo: true,
             ease: "sine.inOut",
             delay: i * 0.1
+        });
+
+        // Parallax / Movement on scroll (Images stay visible)
+        gsap.to(asset, {
+            y: -250 - (i * 15), // Smooth move up
+            scrollTrigger: {
+                trigger: '.cosmos-hero',
+                start: 'top top',
+                end: 'bottom top',
+                scrub: 1.5,
+                invalidateOnRefresh: true
+            }
         });
     });
 
@@ -344,19 +358,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }, '-=0.6');
     }
 
-    // Final CTA reveal
-    gsap.from('.final-title', {
-        scrollTrigger: {
-            trigger: '.final-cta-section',
-            start: 'top 80%',
-        },
-        y: 100,
-        opacity: 0,
-        duration: 1.5,
-        ease: 'power4.out'
-    });
-
-    // --- Unified Mouse Tracking & Parallax ---
+    // Unified Mouse Tracking & Parallax (Cleaned up)
     const blob = document.createElement('div');
     blob.style.cssText = `
         position: fixed;
@@ -378,6 +380,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mouseY = e.clientY;
     });
 
+    const arcCards = document.querySelectorAll('.arc-card');
     function updateParallax() {
         // Update Mouse Glow
         gsap.to(blob, {
@@ -405,25 +408,14 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        // Arc Cards Parallax
-        if (arcCards.length > 0) {
-            arcCards.forEach((card, i) => {
-                gsap.to(card, {
-                    x: xPercent * (20 + i * 2),
-                    y: yPercent * (20 + i * 2),
-                    duration: 1.5,
-                    force3D: true,
-                    ease: "power2.out"
-                });
-            });
-            gsap.to('.exceptional-content', {
-                x: xPercent * -25,
-                y: yPercent * -20,
-                duration: 1.5,
-                force3D: true,
-                ease: "power2.out"
-            });
-        }
+        // Just Parallax the Content Container (Not individual cards to avoid conflict)
+        gsap.to('.exceptional-content', {
+            x: xPercent * -25,
+            y: yPercent * -20,
+            duration: 1.5,
+            force3D: true,
+            ease: "power2.out"
+        });
 
         requestAnimationFrame(updateParallax);
     }
@@ -446,42 +438,55 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Exceptional Section Text Reveal (Immediate) ---
     // Using a separate trigger to ensure text is visible exactly when needed
+    // --- Exceptional Section Reveal Logic (Robust) ---
     gsap.from('.exceptional-content', {
         scrollTrigger: {
             trigger: '.exceptional-section',
-            start: 'top 90%', // Trigger earlier
-            toggleActions: 'play none none reverse',
+            start: 'top 85%',
+            toggleActions: 'play none none none', // Don't reverse hide to keep it visible
         },
-        autoAlpha: 0,
-        y: 50,
-        duration: 1.2,
-        ease: 'power3.out'
-    });
-
-    // --- Exceptional Section Cards Expansion (Scrubbed) ---
-    const exceptionalTl = gsap.timeline({
-        scrollTrigger: {
-            trigger: '.exceptional-section',
-            start: 'top 95%',
-            end: 'top 20%',
-            scrub: true,
-            invalidateOnRefresh: true,
-        }
-    });
-
-    // Cards fan out immediately as you scroll
-    exceptionalTl.from('.arc-card', {
-        scale: 0,
-        autoAlpha: 0,
-        y: 0,
-        stagger: {
-            each: 0.04,
-            from: "center"
-        },
+        opacity: 0,
+        y: 80,
+        scale: 0.95,
         duration: 2,
         ease: 'power4.out',
-        force3D: true,
         clearProps: "all"
+    });
+
+    // --- Responsive Full Circle Cards Expansion ---
+    const cards = gsap.utils.toArray('.arc-card');
+
+    function getRadius() {
+        const w = window.innerWidth;
+        if (w > 1440) return 400;      // Big Desktop
+        if (w > 1024) return 320;      // Laptop / Small Desktop
+        if (w > 768) return 240;       // Tablet
+        if (w > 480) return 130;       // Large Mobile
+        return 110;                    // Small Mobile
+    }
+
+    cards.forEach((card, i) => {
+        const degrees = i * 30;
+        const angle = degrees * (Math.PI / 180);
+
+        // Initial setup
+        gsap.set(card, { x: 0, y: 0, scale: 0, opacity: 0 });
+
+        // Expansion Animation
+        gsap.to(card, {
+            x: () => Math.cos(angle - Math.PI / 2) * getRadius(),
+            y: () => Math.sin(angle - Math.PI / 2) * getRadius(),
+            scale: 1,
+            opacity: 1,
+            rotation: degrees,
+            scrollTrigger: {
+                trigger: '.exceptional-section',
+                start: 'top 95%',
+                end: 'top 20%',
+                scrub: 1.2,
+                invalidateOnRefresh: true,
+            }
+        });
     });
 
     // 3. Keep the Ring Rotating Infinitely (Independent of Scroll)

@@ -174,7 +174,8 @@ body {
     background-color: #0a0a0a;
     overflow: hidden;
     z-index: 1;
-    /* Keep base hero low */
+    /* Lowest */
+    padding-top: 80px;
 }
 
 .hero-search-container {
@@ -220,7 +221,7 @@ body {
     position: relative;
     z-index: 10;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 0;
 }
 
 .announcement-pill {
@@ -298,28 +299,26 @@ body {
 .magic-pin-section {
     position: relative;
     height: 100vh;
-    /* Changed from 400vh to avoid empty gaps */
     background: #000;
+    z-index: 50;
+    /* Lower than exceptional to avoid cutting cards */
 }
 
 
 .magic-container {
     position: relative;
     height: 90vh;
-    /* Slightly smaller for a floating effect */
     width: 94%;
     margin: 5vh auto;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     overflow: hidden;
-    z-index: 2;
+    z-index: 21;
     background: rgba(10, 10, 10, 0.85);
-    /* Darker, more solid */
     backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 40px;
-    /* Modern rounded corners instead of extreme leaf for better readability */
     box-shadow:
         0 40px 100px rgba(0, 0, 0, 0.8),
         inset 0 0 40px rgba(255, 255, 255, 0.02);
@@ -1298,20 +1297,19 @@ body {
 
 /* Exceptional CTA Section - Full 360 Ring Path */
 .exceptional-section {
-    padding: 10rem 0;
-    min-height: 1100px;
-    /* Fixed high height to match the 900px ring */
+    padding: 15rem 0 20rem 0;
+    /* Slightly less padding for compact look */
+    min-height: 130vh;
     background: var(--bg-color);
     position: relative;
-    overflow: hidden;
-    /* Contain the huge ring */
+    overflow: visible;
+    /* Important: Stop cutting cards */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 10;
-    margin-top: 5rem;
-    /* Push down from hero */
+    z-index: 100;
+    /* Higher than next sections */
 }
 
 .exceptional-container {
@@ -1329,8 +1327,8 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    height: 900px;
-    width: 900px;
+    transform: translate(-50%, -50%);
+    /* No fixed width/height to let JS calculate expansion */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1341,20 +1339,53 @@ body {
 
 .arc-card {
     position: absolute;
-    width: 200px;
-    height: 280px;
+    width: 170px;
+    /* More compact */
+    height: 240px;
     background: #ffffff;
     border-radius: 40px;
     overflow: hidden;
     padding: 8px;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-    /* Transition removed to fix GSAP conflict */
     opacity: 1;
+    visibility: visible !important;
     will-change: transform, opacity;
     backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
     transform: translateZ(0);
-    /* Force GPU acceleration */
+}
+
+@media (max-width: 1440px) {
+    .arc-card {
+        width: 150px;
+        height: 210px;
+        border-radius: 25px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .arc-card {
+        width: 120px;
+        height: 170px;
+        border-radius: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .arc-card {
+        width: 80px;
+        height: 110px;
+        border-radius: 12px;
+        padding: 4px;
+    }
+}
+
+@media (max-width: 480px) {
+    .arc-card {
+        width: 65px;
+        height: 90px;
+        border-radius: 10px;
+        padding: 3px;
+    }
 }
 
 .arc-card img {
@@ -1420,8 +1451,50 @@ body {
 
 .exceptional-content {
     position: relative;
-    z-index: 10;
+    z-index: 110;
+    /* Above everything in this section */
     text-align: center;
+    max-width: 90%;
+    margin: 0 auto;
+    visibility: visible !important;
+}
+
+.exceptional-title {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.exceptional-title span {
+    color: var(--accent);
+}
+
+@media (max-width: 768px) {
+    .exceptional-title {
+        font-size: 2.2rem;
+    }
+
+    .exceptional-section {
+        padding: 6rem 0 15rem 0;
+        min-height: 100vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .exceptional-title {
+        font-size: 1.8rem;
+    }
+
+    .exceptional-section {
+        padding: 4rem 0 12rem 0;
+    }
+
+    .orange-cta {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+    }
 }
 
 /* High-end Background Glow - Fixed nesting */

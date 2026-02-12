@@ -285,7 +285,7 @@
             <!-- Transport & Logistics (FEATURED) -->
             <div class="industry-card featured reveal-up">
                 <div class="industry-img">
-                    <img src="https://images.unsplash.com/photo-1494412519320-aa613dfb7738?q=80&w=2070" alt="Shipping">
+                    <img src="/assets/img/work/mvsoftoffwork3.jpg" alt="Shipping">
                 </div>
                 <div class="card-body">
                     <div class="industry-icon-overlay">
@@ -301,7 +301,7 @@
             <!-- E-Commerce -->
             <div class="industry-card reveal-up">
                 <div class="industry-img">
-                    <img src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?q=80&w=2070" alt="Ecommerce">
+                    <img src="/assets/img/work/mvsoftoffwork8.jpg" alt="Ecommerce">
                 </div>
                 <div class="card-body">
                     <div class="industry-icon-overlay">
@@ -317,7 +317,7 @@
             <!-- Travel -->
             <div class="industry-card reveal-up">
                 <div class="industry-img">
-                    <img src="https://plus.unsplash.com/premium_photo-1684407617181-3408b55fef8e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Travel">
+                    <img src="/assets/img/work/mvsoftoffwork11.avif" alt="Travel">
                 </div>
                 <div class="card-body">
                     <div class="industry-icon-overlay">
@@ -333,7 +333,7 @@
             <!-- Health Care -->
             <div class="industry-card reveal-up">
                 <div class="industry-img">
-                    <img src="https://images.unsplash.com/photo-1530497610245-94d3c16cda28?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Healthcare">
+                    <img src="/assets/img/work/mvsoftoffwork6.avif" alt="Healthcare">
                 </div>
                 <div class="card-body">
                     <div class="industry-icon-overlay">
@@ -349,7 +349,7 @@
             <!-- Real Estate -->
             <div class="industry-card reveal-up">
                 <div class="industry-img">
-                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070" alt="Real Estate">
+                    <img src="/assets/img/work/mvsoftoffwork1.jpg" alt="Real Estate">
                 </div>
                 <div class="card-body">
                     <div class="industry-icon-overlay">
@@ -365,7 +365,7 @@
             <!-- Education -->
             <div class="industry-card reveal-up">
                 <div class="industry-img">
-                    <img src="https://images.unsplash.com/photo-1530497610245-94d3c16cda28?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Education">
+                    <img src="/assets/img/work/mvsoftoffwork0.jpg" alt="Education">
                 </div>
                 <div class="card-body">
                     <div class="industry-icon-overlay">
@@ -381,7 +381,7 @@
             <!-- Utility & On-Demand -->
             <div class="industry-card reveal-up">
                 <div class="industry-img">
-                    <img src="https://plus.unsplash.com/premium_photo-1745612944304-b7aa16240f8c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="On Demand">
+                    <img src="/assets/img/work/mvsoftoffwork12.jpg" alt="On Demand">
                 </div>
                 <div class="card-body">
                     <div class="industry-icon-overlay">
@@ -397,7 +397,7 @@
             <!-- Finance -->
             <div class="industry-card reveal-up">
                 <div class="industry-img">
-                    <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Finance">
+                    <img src="/assets/img/work/mvsoftoffwork10.jpg" alt="Finance">
                 </div>
                 <div class="card-body">
                     <div class="industry-icon-overlay">
@@ -413,7 +413,7 @@
             <!-- Insurance -->
             <div class="industry-card reveal-up">
                 <div class="industry-img">
-                    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2070" alt="Insurance">
+                    <img src="/assets/img/work/mvsoftoffwork11.jpg" alt="Insurance">
                 </div>
                 <div class="card-body">
                     <div class="industry-icon-overlay">
@@ -429,7 +429,7 @@
             <!-- NGO -->
             <div class="industry-card reveal-up">
                 <div class="industry-img">
-                    <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2070" alt="NGO">
+                    <img src="/assets/img/work/mvsoftoffwork2.jpg" alt="NGO">
                 </div>
                 <div class="card-body">
                     <div class="industry-icon-overlay">
@@ -445,7 +445,7 @@
             <!-- Media & Entertainment -->
             <div class="industry-card reveal-up">
                 <div class="industry-img">
-                    <img src="https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?q=80&w=2070" alt="Media">
+                    <img src="/assets/img/work/mvsoftoffwork5.jpg" alt="Media">
                 </div>
                 <div class="card-body">
                     <div class="industry-icon-overlay">
@@ -461,7 +461,7 @@
             <!-- Manufacturing -->
             <div class="industry-card reveal-up">
                 <div class="industry-img">
-                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070" alt="Manufacturing">
+                    <img src="/assets/img/work/mvsoftoffwork9.jpg" alt="Manufacturing">
                 </div>
                 <div class="card-body">
                     <div class="industry-icon-overlay">
@@ -477,7 +477,7 @@
             <!-- Custom Demand -->
             <div class="industry-card reveal-up">
                 <div class="industry-img">
-                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070" alt="Custom">
+                    <img src="/assets/img/work/mvsoftoffwork4.jpg" alt="Custom">
                 </div>
                 <div class="card-body">
                     <div class="industry-icon-overlay">
