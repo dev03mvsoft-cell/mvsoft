@@ -187,15 +187,30 @@
                     </div>
                 </div>
 
-                <!-- Card 3: UI/UX & SEO -->
+                <!-- Card 3: UI/UX Design -->
                 <div class="offering-card light-card reveal-up" data-delay="0.3">
                     <div class="circle"></div>
                     <div class="card-content">
-                        <h2 class="split text-dark">UI/UX Design <br /> & Global SEO</h2>
-                        <p class="text-muted mb-3">User-centric design combined with technical SEO excellence built directly into the codebase.</p>
+                        <h2 class="split text-dark">UI/UX <br /> Design</h2>
+                        <p class="text-muted mb-3">User-centric design focusing on intuitive navigation and stunning visual aesthetics.</p>
                         <ul class="list-unstyled small text-muted">
                             <li class="mb-2"><i class="fab fa-figma text-primary me-2"></i> <strong>Design:</strong> User-centric Figma interfaces</li>
-                            <li><i class="fas fa-bolt text-primary me-2"></i> <strong>SEO:</strong> Technical SEO (SSR, Meta-tags & Schema)</li>
+                            <li class="mb-2"><i class="fas fa-palette text-primary me-2"></i> <strong>Branding:</strong> Corporate identity & design systems</li>
+                            <li><i class="fas fa-mouse-pointer text-primary me-2"></i> <strong>Experience:</strong> Interactive prototypes & motion design</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 4: Global SEO -->
+                <div class="offering-card light-card reveal-up" data-delay="0.4">
+                    <div class="circle"></div>
+                    <div class="card-content">
+                        <h2 class="split text-dark">Global <br /> SEO</h2>
+                        <p class="text-muted mb-3">Dominating search results with technical SEO excellence built directly into the codebase.</p>
+                        <ul class="list-unstyled small text-muted">
+                            <li class="mb-2"><i class="fas fa-bolt text-primary me-2"></i> <strong>Technical:</strong> SSR, Meta-tags & Schema Markup</li>
+                            <li class="mb-2"><i class="fas fa-chart-line text-primary me-2"></i> <strong>Growth:</strong> Keyword research & content strategy</li>
+                            <li><i class="fas fa-globe text-primary me-2"></i> <strong>Reach:</strong> Local and international SEO optimization</li>
                         </ul>
                     </div>
                 </div>
@@ -211,9 +226,9 @@
                 <div class="col-lg-12 text-center reveal-up">
                     <span class="section-tag">Regional Hub</span>
                     <h2 class="display-5 fw-bold mb-4">Leading Tech Hub for <span class="text-primary-gradient">Global Excellence</span></h2>
-                    <p class="lead text-muted mx-auto" style="max-width: 800px;">
-                        MVsoftis the best destination for <strong>React, PHP, Next.js, Laravel, Flutter, and Express</strong> engineering. We are the top-rated software company serving global clients with precision and speed.
-                    </p>
+                        <p class="lead text-muted mx-auto" style="max-width: 800px;">
+                            MVsoftis the best destination for <strong>React, PHP, Next.js, Laravel, React Native, and Express</strong> engineering. We are the top-rated software company serving global clients with precision and speed.
+                        </p>
                 </div>
             </div>
             <div class="row g-4 mt-4 text-center">
@@ -227,7 +242,7 @@
                     <div class="city-pill reveal-up"><strong>Next.js</strong><br><span class="small opacity-75">Fullstack Apps</span></div>
                 </div>
                 <div class="col-6 col-md-4 col-lg-2" data-delay="0.3">
-                    <div class="city-pill reveal-up"><strong>Flutter</strong><br><span class="small opacity-75">Mobile Solutions</span></div>
+                    <div class="city-pill reveal-up"><strong>React Native</strong><br><span class="small opacity-75">Mobile Solutions</span></div>
                 </div>
                 <div class="col-6 col-md-4 col-lg-2" data-delay="0.4">
                     <div class="city-pill reveal-up"><strong>Laravel</strong><br><span class="small opacity-75">Enterprise Engines</span></div>
@@ -607,34 +622,33 @@
     <section class="tech-section py-5">
         <div class="container">
             <div class="text-center mb-5">
-                <span class="section-tag reveal-up">Our Expertise</span>
-                <h2 class="display-4 fw-bold text-dark reveal-up">Technologies we work with</h2>
-                <p class="lead text-muted reveal-up">We use the latest tools to build cutting-edge digital solutions.</p>
+                <span class="section-tag">Our Expertise</span>
+                <h2 class="display-4 fw-bold text-dark">Technologies we work with</h2>
+                <p class="lead text-muted">We use the latest tools to build cutting-edge digital solutions.</p>
             </div>
 
             <!-- Horizontal Tab Navigation -->
-            <div class="tech-nav-wrapper mb-5 reveal-up">
+            <div class="tech-nav-wrapper mb-5">
                 <div class="tech-nav-tabs">
                     <button class="tech-nav-btn active" data-tab="frontend">Front End</button>
                     <button class="tech-nav-btn" data-tab="mobile">Mobile</button>
                     <button class="tech-nav-btn" data-tab="backend">Backend</button>
                     <button class="tech-nav-btn" data-tab="frameworks">Frameworks</button>
-                    <!-- <button class="tech-nav-btn" data-tab="cms">CMS</button> -->
+
                     <button class="tech-nav-btn" data-tab="database">Database</button>
-                    <!-- <button class="tech-nav-btn" data-tab="devops">DevOps</button>
-                <button class="tech-nav-btn" data-tab="ecommerce">Ecommerce</button> -->
+
                 </div>
             </div>
 
             <!-- Tab Content Panes -->
-            <div class="tech-panes-container reveal-up">
+            <div class="tech-panes-container">
                 <!-- Mobile -->
                 <div class="tech-content-pane" id="pane-mobile">
                     <div class="row g-4">
                         <div class="col-lg-3 col-md-4 col-6">
                             <div class="tech-card">
-                                <i class="devicon-flutter-plain colored"></i>
-                                <span>Flutter</span>
+                                <i class="devicon-react-original colored"></i>
+                                <span>React Native</span>
                             </div>
                         </div>
                         <!-- <div class="col-lg-3 col-md-4 col-6">
@@ -711,7 +725,7 @@
                         </div>
                         <div class="col-lg-3 col-md-4 col-6">
                             <div class="tech-card">
-                                <i class="devicon-nodejs-plain colored"></i>
+                                <i class="devicon-nextjs-plain"></i>
                                 <span>Node JS</span>
                             </div>
                         </div>

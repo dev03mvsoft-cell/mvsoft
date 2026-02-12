@@ -365,7 +365,7 @@
                     <div class="collage-row row-1">
                         <div class="collage-item diamond">
                             <div class="diamond-content">
-                                <img src="../assets/img/logo/Trident_Logo_Registered_489c31b1ff (1).svg" alt="Partner">
+                                <img src="../assets/img/logo/trident_maritime_logo.png" alt="Partner">
                             </div>
                         </div>
                     </div>

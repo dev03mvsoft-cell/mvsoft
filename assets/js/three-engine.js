@@ -371,7 +371,7 @@ const ThreeEngine = (() => {
                 { name: 'MySQL', color: '#4479A1' },
                 { name: 'GSAP', color: '#88CE02' },
                 { name: 'Three JS', color: '#ffffff' },
-                { name: 'Flutter', color: '#02569B' }
+                { name: 'React Native', color: '#61DAFB' }
             ]; // Reduced set for mobile
 
             this.badges = [];

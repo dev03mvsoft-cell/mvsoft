@@ -8,7 +8,7 @@
                 <div class="col-lg-7">
                     <span class="badge bg-primary rounded-pill px-3 py-2 mb-3 reveal-up">Best App Development Hub</span>
                     <h1 class="display-3 fw-bold text-dark mb-4 reveal-up">Premium <span class="text-primary-gradient">App Development</span> India</h1>
-                    <h2 class="h4 fw-bold text-muted mb-4 reveal-up" data-delay="0.2">Elite Flutter & Native Engineering for the Modern World.</h2>
+                    <h2 class="h4 fw-bold text-muted mb-4 reveal-up" data-delay="0.2">Elite React Native & Native Engineering for the Modern World.</h2>
                     <p class="lead text-muted mb-5 reveal-up" data-delay="0.3" style="max-width: 650px;">
                         MVsoft is the leading <strong>mobile app development agency</strong>. We build applications that are truly "platform-agnostic," delivering high-performance logic across India and international markets.
                     </p>
@@ -43,8 +43,8 @@
                         <div class="mt-5">
                             <div class="tech-item mb-4 reveal-up">
                                 <div class="d-flex align-items-center gap-3 mb-2">
-                                    <div class="icon-box-sm bg-white shadow-sm text-primary rounded-3"><i class="devicon-flutter-plain colored"></i></div>
-                                    <h5 class="fw-bold mb-0">Flutter (Frontend)</h5>
+                                    <div class="icon-box-sm bg-white shadow-sm text-primary rounded-3"><i class="devicon-react-original colored"></i></div>
+                                    <h5 class="fw-bold mb-0">React Native</h5>
                                 </div>
                                 <p class="small text-muted mb-0">Beautiful, pixel-perfect UIs with smooth 60fps animations across all mobile platforms.</p>
                             </div>
@@ -52,7 +52,7 @@
                             <div class="tech-item mb-4 reveal-up" data-delay="0.1">
                                 <div class="d-flex align-items-center gap-3 mb-2">
                                     <div class="icon-box-sm bg-white shadow-sm text-primary rounded-3"><i class="devicon-php-plain colored"></i></div>
-                                    <h5 class="fw-bold mb-0">NativePHP (Backend)</h5>
+                                    <h5 class="fw-bold mb-0">NativePHP</h5>
                                 </div>
                                 <p class="small text-muted mb-0">Bringing the full power of Laravel into your app for complex logic and native OS features.</p>
                             </div>
@@ -83,7 +83,7 @@
                                 <div class="feature-pill-card p-4 h-100" data-delay="0.2">
                                     <div class="pill-icon mb-3"><i class="fas fa-fingerprint"></i></div>
                                     <h6 class="fw-bold mb-2">Native OS Integration</h6>
-                                    <p class="small text-muted mb-0">Access FaceID, Notifications, Camera and SQLite directly through PHP and Flutter bridges.</p>
+                                    <p class="small text-muted mb-0">Access FaceID, Notifications, Camera and SQLite directly through PHP and React Native bridges.</p>
                                 </div>
                             </div>
                             <div class="col-md-6">

@@ -19,8 +19,8 @@
 
     <!-- SEO Optimization -->
     <title>MVsoft| Best React, PHP, Laravel & Web Development Hub</title>
-    <meta name="description" content="MVsoft Solutions  is the premier hub for React, PHP, Next.js, Laravel, Flutter, and Express development. Leading the digital landscape with elite engineering solutions.">
-    <meta name="keywords" content="React development, PHP developers, Next.js, Laravel development, Flutter app development, Express JS, Website development, Best IT company, MVsoft Solutions , Top software agency">
+    <meta name="description" content="MVsoft Solutions  is the premier hub for React, PHP, Next.js, Laravel, React Native, and Express development. Leading the digital landscape with elite engineering solutions.">
+    <meta name="keywords" content="React development, PHP developers, Next.js, Laravel development, React Native app development, Express JS, Website development, Best IT company, MVsoft Solutions , Top software agency">
     <meta name="author" content="MVsoft Solutions ">
 
     <!-- Global Targeting -->
@@ -30,7 +30,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://MVsoft Solutions .com/">
     <meta property="og:title" content="MVsoft| Top Development Hub (React, PHP, Laravel)">
-    <meta property="og:description" content="The ultimate destination for React, PHP, Next.js, Laravel, Flutter, and Express engineering. Dominating the tech space globally.">
+    <meta property="og:description" content="The ultimate destination for React, PHP, Next.js, Laravel, React Native, and Express engineering. Dominating the tech space globally.">
     <meta property="og:image" content="assets/img/logo1.png">
 
     <!-- Schema.js (JSON-LD) for SEO -->

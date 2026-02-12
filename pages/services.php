@@ -151,7 +151,7 @@
                             </div>
                             <h3 class="fw-bold mt-4">Mobile Engineering</h3>
                         </div>
-                        <p class="text-muted small mb-4">Native-performance experiences for iOS & Android built on React Native and Flutter.</p>
+                        <p class="text-muted small mb-4">Native-performance experiences for iOS & Android built on React Native and professional cross-platform stacks.</p>
                         <ul class="service-list-minimal mb-4">
                             <li><i class="fas fa-circle-check"></i> Cross-Platform Efficiency</li>
                             <li><i class="fas fa-circle-check"></i> Real-time Edge Sync</li>

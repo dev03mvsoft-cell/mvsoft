@@ -22,30 +22,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	if (typeof ThreeEngine !== 'undefined') ThreeEngine.init();
 
-	// 3. Optimized Tab Switching Logic
+	// 3. Performance-First Tab Switching (CSS Driven)
 	const tabBtns = document.querySelectorAll('.tech-nav-btn');
 	const tabPanes = document.querySelectorAll('.tech-content-pane');
 
 	tabBtns.forEach(btn => {
 		btn.addEventListener('click', () => {
+			if (btn.classList.contains('active')) return;
+
 			const targetTab = btn.getAttribute('data-tab');
 
 			// Update Buttons
 			tabBtns.forEach(b => b.classList.remove('active'));
 			btn.classList.add('active');
 
-			// Update Panes with smooth fade
+			// Update Panes (CSS handles the animation)
 			tabPanes.forEach(pane => {
 				if (pane.id === `pane-${targetTab}`) {
-					gsap.to(pane, {
-						opacity: 1, display: 'block', duration: 0.4, onComplete: () => {
-							ScrollTrigger.refresh();
-						}
-					});
+					pane.classList.add('active');
 				} else {
-					gsap.to(pane, { opacity: 0, display: 'none', duration: 0.3 });
+					pane.classList.remove('active');
 				}
 			});
+
+			// Only refresh if ScrollTrigger exists
+			if (typeof ScrollTrigger !== 'undefined') {
+				setTimeout(() => ScrollTrigger.refresh(), 350);
+			}
 		});
 	});
 
