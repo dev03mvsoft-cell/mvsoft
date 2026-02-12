@@ -32,10 +32,10 @@
     </section>
 
     <!-- Content Section -->
-    <section class="py-5 bg-light">
+    <section class="py-5 bg-light position-relative" style="z-index: 11;">
         <div class="container py-5">
             <div class="row g-5">
-                <div class="col-lg-4">
+                <div class="col-lg-4 position-relative" style="z-index: 11;">
                     <div class="sticky-top" style="top: 100px;">
                         <h2 class="fw-bold text-dark mb-4">Our Technology <br><span class="text-primary-gradient">Duo</span></h2>
                         <p class="text-muted">We leverage the most powerful toolsets in the industry to ensure your application stands out in performance and reliability.</p>
@@ -74,7 +74,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="feature-pill-card p-4 h-100" data-delay="0.1">
-                                    <div class="pill-icon mb-3"><i class="fas fa-wifi-slash"></i></div>
+                                    <div class="pill-icon mb-3"><i class="fas fa-link-slash"></i></div>
                                     <h6 class="fw-bold mb-2">Offline-First</h6>
                                     <p class="small text-muted mb-0">NativePHP allows local data processing, ensuring functionality even in areas with poor connectivity.</p>
                                 </div>

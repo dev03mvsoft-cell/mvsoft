@@ -225,12 +225,45 @@
                             document.getElementById('contactForm').addEventListener('submit', function(e) {
                                 e.preventDefault();
                                 const form = this;
+                                const submitBtn = form.querySelector('button[type="submit"]');
+                                const originalBtnText = submitBtn.innerHTML;
+
+                                // Disable button and show loading state
+                                submitBtn.disabled = true;
+                                submitBtn.innerHTML = '<span>Initiating... <i class="fas fa-spinner fa-spin ms-2"></i></span>';
+
                                 grecaptcha.ready(function() {
                                     grecaptcha.execute('6LcNmGUsAAAAAFqQA9y7Fqi_8yRQF7QvsnHpS4Qu', {
                                         action: 'contact'
                                     }).then(function(token) {
                                         document.getElementById('g-recaptcha-response').value = token;
-                                        form.submit();
+
+                                        const formData = new FormData(form);
+
+                                        fetch('mail-handler.php', {
+                                                method: 'POST',
+                                                body: formData,
+                                                headers: {
+                                                    'X-Requested-With': 'XMLHttpRequest'
+                                                }
+                                            })
+                                            .then(response => response.json())
+                                            .then(data => {
+                                                if (data.success) {
+                                                    Toaster.show(data.message, 'success');
+                                                    form.reset();
+                                                } else {
+                                                    Toaster.show(data.message, 'error');
+                                                }
+                                            })
+                                            .catch(error => {
+                                                console.error('Error:', error);
+                                                Toaster.show('An error occurred. Please try again later.', 'error');
+                                            })
+                                            .finally(() => {
+                                                submitBtn.disabled = false;
+                                                submitBtn.innerHTML = originalBtnText;
+                                            });
                                     });
                                 });
                             });

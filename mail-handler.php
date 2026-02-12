@@ -15,6 +15,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // 1. Honeypot check
     if (!empty($_POST['honeypot'])) {
+        if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+            echo json_encode(['success' => false, 'message' => 'Bot detected.']);
+            exit;
+        }
         die("Bot detected.");
     }
 
@@ -25,6 +29,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $response_keys = json_decode($response, true);
 
     if (!$response_keys["success"] || $response_keys["score"] < 0.5) {
+        if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+            echo json_encode(['success' => false, 'message' => 'Verification failed. Please try again.']);
+            exit;
+        }
         die("Verification failed. Please try again.");
     }
 
@@ -124,8 +132,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         $mail->send();
+        if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+            echo json_encode(['success' => true, 'message' => 'Message has been sent successfully!']);
+            exit;
+        }
         echo "<script>alert('Message has been sent successfully!'); window.location.href='/'</script>";
     } catch (Exception $e) {
+        if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+            echo json_encode(['success' => false, 'message' => "Message could not be sent. Mailer Error: {$mail->ErrorInfo}"]);
+            exit;
+        }
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }
 } else {

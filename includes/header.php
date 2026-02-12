@@ -262,6 +262,8 @@
         <link rel="stylesheet" href="<?= asset_v('assets/css/nexus.css') ?>">
     <?php endif; ?>
     <link rel="stylesheet" href="<?= asset_v('assets/css/magnetic-btn.css') ?>">
+    <link rel="stylesheet" href="<?= asset_v('assets/css/toaster.css') ?>">
+
 </head>
 
 <body>

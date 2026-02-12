@@ -1,4 +1,10 @@
 <?php include 'includes/header.php'; ?>
+<style>
+    main {
+        width: 100%;
+        overflow-x: hidden;
+    }
+</style>
 
 <main>
     <!-- Nexus Hero (Interactive Background applies automatically) -->

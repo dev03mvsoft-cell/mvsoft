@@ -8,7 +8,7 @@
                 <span class="badge bg-primary rounded-pill px-3 py-2 mb-3">Join Our Collective</span>
                 <div class="elastic-stage">
                     <div class="elastic-content">
-                        <h1 class="elastic-txt">Careers</h1>
+                        <h1 class="elastic-txt">Career</h1>
                     </div>
                 </div>
 
@@ -296,12 +296,45 @@
                             document.getElementById('careerForm').addEventListener('submit', function(e) {
                                 e.preventDefault();
                                 const form = this;
+                                const submitBtn = form.querySelector('button[type="submit"]');
+                                const originalBtnText = submitBtn.innerHTML;
+
+                                // Disable button and show loading state
+                                submitBtn.disabled = true;
+                                submitBtn.innerHTML = '<span>Sending... <i class="fas fa-spinner fa-spin ms-2"></i></span>';
+
                                 grecaptcha.ready(function() {
                                     grecaptcha.execute('6LcNmGUsAAAAAFqQA9y7Fqi_8yRQF7QvsnHpS4Qu', {
                                         action: 'career'
                                     }).then(function(token) {
                                         document.getElementById('g-recaptcha-response').value = token;
-                                        form.submit();
+
+                                        const formData = new FormData(form);
+
+                                        fetch('mail-handler.php', {
+                                                method: 'POST',
+                                                body: formData,
+                                                headers: {
+                                                    'X-Requested-With': 'XMLHttpRequest'
+                                                }
+                                            })
+                                            .then(response => response.json())
+                                            .then(data => {
+                                                if (data.success) {
+                                                    Toaster.show(data.message, 'success');
+                                                    form.reset();
+                                                } else {
+                                                    Toaster.show(data.message, 'error');
+                                                }
+                                            })
+                                            .catch(error => {
+                                                console.error('Error:', error);
+                                                Toaster.show('An error occurred. Please try again later.', 'error');
+                                            })
+                                            .finally(() => {
+                                                submitBtn.disabled = false;
+                                                submitBtn.innerHTML = originalBtnText;
+                                            });
                                     });
                                 });
                             });

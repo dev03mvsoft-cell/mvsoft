@@ -23,10 +23,10 @@
     </section>
 
     <!-- Content Section -->
-    <section class="py-5 bg-light">
+    <section class="py-5 bg-light position-relative" style="z-index: 11;">
         <div class="container py-5">
             <div class="row g-5">
-                <div class="col-lg-4">
+                <div class="col-lg-4 position-relative" style="z-index: 11;">
                     <div class="sticky-top" style="top: 100px;">
                         <h2 class="fw-bold text-dark mb-4">Scalable <br>Power</h2>
                         <p class="text-muted">Hosting is the heartbeat of your digital presence. We ensure yours is strong and steady.</p>

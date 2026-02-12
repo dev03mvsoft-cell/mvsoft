@@ -116,6 +116,8 @@
 <script src="<?= asset_v('assets/vendor/js/lenis.min.js') ?>"></script>
 <!-- Custom JS Modules -->
 <script src="<?= asset_v('assets/js/core-ui.js') ?>"></script>
+<script src="<?= asset_v('assets/js/toaster.js') ?>"></script>
+
 <script src="<?= asset_v('assets/js/animation-engine.js') ?>"></script>
 <script src="<?= asset_v('assets/js/three-engine.js') ?>"></script>
 <script src="<?= asset_v('assets/js/horizontal-scroll.js') ?>"></script>

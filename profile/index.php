@@ -51,21 +51,21 @@
 
             <div class="floating-assets">
                 <!-- Row 1 -->
-                <div class="asset asset-1"><img src="../assets/img/companyimages/mvsoftoff10.png" alt=""></div>
-                <div class="asset asset-2"><img src="../assets/img/companyimages/mvsoftoff11.png" alt=""></div>
-                <div class="asset asset-3"><img src="../assets/img/companyimages/mvsoftoff12.png" alt=""></div>
+                <div class="asset asset-1"><img src="../assets/img/companyimages/mvsoftoff10.jpg" alt=""></div>
+                <div class="asset asset-2"><img src="../assets/img/companyimages/mvsoftoff11.jpg" alt=""></div>
+                <div class="asset asset-3"><img src="../assets/img/companyimages/mvsoftoff12.jpg" alt=""></div>
                 <!-- Row 2 -->
-                <div class="asset asset-4"><img src="../assets/img/companyimages/mvsoftoff13.png" alt=""></div>
-                <div class="asset asset-5"><img src="../assets/img/companyimages/mvsoftoff14.png" alt=""></div>
-                <div class="asset asset-6"><img src="../assets/img/companyimages/mvsoftoff15.png" alt=""></div>
+                <div class="asset asset-4"><img src="../assets/img/companyimages/mvsoftoff13.jpg" alt=""></div>
+                <div class="asset asset-5"><img src="../assets/img/companyimages/mvsoftoff14.jpg" alt=""></div>
+                <div class="asset asset-6"><img src="../assets/img/companyimages/mvsoftoff15.jpg" alt=""></div>
                 <!-- Row 3 -->
-                <div class="asset asset-7"><img src="../assets/img/companyimages/mvsoftoff16.png" alt=""></div>
-                <div class="asset asset-8"><img src="../assets/img/companyimages/mvsoftoff17.png" alt=""></div>
-                <div class="asset asset-9"><img src="../assets/img/companyimages/mvsoftoff18.png" alt=""></div>
+                <div class="asset asset-7"><img src="../assets/img/companyimages/mvsoftoff16.jpg" alt=""></div>
+                <div class="asset asset-8"><img src="../assets/img/companyimages/mvsoftoff17.jpg" alt=""></div>
+                <div class="asset asset-9"><img src="../assets/img/companyimages/mvsoftoff18.jpg" alt=""></div>
                 <!-- Extra scattered -->
-                <div class="asset asset-10"><img src="../assets/img/companyimages/mvsoftoff19.png" alt=""></div>
-                <div class="asset asset-11"><img src="../assets/img/companyimages/mvsoftoff20.png" alt=""></div>
-                <div class="asset asset-12"><img src="../assets/img/companyimages/mvsoftoff21.png" alt=""></div>
+                <div class="asset asset-10"><img src="../assets/img/companyimages/mvsoftoff19.jpg" alt=""></div>
+                <div class="asset asset-11"><img src="../assets/img/companyimages/mvsoftoff20.jpg" alt=""></div>
+                <div class="asset asset-12"><img src="../assets/img/companyimages/mvsoftoff21.jpg" alt=""></div>
             </div>
 
             <div class="hero-center">
@@ -80,18 +80,18 @@
             <div class="exceptional-container">
                 <!-- Full Circle Arc of Cards -->
                 <div class="cards-arc">
-                    <div class="arc-card card-1"><img src="../assets/img/companyimages/mvsoftoff22.png" alt=""></div>
-                    <div class="arc-card card-2"><img src="../assets/img/companyimages/mvsoftoff23.png" alt=""></div>
-                    <div class="arc-card card-3"><img src="../assets/img/companyimages/mvsoftoff24.png" alt=""></div>
-                    <div class="arc-card card-4"><img src="../assets/img/companyimages/mvsoftoff25.png" alt=""></div>
-                    <div class="arc-card card-5"><img src="../assets/img/companyimages/mvsoftoff26.png" alt=""></div>
-                    <div class="arc-card card-6"><img src="../assets/img/companyimages/mvsoftoff27.png" alt=""></div>
-                    <div class="arc-card card-7"><img src="../assets/img/companyimages/mvsoftoff28.png" alt=""></div>
-                    <div class="arc-card card-8"><img src="../assets/img/companyimages/mvsoftoff29.png" alt=""></div>
-                    <div class="arc-card card-9"><img src="../assets/img/companyimages/mvsoftoff30.png" alt=""></div>
-                    <div class="arc-card card-10"><img src="../assets/img/companyimages/mvsoftoff31.png" alt=""></div>
-                    <div class="arc-card card-11"><img src="../assets/img/companyimages/mvsoftoff32.png" alt=""></div>
-                    <div class="arc-card card-12"><img src="../assets/img/companyimages/mvsoftoff33.png" alt=""></div>
+                    <div class="arc-card card-1"><img src="../assets/img/companyimages/mvsoftoff22.jpg" alt=""></div>
+                    <div class="arc-card card-2"><img src="../assets/img/companyimages/mvsoftoff23.jpg" alt=""></div>
+                    <div class="arc-card card-3"><img src="../assets/img/companyimages/mvsoftoff24.jpg" alt=""></div>
+                    <div class="arc-card card-4"><img src="../assets/img/companyimages/mvsoftoff25.jpg" alt=""></div>
+                    <div class="arc-card card-5"><img src="../assets/img/companyimages/mvsoftoff26.jpg" alt=""></div>
+                    <div class="arc-card card-6"><img src="../assets/img/companyimages/mvsoftoff27.jpg" alt=""></div>
+                    <div class="arc-card card-7"><img src="../assets/img/companyimages/mvsoftoff28.jpg" alt=""></div>
+                    <div class="arc-card card-8"><img src="../assets/img/companyimages/mvsoftoff29.jpg" alt=""></div>
+                    <div class="arc-card card-9"><img src="../assets/img/companyimages/mvsoftoff30.jpg" alt=""></div>
+                    <div class="arc-card card-10"><img src="../assets/img/companyimages/mvsoftoff31.jpg" alt=""></div>
+                    <div class="arc-card card-11"><img src="../assets/img/companyimages/mvsoftoff32.jpg" alt=""></div>
+                    <div class="arc-card card-12"><img src="../assets/img/companyimages/mvsoftoff33.jpg" alt=""></div>
                 </div>
 
                 <div class="exceptional-content">

@@ -23,10 +23,10 @@
     </section>
 
     <!-- Content Section -->
-    <section class="py-5 bg-light">
+    <section class="py-5 bg-light position-relative" style="z-index: 11;">
         <div class="container py-5">
             <div class="row g-5">
-                <div class="col-lg-4">
+                <div class="col-lg-4 position-relative" style="z-index: 11;">
                     <div class="sticky-top" style="top: 100px;">
                         <h2 class="fw-bold text-dark mb-4">Engineering for <br>Growth</h2>
                         <p class="text-muted">In the digital-first world, your website is your strongest brand asset. We ensure it's unique, lightweight, and high-performing.</p>
