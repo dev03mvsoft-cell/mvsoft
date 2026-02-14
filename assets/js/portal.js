@@ -29,7 +29,7 @@ console.log("Target Path:", nextPath);
 // Create overlay element
 const overlay = document.createElement('div');
 overlay.className = 'transition-overlay';
-overlay.innerText = 'Redirecting to Profile...';
+overlay.innerText = 'Redirecting to Studio...';
 const container = document.getElementById('portal-container');
 if (container) {
     container.appendChild(overlay);

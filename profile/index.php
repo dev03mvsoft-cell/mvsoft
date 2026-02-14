@@ -69,7 +69,9 @@
             </div>
 
             <div class="hero-center">
-                <h1 class="hero-title">Your space <br>for inspiration</h1>
+                <h1 class="hero-title">Your space <br>
+                    <span>for inspiration</span>
+                </h1>
                 <p class="hero-tagline">Discover, search, and save what's next.</p>
 
             </div>
@@ -77,8 +79,7 @@
 
         <!-- Exceptional CTA Section -->
         <section class="exceptional-section">
-            <div class="exceptional-container">
-                <!-- Full Circle Arc of Cards -->
+            <div class="cards-arc-wrapper">
                 <div class="cards-arc">
                     <div class="arc-card card-1"><img src="../assets/img/companyimages/mvsoftoff22.jpg" alt=""></div>
                     <div class="arc-card card-2"><img src="../assets/img/companyimages/mvsoftoff23.jpg" alt=""></div>
@@ -93,11 +94,14 @@
                     <div class="arc-card card-11"><img src="../assets/img/companyimages/mvsoftoff32.jpg" alt=""></div>
                     <div class="arc-card card-12"><img src="../assets/img/companyimages/mvsoftoff33.jpg" alt=""></div>
                 </div>
+            </div>
 
+            <div class="exceptional-container">
                 <div class="exceptional-content">
+
                     <h2 class="exceptional-title">Let's Create Something <br><span>Exceptional</span></h2>
                     <p class="exceptional-text">Let's collaborate to create a bold brand or seamless digital experiences. Get in touch!</p>
-                    <a href="#" class="orange-cta">
+                    <a href="../contact" class="orange-cta">
                         <div class="icon-circle"><i class="fa-solid fa-arrow-right"></i></div>
                         <span>Contact Me</span>
                     </a>
@@ -480,6 +484,7 @@
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
     <script src="script.js"></script>
 </body>
 

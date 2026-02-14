@@ -3,6 +3,27 @@ document.addEventListener('DOMContentLoaded', () => {
     // Register ScrollTrigger
     gsap.registerPlugin(ScrollTrigger);
 
+    // Initialize Lenis Smooth Scroll
+    const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smoothWheel: true,
+        touchMultiplier: 2,
+    });
+
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    // Synchronize Lenis with ScrollTrigger
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add((time) => {
+        lenis.raf(time * 1000);
+    });
+    gsap.ticker.lagSmoothing(0);
+
 
     // Initial Animations
     const tl = gsap.timeline();
@@ -147,155 +168,165 @@ document.addEventListener('DOMContentLoaded', () => {
         visibility: 'visible'
     });
 
-    const magicTl = gsap.timeline({
-        scrollTrigger: {
-            trigger: '.magic-pin-section',
-            start: 'top top',
-            end: '+=450%',
-            pin: true,
-            scrub: 1.2,
-            anticipatePin: 1,
-            invalidateOnRefresh: true
-        }
-    });
+    const magicMM = gsap.matchMedia();
 
-    // Animate each slide
-    slides.forEach((slide, i) => {
-        const content = slide.querySelector('.magic-content');
+    magicMM.add({
+        isDesktop: "(min-width: 1025px)",
+        isMobile: "(max-width: 1024px)"
+    }, (context) => {
+        let { isDesktop } = context.conditions;
 
-        if (i === 0) {
-            // Slide 1 Initial Animation
-            gsap.from([slide.querySelector('.magic-label'), slide.querySelector('.magic-title')], {
-                x: -50,
-                opacity: 0,
-                stagger: 0.2,
-                duration: 1.5,
-                delay: 0.5
-            });
-            return;
-        }
+        const magicTl = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.magic-pin-section',
+                start: 'top top',
+                end: isDesktop ? '+=450%' : '+=250%', // Much shorter on tablet/mobile
+                pin: true,
+                scrub: 1.2,
+                anticipatePin: 1,
+                invalidateOnRefresh: true
+            }
+        });
 
-        const prevSlide = slides[i - 1];
 
-        // 1. Reveal Slide
-        magicTl.to(slide, {
-            clipPath: "inset(0% 0% 0% 0%)",
-            duration: 2.5,
-            ease: "power3.inOut"
-        }, "+=0.3");
+        // Animate each slide
+        slides.forEach((slide, i) => {
+            const content = slide.querySelector('.magic-content');
 
-        // 2. Animate Boss Image (Responsive Scaling)
-        if (i === 1) {
-            magicTl.to(bossImg, {
-                top: "50%",
-                left: "50%",
-                xPercent: -50,
-                yPercent: -50,
-                width: "min(350px, 28vw)",
-                height: "min(500px, 42vh)",
-                borderRadius: "20px",
-                duration: 2.2,
-                force3D: true,
-                ease: "expo.inOut"
-            }, "<");
-        } else if (i === 2) {
-            magicTl.to(bossImg, {
-                left: "min(12%, 100px)",
-                xPercent: 0,
-                width: "min(450px, 32vw)",
-                height: "min(600px, 52vh)",
-                duration: 2.2,
-                force3D: true,
-                ease: "expo.inOut"
-            }, "<");
-        } else if (i === 3) {
-            magicTl.to(bossImg, {
-                top: "50%",
-                left: "50%",
-                xPercent: -50,
-                yPercent: -50,
-                width: "min(1100px, 92vw)",
-                height: "min(750px, 82vh)",
-                borderRadius: "20px",
-                opacity: 1,
+            if (i === 0) {
+                // Slide 1 Initial Animation
+                gsap.from([slide.querySelector('.magic-label'), slide.querySelector('.magic-title')], {
+                    x: -50,
+                    opacity: 0,
+                    stagger: 0.2,
+                    duration: 1.5,
+                    delay: 0.5
+                });
+                return;
+            }
+
+            const prevSlide = slides[i - 1];
+
+            // 1. Reveal Slide
+            magicTl.to(slide, {
+                clipPath: "inset(0% 0% 0% 0%)",
                 duration: 2.5,
-                force3D: true,
-                ease: "expo.inOut"
+                ease: "power3.inOut"
+            }, "+=0.3");
+
+            // 2. Animate Boss Image (Responsive Scaling)
+            if (i === 1) {
+                magicTl.to(bossImg, {
+                    top: "50%",
+                    left: "50%",
+                    xPercent: -50,
+                    yPercent: -50,
+                    width: "min(350px, 28vw)",
+                    height: "min(500px, 42vh)",
+                    borderRadius: "20px",
+                    duration: 2.2,
+                    force3D: true,
+                    ease: "expo.inOut"
+                }, "<");
+            } else if (i === 2) {
+                magicTl.to(bossImg, {
+                    left: "min(12%, 100px)",
+                    xPercent: 0,
+                    width: "min(450px, 32vw)",
+                    height: "min(600px, 52vh)",
+                    duration: 2.2,
+                    force3D: true,
+                    ease: "expo.inOut"
+                }, "<");
+            } else if (i === 3) {
+                magicTl.to(bossImg, {
+                    top: "50%",
+                    left: "50%",
+                    xPercent: -50,
+                    yPercent: -50,
+                    width: "min(1100px, 92vw)",
+                    height: "min(750px, 82vh)",
+                    borderRadius: "20px",
+                    opacity: 1,
+                    duration: 2.5,
+                    force3D: true,
+                    ease: "expo.inOut"
+                }, "<");
+            }
+
+            // 3. Fade Prev Slide
+            magicTl.to(prevSlide, {
+                scale: 0.8,
+                opacity: 0,
+                filter: "blur(20px)",
+                duration: 2,
+                ease: "power2.inOut"
             }, "<");
-        }
 
-        // 3. Fade Prev Slide
-        magicTl.to(prevSlide, {
-            scale: 0.8,
-            opacity: 0,
-            filter: "blur(20px)",
-            duration: 2,
-            ease: "power2.inOut"
-        }, "<");
+            // 4. Animate Text (Sequential)
+            if (i === 1) {
+                // Slide 2: Split Layout Reveal (L/R)
+                gsap.set(content, { width: "100%", maxWidth: "1200px", left: 0, zIndex: 100 });
+                const leftPart = content.querySelector('.split-left');
+                const rightPart = content.querySelector('.split-right');
 
-        // 4. Animate Text (Sequential)
-        if (i === 1) {
-            // Slide 2: Split Layout Reveal (L/R)
-            gsap.set(content, { width: "100%", maxWidth: "1200px", left: 0, zIndex: 100 });
-            const leftPart = content.querySelector('.split-left');
-            const rightPart = content.querySelector('.split-right');
+                magicTl.fromTo([leftPart, rightPart], {
+                    x: (idx) => idx === 0 ? -100 : 100,
+                    opacity: 0
+                }, {
+                    x: 0,
+                    opacity: 1,
+                    duration: 1.5,
+                    ease: "power4.out"
+                }, "-=1.5");
+            } else if (i === 2) {
+                // Slide 3: Right Layout (Image is on Left)
+                // Use smaller width and safe absolute positioning to avoid overlap
+                gsap.set(content, {
+                    textAlign: "right",
+                    width: "35%",
+                    position: "absolute",
+                    right: "10%",
+                    left: "auto",
+                    zIndex: 100
+                });
+                magicTl.fromTo([content.querySelector('.magic-label'), content.querySelector('.magic-title')], {
+                    x: 50,
+                    opacity: 0
+                }, {
+                    x: 0,
+                    opacity: 1,
+                    stagger: 0.2,
+                    duration: 1.5,
+                    ease: "back.out(1.4)"
+                }, "-=1.5");
+            } else if (i === 3) {
+                // Slide 4: Full Centered Focus
+                gsap.set(content, {
+                    textAlign: "center",
+                    width: "min(100%, 1000px)",
+                    left: "50%",
+                    top: "50%",
+                    xPercent: -50,
+                    yPercent: -50,
+                    position: "absolute",
+                    zIndex: 100
+                });
+                magicTl.fromTo([content.querySelector('.magic-label'), content.querySelector('.magic-title')], {
+                    y: 50,
+                    opacity: 0
+                }, {
+                    y: 0,
+                    opacity: 1,
+                    stagger: 0.2,
+                    duration: 1.5,
+                    ease: "power3.out"
+                }, "-=1.5");
 
-            magicTl.fromTo([leftPart, rightPart], {
-                x: (idx) => idx === 0 ? -100 : 100,
-                opacity: 0
-            }, {
-                x: 0,
-                opacity: 1,
-                duration: 1.5,
-                ease: "power4.out"
-            }, "-=1.5");
-        } else if (i === 2) {
-            // Slide 3: Right Layout (Image is on Left)
-            // Use smaller width and safe absolute positioning to avoid overlap
-            gsap.set(content, {
-                textAlign: "right",
-                width: "35%",
-                position: "absolute",
-                right: "10%",
-                left: "auto",
-                zIndex: 100
-            });
-            magicTl.fromTo([content.querySelector('.magic-label'), content.querySelector('.magic-title')], {
-                x: 50,
-                opacity: 0
-            }, {
-                x: 0,
-                opacity: 1,
-                stagger: 0.2,
-                duration: 1.5,
-                ease: "back.out(1.4)"
-            }, "-=1.5");
-        } else if (i === 3) {
-            // Slide 4: Full Centered Focus
-            gsap.set(content, {
-                textAlign: "center",
-                width: "min(100%, 1000px)",
-                left: "50%",
-                top: "50%",
-                xPercent: -50,
-                yPercent: -50,
-                position: "absolute",
-                zIndex: 100
-            });
-            magicTl.fromTo([content.querySelector('.magic-label'), content.querySelector('.magic-title')], {
-                y: 50,
-                opacity: 0
-            }, {
-                y: 0,
-                opacity: 1,
-                stagger: 0.2,
-                duration: 1.5,
-                ease: "power3.out"
-            }, "-=1.5");
-
-            // Ensure boss image is visible but behind text
-            magicTl.set(bossImg, { zIndex: 10 }, "<");
-        }
+                // Ensure boss image is visible but behind text
+                magicTl.set(bossImg, { zIndex: 10 }, "<");
+            }
+        });
     });
 
     // --- Horizontal Client Showcase ---
@@ -453,46 +484,63 @@ document.addEventListener('DOMContentLoaded', () => {
         clearProps: "all"
     });
 
-    // --- Responsive Full Circle Cards Expansion ---
+    // --- Exceptional Section Cards Expansion (4-Screen Explicit Control) ---
+    const mm = gsap.matchMedia();
     const cards = gsap.utils.toArray('.arc-card');
 
-    function getRadius() {
-        const w = window.innerWidth;
-        if (w > 1440) return 400;      // Big Desktop
-        if (w > 1024) return 320;      // Laptop / Small Desktop
-        if (w > 768) return 240;       // Tablet
-        if (w > 480) return 130;       // Large Mobile
-        return 110;                    // Small Mobile
-    }
+    mm.add({
+        isDesktop: "(min-width: 1441px)",
+        isLaptop: "(min-width: 1025px) and (max-width: 1440px)",
+        isTablet: "(min-width: 769px) and (max-width: 1024px)",
+        isMobile: "(max-width: 768px)"
+    }, (context) => {
+        let { isDesktop, isLaptop, isTablet, isMobile } = context.conditions;
 
-    cards.forEach((card, i) => {
-        const degrees = i * 30;
-        const angle = degrees * (Math.PI / 180);
+        let radius;
+        if (isDesktop) radius = 420;
+        else if (isLaptop) radius = 340;
+        else if (isTablet) radius = 240;
+        else radius = 145;
 
-        // Initial setup
-        gsap.set(card, { x: 0, y: 0, scale: 0, opacity: 0 });
+        cards.forEach((card, i) => {
+            const degrees = i * 30;
+            const angle = degrees * (Math.PI / 180);
 
-        // Expansion Animation
-        gsap.to(card, {
-            x: () => Math.cos(angle - Math.PI / 2) * getRadius(),
-            y: () => Math.sin(angle - Math.PI / 2) * getRadius(),
-            scale: 1,
-            opacity: 1,
-            rotation: degrees,
-            scrollTrigger: {
-                trigger: '.exceptional-section',
-                start: 'top 95%',
-                end: 'top 20%',
-                scrub: 1.2,
-                invalidateOnRefresh: true,
-            }
+            gsap.set(card, {
+                x: 0,
+                y: 0,
+                xPercent: -50,
+                yPercent: -50,
+                scale: 0,
+                opacity: 0,
+                transformOrigin: "center center"
+            });
+
+            gsap.to(card, {
+                x: Math.cos(angle - Math.PI / 2) * radius,
+                y: Math.sin(angle - Math.PI / 2) * radius,
+                xPercent: -50,
+                yPercent: -50,
+                scale: 1,
+                opacity: 1,
+                rotation: degrees,
+                scrollTrigger: {
+                    trigger: '.exceptional-section',
+                    start: 'top 95%',
+                    end: 'top 20%',
+                    scrub: 1.2,
+                    invalidateOnRefresh: true,
+                }
+            });
         });
     });
 
-    // 3. Keep the Ring Rotating Infinitely (Independent of Scroll)
+    // 3. Keep the Ring Rotating Infinitely (Centered Pivot)
     gsap.to('.cards-arc', {
         rotation: 360,
-        duration: 50,
+        xPercent: -50,
+        yPercent: -50,
+        duration: 80,
         repeat: -1,
         ease: "none",
         force3D: true
@@ -502,21 +550,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function finalize() {
         ScrollTrigger.sort();
         ScrollTrigger.refresh();
-        // Force images to render
-        const imgs = document.querySelectorAll('img');
-        imgs.forEach(img => {
-            if (img.complete) {
-                gsap.to(img, { opacity: 1, duration: 0.3 });
-            } else {
-                img.onload = () => gsap.to(img, { opacity: 1, duration: 0.3 });
-            }
-        });
     }
-    const refreshAll = () => {
-        ScrollTrigger.refresh();
-        ScrollTrigger.sort();
-    };
-
 
     window.addEventListener('resize', () => {
         ScrollTrigger.refresh();

@@ -64,35 +64,35 @@
 
             <div class="main-grid d-flex">
                 <div class="box">
-                    <div class="bg-img"><img src="assets/img/companyimages/mvsoftoff34.png" alt="React"></div>
+                    <div class="bg-img"><img src="assets/img/companyimages/mvsoftoff36.png" alt="React"></div>
                     <span class="px-2">Advanced React Logic</span>
                 </div>
                 <div class="box">
-                    <div class="bg-img"><img src="assets/img/companyimages/mvsoftoff35.png" alt="Next.js"></div>
+                    <div class="bg-img"><img src="assets/img/companyimages/mvsoftoff37.png" alt="Next.js"></div>
                     <span class="px-2">Next-Gen Web Apps</span>
                 </div>
                 <div class="box">
-                    <div class="bg-img"><img src="assets/img/companyimages/mvsoftoff36.png" alt="PHP"></div>
+                    <div class="bg-img"><img src="assets/img/companyimages/mvsoftoff38.png" alt="PHP"></div>
                     <span class="px-2">Secure Backend Systems</span>
                 </div>
                 <div class="box">
-                    <div class="bg-img"><img src="assets/img/companyimages/mvsoftoff37.png" alt="Laravel"></div>
+                    <div class="bg-img"><img src="assets/img/companyimages/mvsoftoff39.png" alt="Laravel"></div>
                     <span class="px-2">Enterprise Laravel</span>
                 </div>
                 <div class="box">
-                    <div class="bg-img"><img src="assets/img/companyimages/mvsoftoff38.png" alt="MySQL"></div>
+                    <div class="bg-img"><img src="assets/img/companyimages/mvsoftoff40.png" alt="MySQL"></div>
                     <span class="px-2">Smart Data Architecture</span>
                 </div>
                 <div class="box">
-                    <div class="bg-img"><img src="assets/img/companyimages/mvsoftoff10.png" alt="Bootstrap"></div>
+                    <div class="bg-img"><img src="assets/img/companyimages/mvsoftoff41.png" alt="Bootstrap"></div>
                     <span class="px-2">Rapid Component Design</span>
                 </div>
                 <div class="box">
-                    <div class="bg-img"><img src="assets/img/companyimages/mvsoftoff11.png" alt="Tailwind"></div>
+                    <div class="bg-img"><img src="assets/img/companyimages/mvsoftoff42.png" alt="Tailwind"></div>
                     <span class="px-2">Modern Tailwind Styling</span>
                 </div>
                 <div class="box">
-                    <div class="bg-img"><img src="assets/img/companyimages/mvsoftoff12.png" alt="AI Solutions"></div>
+                    <div class="bg-img"><img src="assets/img/companyimages/mvsoftoff43.png" alt="AI Solutions"></div>
                     <span class="px-2">AI-Powered Engineering</span>
                 </div>
             </div>
@@ -317,7 +317,7 @@
             <!-- Travel -->
             <div class="industry-card reveal-up">
                 <div class="industry-img">
-                    <img src="/assets/img/work/mvsoftoffwork11.avif" alt="Travel">
+                    <img src="/assets/img/work/mvsoftoffwork11.jpg" alt="Travel">
                 </div>
                 <div class="card-body">
                     <div class="industry-icon-overlay">
@@ -333,7 +333,7 @@
             <!-- Health Care -->
             <div class="industry-card reveal-up">
                 <div class="industry-img">
-                    <img src="/assets/img/work/mvsoftoffwork6.avif" alt="Healthcare">
+                    <img src="/assets/img/work/mvsoftoffwork6.jpg" alt="Healthcare">
                 </div>
                 <div class="card-body">
                     <div class="industry-icon-overlay">
