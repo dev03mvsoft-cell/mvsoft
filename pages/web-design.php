@@ -33,8 +33,8 @@
 
                         <div class="service-stats mt-5">
                             <div class="stat-item mb-4">
-                                <h4 class="fw-bold text-primary mb-0">500+</h4>
-                                <p class="small text-muted">Projects Completed</p>
+                                <h4 class="fw-bold text-primary mb-0">Elite</h4>
+                                <p class="small text-muted">Project Track Record</p>
                             </div>
                             <div class="stat-item mb-4">
                                 <h4 class="fw-bold text-primary mb-0">99%</h4>
@@ -150,42 +150,20 @@
                     </div>
 
                     <!-- Process Section -->
-                    <div class="engineering-block reveal-up" data-delay="0.3">
-                        <div class="d-flex align-items-center gap-3 mb-5">
-                            <div class="icon-box-primary"><i class="fas fa-sync-alt"></i></div>
-                            <h3 class="fw-bold mb-0">Our "Best Product" Process</h3>
-                        </div>
-                        <div class="process-steps">
-                            <div class="step-item d-flex gap-4 mb-4">
-                                <div class="step-num shadow-sm">1</div>
-                                <div>
-                                    <h5 class="fw-bold mb-1">Discovery</h5>
-                                    <p class="text-muted small mb-0">Analyzing your business needs and selecting the right stack (Laravel or MERN).</p>
-                                </div>
+                    <!-- Portfolio Showcase Redirect -->
+                    <div class="engineering-block reveal-up" style="background: linear-gradient(135deg, #1a387f 0%, #001a4d 100%);">
+                        <div class="row align-items-center g-4 text-white">
+                            <div class="col-md-9">
+                                <h3 class="fw-bold mb-3">Experience Our Elite Delivery</h3>
+                                <p class="text-white-50 mb-0">Discover the precision and impact of our digital engineering through our curated showcase. See how we transform complex visions into world-class digital assets.</p>
                             </div>
-                            <div class="step-item d-flex gap-4 mb-4">
-                                <div class="step-num shadow-sm">2</div>
-                                <div>
-                                    <h5 class="fw-bold mb-1">Architecture</h5>
-                                    <p class="text-muted small mb-0">Designing the database and system flow from scratch.</p>
-                                </div>
-                            </div>
-                            <div class="step-item d-flex gap-4 mb-4">
-                                <div class="step-num shadow-sm">3</div>
-                                <div>
-                                    <h5 class="fw-bold mb-1">Development</h5>
-                                    <p class="text-muted small mb-0">Agile coding with regular updates and transparency.</p>
-                                </div>
-                            </div>
-                            <div class="step-item d-flex gap-4">
-                                <div class="step-num shadow-sm bg-primary text-white">4</div>
-                                <div>
-                                    <h5 class="fw-bold mb-1">Deployment</h5>
-                                    <p class="text-muted small mb-0">Optimized launch with integrated SEO (via BCS) to ensure immediate visibility.</p>
-                                </div>
+                            <div class="col-md-3 text-md-end">
+                                <a href="portal?next=profile/" class="btn btn-light btn-sm rounded-pill px-5 shadow-lg fw-bold">Enter Portfolio Hub</a>
                             </div>
                         </div>
                     </div>
+
+
                 </div>
             </div>
         </div>

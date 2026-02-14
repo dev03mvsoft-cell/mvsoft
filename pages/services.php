@@ -288,8 +288,8 @@
                         <div class="blob-bg"></div>
                         <img src="assets/img/office/mvsoftoff11.jpg" class="img-fluid rounded-5 shadow-lg position-relative z-2" alt="MVsoftStrategy Hub">
                         <div class="stat-floating-card glass-card p-3 shadow-glow reveal-up" data-delay="0.5">
-                            <span class="d-block fw-bold text-primary fs-4">500+</span>
-                            <span class="text-muted small uppercase fw-bold">Active Projects</span>
+                            <span class="d-block fw-bold text-primary fs-4">Global</span>
+                            <span class="text-muted small uppercase fw-bold">Project Success</span>
                         </div>
                     </div>
                 </div>
@@ -303,7 +303,7 @@
             <div class="reveal-up mb-5">
                 <span class="section-tag text-white-50">Launch Strategy</span>
                 <h2 class="display-4 fw-bold text-white mb-4">Ready to scale your <span class="text-primary-gradient">impact?</span></h2>
-                <p class="lead text-white-50 mb-5 mx-auto" style="max-width: 700px;">Join 500+ successful partners and let's engineer something extraordinary together.</p>
+                <p class="lead text-white-50 mb-5 mx-auto" style="max-width: 700px;">Join our elite network of successful partners and let's engineer something extraordinary together.</p>
                 <div class="d-flex justify-content-center">
                     <a href="contact" class="btn btn-nexus-primary btn-magnetic px-5 py-3">
                         <span>Get Started <i class="fas fa-arrow-right ms-2"></i></span>

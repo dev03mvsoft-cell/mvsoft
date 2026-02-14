@@ -58,7 +58,7 @@
                                         <tr>
                                             <td class="text-muted">Experience</td>
                                             <td>Theoretical</td>
-                                            <td>500+ Insights</td>
+                                            <td>Extensive Insights</td>
                                         </tr>
                                         <tr>
                                             <td class="text-muted">Niche</td>
@@ -76,8 +76,8 @@
                                 <p class="small text-muted">Measurable Results</p>
                             </div>
                             <div class="stat-item mb-4 reveal-up" data-delay="0.1">
-                                <h4 class="fw-bold text-primary mb-0">500+</h4>
-                                <p class="small text-muted">Project Insights</p>
+                                <h4 class="fw-bold text-primary mb-0">High-Impact</h4>
+                                <p class="small text-muted">Project Case Studies</p>
                             </div>
                         </div>
                     </div>

@@ -58,8 +58,8 @@
                             <div class="row g-3 mt-4 reveal-up" data-delay="0.5">
                                 <div class="col-6 col-md-3">
                                     <div class="stat-card">
-                                        <span class="stat-number text-primary" data-target="500">0</span>
-                                        <span class="stat-label">Projects</span>
+                                        <span class="stat-number text-primary" data-target="100">Numerous</span>
+                                        <span class="stat-label">Successful Projects</span>
                                     </div>
                                 </div>
                                 <div class="col-6 col-md-3">

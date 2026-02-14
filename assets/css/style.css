@@ -1714,6 +1714,14 @@ body {
     pointer-events: none;
 }
 
+@media (max-width: 767px) {
+    .info-section .box span {
+        font-size: 9px;
+        width: 95%;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+    }
+}
+
 
 /* Box Background-Image */
 .info-section .box .bg-img {
@@ -4715,5 +4723,55 @@ body {
     to {
         filter: drop-shadow(0.25em 0.25em 0.5em hsla(0, 0%, 0%, 0.3));
         transform: translate3d(0, -2.5em, 0) rotate(1turn) translate3d(0, 2.5em, 0) scale(1);
+    }
+}
+
+/* === Enhanced Tech Grid Mobile View === */
+@media screen and (max-width: 767px) {
+    .info-section .right-part {
+        height: 400px !important;
+        width: 400px !important;
+        max-width: 100%;
+        margin: 20px auto 0 !important;
+    }
+
+    .info-section .box {
+        width: 120px !important;
+        height: 120px !important;
+    }
+
+    .info-section .box span {
+        font-size: 11px !important;
+        line-height: 1.2 !important;
+        width: 90% !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .info-section .right-part {
+        transform: scale(0.85) !important;
+        height: 400px !important;
+        width: 400px !important;
+        margin: -30px auto 0 !important;
+    }
+}
+
+/* === Tablet View Enhancements === */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .info-section .right-part {
+        transform: scale(1) !important;
+        width: 550px !important;
+        height: 550px !important;
+        margin: 0 auto !important;
+    }
+
+    .info-section .box {
+        width: 140px !important;
+        height: 140px !important;
+    }
+
+    .info-section .box span {
+        font-size: 14px !important;
+        width: 90% !important;
     }
 }

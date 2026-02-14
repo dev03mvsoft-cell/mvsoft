@@ -411,8 +411,8 @@
 
                 <div class="trust-stats-bar">
                     <div class="t-stat">
-                        <span class="t-count">500+</span>
-                        <span class="t-label">Global Projects</span>
+                        <span class="t-count">Numerous</span>
+                        <span class="t-label">Global Deliveries</span>
                     </div>
                     <div class="t-divider"></div>
                     <div class="t-stat">
